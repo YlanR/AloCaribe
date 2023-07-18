@@ -1,0 +1,14 @@
+/*definiendo variables para colores*/
+:root{
+    --negro:#000;
+    --blanco:#fff;
+    --transparente-claro:rgba(255, 255, 255, 0.911);
+    --transparente-oscuro:rgba(0, 0, 0, 0.11);
+    --rosado:#EDA5FF;
+    --moraclaro:#CC00FF;
+    --moradousuario:#CC01FF;/*boton de usuario*/
+    --morapie:#531A87;
+    --moraoscuro:#2C0351;/*barra*/
+    --moradomezcla:#3f017a;/*home tiene un efecto mezcla */
+    --moztarillo:#F3FE01; 
+    }
