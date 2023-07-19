@@ -1,0 +1,48 @@
+/*definiendo variables para colores*/
+:root{
+    --negro:#000;
+    --blanco:#fff;
+    --transparente-claro:rgba(255, 255, 255, 0.911);
+    --transparente-oscuro:rgba(0, 0, 0, 0.11);
+    --rosado:#EDA5FF;
+    --moraclaro:#CC00FF;
+    --moradousuario:#CC01FF;/*boton de usuario*/
+    --morapie:#531A87;
+    --moraoscuro:#2C0351;/*barra*/
+    --moradomezcla:#3f017a;/*home tiene un efecto mezcla */
+    --moztarillo:#F3FE01;
+    --morainicio-regitro:#602F92;
+    --gris:#B0B0B0;
+    --gris-transparente:#E3E3E3
+}
+
+/*estilo del contenido */
+.plantilla2-encapsulado{
+padding: 8rem 0 8rem 0;
+}
+
+.plantilla2-encapsulado-centrado{
+margin: 0 25rem 0 25rem;
+text-align: center;
+
+justify-content: center;
+
+background-color: var(--gris-transparente);
+
+border-radius: 5rem;/*o 60px tambien se ve bien */
+}
+.plantilla2-content-espacio{
+    padding: 20px;
+}
+.plantilla2-content-top{
+    background-color: var(--moztarillo);
+    border-radius: 28px;
+    padding: 20px;
+    margin: 0 4rem;
+}
+.plantilla2-content-mid{
+    padding: 20px;
+}
+.plantilla2-content-bot{
+    padding: 20px;
+}
