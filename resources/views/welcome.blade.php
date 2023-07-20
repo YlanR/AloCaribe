@@ -15,7 +15,7 @@
     <nav class="navbar">
          <!---->
         <div id="navbar-logo">
-            <a href="home.php">
+            <a href="{ route('welcome') }">
                 <img src="../img/logo-diminutivo.png" alt="logo de la empresa" class="navbar-logo-logo-diminutivo">
             </a>
         </div>
@@ -34,8 +34,8 @@
             </ul>
          <!---->
             <div id="navbar-botones" >
-            <!--emoji que manda al inicio de sesión-->
-                <a href="./vista/login.php">
+            <!--emoji que manda al inicio de sesión -->
+                <a href="#">
                 <span class="icon-user" style="color:white;"></span>
                 </a>
             </div>
@@ -48,9 +48,12 @@
         <!--segunda plantilla -->
         <section class="plantilla2">
             <div class="plantilla2-content">
+                <div class="plantilla2-content-pelotas"></div>
+                <div class="plantilla2-content-confeti"></div>
+                <div class="plantilla2-content-nubes"></div>
                 <div class="plantilla2-description">
                     <div class="plantilla2-encapsulado">
-                        <div class="plantilla2-encapsulado-centrado">
+                        <div class="plantilla2-encapsulado-centrado cristal-content">
                             <div class="plantilla2-content-espacio"> </div>
                             <div class="plantilla2-content-top">
                                 <h2>Competencia Nacional</h2>
@@ -76,7 +79,7 @@
     <footer>
         <section  id="footer-main" class="footer-main">
             <div class="footer-logo">
-                <a href="home.php">
+                <a href="{ {route('welcome') }}">
                 <img src="../img/logo.png" alt="Logo simple de Rizo`s & Rey" id="footer-logo" class="footer-logo-logo">
                 </a>
             </div>

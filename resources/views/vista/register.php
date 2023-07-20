@@ -15,7 +15,7 @@
     <nav class="navbar">
          <!---->
         <div id="navbar-logo">
-            <a href="home.php">
+            <a href="{{ route('welcome') }}">
                 <img src="../../img/logo-diminutivo.png" alt="logo de la empresa" class="navbar-logo-logo-diminutivo">
             </a>
         </div>
@@ -121,7 +121,7 @@
     <footer>
         <section  id="footer-main" class="footer-main">
             <div class="footer-logo">
-                <a href="home.php">
+                <a href="{{ route('welcome') }}">
                 <img src="../../img/logo.png" alt="Logo simple de Rizo`s & Rey" id="footer-logo" class="footer-logo-logo">
                 </a>
             </div>
