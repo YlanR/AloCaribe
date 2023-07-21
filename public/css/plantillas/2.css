@@ -2,7 +2,7 @@
 :root{
     --negro:#000;
     --blanco:#fff;
-    --transparente-claro:rgba(255, 255, 255, 0.911);
+    --transparente-claro:rgba(255, 255, 255, 0.459);
     --transparente-oscuro:rgba(0, 0, 0, 0.11);
     --rosado:#EDA5FF;
     --moraclaro:#CC00FF;
@@ -13,27 +13,80 @@
     --moztarillo:#F3FE01;
     --morainicio-regitro:#602F92;
     --gris:#B0B0B0;
-    --gris-transparente:#E3E3E3
+    --gris-transparente:#E3E3E350;
+    --transparencia:#fafafa10;
+    --tranparencia1:#e3e3e310;
+    --transparencia2:#b0b0b010;
+
 }
+.plantilla2-content-pelotas{
+    display: flex;
+    position: absolute;
+}
+.pelotas-minusculas img{
+    height: 2rem;
+    width: 2rem;
+}
+.minuscula1{translate: 11rem 5rem;}
+.minuscula2{translate: 6rem 19rem;}
+.minuscula3{translate: 14rem 33rem;}
+.minuscula4{translate: 41rem 28rem;}
+.minuscula5{translate: 74rem 19rem;}
+
+.pelotas-pequeñas img{
+height: 4.5rem;
+width: 4.5rem;
+}
+.pequeña1{translate: 50rem 24rem;}
+.pequeña2{translate: 6rem 12rem;}
+
+.pelotas-medianas img{
+    height: 7rem;
+    width: 7rem;
+}
+.mediana1{translate: 54rem 30rem;}
+.mediana2{translate: 0rem 20rem;}
+
+.pelotas-grandes img{
+    height: 9rem;
+    width: 9rem;
+}
+.grande1{translate: 24rem 12rem;}
+.grande2{translate: -44rem 1rem;}
+
+.pelotas-gigantes img{  
+    height: 12rem;
+    width: 12rem;}
+.gigante1{translate: -54rem 28rem;}
+.gigante2{translate: -20rem -2rem;}
 
 /*estilo del contenido */
 .plantilla2-encapsulado{
-padding: 8rem 0 8rem 0;
+padding: 5rem 0 5rem 0;
+background-size: cover;
+display: flex;
+align-items: center;
+background-color: var(--blanco);
 }
 
 .plantilla2-encapsulado-centrado{
-margin: 0 25rem 0 25rem;
+    width: 45rem;
+    height: 20rem;
+    border: 2px solid var(--transparencia2);
+    margin: 0 auto;
+margin: 0 23rem 0 23rem;
 text-align: center;
-
 justify-content: center;
-
-background-color: var(--gris-transparente);
-
-border-radius: 5rem;/*o 60px tambien se ve bien */
+background-color: var(--gris-transparente) ;
+border-radius: 3rem;/*o 60px tambien se ve bien */
 /*definiendo la sombra*/
 box-shadow: 0rem 3rem 1rem var(--gris);
 }
+.cristal-content{
+    background-color:var(--transparencia2);
+    backdrop-filter: blur(0.4rem);
 
+}
 .plantilla2-content-espacio{
     padding: 20px;
 }
