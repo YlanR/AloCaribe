@@ -1,6 +1,15 @@
     @include('templates.header',  ['modo' => 'Alo Caribe'])
     <main>
-        <section></section>
+        <section>
+            <div>
+                <div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </section>
         <!--segunda plantilla -->
         <section class="plantilla2">
             <div class="plantilla2-content">

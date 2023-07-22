@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./fonts/style.css">
     <link rel="stylesheet" href="./css/plantillas/2.css">
+    <link rel="stylesheet" href="./css/plantillas/1.css">
     <title>{{ $modo }}</title>
 </head>
 <body>

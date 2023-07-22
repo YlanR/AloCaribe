@@ -19,6 +19,7 @@
     --transparencia2:#b0b0b010;
 
 }
+/*estilos de las pelotas y posicionamiento*/
 .plantilla2-content-pelotas{
     display: flex;
     position: absolute;
@@ -27,9 +28,9 @@
     height: 2rem;
     width: 2rem;
 }
-.minuscula1{translate: 11rem 5rem;}
-.minuscula2{translate: 6rem 19rem;}
-.minuscula3{translate: 14rem 33rem;}
+.minuscula1{translate: 10rem 16rem;}
+.minuscula2{translate: 66rem 5rem;}
+.minuscula3{translate: 13rem 29rem;}
 .minuscula4{translate: 41rem 28rem;}
 .minuscula5{translate: 74rem 19rem;}
 
@@ -59,6 +60,59 @@ width: 4.5rem;
     width: 12rem;}
 .gigante1{translate: -54rem 28rem;}
 .gigante2{translate: -20rem -2rem;}
+/*estilos del confeti y posicionamiento*/
+.plantilla2-content-confeti{
+    display: flex;
+    position: absolute;
+}
+.plantilla2-content-confeti img{
+    width: 8rem;
+    height: 8rem;
+    opacity: 0.2;
+}
+.confeti1{
+    translate: 0rem 10rem;
+    transform: rotate(158.32deg);
+}
+.confeti2{
+    translate: -6rem 23rem;
+    transform: rotate(75deg);
+}
+.confeti3{
+    translate: 9rem 10rem;
+}
+.confeti4{
+    transform: rotate(55deg);
+    translate: 0rem -2.5rem;
+}
+.confeti5{
+    translate: -1rem 22rem;
+}
+.confeti6{
+    translate: 9rem 11rem;
+}
+.confeti7{
+    translate: 2rem 30rem;
+    transform: rotate(45deg);
+}
+.confeti8{translate: 19rem ;
+transform: rotate(-80deg);}
+.confeti9{translate: 12rem 14rem;}
+
+/*logo central*/
+.plantilla2-content-logo{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 31rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.plantilla2-content-logo img{
+    width: 18rem;
+    height: 18rem;
+}
 
 /*estilo del contenido */
 .plantilla2-encapsulado{
