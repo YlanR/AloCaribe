@@ -5,6 +5,7 @@
         <section class="plantilla2">
             <div class="plantilla2-content">
                 <div class="plantilla2-content-pelotas">
+                <div class="plantilla2-content-nubes"></div>
                     <div class="pelotas-minusculas minuscula1"> 
                         <img src="../img/2/Ellipse12.png" alt="pelota morada">
                     </div>
@@ -46,8 +47,38 @@
                         <img src="../img/2/Ellipse12.png" alt="pelota morada">
                     </div>
                 </div>
-                <div class="plantilla2-content-confeti"></div>
-                <div class="plantilla2-content-nubes"></div>
+                <div class="plantilla2-content-confeti">
+                    <div class="confeti-diseño confeti1">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                    <div class="confeti-diseño confeti2">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                    <div class="confeti-diseño confeti3">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                    <div class="confeti-diseño confeti4">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                    <div class="confeti-diseño confeti5">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                    <div class="confeti-diseño confeti6">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                    <div class="confeti-diseño confeti7">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                    <div class="confeti-diseño confeti8">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                    <div class="confeti-diseño confeti9">
+                        <img src="../img/2/sss.png" alt="confeti">
+                    </div>
+                </div>
+                <div class ="plantilla2-content-logo">
+                    <img src="../img/logo.png" alt="logo">
+                </div>
                 <div class="plantilla2-description">
                     <div class="plantilla2-encapsulado">
                         <div class="plantilla2-encapsulado-centrado cristal-content">
