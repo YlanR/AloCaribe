@@ -17,7 +17,11 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
-Route::get('/login', [UsuarioController::class,'index']);
-Route::get('/register', [UsuarioController::class,'register']);
+// Route::get('/login', [UsuarioController::class,'index']);
+// Route::get('/register', [UsuarioController::class,'register']);
+
+Auth::routes();
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);

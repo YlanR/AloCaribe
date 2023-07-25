@@ -63,24 +63,42 @@
                 <!--botones de referencia-->
             
                 <!--contenido derecho-->
-                <form action="" class="main-content-right login">
+                <form method="POST" action="{{ route('login') }}" class="main-content-right login">
+                @csrf
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+
                     <div class="login-logo">
                         <img src="../../img/logo.png" alt="logo de la pag" class="login-logo-logo">
                     </div>
                     <div class="login-content">
-                        <input type="email" placeholder="Email" name="email" id="email" class="login-email">
+                        <input type="email" placeholder="Email" name="email" id="email" class="login-email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                         <div class="login-icon"> 
                             <span class="icon-user" style="color:#B0B0B0;"></span>
                         </div>
                     </div>
+
                     <div class="login-content"> 
-                        <input type="password" placeholder="Contraseña" id="password" name="password" class="login-password">
+                        <input type="password" placeholder="Contraseña" id="password" name="password" class="login-password" required autocomplete="current-password">
                         <div class="login-icon">
                             <span class="icon-lock" style="color:#B0B0B0;"></span>
                         </div>
                     </div>
                     <button class="login-boton" type="submit">Iniciar</button>
-                    <a href="#" target="_blank">¿Olvido su contraseña?</a>
+                    @if (Route::has('password.request'))
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                            {{ __('¿Olvidaste tu contraseña?') }}
+                        </a>
+                    @endif
                 </form>
             </div>
         </section>
