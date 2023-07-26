@@ -1,12 +1,27 @@
     @include('templates.header',  ['modo' => 'Alo Caribe'])
     <main>
-        <section>
-            <div>
-                <div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+        <section class="plantilla1">
+            <div class="plantilla1-home">
+                <div class="plantilla1-home-content">
+                    <div class="plantilla1-content-letras"></div>
+                    <div class="plantilla1-content-trompeta">
+                        <img src="../img/Home1/R.png" alt="trompeta" class="trompeta">
+                    </div>
+                    <div class="plantilla1-content-maracas">
+                        <img src="../img/Home1/OIP.png" alt="maracas" class="maraca1">
+                        <img src="../img/Home1/OIP.png" alt="maracas" class="maraca2">
+                    </div>
+                    <div class="plantilla1-content-redoblante">
+                        <img src="../img/Home1/R2.png" alt="redoblante">
+                    </div>
+                    <div class="plantilla1-content-logo">
+                        <img src="../img/Home1/ALCPNG.png" alt="logo">
+                    </div>
+                    <div class="plantilla1-content-matas">
+                        <img src="../img/Home1/Mata2.png" alt="mata" class="mata1">
+                        <img src="../img/Home1/Mata2.png" alt="mata" class="mata2 ">
+                    </div>
+                    <div class="plantilla1-content-nubes"></div>
                 </div>
             </div>
         </section>
