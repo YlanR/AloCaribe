@@ -23,4 +23,4 @@ use Illuminate\Support\Facades\Auth;
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index.blade']);
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
