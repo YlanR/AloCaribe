@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\HomeController;
+use Illuminate\Support\Facades\Auth;
 
 
 /*
@@ -16,12 +17,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-// Route::get('/login', [UsuarioController::class,'index']);
+
+// Route::get('/login', [HomeController::class,'index']);
 // Route::get('/register', [UsuarioController::class,'register']);
 
 Auth::routes();
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
+
+

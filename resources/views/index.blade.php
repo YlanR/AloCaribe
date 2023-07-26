@@ -98,6 +98,12 @@
                             <div class="plantilla2-content-mid">
                                 <h1>Salsa Casino</h1>
                                 <h1>BACHATA</h1>
+                                @role('Operador')
+                                <h1>Soy operador</h1>
+                                @endrole
+                                @role('Director')
+                                <h1>Soy Director</h1>
+                                @endrole
                             </div>
                             <div class="plantilla2-content-bot">
                                 <p>14 de Octubre</p>
