@@ -21,14 +21,54 @@
 }
 /*estilo de la plantilla 1*/
 /*el contenedor general*/
+.plantilla1-home{
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+/*letras del home*/
+.plantilla1-content-letras{
+    display: flex;
+    position: absolute;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.plantilla1-content-letras .letra1{
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 5px var(--blanco);
+}
+.vivelo1{translate: 4.5rem 0rem;}
+.maximo1{    
+    translate: 46rem 16rem;
+    position: absolute;
+}
+.plantilla1-content-letras .letra2{
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--blanco);
+}
+.vivelo2{    translate: -1rem 5rem;}
+.maximo2{    translate: 50rem 22rem;
+    position: absolute;}
+.plantilla1-content-letras .letra3{
+    font-size: 80px;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--blanco);
+}
+.vivelo3{translate: -7rem 10rem;}
+.maximo3{
+    translate: 55rem 28rem;
+    position: absolute;}
+/*imagenes del home*/
 .plantilla1-home-content{
 width: 100%;
-height: 0;
-background-image: url(../img/Home1/home.png);
+height: 170vh;
+background-image: url(./img/Home1/home.png);
 background-repeat: no-repeat;
 
 display: flex;
+contain: layout;
 }
+
 .plantilla1-content-logo{
     display: flex;
     position: absolute;
@@ -38,43 +78,64 @@ display: flex;
     justify-content: center;
     text-align: center;
 }
+.plantilla1-content-logo h4{
+    font-size: 28px;
+}
+.plantilla1-content-logo .letra1{   translate: 6rem -9rem;}
+.plantilla1-content-logo .letra2{   translate: -6rem 7rem;}
 .plantilla1-content-logo img{
-    width: 18rem;
+    width: 23rem;
     height: 18rem;
 }
 .plantilla1-content-trompeta {
 display: flex;
+width: 10px;
 }
 .plantilla1-content-trompeta img{
-    width: 15rem;
-    height: 15rem;
+    width: 13rem;
+    height: 12rem;
 }
 .trompeta{
-translate: 10rem 8rem;
+translate: 55rem 1rem;
 }
 .plantilla1-content-maracas{
     display: flex;
+    width: 10px;
 }
 .plantilla1-content-maracas img{
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 27rem;
+    opacity: 0.5;
 }
 
 .maraca1{
-    translate:-5rem 15rem;
-    transform: rotate(20dag);
+    translate:0rem 8rem;
+    transform: rotate(12deg);
 }
 .maraca2{
-    translate: 5rem 15rem;
-    transform: rotate(-20dag);
+    translate: 59rem 8rem;
+    transform: rotate(-14deg);
+}
+.plantilla1-content-redoblante{
+    width: 10px;
 }
 .plantilla1-content-redoblante img{
     width: 15rem;
     height: 15rem;
 }
-
-
-.plantilla1-content-matas img{
-    width: 15rem;
-    height: 15rem;
+.redoblante{
+    translate: 14rem 22rem;
 }
+
+.plantilla1-content-matas{
+    display: flex;
+    width: 50px;
+}
+.plantilla1-content-matas img{
+    width: 31rem;
+    height: 36rem;
+}
+.mata1{
+    translate: -9rem 12rem;
+}
+.mata2{ translate: 34rem 12rem;}

@@ -3,7 +3,14 @@
         <section class="plantilla1">
             <div class="plantilla1-home">
                 <div class="plantilla1-home-content">
-                    <div class="plantilla1-content-letras"></div>
+                    <div class="plantilla1-content-letras">
+                        <p class="letra1 vivelo1">Vivelo</p>
+                        <p class="letra2 vivelo2">Vivelo</p>
+                        <p class="letra3 vivelo3">Vivelo</p>
+                        <p class="letra3 maximo3">Al máximo</p>
+                        <p class="letra2 maximo2">Al máximo</p>
+                        <p class="letra1 maximo1">Al máximo</p>
+                    </div>
                     <div class="plantilla1-content-trompeta">
                         <img src="../img/Home1/R.png" alt="trompeta" class="trompeta">
                     </div>
@@ -12,10 +19,12 @@
                         <img src="../img/Home1/OIP.png" alt="maracas" class="maraca2">
                     </div>
                     <div class="plantilla1-content-redoblante">
-                        <img src="../img/Home1/R2.png" alt="redoblante">
+                        <img src="../img/Home1/R2.png" alt="redoblante" class="redoblante">
                     </div>
                     <div class="plantilla1-content-logo">
+                        <h4 class="letra1">Vivelo</h4>
                         <img src="../img/Home1/ALCPNG.png" alt="logo">
+                        <h4 class="letra2">Al máximo</h4>
                     </div>
                     <div class="plantilla1-content-matas">
                         <img src="../img/Home1/Mata2.png" alt="mata" class="mata1">
