@@ -9,6 +9,15 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 
+use App\Models\Categoria1;
+use App\Models\Categoria2;
+use App\Models\Categoria3;
+
+use App\Models\Academy;
+use App\Models\Pagos;
+
+
+
 
 class User extends Authenticatable
 {
@@ -24,7 +33,7 @@ class User extends Authenticatable
         'apellido',
         'cedula',
         'edad',
-        'id_instagram',
+        'instagram',
         'foto',
         'email',
         'password',
@@ -49,4 +58,24 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function categoria1(){
+        return $this->belongsToMany(Categoria1::class, 'users_has_categorias');
+    }
+
+    public function categoria2(){
+        return $this->belongsToMany(Categoria2::class, 'users_has_categorias');
+    }
+
+    public function categoria3(){
+        return $this->belongsToMany(Categoria3::class, 'users_has_categorias');
+    }
+    
+    public function academy(){
+        return $this->hasMany(Academy::class, 'id');
+    }
+
+    public function pagos(){
+        return $this->hasMany(Pagos::class, 'user_id');
+    }
 }

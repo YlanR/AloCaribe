@@ -63,7 +63,7 @@
                 <!--botones de referencia-->
             
                 <!--contenido derecho-->
-                <form method="POST" action="{{ route('register') }}" class="main-content-right login">
+                <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data" class="main-content-right login">
                 @csrf
 
                     <div class="login-logo">
@@ -148,6 +148,7 @@
                     
                     <!--subir logo -->
                     <label for="subir">subir logo de la academia </label>
+                    <input type="file" name="foto" id="">
                     <button class="login-subir">subir</button>
                     <!--boton-->
                     <button class="login-boton" type="submit">registrarse </button>

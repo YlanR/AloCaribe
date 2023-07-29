@@ -15,13 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('apellido');
-            $table->integer('cedula');
+            $table->integer('cedula')->unique();
             $table->integer('edad');
-            $table->string('email')->unique();
-            $table->integer('id_instagram');
-            $table->string('foto');
-            $table->string('password');
+            $table->string('email');
+            $table->string('instagram');
+            $table->string('foto')->nullable();
+            $table->string('password')->nullable();
             $table->timestamps();
+
         });
     }
 
