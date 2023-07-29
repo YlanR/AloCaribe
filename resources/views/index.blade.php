@@ -30,7 +30,10 @@
                         <img src="../img/Home1/Mata2.png" alt="mata" class="mata1">
                         <img src="../img/Home1/Mata2.png" alt="mata" class="mata2 ">
                     </div>
-                    <div class="plantilla1-content-nubes"></div>
+                    <div class="plantilla1-content-nubes">
+                        <div class="nube1"></div>
+                        <div class="nube2"></div>
+                    </div>
                 </div>
             </div>
         </section>
