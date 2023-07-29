@@ -31,6 +31,11 @@
                         <img src="../img/Home1/Mata2.png" alt="mata" class="mata2 ">
                     </div>
                     <div class="plantilla1-content-nubes">
+                        <!--
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                <path fill="#0099ff" fill-opacity="1" d="M0,96L48,85.3C96,75,192,53,288,69.3C384,85,480,139,576,176C672,213,768,235,864,250.7C960,267,1056,277,1152,240C1248,203,1344,117,1392,74.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                        </svg>
+                        -->
                         <div class="nube1"></div>
                         <div class="nube2"></div>
                     </div>
@@ -137,6 +142,14 @@
                                 <p>2023</p>
                             </div>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="contenidos">
+                    <div class="contenedor-contenidos">
+                        <div class="contenedor-contenido">
+                            <div class="c-contenido"><img src="" alt=""></div>
+                            <div class="c-despliegue"><img src="" alt=""></div>
                         </div>
                     </div>
                 </div>

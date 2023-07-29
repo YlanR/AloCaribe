@@ -144,15 +144,17 @@ translate: 55rem 1rem;
 .mata2{ translate: 34rem 12rem;}
 
 /*efecto wavy*/
-.plantilla1-content-nubes{    
+.plantilla1-content-nubes{ 
+    /*   
     width: 90rem;
     height: 8rem;
     translate: -2rem 29rem;
-    /* color: white; */
+    /* color: white; 
     background: white;
     position: absolute;
-    opacity: 0.5;
+    opacity: 0.5; */
     animation: wave 3s ease-in-out infinite;}
+    /*
 @keyframes wave {
     0%, 100% {
         clip-path: polygon(
@@ -181,3 +183,4 @@ translate: 55rem 1rem;
         );
     }
 }
+*/
