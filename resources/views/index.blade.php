@@ -148,8 +148,42 @@
                 <div class="contenidos">
                     <div class="contenedor-contenidos">
                         <div class="contenedor-contenido">
-                            <div class="c-contenido"><img src="" alt=""></div>
-                            <div class="c-despliegue"><img src="" alt=""></div>
+                            <div class="contenido"><img src="../img/2/Vector.png" alt=""></div>
+                            <div class="despliegue">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ex nostrum fugiat, perspiciatis ducimus facilis nihil tempora sequi minima dicta iure delectus alias numquam quam ipsum consectetur placeat eaque quisquam.</p>
+                                <div class="plantilla3">
+                                    <div class="plantilla3-content">
+                                        <div class="plantilla3-content-ofrecemos">
+                                            <div>
+                                                <img src="../img/3/imagen2.png" alt="">
+                                                <img src="../img/3/image1.png" alt="">
+                                            </div>   
+                                            <img src="Group4.png" alt="">
+                                            
+                                        </div>
+                                        <div class="plantilla3-content-fondo">
+                                            <div></div>
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="plantilla4">
+                                    <div class="plantilla4-content">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="plantilla5">
+                                    <div class="plantilla5-content">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <div class="plantilla6">
+                                    <div class="plantilla6-content">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -158,5 +192,5 @@
 
         <section></section>
     </main>
-
+<script src="../js/desplegable.js"> </script>
     @include('templates.footer')

@@ -20,6 +20,13 @@
 
 }
 /*estilo de la plantilla 1*/
+/*   display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    */
 /*el contenedor general*/
 .plantilla1-home{
     margin-top: 75px;
@@ -30,6 +37,13 @@
     display: flex;
     position: absolute;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
 }
 .plantilla1-content-letras .letra1{
     font-size: 80px;
@@ -91,19 +105,29 @@ background-position-y: bottom;
     height: 18rem;
 }
 .plantilla1-content-trompeta {
-display: flex;
-width: 10px;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
 }
 .plantilla1-content-trompeta img{
     width: 13rem;
-    height: 12rem;
+    height: 13rem;
 }
 .trompeta{
-translate: 55rem 1rem;
+translate: -100% -11rem;
 }
 .plantilla1-content-maracas{
     display: flex;
-    width: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 .plantilla1-content-maracas img{
     width: 12rem;
@@ -116,23 +140,35 @@ translate: 55rem 1rem;
     transform: rotate(12deg);
 }
 .maraca2{
-    translate: 59rem 8rem;
+    translate: 0rem 8rem;
     transform: rotate(-14deg);
 }
 .plantilla1-content-redoblante{
-    width: 10px;
+
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: initial;
+    text-align: center;
 }
 .plantilla1-content-redoblante img{
     width: 15rem;
     height: 15rem;
 }
 .redoblante{
-    translate: 14rem 22rem;
+    transform: rotate(20deg);
+    translate: 19rem 13rem;
 }
 
 .plantilla1-content-matas{
     display: flex;
-    width: 50px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 .plantilla1-content-matas img{
     width: 31rem;
@@ -141,7 +177,7 @@ translate: 55rem 1rem;
 .mata1{
     translate: -9rem 12rem;
 }
-.mata2{ translate: 34rem 12rem;}
+.mata2{ translate: 15rem 12rem;}
 
 /*efecto wavy*/
 .plantilla1-content-nubes{ 

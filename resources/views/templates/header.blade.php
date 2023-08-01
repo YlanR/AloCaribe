@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./fonts/style.css">
+    <link rel="stylesheet" href="./css/plantillas/6.css">
+    <link rel="stylesheet" href="./css/plantillas/5.css">
+    <link rel="stylesheet" href="./css/plantillas/4.css">
+    <link rel="stylesheet" href="./css/plantillas/3.css">
     <link rel="stylesheet" href="./css/plantillas/2.css">
     <link rel="stylesheet" href="./css/plantillas/1.css">
     <title>{{ $modo }}</title>
