@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class RegisterController extends Controller
 {
@@ -53,6 +54,10 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'apellido' => ['required', 'string', 'max:255'],
+            'cedula' => ['required', 'integer'],
+            'edad' => ['required', 'integer', 'max:255'],
+            'instagram' => ['string', 'max:20']
         ]);
     }
 
@@ -64,6 +69,13 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        $foto = request()->except('_token');
+        if (request()->hasFile('foto')) {
+            $foto['foto'] = request()->file('foto')->store('uploads', 'public');
+            // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
+        }
+
         return User::create([
             'name' => $data['name'],
             'apellido' => $data['apellido'],
@@ -71,7 +83,7 @@ class RegisterController extends Controller
             'edad' => $data['edad'],
             'email' => $data['email'],
             'instagram' => $data['id_instagram'],
-            'foto' => '',
+            'foto' => $foto['foto'],
             'password' => Hash::make($data['password']),
         ]);
     }

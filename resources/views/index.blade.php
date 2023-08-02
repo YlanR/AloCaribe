@@ -136,6 +136,9 @@
                                 @role('Director')
                                 <h1>Soy Director</h1>
                                 @endrole
+                                @if(Auth::user())
+                                <img width="100" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt="">
+                                @endif
                             </div>
                             <div class="plantilla2-content-bot">
                                 <p>14 de Octubre</p>
@@ -144,13 +147,18 @@
 
                         </div>
                     </div>
+                    
                 </div>
                 <div class="contenidos">
                     <div class="contenedor-contenidos">
                         <div class="contenedor-contenido">
                             <div class="contenido"><img src="../img/2/Vector.png" alt=""></div>
                             <div class="despliegue">
+                                
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ex nostrum fugiat, perspiciatis ducimus facilis nihil tempora sequi minima dicta iure delectus alias numquam quam ipsum consectetur placeat eaque quisquam.</p>
+                                
+                                 
+                                
                                 <div class="plantilla3">
                                     <div class="plantilla3-content">
                                         <div class="plantilla3-content-ofrecemos">
