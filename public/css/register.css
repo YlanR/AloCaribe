@@ -179,6 +179,7 @@ form {
     padding: 0 20px;
     background: var(--rosado,30%);
     color: white;
+    border: none;
 }
 /*  &:hover {
     transform:  translateY(-3px);
@@ -189,5 +190,5 @@ form {
     }*/
 
     /*
-   
+
     */

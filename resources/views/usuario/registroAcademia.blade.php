@@ -33,39 +33,39 @@
                             <div class="form-content">
                                 <select name="" id="Estados" class="Estados">
                                     <option selected disabled>Selecciona Estado</option>
-                                    <option value="">Amazonas</option>
-                                    <option value="">Anzoátegui</option>
-                                    <option value="">Apure</option>
-                                    <option value="">Aragua</option>
-                                    <option value="">Barinas</option>
-                                    <option value="">Bolívar</option>
-                                    <option value="">Carabobo</option>
-                                    <option value="">Cojedes</option>
-                                    <option value="">Delta Amacuro</option>
-                                    <option value="">Distrito Capital</option>
-                                    <option value="">Falcón</option>
-                                    <option value="">Guárico</option>
-                                    <option value="">La Guaira</option>
-                                    <option value="">Lara</option>
-                                    <option value="">Mérida</option>
-                                    <option value="">Miranda</option>
-                                    <option value="">Monagas</option>
-                                    <option value="">Nueva Esparta</option>
-                                    <option value="">Portuguesa</option>
-                                    <option value="">Sucre</option>
-                                    <option value="">Táchira</option>
-                                    <option value="">Trujillo</option>
-                                    <option value="">Yaracuy</option>
-                                    <option value="">Zulia</option>
+                                    <option value="amazonas">Amazonas</option>
+                                    <option value="anzoategui">Anzoátegui</option>
+                                    <option value="apure">Apure</option>
+                                    <option value="aragua">Aragua</option>
+                                    <option value="barinas">Barinas</option>
+                                    <option value="bolivar">Bolívar</option>
+                                    <option value="carabobo">Carabobo</option>
+                                    <option value="cojedes">Cojedes</option>
+                                    <option value="delta-amacuro">Delta Amacuro</option>
+                                    <option value="distrito-capital">Distrito Capital</option>
+                                    <option value="falcon">Falcón</option>
+                                    <option value="guarico">Guárico</option>
+                                    <option value="la-guaira">La Guaira</option>
+                                    <option value="lara">Lara</option>
+                                    <option value="merida">Mérida</option>
+                                    <option value="miranda">Miranda</option>
+                                    <option value="monagas">Monagas</option>
+                                    <option value="nueva-esparta">Nueva Esparta</option>
+                                    <option value="portuguesa">Portuguesa</option>
+                                    <option value="sucre">Sucre</option>
+                                    <option value="tachira">Táchira</option>
+                                    <option value="trujillo">Trujillo</option>
+                                    <option value="yaracuy">Yaracuy</option>
+                                    <option value="zulia">Zulia</option>
                                 </select>
                             </div>
                             <div class="form-content">
                                 <input type="text" placeholder="instagram de la academia" id="instagramAcademia" class="instagramAcademia">
                             </div>
                         </div>
-                        <label for="">logo academia </label>
-                        <button class="">subir</button>
-                        <button class="" type="submit">Listo</button>
+                        <label for="" id="form-label">logo de la academia </label>
+                        <button class="form-subir">subir</button>
+                        <button class="form-boton" type="submit">Listo</button>
                     </form>
                 </div>
             
