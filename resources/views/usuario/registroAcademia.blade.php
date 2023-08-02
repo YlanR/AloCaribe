@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="../../css/registerAcademia.css">
+    <link rel="stylesheet" href="../../css/registroAcademia.css">
     <!-- <link rel="stylesheet" href="../../css/registerAcademia.css">-->
     <link rel="stylesheet" href="../fonts/style.css">
     <title>Registro</title>
@@ -18,7 +18,13 @@
                 <div class="main-content-contenido">
                     <form action="" class="contenido-form" method="POST">
                         <div class="form-logo">
-                            <img src="../../img/logo.png" alt=" logo " class="form-logo-logo">
+                            <img src="../../img/logo.png" alt=" logo " class="/* `form-logo-logo` is
+                            the class name
+                            assigned to the
+                            `<img>` element that
+                            displays the logo of
+                            the academia. */
+                            form-logo-logo">
                             <label for="">Registro de academía</label>
                         </div>
                         <div class="form-contents">
