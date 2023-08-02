@@ -29,7 +29,7 @@ body{
     border-radius: 9% ;
     box-shadow:  4rem 3rem 1rem -1rem var(--transparente-oscuro);
 
-    justify-content: center;
+    justify-content:space-around;
 
 }
 
@@ -162,7 +162,7 @@ form {
     background-color:var(--rosado,30%);
     color:#fff; 
     font-size:  14px;
-    margin-left:  auto; 
+
     font-weight:  500; 
     box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13); 
     border:  none;
@@ -173,6 +173,12 @@ form {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+}
+.subir-foto-perfil{
+    margin: 0 200px;
+    padding: 0 20px;
+    background: var(--rosado,30%);
+    color: white;
 }
 /*  &:hover {
     transform:  translateY(-3px);

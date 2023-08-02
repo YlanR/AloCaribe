@@ -1,0 +1,65 @@
+/*definiendo variables para colores*/
+:root{
+    --negro:#000;
+    --blanco:#fff;
+    --transparente-claro:rgba(255, 255, 255, 0.911);
+    --transparente-oscuro:rgba(0, 0, 0, 0.11);
+    --rosado:#EDA5FF;
+    --moraclaro:#CC00FF;
+    --moradousuario:#CC01FF;/*boton de usuario*/
+    --morapie:#531A87;
+    --moraoscuro:#2C0351;/*barra*/
+    --moradomezcla:#3f017a;/*home tiene un efecto mezcla */
+    --moztarillo:#F3FE01;
+    --morainicio-regitro:#602F92;
+    --gris:#B0B0B0;
+    
+    }
+/*estilos generales*/
+body{
+    background-color: var(--morainicio-regitro);
+}
+.main-content{
+    display:  flex; 
+    flex-direction:  row; 
+    width:  auto; 
+    height:  auto; 
+    margin:  8rem 12.9rem; 
+    background: var(--blanco); 
+    border-radius: 9% ;
+    box-shadow:  4rem 3rem 1rem -1rem var(--transparente-oscuro);
+
+justify-content: center;
+
+}
+
+
+/*ordenando el formulario */
+.contenido-form{   
+    display: inline-grid;
+    justify-content: center;
+    text-align: center;
+    margin: 15px;}
+
+.form-contents{
+    display: flex;
+    margin: -5px;
+}
+.form-content{
+    position: relative;
+    margin-bottom: 1rem;
+    width: 100%;
+    margin-top: -4rem;
+}
+.form-content input{
+    border: none;
+    border-bottom: 1px solid var(--gris);
+    padding: 9px 2px;
+    margin: 2rem 2rem;
+}
+.form-content select{
+    border: none;
+    border-bottom: 1px solid var(--gris);
+    padding: 9px 2px;
+    margin: 2rem 2rem;
+}

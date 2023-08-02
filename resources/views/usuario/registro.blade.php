@@ -9,18 +9,18 @@
     <title>Registro</title>
 </head>
 <body>
-     <!---->
-     <header>
-         <!---->
+    <!---->
+    <header> 
+        <!---->
     <nav class="navbar">
-         <!---->
+        <!---->
         <div id="navbar-logo">
             <a href="">
                 <img src="../../img/logo-diminutivo.png" alt="logo de la empresa" class="navbar-logo-logo-diminutivo">
             </a>
         </div>
-         <!---->
-         <div class="navbar-content">
+            <!---->
+        <div class="navbar-content">
             <ul class="navbar-links">
                 <li class="navbar-link"> 
                     <a href="#">COMPETICIÓN <span class="icon-play3" style="color: white ; "></span></a>
@@ -32,7 +32,7 @@
                     <a href="#">CONTACTO</a>
                 </li>
             </ul>
-         <!---->
+            <!---->
             <div id="navbar-botones" >
             <!--emoji que manda al inicio de sesión-->
                 <a href="./vista/login.php">
@@ -103,7 +103,7 @@
                         <div class="login-content"> 
                             <input type="email" placeholder=" Email" id="email" name="email" class="login-email">
 
-                             @error('email')
+                                @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -142,8 +142,8 @@
                         </div>
                     </div>
                     <!--subir logo -->
-                    <label for="subir">subir logo de la academia </label>
-                    <button class="login-subir">subir</button>
+                    <label for="subir">Subir foto de perfil</label>
+                    <button class="subir-foto-perfil">subir</button>
                     <!--boton-->
                     <button class="login-boton" type="submit">registrarse </button>
                     <a href="">¿Olvido su contraseña?</a>
