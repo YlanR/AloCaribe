@@ -46,6 +46,7 @@ class AcademyController extends Controller
             $foto = $request->file('foto_academy')->store('uploads', 'public');
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
         }
+        
         $academia = new Academy;
         $academia->user_id= $request->input('user_id');
         $academia->name_academy= $request->input('name_academy');
