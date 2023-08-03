@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/index.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="../../css/registroAca.css">
+=======
+    <link rel="stylesheet" href="../../css/registroAcademia.css">
+    <!-- <link rel="stylesheet" href="../../css/registerAcademia.css">-->
+>>>>>>> 11294b4ec0e53cedb24c17ab16e17dcec780ea23
     <link rel="stylesheet" href="../fonts/style.css">
     <title>Registro</title>
 </head>
@@ -18,7 +23,13 @@
                     <form action="{{ route('academia.store') }}" enctype="multipart/form-data" class="contenido-form" method="POST">
                         @csrf
                         <div class="form-logo">
-                            <img src="../../img/logo.png" alt=" logo " class="form-logo-logo">
+                            <img src="../../img/logo.png" alt=" logo " class="/* `form-logo-logo` is
+                            the class name
+                            assigned to the
+                            `<img>` element that
+                            displays the logo of
+                            the academia. */
+                            form-logo-logo">
                             <label for="">Registro de academía</label>
                         </div>
                         <input type="hidden" name="user_id" value="{{ Auth::User()->id }}">
