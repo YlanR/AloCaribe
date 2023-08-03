@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/registroAca.css">
     <link rel="stylesheet" href="../fonts/style.css">
-    <title>Registro</title>
+    <title>Registro de la academia</title>
 </head>
 <body>
     <header></header>
