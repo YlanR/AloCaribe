@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="../../css/registerAcademia.css">
-    <!-- <link rel="stylesheet" href="../../css/registerAcademia.css">-->
+    <link rel="stylesheet" href="../../css/registroAca.css">
     <link rel="stylesheet" href="../fonts/style.css">
     <title>Registro</title>
 </head>
@@ -16,22 +15,24 @@
         <section class="main">
             <div class="main-content">  
                 <div class="main-content-contenido">
-                    <form action="" class="contenido-form" method="POST">
+                    <form action="{{ route('academia.store') }}" enctype="multipart/form-data" class="contenido-form" method="POST">
+                        @csrf
                         <div class="form-logo">
                             <img src="../../img/logo.png" alt=" logo " class="form-logo-logo">
                             <label for="">Registro de academía</label>
                         </div>
+                        <input type="hidden" name="user_id" value="{{ Auth::User()->id }}">
                         <div class="form-contents">
                             <div class="form-content">
-                                <input type="text" placeholder="nombre de la academia" id="nombreAcademia" class="nombreAcademia">
+                                <input type="text" placeholder="nombre de la academia" id="nombreAcademia" name="name_academy" class="nombreAcademia">
                             </div>
                             <div class="form-content">
-                                <input type="tel" placeholder="Número de celular" id="telefono" class="telefono">
+                                <input type="tel" placeholder="Número de celular" id="telefono" name="telefono" class="telefono">
                             </div>
                         </div>
                         <div class="form-contents">
                             <div class="form-content">
-                                <select name="" id="Estados" class="Estados">
+                                <select name="estado" id="Estados" class="Estados">
                                     <option selected disabled>Selecciona Estado</option>
                                     <option value="amazonas">Amazonas</option>
                                     <option value="anzoategui">Anzoátegui</option>
@@ -60,11 +61,11 @@
                                 </select>
                             </div>
                             <div class="form-content">
-                                <input type="text" placeholder="instagram de la academia" id="instagramAcademia" class="instagramAcademia">
+                                <input type="text" placeholder="instagram de la academia" id="instagramAcademia" name="instagram" class="instagramAcademia">
                             </div>
                         </div>
                         <label for="" id="form-label">logo de la academia </label>
-                        <button class="form-subir">subir</button>
+                        <input type="file" name="foto_academy" id="">
                         <button class="form-boton" type="submit">Listo</button>
                     </form>
                 </div>
