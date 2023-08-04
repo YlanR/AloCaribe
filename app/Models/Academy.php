@@ -14,4 +14,8 @@ class Academy extends Model
     public function users(){
         return $this->hasMany(User::class, 'user_id');
     }
+
+    public function instagram(){
+        return $this->hasOne(Instagram::class, 'instagram_id');
+    }
 }

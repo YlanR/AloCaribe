@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+// use Illuminate\Support\Facades\DB;
+
 use App\Models\Academy;
+use App\Models\Instagram;
 
 class AcademyController extends Controller
 {
@@ -46,18 +49,25 @@ class AcademyController extends Controller
             $foto = $request->file('foto_academy')->store('uploads', 'public');
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
         }
-        
-        $academia = new Academy;
-        $academia->user_id= $request->input('user_id');
-        $academia->name_academy= $request->input('name_academy');
-        $academia->telefono= $request->input('telefono');
-        $academia->estado= $request->input('estado');
-        $academia->instagram= $request->input('instagram');
-        $academia->foto_academy = $foto;
-       
 
-        $academia->save();
-        return redirect()->back();
+            $instagram = new Instagram;
+            $instagram->name = $request->input('instagram');
+
+            $instagram->save();
+
+            $academia = new Academy;
+            $academia->user_id= $request->input('user_id');
+            $academia->instagram_id= $instagram->id;
+            $academia->name_academy= $request->input('name_academy');
+            $academia->telefono= $request->input('telefono');
+            $academia->estado= $request->input('estado');
+            $academia->foto_academy = $foto;
+        
+            $academia->save();
+
+           
+            return redirect()->back();
+      
     }
 
     /**
