@@ -25,5 +25,5 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
-Route::resource('/academia', AcademyController::class);
+Route::resource('/academia', AcademyController::class)->middleware('auth');
 
