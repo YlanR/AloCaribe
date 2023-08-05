@@ -1,5 +1,20 @@
 
-
+:root{
+    --negro:#000;
+    --blanco:#fff;
+    --transparente-claro:rgba(255, 255, 255, 0.911);
+    --transparente-oscuro:rgba(0, 0, 0, 0.11);
+    --rosado:#EDA5FF;
+    --moraclaro:#CC00FF;
+    --moradousuario:#CC01FF;/*boton de usuario*/
+    --morapie:#531A87;
+    --moraoscuro:#2C0351;/*barra*/
+    --moradomezcla:#3f017a;/*home tiene un efecto mezcla */
+    --moztarillo:#F3FE01;
+    --morainicio-regitro:#602F92;
+    --gris:#B0B0B0;
+    --conten:#efefef;
+    }
 
 .main-content{
     margin-top:20px;
@@ -45,7 +60,7 @@ justify-content:space-between;
 
     text-align: center;
     justify-content: center;
-    background-color: #b0b0b010;
+    background-color: var(--conten);
     border-radius: 0 3rem 3rem 3rem;
     box-shadow: 0rem 3rem 1rem #b0b0b040;
 
@@ -153,7 +168,7 @@ justify-content:space-between;
 
     text-align: center;
     justify-content: center;
-    background-color: #b0b0b010;
+    background-color: var(--conten);
     border-radius: 0 3rem 3rem 3rem;
     box-shadow: 0rem 3rem 1rem #b0b0b040;
 
@@ -215,7 +230,7 @@ border: 2px solid ;
 
 text-align: center;
 justify-content: center;
-background-color: #b0b0b010;
+background-color: var(--conten);
 border-radius:3rem 0rem 3rem 3rem;
 box-shadow: 0rem 3rem 1rem #b0b0b040;
 
