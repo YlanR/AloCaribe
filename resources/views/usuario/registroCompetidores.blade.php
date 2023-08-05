@@ -25,10 +25,14 @@
                             <div class="ficha-contenido-encapsulado-centro">
                                 <h3> Ficha de competidor</h3>
                                 <!--formulario donde se registran los datos-->
-                                <form action="" id="" class="ficha-form form" method="POST">
+                                <form action="{{ route('competidor.store') }}" id="" class="ficha-form form" enctype="multipart/form-data" method="POST">
+                                @csrf
                                     <div class="form-inputs">
                                         <div class="form-input">
-                                            <input type="text" placeholder="nombre completo" id="nombreC" name="nombreC" class="">
+                                            <input type="text" placeholder="nombre" id="nombreC" name="nombreC" class="">
+                                        </div>
+                                        <div class="form-input">
+                                            <input type="text" placeholder="apellido" id="apellidoC" name="apellidoC" class="">
                                         </div>
                                         <div class="form-input">
                                             <input type="num" placeholder="cedula" id="cedula" name="cedula" class="">
@@ -44,49 +48,49 @@
                                     <hr class="form-linea-horizontal">
                                     <div class="form-inputs">
                                         <div class="form-select"> 
-                                            <select name="" id="">
+                                            <select name="categoria1" id="">
                                                 <option selected disabled>Categoría</option>
-                                                <option value="">Salsa casino</option>
-                                                <option value="">Bachata</option>
+                                                <option value="1">Salsa Casino</option>
+                                                <option value="2">Bachata</option>
                                             </select>
                                         </div>
                                         <div class="form-select"> 
-                                            <select name="" id="">
+                                            <select name="categoria2" id="">
                                                 <option selected disabled>Categoría</option>
-                                                <option value="Salsa">Solista femenido</option>
-                                                <option value="Salsa">Solista masculino</option>
-                                                <option value="Salsa">Parejas</option>
-                                                <option value="Salsa">Grupos</option>
-                                                <option value="Salsa">Duo masculino</option>
-                                                <option value="Salsa">Duo femenido</option>
-                                                <option value="Salsa">Rueda</option>
-                                                <option value="Salsa">Coreográfico</option>
+                                                <option value="1">Solista Femenido</option>
+                                                <option value="2">Solista Masculino</option>
+                                                <option value="3">Parejas</option>
+                                                <option value="4">Grupos</option>
+                                                <option value="5">Duo Masculino</option>
+                                                <option value="6">Duo Femenido</option>
+                                                <option value="7">Rueda</option>
+                                                <option value="8">Coreográfico</option>
 
-                                                <option value="Bachata">Parejas</option>
-                                                <option value="Bachata">Lady style</option>
-                                                <option value="Bachata">Men style</option>
+                                                <option value="9">Parejas</option>
+                                                <option value="10">Lady Style</option>
+                                                <option value="11">Men Style</option>
                                             </select>
                                         </div>
                                         <hr class="form-linea--vertical">
                                         <div class="form-chack">
                                             <label for="">Begginer</label>
-                                            <input type="checkbox">
+                                            <input name="categoria3" type="radio" value="1">
                                         </div>
                                         <div class="form-chack">
                                             <label for="">NT</label> 
-                                            <input type="checkbox">
+                                            <input name="categoria3" type="radio" value="2">
                                         </div>
                                         <div class="form-chack">
                                             <label for="">Novel</label> 
-                                            <input type="checkbox">
+                                            <input name="categoria3" type="radio" value="3">
                                         </div>
                                         <div class="form-chack">
                                             <label for="">Libre</label> 
-                                            <input type="checkbox">
+                                            <input name="categoria3" type="radio" value="4">
                                         </div>
                                         <div class="form-chack">
                                             <label for="">Abierta</label>
-                                            <input type="checkbox">
+                                            <input name="categoria3" type="radio" value="5">
                                         </div>
                                     </div>
                                     <hr class="linea-horizontal">
@@ -95,7 +99,7 @@
                                     </div>
                                     <div class="form-botones">
                                         <label for="">foto del competidor</label>
-                                        <button class="form-botones-subir">subir</button>
+                                        <input type="file" name="foto_competidor" id="">
                                         <button class="form-botones-enviar" type="submit">hecho</button>
                                     </div>
                                 </form>
@@ -148,7 +152,7 @@
                                     </div>
                                     <div class="form-botones">
                                         <label for="">Comprobante del pago </label>
-                                        <button class="form-botones-subir">subir</button>
+                                        <input type="file" name="foto_competidor" id="">
                                         <button class="form-botones-enviar" type="submit">hecho</button>
                                     </div>
                                 </form>
