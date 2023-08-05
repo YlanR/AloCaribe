@@ -50,6 +50,23 @@
                     </form>
                 </li>
                 @endif
+
+                @if(Auth::user() && Auth::user()->id == $academy->user_id)
+                <li class="navbar-link">
+                    <a href="{{ url('/') }}">
+                        Academia
+                    </a>
+                </li>
+                @else
+                <li class="navbar-link">
+                    <a href="{{ url('academia') }}">
+                        Academia
+                    </a>
+                </li>
+                <li class="navbar-link"> 
+                        <p class="nombre"> {{ Auth::user()->name }} {{ Auth::user()->apellido }} </p>
+                </li>
+                @endif
             </ul>
          <!---->
         @if(!Auth::user())
@@ -60,8 +77,9 @@
                 </a>
             </div>
         @else
-            <li class="navbar-link"> 
-                        <a href="#">{{ Auth::user()->name }}</a>
+          
+            <li class="navbar-link foto_header-cuadro"> 
+                        <a class="" href="#"> <img  class="foto_header" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></a>
             </li>
         @endif    
         </div>
