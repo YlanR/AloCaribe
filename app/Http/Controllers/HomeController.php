@@ -21,7 +21,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $academy = Academy::pluck('name_academy', 'id');
+        $academy = Academy::find(1);
         return view('index', compact('academy'));
     }
 }
