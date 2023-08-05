@@ -43,7 +43,7 @@ justify-content:space-between;
 .ficha-contenido-encapsulado-centro{
     position:absolute;
     width: 55%;
-    height: 100%;
+    height: 85%;
     border: 2px solid ;
 
  
@@ -55,7 +55,7 @@ justify-content:space-between;
 
     backdrop-filter: blur(0.4rem);
 }
-.form{
+.ficha-form{
     position: absolute;
 }
 .form-inputs{
@@ -137,6 +137,98 @@ justify-content:space-between;
     color: white;
     box-shadow: 0px 3px 8px -1px black;
 }
+
+.pago-contenido{
+    width: 100%;
+    height: 31rem;
+    margin-top:100px;
+}
+.pago-contenido-encapsulado{
+    background-size: cover;
+    background-color: white;
+}
+.pago-contenido-encapsulado-centro{
+    position:absolute;
+    width: 55%;
+    height: 65%;
+    border: 2px solid ;
+
+    margin-top:50px;
+
+    text-align: center;
+    justify-content: center;
+    background-color: #b0b0b010;
+    border-radius: 0 3rem 3rem 3rem;
+    box-shadow: 0rem 3rem 1rem #b0b0b040;
+
+    backdrop-filter: blur(0.4rem);
+}
+.pago-contenido-datos{
+    display: flex;
+    justify-content: space-evenly;
+}
+.pago-contenido-dato{
+    display:grid;
+}
+.pago-form .form-botones{
+    justify-content: center;
+}
+.pago-tipo{
+    display: table-caption;
+    text-align: initial;
+    padding: 2px 2px 0 0;
+    margin: 20px 2px 0 0;
+}
+.pago-tipo button{
+    width: 100px;
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 2px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background: #f37188;
+    color: white;
+}
+.pago-logo{
+    display: flex;
+    width: auto;
+    height: auto;
+}
+.pago-logo img{
+    height: 14rem;
+    opacity: 0.5;
+}
+/*estilos del contenedor derecho  */
+.tabla-contenido{    
+
+width: 100%;
+height: 31rem;
+}
+
+.tabla-contenido-encapsulado{
+
+background-size: cover;
+background-color: white;
+}
+.tabla-contenido-encapsulado-centro{
+position:absolute;
+width: 34%;
+height: 85%;
+border: 2px solid ;
+
+
+text-align: center;
+justify-content: center;
+background-color: #b0b0b010;
+border-radius:3rem 0rem 3rem 3rem;
+box-shadow: 0rem 3rem 1rem #b0b0b040;
+
+backdrop-filter: blur(0.4rem);
+}
+.tabla-competidores{
+    display: grid;
+    margin-top: 10px;
+}
     </style>
 </head>
 <body>
@@ -147,6 +239,7 @@ justify-content:space-between;
         <div class="main-content">
             <!--contenido de la columna izquierda /la ficha y el pago -->
             <div class="main-content-izquierda left">
+                <h2></h2>
                 <div class="main-content-izquierda-ficha ficha">
                     <div class="ficha-logo">
                         <img src="" alt="">
@@ -236,12 +329,140 @@ justify-content:space-between;
                     </div>
                     
                 </div>
-
-                <div class="main-content-izquierda-pago pago"></div>
+<!--formulario para el pago movil -->
+                <div class="main-content-izquierda-pago pago">
+                    <div class="pago-logo">
+                        <img src="../../img/logo.png" alt="">
+                    </div>
+                    <div class="pago-contenido">
+                        <div class="pago-contenido-encapsulado">
+                            <div class="pago-contenido-encapsulado-centro">
+                                <div class="pago-tipo">
+                                    <button id="pago-movil">Pago móvil</button>
+                                    <button id="Efectivo">Efectivo</button>
+                                </div>
+                                
+                                <h3 style="margin: 0 0 1em 0;"> Pago movil </h3>
+                                <div class="pago-contenido-datos" >
+                                    <div class="pago-contenido-dato">
+                                        <label for="">Banplus</label>
+                                        <label for="">(0175)</label>
+                                    </div>
+                                    <div class="pago-contenido-dato">
+                                        <label for="">Teléfono</label>
+                                        <label for="">0424-2394092</label>                                    
+                                    </div>
+                                    <div class="pago-contenido-dato">
+                                        <label for="">Cédula</label>
+                                        <label for="">27.343.276</label>
+                                    </div>
+                                </div>
+                                <!--formulario donde se registran los datos-->
+                                <form action="" id="" class="pago-form form" method="POST">
+                                    <div class="form-inputs">
+                                        <div class="form-input">
+                                            <input type="text" placeholder="nombre del titular del pago" id="nombreTitular" name="nombreTitular" class="">
+                                        </div>
+                                        <div class="form-input">
+                                            <input type="tel" placeholder="número del titular" id="numeroTitular" name="numeroTitular" class="">
+                                        </div>
+                                        <div class="form-input">
+                                            <input type="num" placeholder="referencia del pago móvil" id="referenciaPago" name="referenciaPago">
+                                        </div>
+                                    </div>
+                                    <div class="form-botones">
+                                        <label for="">Comprobante del pago </label>
+                                        <button class="form-botones-subir">subir</button>
+                                        <button class="form-botones-enviar" type="submit">hecho</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
+<!--formulario para el efectivo-->
+
+            <!--            <div class="main-content-izquierda-pago pago">
+                <   div class="pago-logo">
+                        <img src="../../img/logo.png" alt="">
+                    </div>
+                    <div class="pago-contenido">
+                        <div class="pago-contenido-encapsulado">
+                            <div class="pago-contenido-encapsulado-centro">
+                                <div class="pago-tipo">
+                                    <button id="pago-movil">Pago móvil</button>
+                                    <button id="Efectivo">Efectivo</button>
+                                </div>
+                                
+                                <h3 style="margin: 0 0 1em 0;"> Efectivo </h3>
+                                <div class="pago-contenido-datos" >
+                                    <div class="pago-contenido-dato">
+                                        <label for="">"Información para pagar en efectivo"</label>
+                                    </div>
+                                </div>
+                                <--formulario donde se registran los datos--
+                                <form action="" id="" class="pago-form form" method="POST">
+                                    <div class="form-inputs">
+                                        <div class="form-input">
+                                            <input type="text" placeholder="Responsable del pago" id="nombreTitular" name="nombreTitular" class="">
+                                        </div>
+                                        <div class="form-input">
+                                            <input type="num" placeholder="Cédula del responsable" id="referenciaPago" name="referenciaPago">
+                                        </div>
+                                        <div class="form-input">
+                                            <input type="tel" placeholder="número del responsable" id="numeroTitular" name="numeroTitular" class="">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-botones" style="display:flex;">
+                                        <button class="form-botones-enviar" type="submit" style="width:20%;">hecho</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> -->
+
             <!---->
             <div class="main-content-derecha right">
-                <div></div>
+                <h2></h2>
+                <div class="main-content-derecha-tabla tabla">
+                    
+                    <div class="tabla-logo">
+                        <img src="../../img/logo.png" alt="">
+                    </div>
+                    <div class="tabla-contenido">
+                        <div class="tabla-contenido-encapsulado">
+                            <div class="tabla-contenido-encapsulado-centro">
+                                <div class="tabla-competidores">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Competidores</th>
+                                                <th>Pago C/U</th>
+                                                <th>Opciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>20$</th>
+                                                <th><a href="">check</a>
+                                                    <a href="">elim</a>
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
