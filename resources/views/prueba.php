@@ -229,6 +229,17 @@ backdrop-filter: blur(0.4rem);
     display: grid;
     margin-top: 10px;
 }
+.form-input button{
+    display: flex;
+    margin-top: 35px;
+    border: none;
+    border-radius: 25px;
+    border-bottom: 1px solid black;
+    background: transparent;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
@@ -266,7 +277,7 @@ backdrop-filter: blur(0.4rem);
                                     </div>
                                     <p>Selección de categorias</p>
                                     <hr class="form-linea-horizontal">
-                                    <div class="form-inputs">
+                                    <div class="form-inputs" id="seleccionadorCategorias">
                                         <div class="form-select"> 
                                             <select name="" id="">
                                                 <option selected disabled>Categoría</option>
@@ -315,7 +326,7 @@ backdrop-filter: blur(0.4rem);
                                     </div>
                                     <hr class="linea-horizontal">
                                     <div class="form-input">
-                                        <input type="text" placeholder="Agregar otra categoria " id="otraCate" name="otracate" class="otracate">
+                                        <button id="seleccionador">Agregar otra categoria </button> 
                                     </div>
                                     <div class="form-botones">
                                         <label for="">foto del competidor</label>
@@ -467,5 +478,20 @@ backdrop-filter: blur(0.4rem);
         </div>
     </section>
 </main>
+<script src="../public/js/agregarCategoria.js"></script>
 </body>
+<script>
+    function repetir{
+        let seleccionador = document.getElementById('seleccionadar');
+        let seleccionadorCategorias=document.getElementById('seleccionadarCategorias');
+
+        seleccionador.addEventListener('clikc', mostrar);
+
+        function mostrar(
+            var cate= document.createElement("input");
+            
+            document.getElementsByTagName("body")[0].appendChild(cate);
+        )
+    }
+</script>
 </html>
