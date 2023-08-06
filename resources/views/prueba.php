@@ -245,7 +245,7 @@ backdrop-filter: blur(0.4rem);
 <body>
     <main>
         <!--sección principal-->
-    <section class="main">
+    <section class="main"> 
         <!--contenido principal sepadado en 2 columnas-->
         <div class="main-content">
             <!--contenido de la columna izquierda /la ficha y el pago -->
@@ -326,7 +326,7 @@ backdrop-filter: blur(0.4rem);
                                     </div>
                                     <hr class="linea-horizontal">
                                     <div class="form-input">
-                                        <button id="seleccionador">Agregar otra categoria </button> 
+                                        <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
                                     </div>
                                     <div class="form-botones">
                                         <label for="">foto del competidor</label>
@@ -343,7 +343,7 @@ backdrop-filter: blur(0.4rem);
 <!--formulario para el pago movil -->
                 <div class="main-content-izquierda-pago pago">
                     <div class="pago-logo">
-                        <img src="../../img/logo.png" alt="">
+                        <img src="../../img/logo.png" alt="foto del logo ">
                     </div>
                     <div class="pago-contenido">
                         <div class="pago-contenido-encapsulado">
@@ -438,7 +438,7 @@ backdrop-filter: blur(0.4rem);
                 </div>
             </div> -->
 
-            <!---->
+           
             <div class="main-content-derecha right">
                 <h2></h2>
                 <div class="main-content-derecha-tabla tabla">
@@ -478,20 +478,19 @@ backdrop-filter: blur(0.4rem);
         </div>
     </section>
 </main>
-<script src="../public/js/agregarCategoria.js"></script>
+<!--<script src="../public/js/agregarCategoria.js"></script>-->
+    <script>
+        function copiar(){
+            var contenido= document.getElementById("seleccionadorCategorias").innerHTML;
+
+            var temp=document.createElement("div");
+            temp.innerHTML=contenido;
+            document.body.appendChild(temp);
+        // document.getElementsByTagName("body")[0].appendChild(temp);
+        }
+    </script>
 </body>
-<script>
-    function repetir{
-        let seleccionador = document.getElementById('seleccionadar');
-        let seleccionadorCategorias=document.getElementById('seleccionadarCategorias');
 
-        seleccionador.addEventListener('clikc', mostrar);
-
-        function mostrar(
-            var cate= document.createElement("input");
-            
-            document.getElementsByTagName("body")[0].appendChild(cate);
-        )
-    }
-</script>
 </html>
+<!--<div id="categoria">baile muntiple</div>
+        <button onclick="copiar()">copiar</button>-->

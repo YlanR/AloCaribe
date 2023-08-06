@@ -3,8 +3,9 @@
         let seleccionadorCategorias = document.getElementById('seleccionadarCategorias');
 
         seleccionador.addEventListener('clikc', mostrar);
-var cate =document.createElement("input");
-function mostrar
-(
-        document.getElementsByTagName("")
-)
+
+function mostrar(){
+        
+        var cate =document.createElement("input");
+        document.getElementsByTagName("body")[0].appendChild(cate);
+}
