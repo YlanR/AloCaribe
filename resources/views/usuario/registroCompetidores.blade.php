@@ -44,7 +44,7 @@
                                     <hr class="form-linea-horizontal">
                                     <div class="form-inputs">
                                         <div class="form-select"> 
-                                            <select name="categoria1" id="Options">
+                                            <select name="categoria1" id="optiones">
                                                 <option selected disabled>Categoría</option>
                                                 <option id="casino" value="1">Salsa Casino</option>
                                                 <option id="bachata" value="2">Bachata</option>
@@ -251,44 +251,75 @@
     <script>
         const $categoria1 = document.querySelector('#Options2');
         const $categoria2 = document.querySelector('#Options3');
-        const $option = document.querySelector('#Option');
+        // const $option = document.querySelector('#Option');
 
+        var select = document.getElementById('optiones');
+            select.addEventListener('change', function(){
+                var selectedOption = this.options[select.selectedIndex];
+
+                if(selectedOption.value === "1"){
+                        ocultarOpcionesBachata();   
+                    } else if(selectedOption.value === "2") {
+                        ocultarOpcionesSalsa();
+                    } 
+                // console.log(selectedOption.value + ': ' + selectedOption.text);
+            });
         
+        
+
         function ocultarOpcionesBachata() {
-        var select = document.getElementById("Options2"); // Obtener el select por su ID
-        var opciones = select.options; // Obtener todas las opciones del select
-        
-        for (var i = 0; i < opciones.length; i++) {
-            var opcion = opciones[i];
+            var select = document.getElementById("Options2"); // Obtener el select por su ID
+            var opciones = select.options; // Obtener todas las opciones del select
             
-            // Utilizar una condición para ocultar las opciones que no te interesan
-            if (opcion.value === "8" || opcion.value === "9" || opcion.value === "10" || opcion.value === "11") {
-            opcion.style.display = "none"; // Ocultar la opción
+            for (var i = 0; i < opciones.length; i++) {
+                var opcion = opciones[i];
+                
+                // Utilizar una condición para ocultar las opciones que no te interesan
+                if (opcion.value === "8" || opcion.value === "9" || opcion.value === "10" || opcion.value === "11") {
+                opcion.style.display = "none"; // Ocultar la opción
+                } else{
+                    opcion.style.display = "block";
+                }
             }
-        }
         }
 
         function ocultarOpcionesSalsa() {
-        var select = document.getElementById("Options2"); // Obtener el select por su ID
-        var opciones = select.options; // Obtener todas las opciones del select
-        
-        for (var i = 0; i < opciones.length; i++) {
-            var opcion = opciones[i];
+            let select = document.getElementById("Options2"); // Obtener el select por su ID
+            let opciones = select.options; // Obtener todas las opciones del select
             
-            // Utilizar una condición para ocultar las opciones que no te interesan
-            if (opcion.value === "1" || opcion.value === "2" || opcion.value === "3" || opcion.value === "4" || opcion.value === "5" || opcion.value === "6" || opcion.value === "7") {
-            opcion.style.display = "none"; // Ocultar la opción
+            for (let i = 0; i < opciones.length; i++) {
+                let opcion = opciones[i];
+                
+                // Utilizar una condición para ocultar las opciones que no te interesan
+                if (opcion.value === "1" || opcion.value === "2" || opcion.value === "3" || opcion.value === "4" || opcion.value === "5" || opcion.value === "6" || opcion.value === "7") {
+                opcion.style.display = "none"; // Ocultar la opción
+                } else{
+                    opcion.style.display = "block";
+                }
             }
         }
-        }
 
-        let seleccion = $option.value;
-        console.log(seleccion)
+        
+        // let seleccion = document.getElementById("Option");
 
+        // seleccion.addEventListener('change', function(){
+        //     let opciones =seleccion.options;
+            
+        //     for (let i = 0; i < opciones.length; i++) {
+        //     let select = opciones[i];
+
+        //     if(select.value === "1"){
+        //         ocultarOpcionesBachata();   
+        //     }else{
+        //         ocultarOpcionesSalsa();
+        //     }
+        // }
+        // })
+         
+        // console.log(seleccion)
+   
         // if(){
-        //     ocultarOpcionesBachata();
         // } else{
-        //     ocultarOpcionesSalsa();
         // }
 
     
