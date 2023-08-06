@@ -138,8 +138,7 @@
                                 @endrole
                                 @if(Auth::user())
                                 <img width="100" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt="">
-                                <!-- <h1>{{ $academy->name_academy }}</h1>
-                                <img width="100" src="{{ asset('storage/').'/'. $academy->foto_academy }}" alt=""> -->
+                     
                                 @endif
                             </div>
                             <div class="plantilla2-content-bot">

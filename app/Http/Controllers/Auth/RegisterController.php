@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
+use Spatie\Permission\Models\Role;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -76,7 +77,9 @@ class RegisterController extends Controller
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
         }
 
-        return User::create([
+        
+
+       $user = User::create([
             'name' => $data['name'],
             'apellido' => $data['apellido'],
             'cedula' => $data['cedula'],
@@ -86,5 +89,8 @@ class RegisterController extends Controller
             'foto' => $foto['foto'],
             'password' => Hash::make($data['password']),
         ]);
+
+        return $user->assignRole('2');
+
     }
 }

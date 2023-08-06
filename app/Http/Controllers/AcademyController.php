@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\Academy;
 use App\Models\Instagram;
@@ -16,7 +17,7 @@ class AcademyController extends Controller
     public function index()
     {
         //
-        return view('usuario.registroAcademia');
+       
     }
 
     /**
@@ -76,6 +77,11 @@ class AcademyController extends Controller
     public function show(string $id)
     {
         //
+
+        $user = Auth::user()->id;
+        $academy = Academy::where('user_id', $user)->first();
+        
+        return view('usuario.registroAcademia', compact('academy'));
     }
 
     /**

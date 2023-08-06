@@ -11,6 +11,8 @@ use Spatie\Permission\Traits\HasRoles;
 
 use App\Models\Academy;
 use App\Models\Pagos;
+use App\Models\Users_has_categorias;
+
 
 
 
@@ -62,5 +64,10 @@ class User extends Authenticatable
 
     public function pagos(){
         return $this->hasMany(Pagos::class, 'user_id');
+    }
+
+
+    public function Users_has_categorias(){
+        return $this->belongsToMany(Users_has_categorias::class);
     }
 }

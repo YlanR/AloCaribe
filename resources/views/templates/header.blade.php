@@ -51,22 +51,21 @@
                 </li>
                 @endif
 
-                @if(Auth::user() && Auth::user()->id == $academy->user_id)
+                @if(Auth::user())
                 <li class="navbar-link">
-                    <a href="{{ url('/') }}">
+                    <a href="{{url('academia/')}}/{{Auth::user()->id}}">
                         Academia
                     </a>
-                </li>
-                @else
-                <li class="navbar-link">
-                    <a href="{{ url('academia') }}">
-                        Academia
-                    </a>
-                </li>
-                <li class="navbar-link"> 
-                        <p class="nombre"> {{ Auth::user()->name }} {{ Auth::user()->apellido }} </p>
                 </li>
                 @endif
+
+
+                <li class="navbar-link"> 
+                        @if(Auth::user()) 
+                        <p class="nombre"> {{ Auth::user()->name }} {{ Auth::user()->apellido }} </p>
+                        @endif
+
+                </li>
             </ul>
          <!---->
         @if(!Auth::user())

@@ -21,7 +21,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $academy = Academy::find(1);
-        return view('index', compact('academy'));
+        return view('index');
     }
 }

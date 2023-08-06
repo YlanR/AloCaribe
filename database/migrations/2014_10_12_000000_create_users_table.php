@@ -17,8 +17,8 @@ return new class extends Migration
             $table->string('apellido');
             $table->integer('cedula')->unique();
             $table->integer('edad');
-            $table->string('email');
-            $table->string('instagram');
+            $table->string('email')->nullable()->unique();
+            $table->string('instagram')->nullable()->unique();
             $table->string('foto')->nullable();
             $table->string('password')->nullable();
             $table->timestamps();

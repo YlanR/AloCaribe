@@ -1,14 +1,7 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registro de los competidores</title>
-    <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="../../css/registroCompe.css">
-    <link rel="stylesheet" href="../fonts/style.css">
-</head>
-<body>
-<main>
+
+@include('templates.header',  ['modo' => 'Alo Caribe'])
+<link rel="stylesheet" href="../../css/registroCompe.css">
+    
         <!--sección principal-->
     <section class="main">
         <!--contenido principal sepadado en 2 columnas-->
@@ -28,6 +21,9 @@
                                 <form action="{{ route('competidor.store') }}" id="" class="ficha-form form" enctype="multipart/form-data" method="POST">
                                 @csrf
                                     <div class="form-inputs">
+
+                                        <input type="hidden" name="academy_id" value="{{ $academy->id }}">
+
                                         <div class="form-input">
                                             <input type="text" placeholder="nombre" id="nombreC" name="nombreC" class="">
                                         </div>
@@ -48,14 +44,14 @@
                                     <hr class="form-linea-horizontal">
                                     <div class="form-inputs">
                                         <div class="form-select"> 
-                                            <select name="categoria1" id="">
+                                            <select name="categoria1" id="optiones">
                                                 <option selected disabled>Categoría</option>
-                                                <option value="1">Salsa Casino</option>
-                                                <option value="2">Bachata</option>
+                                                <option id="casino" value="1">Salsa Casino</option>
+                                                <option id="bachata" value="2">Bachata</option>
                                             </select>
                                         </div>
                                         <div class="form-select"> 
-                                            <select name="categoria2" id="">
+                                            <select name="categoria2" id="Options2">
                                                 <option selected disabled>Categoría</option>
                                                 <option value="1">Solista Femenido</option>
                                                 <option value="2">Solista Masculino</option>
@@ -65,11 +61,15 @@
                                                 <option value="6">Duo Femenido</option>
                                                 <option value="7">Rueda</option>
                                                 <option value="8">Coreográfico</option>
-
                                                 <option value="9">Parejas</option>
                                                 <option value="10">Lady Style</option>
                                                 <option value="11">Men Style</option>
                                             </select>
+
+                                            <!-- <select name="categoria2" id="Options3">
+                                                <option selected disabled>Categoría</option>
+                                                
+                                            </select> -->
                                         </div>
                                         <hr class="form-linea--vertical">
                                         <div class="form-chack">
@@ -246,6 +246,107 @@
             </div>
         </div>
     </section>
-</main>
-</body>
-</html>
+    @include('templates.footer')
+
+    <script>
+        const $categoria1 = document.querySelector('#Options2');
+        const $categoria2 = document.querySelector('#Options3');
+        // const $option = document.querySelector('#Option');
+        document.getElementById('Options2').style.display = "none";
+
+
+        var select = document.getElementById('optiones');
+            select.addEventListener('change', function(){
+                var selectedOption = this.options[select.selectedIndex];
+
+
+            if (selectedOption != null){
+
+                document.getElementById('Options2').style.display = "block";
+
+                if(selectedOption.value === "1"){
+                        ocultarOpcionesBachata();   
+                    } else if(selectedOption.value === "2") {
+                        ocultarOpcionesSalsa();
+                    } 
+
+            } 
+                // console.log(selectedOption.value + ': ' + selectedOption.text);
+            });
+
+        
+        
+
+        function ocultarOpcionesBachata() {
+            var select = document.getElementById("Options2"); // Obtener el select por su ID
+            var opciones = select.options; // Obtener todas las opciones del select
+            
+            for (var i = 0; i < opciones.length; i++) {
+                var opcion = opciones[i];
+                
+                // Utilizar una condición para ocultar las opciones que no te interesan
+                if (opcion.value === "8" || opcion.value === "9" || opcion.value === "10" || opcion.value === "11") {
+                opcion.style.display = "none"; // Ocultar la opción
+                } else{
+                    opcion.style.display = "block";
+                }
+            }
+        }
+
+        function ocultarOpcionesSalsa() {
+            let select = document.getElementById("Options2"); // Obtener el select por su ID
+            let opciones = select.options; // Obtener todas las opciones del select
+            
+            for (let i = 0; i < opciones.length; i++) {
+                let opcion = opciones[i];
+                
+                // Utilizar una condición para ocultar las opciones que no te interesan
+                if (opcion.value === "1" || opcion.value === "2" || opcion.value === "3" || opcion.value === "4" || opcion.value === "5" || opcion.value === "6" || opcion.value === "7") {
+                opcion.style.display = "none"; // Ocultar la opción
+                } else{
+                    opcion.style.display = "block";
+                }
+            }
+        }
+
+        
+        // let seleccion = document.getElementById("Option");
+
+        // seleccion.addEventListener('change', function(){
+        //     let opciones =seleccion.options;
+            
+        //     for (let i = 0; i < opciones.length; i++) {
+        //     let select = opciones[i];
+
+        //     if(select.value === "1"){
+        //         ocultarOpcionesBachata();   
+        //     }else{
+        //         ocultarOpcionesSalsa();
+        //     }
+        // }
+        // })
+         
+        // console.log(seleccion)
+   
+        // if(){
+        // } else{
+        // }
+
+    
+        // if(seleccionado == "1"){
+        //     $categoria1.style.display = 'block';
+        //     $categoria2.style.display = 'none';
+        // }else{
+        //     $categoria1.style.display = 'none';
+        //     $categoria2.style.display = 'block';
+        // }
+        // Recorre todas las opciones del select
+            // Array.from(this.options).forEach(function(option) {
+            //     if (option.value === seleccionado) {
+            //     option.style.display = 'block'; // Muestra las opciones seleccionadas
+            //     } else {
+            //     option.style.display = 'none'; // Oculta las opciones no seleccionadas
+            //     }
+            // });
+        
+    </script>

@@ -26,8 +26,12 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index']);
-Route::resource('/academia', AcademyController::class)->middleware('auth');
 Route::get('/registraCompetidores', [UsuarioController::class, 'index'])->middleware('auth');
-Route::resource('/competidor', UsuarioController::class);
+Route::resource('/competidor', UsuarioController::class)->middleware('auth');
+Route::get('/academia/{id}', [AcademyController::class, 'show'])->middleware('auth');
+Route::resource('/academia', AcademyController::class)->middleware('auth');
+
+
+
 
 

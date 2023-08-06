@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Instagram;
+use App\Models\Academy;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 use App\Models\Categoria1;
 use App\Models\Categoria2;
@@ -21,7 +24,8 @@ class UsuarioController extends Controller
     public function index()
     {
         //
-        return view('usuario.registroCompetidores');
+        $academy = Academy::where('user_id', Auth::user()->id)->first();
+        return view('usuario.registroCompetidores', compact('academy'));
     }
 
     public function register(){
@@ -70,30 +74,51 @@ class UsuarioController extends Controller
             // $instagram->name = $request->input('instagram');
 
             // $instagram->save();
+            $cedula = $request->input('cedula');
+            $UserExist = User::where('cedula', $cedula)->exists();
+            $UserExistent = User::where('cedula', $cedula)->first();
 
-            $competidor = new User;
-            $competidor->name= $request->input('nombreC');
-            $competidor->apellido= $request->input('apellidoC');
-            $competidor->cedula= $request->input('cedula');
-            $competidor->edad= $request->input('edad');
-            $competidor->instagram= $request->input('instagram');;
-            $competidor->foto = $foto;
-        
-            $competidor->save();
+         
 
-            $categoria = new Users_has_categorias;
-            $categoria->user_id = $competidor->id;
-            $categoria->categoria1_id = $request->input('categoria1');
-            $categoria->categoria2_id = $request->input('categoria2');
-            $categoria->categoria3_id = $request->input('categoria3');
+                $competidor = new User;
+                $competidor->name= $request->input('nombreC');
+                $competidor->apellido= $request->input('apellidoC');
+                $competidor->cedula= $request->input('cedula');
+                $competidor->edad= $request->input('edad');
+                $competidor->instagram= $request->input('instagram');;
+                $competidor->foto = $foto;
 
-            $categoria->save();
+                
 
+            if($UserExist == null){
+                
+                $competidor->save();
 
-            
-
-           
+                $categoria = new Users_has_categorias;
+                $categoria->user_id = $competidor->id;
+                $categoria->categoria1_id = $request->input('categoria1');
+                $categoria->categoria2_id = $request->input('categoria2');
+                $categoria->categoria3_id = $request->input('categoria3');
+                $categoria->academy_id = $request->input('academy_id');
+                
+                $categoria->save();
             return redirect()->back();
+
+
+            } else{
+                
+                $categoria = new Users_has_categorias;
+                $categoria->user_id = $UserExistent->id;
+                $categoria->categoria1_id = $request->input('categoria1');
+                $categoria->categoria2_id = $request->input('categoria2');
+                $categoria->categoria3_id = $request->input('categoria3');
+                $categoria->academy_id = $request->input('academy_id');
+
+                $categoria->save();
+            return redirect()->back();
+
+            }
+            
     }
 
     /**
