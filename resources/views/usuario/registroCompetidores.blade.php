@@ -252,18 +252,28 @@
         const $categoria1 = document.querySelector('#Options2');
         const $categoria2 = document.querySelector('#Options3');
         // const $option = document.querySelector('#Option');
+        document.getElementById('Options2').style.display = "none";
+
 
         var select = document.getElementById('optiones');
             select.addEventListener('change', function(){
                 var selectedOption = this.options[select.selectedIndex];
+
+
+            if (selectedOption != null){
+
+                document.getElementById('Options2').style.display = "block";
 
                 if(selectedOption.value === "1"){
                         ocultarOpcionesBachata();   
                     } else if(selectedOption.value === "2") {
                         ocultarOpcionesSalsa();
                     } 
+
+            } 
                 // console.log(selectedOption.value + ': ' + selectedOption.text);
             });
+
         
         
 
