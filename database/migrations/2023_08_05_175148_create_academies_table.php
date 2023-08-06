@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('academies', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->string('name_academy');
+            $table->string('name_academy')->unique();
             $table->string('telefono');
             $table->string('estado');
-            $table->unsignedBigInteger('instagram')->unique();
-            $table->string('foto_academy');
+            $table->unsignedBigInteger('instagram')->unique()->nullable();
+            $table->string('foto_academy')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

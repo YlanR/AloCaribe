@@ -12,6 +12,9 @@
     <header></header>
 
     <main>
+        @if($academy == NULL)
+
+        <h1>{{$academy}}</h1>
         <section class="main">
             <div class="main-content">  
                 <div class="main-content-contenido">
@@ -73,6 +76,29 @@
         </div>
         
         </section>
+        @else
+
+            @include('templates.header',  ['modo' => 'Alo Caribe'])
+
+            <section class="main">
+            <div class="main-content">  
+                <div class="main-content-contenido">
+                    <form action="{{ route('academia.store') }}" enctype="multipart/form-data" class="contenido-form" method="POST">
+                        @csrf
+                        <div class="form-logo">
+                            <img src="../../img/logo.png" alt=" logo " class="form-logo-logo">
+                            <label for="">Datos Academía</label>
+                        </div>
+                        <h1>Ya tienes cuenta, es {{ $academy->name_academy }}</h1>
+                </div>
+            
+        </div>
+        
+        </section>
+
+
+        @endif
+        
     </main>
 
     <footer></footer>

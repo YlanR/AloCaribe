@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Instagram;
+use App\Models\Academy;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 use App\Models\Categoria1;
 use App\Models\Categoria2;
@@ -21,7 +24,8 @@ class UsuarioController extends Controller
     public function index()
     {
         //
-        return view('usuario.registroCompetidores');
+        $academy = Academy::where('user_id', Auth::user()->id)->first();
+        return view('usuario.registroCompetidores', compact('academy'));
     }
 
     public function register(){
@@ -86,6 +90,7 @@ class UsuarioController extends Controller
             $categoria->categoria1_id = $request->input('categoria1');
             $categoria->categoria2_id = $request->input('categoria2');
             $categoria->categoria3_id = $request->input('categoria3');
+            $categoria->academy_id = $request->input('academy_id');
 
             $categoria->save();
 
