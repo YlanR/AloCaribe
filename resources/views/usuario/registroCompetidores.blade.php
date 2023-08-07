@@ -1,7 +1,7 @@
 
 @include('templates.header',  ['modo' => 'Alo Caribe'])
 <link rel="stylesheet" href="../../css/registroCompe.css">
-    
+    <!--<script src="../../js/agregarCategoria.js"></script>-->
         <!--sección principal-->
     <section class="main">
         <!--contenido principal sepadado en 2 columnas-->
@@ -42,7 +42,7 @@
                                     </div>
                                     <p>Selección de categorias</p>
                                     <hr class="form-linea-horizontal">
-                                    <div class="form-inputs">
+                                    <div class="form-inputs" id="seleccionadorCategorias">
                                         <div class="form-select"> 
                                             <select name="categoria1" id="optiones">
                                                 <option selected disabled>Categoría</option>
@@ -95,7 +95,7 @@
                                     </div>
                                     <hr class="linea-horizontal">
                                     <div class="form-input">
-                                        <input type="text" placeholder="Agregar otra categoria " id="otraCate" name="otracate" class="otracate">
+                                    <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
                                     </div>
                                     <div class="form-botones">
                                         <label for="">foto del competidor</label>

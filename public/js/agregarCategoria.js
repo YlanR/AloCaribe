@@ -1,11 +1,8 @@
 
-        let seleccionador = document.getElementById('seleccionadar');
-        let seleccionadorCategorias = document.getElementById('seleccionadarCategorias');
+function copiar(){
+        var contenido= document.getElementById("seleccionadorCategorias").innerHTML;
 
-        seleccionador.addEventListener('clikc', mostrar);
-
-function mostrar(){
-        
-        var cate =document.createElement("input");
-        document.getElementsByTagName("body")[0].appendChild(cate);
+        var temp=document.createElement("div");
+        temp.innerHTML=contenido;
+        document.body.appendChild(temp);
 }

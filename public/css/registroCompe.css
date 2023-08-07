@@ -240,3 +240,14 @@ backdrop-filter: blur(0.4rem);
     display: grid;
     margin-top: 10px;
 }
+.form-input button{
+    display: flex;
+    margin-top: 35px;
+    border: none;
+    border-radius: 25px;
+    border-bottom: 1px solid black;
+    background: transparent;
+    color: white;
+    padding: 4px;
+    cursor: pointer;
+}

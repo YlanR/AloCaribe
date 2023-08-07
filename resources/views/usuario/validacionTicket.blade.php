@@ -3,12 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-
-    </style>
 </head>
 <body>
-    <main>
+    
+<main>
         <section class="main">
             <div class="main-content">
                 <div class="main-content-contenido">
@@ -46,7 +44,11 @@
                                 <div class="central-contenido-superior-derecha"><a href="">loading</a>
                                 </div>
                             </div> 
-                    </div>
+                            <div class="central-contenido-logo">
+                                <img src="../../img/logo.png" alt="logo en el fondo jejeje ">
+                            </div>
+                            
+                        </div>
                         <hr>
                         <div class="central-contenido central-contenido2">
                             <div class="central-contenido-inferior">
@@ -87,8 +89,5 @@
         </section>
 
     </main>
-
-
 </body>
-
 </html>
