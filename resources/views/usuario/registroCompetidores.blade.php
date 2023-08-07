@@ -77,7 +77,7 @@
                                             <input name="categoria3" type="radio" value="1">
                                         </div>
                                         <div class="form-chack">
-                                            <label for="">NT</label> 
+                                            <label for="">Nuevo Talento</label> 
                                             <input name="categoria3" type="radio" value="2">
                                         </div>
                                         <div class="form-chack">
