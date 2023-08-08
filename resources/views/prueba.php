@@ -12,7 +12,12 @@
         <section class="main">
             <div class="main-content">
                 <div class="main-content-contenido">
-                    <h3>Validadición de ticket</h3>
+                    <h3>Lista de competidores </h3>
+                    <div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </section>
