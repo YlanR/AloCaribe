@@ -160,22 +160,40 @@
                                 
                                  
                                 
-                                <div class="plantilla3">
-                                    <div class="plantilla3-content">
-                                        <div class="plantilla3-content-ofrecemos">
-                                            <div>
-                                                <img src="../img/3/imagen2.png" alt="">
-                                                <img src="../img/3/image1.png" alt="">
-                                            </div>   
-                                            <img src="Group4.png" alt="">
-                                            
-                                        </div>
-                                        <div class="plantilla3-content-fondo">
-                                            <div></div>
-                                            <div></div>
-                                        </div>
+                                <div class=" plantilla3">
+                                    <div class="plantilla3-izq">
+                        
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno1">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno2">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno3">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno4">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno5">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno6">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno7">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno8">
+                                        <!--adornos claros-->
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoa">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornob">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoc">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornod">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoe">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornof">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornog">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoh">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoi">
+                                        <!--imagenes de flayers-->
+                                        <img src="../img/3/sss.png" alt="" class="plantilla3-confeti-up plantilla3-confeti">
+                                        <img src="../img/3/sss.png" alt="" class="plantilla3-confeti-down plantilla3-confeti">
+                                        <img src="../img/3/imagen2.png" alt="" class="plantilla3-imagen-superior">
+                                        <img src="../img/3/image1.png" alt="" class="plantilla3-imagen-inferior">
                                     </div>
-                                </div>
+                                    <div class="plantilla3-derch">
+                        
+                                        <img src="../img/3/Group4.png" alt="">
+                                        <img src="../img/3/bachata1.png" alt="" class="plantilla3-derch-inferior">
+                                    </div>
+                    
+                                </div> 
                                 <div class="plantilla4">
                                     <div class="plantilla4-content">
                                         <div></div>
