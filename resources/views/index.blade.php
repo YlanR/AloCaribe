@@ -156,10 +156,6 @@
                             <div class="contenido"><img src="../img/2/Vector.png" alt=""></div>
                             <div class="despliegue">
                                 
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ex nostrum fugiat, perspiciatis ducimus facilis nihil tempora sequi minima dicta iure delectus alias numquam quam ipsum consectetur placeat eaque quisquam.</p>
-                                
-                                 
-                                
                                 <div class=" plantilla3">
                                     <div class="plantilla3-izq">
                         
