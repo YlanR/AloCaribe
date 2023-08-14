@@ -191,9 +191,55 @@
                     
                                 </div> 
                                 <div class="plantilla4">
-                                    <div class="plantilla4-content">
-                                        <div></div>
+                                    <div class="plantilla4-jurados jurados-salsa">
+                                            <div class="plantilla4-jurados-text ">
+                                                <h2>Jurados </h2>
+                                                <h2>Salsa Casino</h2>
+                                            </div>
+                                        <div class="plantilla4-jurados-image">
+                                            <img src="./4/aaaa.svg" alt="" class="plantilla4-jurados-image-costado">
+                                            <img src="./4/aa.svg" alt="">
+                                            <img src="./4/dda.svg" alt="" class="plantilla4-jurados-image-costado">
+                                        </div>
                                     </div>
+                                    <div class="plantilla4-jurados jurados-bacahta">
+                                        <div class="plantilla4-jurados-text ">
+                                            <h2>Jurados </h2>
+                                            <h2>Bachata</h2>
+                                        </div>
+                                        <div class="plantilla4-jurados-image">
+                                            <img src="./4/2.svg" alt="" class="plantilla4-jurados-image-costado">
+                                            <img src="./4/3.svg" alt="">
+                                            <img src="./4/4.svg" alt="" class="plantilla4-jurados-image-costado">
+                                        </div>
+                                        <img src="./4/1.svg" alt="">
+                                    </div>
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros1">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros2">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros3">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros4">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros5">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros6">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros7">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros8">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros9">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros00">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros01">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros02">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros03">
+                                    <!--cubos claros-->
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros1">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros2">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros3">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros4">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros5">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros6">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros7">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros8">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros9">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros00">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros01">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros02">
                                 </div>
                                 <div class="plantilla5">
                                     <div class="plantilla5-content">
