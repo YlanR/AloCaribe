@@ -30,6 +30,8 @@ Route::get('/registraCompetidores', [UsuarioController::class, 'index'])->middle
 Route::resource('/competidor', UsuarioController::class)->middleware('auth');
 Route::get('/academia/{id}', [AcademyController::class, 'show'])->middleware('auth');
 Route::resource('/academia', AcademyController::class)->middleware('auth');
+Route::get('/registraCompetidores', [UsuarioController::class, 'index'])->middleware('auth');
+Route::post('/recibirdatos', [UsuarioController::class, 'store']);
 
 
 

@@ -13,15 +13,18 @@ return new class extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id')->unique();
+            $table->unsignedBigInteger('user_id');
             $table->string('modalidad');
             $table->string('referencia');
             $table->string('telefono');
-            $table->string('comprobante');
-            $table->unsignedBigInteger('cedula_id');
+            $table->integer('cedula_id');
+            $table->string('ticket_id');
+            $table->string('total');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+    
+
         });
     }
 

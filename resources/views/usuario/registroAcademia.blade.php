@@ -11,6 +11,7 @@
             <div class="main-content">  
                 <div class="main-content-contenido">
                     <form action="{{ route('academia.store') }}" enctype="multipart/form-data" class="contenido-form" method="POST">
+                        
                         @csrf
                         <div class="form-logo">
                             <img src="../../img/logo.png" alt=" logo " class="form-logo-logo">

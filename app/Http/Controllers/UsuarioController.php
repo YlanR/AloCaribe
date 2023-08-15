@@ -13,6 +13,7 @@ use App\Models\Categoria1;
 use App\Models\Categoria2;
 use App\Models\Categoria3;
 
+
 use App\Models\Users_has_categorias;
 
 
@@ -63,6 +64,8 @@ class UsuarioController extends Controller
 
         // $this->validate($request, $campos,$mensaje);
 
+        
+
         if ($request->hasFile('foto_competidor')) {
             $foto = $request->file('foto_competidor')->store('uploads', 'public');
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
@@ -78,15 +81,14 @@ class UsuarioController extends Controller
             $UserExist = User::where('cedula', $cedula)->exists();
             $UserExistent = User::where('cedula', $cedula)->first();
 
-         
 
                 $competidor = new User;
-                $competidor->name= $request->input('nombreC');
-                $competidor->apellido= $request->input('apellidoC');
+                $competidor->name= $request->input('name');
+                $competidor->apellido= $request->input('apellido');
                 $competidor->cedula= $request->input('cedula');
                 $competidor->edad= $request->input('edad');
                 $competidor->instagram= $request->input('instagram');;
-                $competidor->foto = $foto;
+                // $competidor->foto = $foto;
 
                 
 
@@ -100,9 +102,10 @@ class UsuarioController extends Controller
                 $categoria->categoria2_id = $request->input('categoria2');
                 $categoria->categoria3_id = $request->input('categoria3');
                 $categoria->academy_id = $request->input('academy_id');
+                $categoria->ticket_id = $request->input('ticket_id');
                 
                 $categoria->save();
-            return redirect()->back();
+                return response()->json('Todo listo');
 
 
             } else{
@@ -113,9 +116,14 @@ class UsuarioController extends Controller
                 $categoria->categoria2_id = $request->input('categoria2');
                 $categoria->categoria3_id = $request->input('categoria3');
                 $categoria->academy_id = $request->input('academy_id');
+                $categoria->ticket_id = $request->input('ticket_id');
 
                 $categoria->save();
-            return redirect()->back();
+
+                
+
+                
+            return response()->json('Todo listo');
 
             }
             

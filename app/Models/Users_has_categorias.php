@@ -9,6 +9,8 @@ use App\Models\Categoria1;
 use App\Models\Categoria2;
 use App\Models\Categoria3;
 
+use App\Models\Tickets;
+
 
 class Users_has_categorias extends Model
 {
@@ -24,5 +26,9 @@ class Users_has_categorias extends Model
 
     public function categoria3(){
         return $this->belongsToMany(Categoria3::class, 'users_has_categorias');
+    }
+
+    public function tickets(){
+        return $this->belongsToMany(Tickets::class);
     }
 }

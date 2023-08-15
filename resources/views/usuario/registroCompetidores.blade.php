@@ -16,19 +16,20 @@
                     <div class="ficha-contenido">
                         <div class="ficha-contenido-encapsulado">
                             <div class="ficha-contenido-encapsulado-centro">
-                                <h3> Ficha de competidor</h3>
+                                <h3 id="tituloficha"> Ficha de competidor</h3>
+                                
                                 <!--formulario donde se registran los datos-->
-                                <form action="{{ route('competidor.store') }}" id="" class="ficha-form form" enctype="multipart/form-data" method="POST">
+                                <form action="" id="formularioregistro" class="ficha-form form" enctype="multipart/form-data" method="POST">
                                 @csrf
-                                    <div class="form-inputs">
+                                    <div class="form-inputs" id="form-inputs">
 
-                                        <input type="hidden" name="academy_id" value="{{ $academy->id }}">
-
+                                        <input type="hidden" name="academy_id" id="idUser" value="{{ $academy->id }}">
+                                        <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                                         <div class="form-input">
-                                            <input type="text" placeholder="nombre" id="nombreC" name="nombreC" class="">
+                                            <input type="text" placeholder="nombre" id="name" name="name" class="">
                                         </div>
                                         <div class="form-input">
-                                            <input type="text" placeholder="apellido" id="apellidoC" name="apellidoC" class="">
+                                            <input type="text" placeholder="apellido" id="apellido" name="apellido" class="">
                                         </div>
                                         <div class="form-input">
                                             <input type="num" placeholder="cedula" id="cedula" name="cedula" class="">
@@ -72,26 +73,40 @@
                                             </select> -->
                                         </div>
                                         <hr class="form-linea--vertical">
-                                        <div class="form-chack">
+
+                                        <div class="form-select"> 
+                                            <select name="categoria3" id="categoria3">
+                                                <option selected disabled>Categoría</option>
+                                                <option value="1">Begginer</option>
+                                                <option value="2">Nuevo Talento</option>
+                                                <option value="3">Novel</option>
+                                                <option value="4">Libre</option>
+                                                <option value="5">Abierta</option>
+                                            </select>
+                                        </div>
+
+                                        <!-- <div class="form-chack">
                                             <label for="">Begginer</label>
-                                            <input name="categoria3" type="radio" value="1">
+                                            <input name="categoria3" class="Options3" type="radio" value="1">
                                         </div>
                                         <div class="form-chack">
                                             <label for="">Nuevo Talento</label> 
-                                            <input name="categoria3" type="radio" value="2">
+                                            <input name="categoria3" class="Options3" type="radio" value="2">
                                         </div>
                                         <div class="form-chack">
                                             <label for="">Novel</label> 
-                                            <input name="categoria3" type="radio" value="3">
+                                            <input name="categoria3" class="Options3" type="radio" value="3">
                                         </div>
                                         <div class="form-chack">
                                             <label for="">Libre</label> 
-                                            <input name="categoria3" type="radio" value="4">
+                                            <input name="categoria3" class="Options3" type="radio" value="4">
                                         </div>
                                         <div class="form-chack">
                                             <label for="">Abierta</label>
-                                            <input name="categoria3" type="radio" value="5">
+                                            <input name="categoria3" class="Options3" type="radio" value="5">
                                         </div>
+                                        <input name="categoria3" class="Options3" type="radio" value="0" hidden checked> -->
+
                                     </div>
                                     <hr class="linea-horizontal">
                                     <div class="form-input">
@@ -99,10 +114,10 @@
                                     </div>
                                     <div class="form-botones">
                                         <label for="">foto del competidor</label>
-                                        <input type="file" name="foto_competidor" id="">
-                                        <button class="form-botones-enviar" type="submit">hecho</button>
+                                        <!-- <input type="file" name="foto_competidor" id="foto_competidor"> -->
+                                        <a class="form-botones-enviar" id="bottomLista" type="submit">hecho</a>
                                     </div>
-                                </form>
+                                <!-- </form> -->
                             </div>
                         </div>
                         
@@ -138,7 +153,7 @@
                                     </div>
                                 </div>
                                 <!--formulario donde se registran los datos-->
-                                <form action="" id="" class="pago-form form" method="POST">
+                                <!-- <form action="" id="" class="pago-form form" method="POST"> -->
                                     <div class="form-inputs">
                                         <div class="form-input">
                                             <input type="text" placeholder="nombre del titular del pago" id="nombreTitular" name="nombreTitular" class="">
@@ -151,11 +166,13 @@
                                         </div>
                                     </div>
                                     <div class="form-botones">
-                                        <label for="">Comprobante del pago </label>
-                                        <input type="file" name="foto_competidor" id="">
-                                        <button class="form-botones-enviar" type="submit">hecho</button>
+                                        <!-- <label for="">Comprobante del pago </label>
+                                        <input type="file" name="foto_competidor" id=""> -->
+                                        <button class="form-botones-enviar" id="EnviarForm" type="submit">hecho</button>
                                     </div>
-                                </form>
+
+                                <!-- </form> -->
+
                             </div>
                         </div>
                         
@@ -223,19 +240,21 @@
                                         <thead>
                                             <tr>
                                                 <th>Competidores</th>
-                                                <th>Pago C/U</th>
+                                                <th>Cedula</th>
                                                 <th>Opciones</th>
                                             </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="competidoresLista">
                                             <tr>
-                                                <th>Name</th>
-                                                <th>20$</th>
-                                                <th><a href="">check</a>
-                                                    <a href="">elim</a>
-                                                </th>
+                                                <th>No tiene competidores registrados</th>
+                                            
                                             </tr>
                                         </tbody>
+                                        <tfoot id="total">
+                                            <tr>
+                                                <th>Total: </th>
+                                            </tr>
+                                        </tfoot>
                                     </table>
                                 </div>
                                 
@@ -248,11 +267,15 @@
     </section>
     @include('templates.footer')
 
+    <script src="../../js/registroCompetidores.js"></script>
     <script>
         const $categoria1 = document.querySelector('#Options2');
         const $categoria2 = document.querySelector('#Options3');
+        const $categoria3 = document.querySelector('#categoria3');
+
         // const $option = document.querySelector('#Option');
         document.getElementById('Options2').style.display = "none";
+        document.getElementById('categoria3').style.display = "none";
 
 
         var select = document.getElementById('optiones');
@@ -263,6 +286,8 @@
             if (selectedOption != null){
 
                 document.getElementById('Options2').style.display = "block";
+                document.getElementById('categoria3').style.display = "block";
+
 
                 if(selectedOption.value === "1"){
                         ocultarOpcionesBachata();   
