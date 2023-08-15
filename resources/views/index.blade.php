@@ -156,30 +156,90 @@
                             <div class="contenido"><img src="../img/2/Vector.png" alt=""></div>
                             <div class="despliegue">
                                 
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ex nostrum fugiat, perspiciatis ducimus facilis nihil tempora sequi minima dicta iure delectus alias numquam quam ipsum consectetur placeat eaque quisquam.</p>
-                                
-                                 
-                                
-                                <div class="plantilla3">
-                                    <div class="plantilla3-content">
-                                        <div class="plantilla3-content-ofrecemos">
-                                            <div>
-                                                <img src="../img/3/imagen2.png" alt="">
-                                                <img src="../img/3/image1.png" alt="">
-                                            </div>   
-                                            <img src="Group4.png" alt="">
-                                            
-                                        </div>
-                                        <div class="plantilla3-content-fondo">
-                                            <div></div>
-                                            <div></div>
-                                        </div>
+                                <div class=" plantilla3">
+                                    <div class="plantilla3-izq">
+                        
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno1">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno2">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno3">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno4">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno5">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno6">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno7">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-oscuros plantilla3-adorno8">
+                                        <!--adornos claros-->
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoa">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornob">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoc">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornod">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoe">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornof">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornog">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoh">
+                                        <img src="../img/3/Polygon.png" alt="" class="plantilla3-adornos plantilla3-adornos-claros plantilla3-adornoi">
+                                        <!--imagenes de flayers-->
+                                        <img src="../img/3/sss.png" alt="" class="plantilla3-confeti-up plantilla3-confeti">
+                                        <img src="../img/3/sss.png" alt="" class="plantilla3-confeti-down plantilla3-confeti">
+                                        <img src="../img/3/imagen2.png" alt="" class="plantilla3-imagen-superior">
+                                        <img src="../img/3/image1.png" alt="" class="plantilla3-imagen-inferior">
                                     </div>
-                                </div>
+                                    <div class="plantilla3-derch">
+                        
+                                        <img src="../img/3/Group4.png" alt="">
+                                        <img src="../img/3/bachata1.png" alt="" class="plantilla3-derch-inferior">
+                                    </div>
+                    
+                                </div> 
                                 <div class="plantilla4">
-                                    <div class="plantilla4-content">
-                                        <div></div>
+                                    <div class="plantilla4-jurados jurados-salsa">
+                                            <div class="plantilla4-jurados-text ">
+                                                <h2>Jurados </h2>
+                                                <h2>Salsa Casino</h2>
+                                            </div>
+                                        <div class="plantilla4-jurados-image">
+                                            <img src="./4/aaaa.svg" alt="" class="plantilla4-jurados-image-costado">
+                                            <img src="./4/aa.svg" alt="">
+                                            <img src="./4/dda.svg" alt="" class="plantilla4-jurados-image-costado">
+                                        </div>
                                     </div>
+                                    <div class="plantilla4-jurados jurados-bacahta">
+                                        <div class="plantilla4-jurados-text ">
+                                            <h2>Jurados </h2>
+                                            <h2>Bachata</h2>
+                                        </div>
+                                        <div class="plantilla4-jurados-image">
+                                            <img src="./4/2.svg" alt="" class="plantilla4-jurados-image-costado">
+                                            <img src="./4/3.svg" alt="">
+                                            <img src="./4/4.svg" alt="" class="plantilla4-jurados-image-costado">
+                                        </div>
+                                        <img src="./4/1.svg" alt="">
+                                    </div>
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros1">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros2">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros3">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros4">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros5">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros6">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros7">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros8">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros9">
+                                    <img src="./4/rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros00">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros01">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros02">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-oscuros plantilla4-adornos-oscuros03">
+                                    <!--cubos claros-->
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros1">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros2">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros3">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros4">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros5">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros6">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros7">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros8">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros9">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros00">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros01">
+                                    <img src="./4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros02">
                                 </div>
                                 <div class="plantilla5">
                                     <div class="plantilla5-content">

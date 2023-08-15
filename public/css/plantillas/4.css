@@ -1,0 +1,107 @@
+:root{
+    --negro:#000;
+    --blanco:#fff;
+    --transparente-claro:rgba(255, 255, 255, 0.459);
+    --transparente-oscuro:rgba(0, 0, 0, 0.11);
+    --rosado:#EDA5FF;
+    --moraclaro:#CC00FF;
+    --moradousuario:#CC01FF;/*boton de usuario*/
+    --morapie:#531A87;
+    --moraoscuro:#2C0351;/*barra*/
+    --moradomezcla:#3f017a;/*home tiene un efecto mezcla */
+    --moztarillo:#F3FE01;
+    --morainicio-regitro:#602F92;
+    --gris:#B0B0B0;
+    --gris-transparente:#E3E3E350;
+    --transparencia:#fafafa10;
+    --tranparencia1:#e3e3e310;
+    --transparencia2:#b0b0b010;
+
+}
+.plantilla4{
+height: 100%;
+width:100%;
+}
+.plantilla4-jurados{
+justify-content:center;
+text-align:center;
+}
+.plantilla4-jurados-text{
+background-color: #CC01FF;
+border-radius: 50px;
+padding: 1px;
+margin: 3rem 30rem;
+}
+.plantilla4-jurados-text h2{
+margin:2px 
+}
+.plantilla4-jurados-image{
+display: flex;
+justify-content: center;
+}
+.plantilla4-jurados img{
+height: 25rem;
+}
+.plantilla4-jurados-image-costado{
+transform: translateY(25px);
+margin: 0 100px;
+}
+/*adornos */
+.plantilla4-adornos-oscuros{
+height:13%;
+z-index: -1;
+position: relative;
+}
+.plantilla4-adornos-claros{
+height:7%;
+z-index: -1;
+opacity: 0.5;
+position: relative;
+}
+/* posicionamiento de las miagenes  */
+.plantilla4-adornos-oscuros1{    translate: 0 -89rem;
+rotate: 45deg;}
+.plantilla4-adornos-oscuros2{    translate: 2rem -59rem;
+z-index: -12;
+rotate: -45deg;}
+.plantilla4-adornos-oscuros3{    translate: 19rem -76rem;}
+.plantilla4-adornos-oscuros4{    translate: 35rem -91rem;
+rotate: -39deg;}
+.plantilla4-adornos-oscuros5{translate: 44rem -98rem;
+rotate: -132deg;}
+.plantilla4-adornos-oscuros6{    translate: 20rem -56rem;
+rotate: 135deg;}
+.plantilla4-adornos-oscuros7{translate: 46rem -54rem;
+rotate: 100deg;}
+.plantilla4-adornos-oscuros8{translate: 51rem -80rem;
+rotate: -20deg;}
+.plantilla4-adornos-oscuros9{    translate: -33rem -13rem;
+rotate: -100deg;
+}
+.plantilla4-adornos-oscuros00{translate: 15rem -10rem;}
+.plantilla4-adornos-oscuros01{translate: 29rem -27rem;
+rotate: -125deg;}
+.plantilla4-adornos-oscuros02{translate: -29rem -1rem;
+rotate: 180deg;}
+.plantilla4-adornos-oscuros03{translate: -88rem -28rem;}
+
+.plantilla4-adornos-claros1{translate: 0 -94rem;}
+.plantilla4-adornos-claros2{    translate: -12rem -24rem;
+rotate: -47deg;}
+.plantilla4-adornos-claros3{    translate: 2rem -63rem;
+rotate: 30deg;}
+.plantilla4-adornos-claros4{translate: -39rem -69rem;
+rotate: -55deg;}
+.plantilla4-adornos-claros5{translate: 40rem -31rem;
+rotate: -10deg;}
+.plantilla4-adornos-claros6{translate: 0 -79rem;
+}
+.plantilla4-adornos-claros7{translate: 35rem -67rem;}
+.plantilla4-adornos-claros8{translate: 0 -43rem;
+rotate: 72deg;}
+.plantilla4-adornos-claros9{translate: -10rem -10rem;}
+.plantilla4-adornos-claros00{translate: 0 -98rem;
+rotate: -214deg;}
+.plantilla4-adornos-claros01{translate: 41rem -39rem;
+rotate: -298deg;}
+.plantilla4-adornos-claros02{translate: 70rem -8rem;}
