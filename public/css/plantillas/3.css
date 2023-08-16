@@ -22,12 +22,13 @@
     display: flex;
     height: 100%;
     width:100%;
+    position: sticky;
 }
 .plantilla3-izq,
 .plantilla3-derch{
     display: flex;
     width: 100%;
-    height: 100%;
+
     justify-content: center;
     align-items: center;
 }
@@ -35,8 +36,8 @@
     height:46%;
 }
 .plantilla3-izq .plantilla3-adornos{
-    height: 15%;
-    width:7%;
+    height: 12%;
+    width: 8%;
 }
 .plantilla3-adornos{
     width: 30%;
@@ -52,7 +53,7 @@
     height:100%;
 }
 .plantilla3-imagen-superior{
-    translate: 30px 10px;
+    translate: 50px 10px;
 }
 .plantilla3-imagen-inferior{
     translate: -130px -50px;
@@ -65,50 +66,51 @@
     height: 35%;
 }
 .plantilla3-confeti-down{
-    translate: -155px -170px;
-    transform: rotate(147deg);
+    translate: -160px -320px;
+    transform: rotate(171deg);
 }
 .plantilla3-confeti-up{
-    translate: 10px 130px;
+    translate: 30px 240px;
+    rotate: 2deg;
 }
 /*pocision de los triangulos */
 .plantilla3-izq .plantilla3-adorno2{
-height: 7%;
-width: 4%;
+    height: 7%;
+    width: 4%;
 }
 .plantilla3-izq .plantilla3-adorno5{
 height: 7%;
 width: 4%;
 }
 .plantilla3-adorno1{
-translate: -340px -295px;
+translate: -340px -496px;
 rotate: 245deg;
 }
 .plantilla3-adorno2{
-translate: -99px -286px;
+translate: -99px -431px;
 
 transform: rotate(-63deg);
 }
 .plantilla3-adorno3{
-translate: 47px -188px;
+translate: 45px -651px;
 }
 .plantilla3-adorno4{
-translate: 265px -306px;
+translate: 277px -415px;
 rotate: -2.5deg;
 }
 .plantilla3-adorno5{
-translate: 316px -12px;
+translate: 385px -12px;
 rotate: 296deg;
 }
 .plantilla3-adorno6{
-translate: 235px 167px;
+translate: 248px 172px;
 }
 .plantilla3-adorno7{
-translate: -119px 270px;
+translate: -119px 563px;
 rotate: 60deg;
 }
 .plantilla3-adorno8{
-translate: -325px 180px;}
+translate: -416px 326px;}
 /*triangulos más claros */
 .plantilla3-izq .plantilla3-adornoa,
 .plantilla3-izq .plantilla3-adornoi,
@@ -127,33 +129,33 @@ translate: -325px 180px;}
 
 }
 .plantilla3-adornob{
-    translate: 49px -289px;
+    translate: 90px -289px;
     rotate: -163deg;
 }
 .plantilla3-adornoc{
     rotate: -163deg;
-    translate: 213px -130px;}
+    translate: 455px 430px;}
 .plantilla3-adornod{
-    translate: 500px -275px;
+    translate: 500px -478px;
     rotate: 15deg;
 }
 .plantilla3-adornoe{
-    translate: 865px -290px;
+    translate: 980px -561px;
     rotate: -15deg;
 }
 .plantilla3-adornof{
-    translate: 100px 75px;
+    translate: 995px 523px;
     rotate: 33deg;}
 .plantilla3-adornog{
-    translate: -304px 40px;
+    translate: -304px 584px;
 
 }
 .plantilla3-adornoh{
-    translate: -114px 145px;
+    translate: -114px 176px;
     rotate: 25deg;
 }
 .plantilla3-adornoi{
-    translate: 58px 288px;
+    translate: 100px 337px;
 }
 /* */
 .plantilla3-derch .plantilla3-derch-inferior{

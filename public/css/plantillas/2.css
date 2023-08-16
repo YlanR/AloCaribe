@@ -23,16 +23,19 @@
 .plantilla2-content-pelotas{
     display: flex;
     position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .pelotas-minusculas img{
     height: 2rem;
     width: 2rem;
 }
-.minuscula1{translate: 10rem 16rem;}
-.minuscula2{translate: 66rem 5rem;}
-.minuscula3{translate: 13rem 29rem;}
-.minuscula4{translate: 41rem 28rem;}
-.minuscula5{translate: 74rem 19rem;}
+.minuscula1{translate: 2rem 16rem;}
+.minuscula2{translate: 75rem 2rem;}
+.minuscula3{translate: 14rem 29rem;}
+.minuscula4{translate: 44rem 28rem;}
+.minuscula5{translate: 66rem 19rem;}
 
 .pelotas-pequeñas img{
 height: 4.5rem;
@@ -45,25 +48,27 @@ width: 4.5rem;
     height: 7rem;
     width: 7rem;
 }
-.mediana1{translate: 54rem 30rem;}
-.mediana2{translate: 0rem 20rem;}
+.mediana1{translate: 54rem 37rem;}
+.mediana2{translate: 60rem 19rem;}
 
 .pelotas-grandes img{
     height: 9rem;
     width: 9rem;
 }
 .grande1{translate: 24rem 12rem;}
-.grande2{translate: -44rem 1rem;}
+.grande2{translate: -56rem -1rem;}
 
 .pelotas-gigantes img{  
     height: 12rem;
     width: 12rem;}
-.gigante1{translate: -54rem 28rem;}
+.gigante1{translate: -65rem 33rem;}
 .gigante2{translate: -20rem -2rem;}
 /*estilos del confeti y posicionamiento*/
 .plantilla2-content-confeti{
     display: flex;
     position: absolute;
+    width: 100%;
+    justify-content: center;
 }
 .plantilla2-content-confeti img{
     width: 8rem;
@@ -71,11 +76,11 @@ width: 4.5rem;
     opacity: 0.2;
 }
 .confeti1{
-    translate: 0rem 10rem;
+    translate: -8rem -3rem;
     transform: rotate(158.32deg);
 }
 .confeti2{
-    translate: -6rem 23rem;
+    translate: -17rem 14rem;
     transform: rotate(75deg);
 }
 .confeti3{
@@ -86,7 +91,7 @@ width: 4.5rem;
     translate: 0rem -2.5rem;
 }
 .confeti5{
-    translate: -1rem 22rem;
+    translate: -1rem 25rem;
 }
 .confeti6{
     translate: 9rem 11rem;
@@ -97,7 +102,7 @@ width: 4.5rem;
 }
 .confeti8{translate: 19rem ;
 transform: rotate(-80deg);}
-.confeti9{translate: 12rem 14rem;}
+.confeti9{translate: 4rem 19rem;}
 
 /*logo central*/
 .plantilla2-content-logo{
@@ -166,6 +171,9 @@ box-shadow: 0rem 3rem 1rem var(--gris);
     padding: 20px;
 }
 /* contenedor del resto del contenido */
+.contenidos{
+    margin-top: 20px;
+}
 .contenedor-contenidos{
 display: grid;
 grid-template-columns: 1fr;
@@ -211,7 +219,11 @@ gap: 5rem;
 .contenedor-contenido.activa .despliegue{
     opacity: 1;
     margin-top: 20px;
-}
-.contenedor-contenido.activa img{
-    transform: rotate(45deg);
+    max-height: 100%;
+} 
+.contenedor-contenido.activa .contenido img{
+    transform: rotate(180deg);
+    opacity: 0.5;
+    translate: 0 100%;
+    
 }

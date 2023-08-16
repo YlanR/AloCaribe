@@ -21,6 +21,7 @@
 .plantilla4{
 height: 100%;
 width:100%;
+position: sticky;
 }
 .plantilla4-jurados{
 justify-content:center;
@@ -49,11 +50,13 @@ margin: 0 100px;
 /*adornos */
 .plantilla4-adornos-oscuros{
 height:13%;
+width: 7%;
 z-index: -1;
 position: relative;
 }
 .plantilla4-adornos-claros{
 height:7%;
+width: 3%;
 z-index: -1;
 opacity: 0.5;
 position: relative;
@@ -61,7 +64,7 @@ position: relative;
 /* posicionamiento de las miagenes  */
 .plantilla4-adornos-oscuros1{    translate: 0 -89rem;
 rotate: 45deg;}
-.plantilla4-adornos-oscuros2{    translate: 2rem -59rem;
+.plantilla4-adornos-oscuros2{    translate: 12rem -59rem;
 z-index: -12;
 rotate: -45deg;}
 .plantilla4-adornos-oscuros3{    translate: 19rem -76rem;}
@@ -69,7 +72,7 @@ rotate: -45deg;}
 rotate: -39deg;}
 .plantilla4-adornos-oscuros5{translate: 44rem -98rem;
 rotate: -132deg;}
-.plantilla4-adornos-oscuros6{    translate: 20rem -56rem;
+.plantilla4-adornos-oscuros6{    translate: 20rem -40rem;
 rotate: 135deg;}
 .plantilla4-adornos-oscuros7{translate: 46rem -54rem;
 rotate: 100deg;}
