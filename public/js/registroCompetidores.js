@@ -30,8 +30,8 @@ class Competidores{
 
         if(competidorExistenteIndex !== -1){
             const competidorExistente = this.competidores[competidorExistenteIndex];
-            competidorExistente.contador++;
-
+            competidorExistente.contador++;  
+        
             this.competidores = [...this.competidores, competidor];
             return console.log(this.competidores);
         }else{
@@ -125,7 +125,6 @@ class UI{
             btnEditar.innerHTML = 'Editar';
 
             btnEditar.onclick = () => editarCompetidor(competidor);
-
 
             divCompetidor.appendChild(divNombre);
             divCompetidor.appendChild(divCedula);
