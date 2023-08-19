@@ -108,7 +108,7 @@
                         <img src="../img/2/sss.png" alt="confeti">
                     </div>
                     <div class="confeti-diseño confeti7">
-                        <img src="../img/2/sss.png" alt="confeti">
+                        <img src="../img/6/ajp.png2/sss.png" alt="confeti">
                     </div>
                     <div class="confeti-diseño confeti8">
                         <img src="../img/2/sss.png" alt="confeti">
@@ -249,7 +249,166 @@
                                 </div>
                                 <div class="plantilla6">
                                     <div class="plantilla6-content">
-                                        <div></div>
+                                        <cosmos-mode-5-6-0 class="">
+                                            <div class="plantilla6-content-panel">
+                                                <div class="plantilla6-content-panel-gallery">
+                                                    <div class="plantilla6-content-panel-gallery-imagen">
+                                                        <div class="plantilla6-content-panel-gallery-imagen-mode plantilla6-modes">
+                                                            <div class="plantilla6-modes-container"></div>
+                                                            <div class="plantilla6-modes-container">
+                                                                <div class="plantilla6-inline">
+                                                                    <div class="plantilla6-inline-image">
+                                                                        <div class="plantilla6-inline-image-gallery">
+                                                                            
+                                                                            <div class="plantilla6-slideshow-navegation">
+                                                                                <div class="plantilla6-slideshow-arrow plantilla6-slideshow-arrow-left">
+                                                                                    <div class="plantilla6-slideshow-arrow-icon plantilla6-slideshow-arrow-left-icon" ></div>
+                                                                                </div>
+                                                                                <div class="plantilla6-slideshow-arrow plantilla6-slideshow-arrow-right">
+                                                                                    <div class="plantilla6-slideshow-arrow-icon plantilla6-slideshow-arrow-right-icon" ></div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="plantilla6-slideshow-images">
+                                                                                <div class="plantilla6-progress">
+                                                                                    <div class="plantilla6-progress-bar">
+                                                                                        <div class="plantilla6-slideshow-image">
+                                                                                            <figure class="plantilla6-slideshow-image-progress">
+                                                                                                <div class="plantilla6-slideshow-image-progress-bar">
+                                                                                                    <a href="" class="plantilla6-image-links">
+                                                                                                        <div></div>
+                                                                                                    
+                                                                                                        <div class="plantilla6-link">
+                                                                                                            <div class="plantilla6-link-image">
+                                                                                                                <div class ="plantilla6-link-image-progress">
+                                                                                                                    <img src="../img/6/s.jpg" alt="" class="plantilla6-link-image-progress-bar">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </figure>
+                                                                                        </div>
+                                                                                        <div class="plantilla6-slideshow-image">
+                                                                                            <figure class="plantilla6-slideshow-image-progress">
+                                                                                                <div class="plantilla6-slideshow-image-progress-bar">
+                                                                                                    <a href="" class="plantilla6-image-links">
+                                                                                                        <div></div>
+                                                                                                    
+                                                                                                        <div class="plantilla6-link">
+                                                                                                            <div class="plantilla6-link-image">
+                                                                                                                <div class ="plantilla6-link-image-progress">
+                                                                                                                    <img src="../img/6/ss.jpg" alt="" class="plantilla6-link-image-progress-bar">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </figure>
+                                                                                        </div>
+                                                                                        <div class="plantilla6-slideshow-image">
+                                                                                            <figure class="plantilla6-slideshow-image-progress">
+                                                                                                <div class="plantilla6-slideshow-image-progress-bar">
+                                                                                                    <a href="" class="plantilla6-image-links">
+                                                                                                        <div></div>
+                                                                                                    
+                                                                                                        <div class="plantilla6-link">
+                                                                                                            <div class="plantilla6-link-image">
+                                                                                                                <div class ="plantilla6-link-image-progress">
+                                                                                                                    <img src="../img/6/sss.jpg" alt="" class="plantilla6-link-image-progress-bar">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </figure>
+                                                                                        </div>
+                                                                                        <div class="plantilla6-slideshow-image">
+                                                                                            <figure class="plantilla6-slideshow-image-progress">
+                                                                                                <div class="plantilla6-slideshow-image-progress-bar">
+                                                                                                    <a href="" class="plantilla6-image-links">
+                                                                                                        <div></div>
+                                                                                                    
+                                                                                                        <div class="plantilla6-link">
+                                                                                                            <div class="plantilla6-link-image">
+                                                                                                                <div class ="plantilla6-link-image-progress">
+                                                                                                                    <img src="../img/6/ssss.jpg" alt="" class="plantilla6-link-image-progress-bar">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </figure>
+                                                                                        </div>
+                                                                                        <div class="plantilla6-slideshow-image">
+                                                                                            <figure class="plantilla6-slideshow-image-progress">
+                                                                                                <div class="plantilla6-slideshow-image-progress-bar">
+                                                                                                    <a href="" class="plantilla6-image-links">
+                                                                                                        <div></div>
+                                                                                                    
+                                                                                                        <div class="plantilla6-link">
+                                                                                                            <div class="plantilla6-link-image">
+                                                                                                                <div class ="plantilla6-link-image-progress">
+                                                                                                                    <img src="../img/6/sssss.jpg" alt="" class="plantilla6-link-image-progress-bar">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </figure>
+                                                                                        </div>
+                                                                                        <div class="plantilla6-slideshow-image">
+                                                                                            <figure class="plantilla6-slideshow-image-progress">
+                                                                                                <div class="plantilla6-slideshow-image-progress-bar">
+                                                                                                    <a href="" class="plantilla6-image-links">
+                                                                                                        <div></div>
+                                                                                                    
+                                                                                                        <div class="plantilla6-link">
+                                                                                                            <div class="plantilla6-link-image">
+                                                                                                                <div class ="plantilla6-link-image-progress">
+                                                                                                                    <img src="../img/6/ssssss.jpg" alt="" class="plantilla6-link-image-progress-bar">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </figure>
+                                                                                        </div>
+                                                                                        <div class="plantilla6-slideshow-image">
+                                                                                            <figure class="plantilla6-slideshow-image-progress">
+                                                                                                <div class="plantilla6-slideshow-image-progress-bar">
+                                                                                                    <a href="" class="plantilla6-image-links">
+                                                                                                        <div></div>
+                                                                                                    
+                                                                                                        <div class="plantilla6-link">
+                                                                                                            <div class="plantilla6-link-image">
+                                                                                                                <div class ="plantilla6-link-image-progress">
+                                                                                                                    <img src="../img/6/asw.jpg" alt="" class="plantilla6-link-image-progress-bar">
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </a>
+                                                                                                </div>
+                                                                                            </figure>
+                                                                                        </div>
+                                                                                    </div>
+
+                                                                                    <div>
+                                                                                        <div>
+                                                                                            <div></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </cosmos-mode-5-6-0>
                                     </div>
                                 </div>
                                 
