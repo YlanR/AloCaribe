@@ -106,7 +106,7 @@ de adentro hacia afuera*/
     transition: transform .6s cubic-bezier(.35,0,0,1),height .6s cubic-bezier(.35,0,0,1);
     width: 100%;
 
-    transform: translateX(-6695.39px);
+    transform: translateX(-4695.39px);
 }
 @media (min-width: 650px){
     .image-slideshow__images{
