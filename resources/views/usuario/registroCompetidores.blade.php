@@ -112,6 +112,157 @@
                                     <div class="form-input">
                                     <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
                                     </div>
+                                    <!--segunda seleccion de agregar categorias -->
+                                    <div>
+                                        <p>Selección de categorias</p>
+                                        <hr class="form-linea-horizontal">
+                                        <div class="form-inputs" id="seleccionadorCategorias">
+                                            <div class="form-select"> 
+                                                <select name="categoria1" id="optiones">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option id="casino" value="1">Salsa Casino</option>
+                                                    <option id="bachata" value="2">Bachata</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-select"> 
+                                                <select name="categoria2" id="Options2">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option value="1">Solista Femenido</option>
+                                                    <option value="2">Solista Masculino</option>
+                                                    <option value="3">Parejas</option>
+                                                    <option value="4">Grupos</option>
+                                                    <option value="5">Duo Masculino</option>
+                                                    <option value="6">Duo Femenido</option>
+                                                    <option value="7">Rueda</option>
+                                                    <option value="8">Coreográfico</option>
+                                                    <option value="9">Parejas</option>
+                                                    <option value="10">Lady Style</option>
+                                                    <option value="11">Men Style</option>
+                                                </select>
+
+                                    
+                                            </div>
+                                            <hr class="form-linea--vertical">
+
+                                            <div class="form-select"> 
+                                                <select name="categoria3" id="categoria3">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option value="1">Begginer</option>
+                                                    <option value="2">Nuevo Talento</option>
+                                                    <option value="3">Novel</option>
+                                                    <option value="4">Libre</option>
+                                                    <option value="5">Abierta</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <hr class="linea-horizontal">
+                                        <div class="form-input">
+                                            <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
+                                        </div>
+                                    </div>
+                                     <!-- fin segunda seleccion de agregar categorias -->
+                                     
+                                     <!--inicio de la tercera selección-->
+                                     <div>
+                                        <p>Selección de categorias</p>
+                                        <hr class="form-linea-horizontal">
+                                        <div class="form-inputs" id="seleccionadorCategorias">
+                                            <div class="form-select"> 
+                                                <select name="categoria1" id="optiones">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option id="casino" value="1">Salsa Casino</option>
+                                                    <option id="bachata" value="2">Bachata</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-select"> 
+                                                <select name="categoria2" id="Options2">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option value="1">Solista Femenido</option>
+                                                    <option value="2">Solista Masculino</option>
+                                                    <option value="3">Parejas</option>
+                                                    <option value="4">Grupos</option>
+                                                    <option value="5">Duo Masculino</option>
+                                                    <option value="6">Duo Femenido</option>
+                                                    <option value="7">Rueda</option>
+                                                    <option value="8">Coreográfico</option>
+                                                    <option value="9">Parejas</option>
+                                                    <option value="10">Lady Style</option>
+                                                    <option value="11">Men Style</option>
+                                                </select>
+
+                                    
+                                            </div>
+                                            <hr class="form-linea--vertical">
+
+                                            <div class="form-select"> 
+                                                <select name="categoria3" id="categoria3">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option value="1">Begginer</option>
+                                                    <option value="2">Nuevo Talento</option>
+                                                    <option value="3">Novel</option>
+                                                    <option value="4">Libre</option>
+                                                    <option value="5">Abierta</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <hr class="linea-horizontal">
+                                        <div class="form-input">
+                                            <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
+                                        </div>
+                                    </div>
+                                     <!--fin de la tercera selección -->
+                                     <!--inico cuarta seleccion-->
+                                     <div>
+                                        <p>Selección de categorias</p>
+                                        <hr class="form-linea-horizontal">
+                                        <div class="form-inputs" id="seleccionadorCategorias">
+                                            <div class="form-select"> 
+                                                <select name="categoria1" id="optiones">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option id="casino" value="1">Salsa Casino</option>
+                                                    <option id="bachata" value="2">Bachata</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-select"> 
+                                                <select name="categoria2" id="Options2">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option value="1">Solista Femenido</option>
+                                                    <option value="2">Solista Masculino</option>
+                                                    <option value="3">Parejas</option>
+                                                    <option value="4">Grupos</option>
+                                                    <option value="5">Duo Masculino</option>
+                                                    <option value="6">Duo Femenido</option>
+                                                    <option value="7">Rueda</option>
+                                                    <option value="8">Coreográfico</option>
+                                                    <option value="9">Parejas</option>
+                                                    <option value="10">Lady Style</option>
+                                                    <option value="11">Men Style</option>
+                                                </select>
+
+                                    
+                                            </div>
+                                            <hr class="form-linea--vertical">
+
+                                            <div class="form-select"> 
+                                                <select name="categoria3" id="categoria3">
+                                                    <option selected disabled>Categoría</option>
+                                                    <option value="1">Begginer</option>
+                                                    <option value="2">Nuevo Talento</option>
+                                                    <option value="3">Novel</option>
+                                                    <option value="4">Libre</option>
+                                                    <option value="5">Abierta</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                        <hr class="linea-horizontal">
+                                        <div class="form-input">
+                                            <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
+                                        </div>
+                                    </div>
+                                    <!--fin cuarta seleccion-->
                                     <div class="form-botones">
                                         <label for="">foto del competidor</label>
                                         <!-- <input type="file" name="foto_competidor" id="foto_competidor"> -->
