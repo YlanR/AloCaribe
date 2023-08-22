@@ -262,15 +262,20 @@
                                                                             
                                                                             <div class="plantilla6-slideshow-navegation">
                                                                                 <div class="plantilla6-slideshow-arrow plantilla6-slideshow-arrow-left">
-                                                                                    <div class="plantilla6-slideshow-arrow-icon plantilla6-slideshow-arrow-left-icon" ></div>
+                                                                                    <div class="plantilla6-slideshow-arrow-icon plantilla6-slideshow-arrow-left-icon" >
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.56 12.09 5.83 5.82a.5.5 0 0 0 .71 0l.35-.35a.51.51 0 0 0 0-.71l-5.12-5.12 5.12-5.11a.51.51 0 0 0 0-.71l-.35-.35a.5.5 0 0 0-.71 0l-5.83 5.82a.51.51 0 0 0 0 .71z"></path></svg>
+                                                                                    </div>
                                                                                 </div>
                                                                                 <div class="plantilla6-slideshow-arrow plantilla6-slideshow-arrow-right">
-                                                                                    <div class="plantilla6-slideshow-arrow-icon plantilla6-slideshow-arrow-right-icon" ></div>
+                                                                                    <div class="plantilla6-slideshow-arrow-icon plantilla6-slideshow-arrow-right-icon" >
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m7.56 12.09 5.83 5.82a.5.5 0 0 0 .71 0l.35-.35a.51.51 0 0 0 0-.71l-5.12-5.12 5.12-5.11a.51.51 0 0 0 0-.71l-.35-.35a.5.5 0 0 0-.71 0l-5.83 5.82a.51.51 0 0 0 0 .71z"></path></svg>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                             <div class="plantilla6-slideshow-images">
                                                                                 <div class="plantilla6-progress">
                                                                                     <div class="plantilla6-progress-bar">
+                                                                                        <!--contenedor de las imagenes-->
                                                                                         <div class="plantilla6-slideshow-image">
                                                                                             <figure class="plantilla6-slideshow-image-progress">
                                                                                                 <div class="plantilla6-slideshow-image-progress-bar">
@@ -421,5 +426,23 @@
 
         <section></section>
     </main>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script src="../js/desplegable.js"> </script>
+<script>
+    var TrandingSlider = new Swiper('.plantilla6-progress-bar', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2.5,
+    },
+});
+</script>
     @include('templates.footer')
