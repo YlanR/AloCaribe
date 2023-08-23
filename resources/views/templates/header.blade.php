@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/plantillas/3.css">
     <link rel="stylesheet" href="./css/plantillas/2.css">
     <link rel="stylesheet" href="./css/plantillas/1.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>{{ $modo }}</title>
 </head>
 <body>

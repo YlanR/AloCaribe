@@ -54,7 +54,7 @@ justify-content:space-between;
 .ficha-contenido-encapsulado-centro{
     position:absolute;
     width: 55%;
-    height: 85%;
+    height: 55%;
     border: 2px solid ;
 
 
@@ -152,7 +152,7 @@ justify-content:space-between;
 .pago-contenido{
     width: 100%;
     height: 31rem;
-    margin-top:100px;
+    margin-top:80px;
 }
 .pago-contenido-encapsulado{
     background-size: cover;
@@ -202,14 +202,30 @@ justify-content:space-between;
 }
 .pago-logo{
     display: flex;
-    width: auto;
-    height: auto;
+    width: 55%;
+    height: 100%;
+
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
 }
 .pago-logo img{
     height: 14rem;
     opacity: 0.5;
 }
 /*estilos del contenedor derecho  */
+.tabla-logo{
+    position: absolute;
+    z-index: 1;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    opacity: 0.2;
+    justify-content: center;
+    width: 35%;
+}
+
 .tabla-contenido{    
 
 width: 100%;
@@ -223,8 +239,8 @@ background-color: white;
 }
 .tabla-contenido-encapsulado-centro{
 position:absolute;
-width: 34%;
-height: 85%;
+width: 35%;
+height: 100%;
 border: 2px solid ;
 
 
@@ -246,8 +262,33 @@ backdrop-filter: blur(0.4rem);
     border: none;
     border-radius: 25px;
     border-bottom: 1px solid black;
-    background: transparent;
+    background: var(--rosado);
     color: white;
     padding: 4px;
     cursor: pointer;
+}
+/*estilos llamadoes en el js de agregar categoria*/
+.seleccionadores{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+.ficha-contenido-encapsulado-centro.altura1{ 
+    height: 60%;
+}
+
+.ficha-contenido-encapsulado-centro.altura2{
+    height: 70%;
+}
+.ficha-contenido-encapsulado-centro.altura3{
+    height: 78%;
+}
+
+.mover1{
+    margin-top:125px;
+}
+.mover2{
+    margin-top:195px;
 }

@@ -15,7 +15,7 @@
                     </div>
                     <div class="ficha-contenido">
                         <div class="ficha-contenido-encapsulado">
-                            <div class="ficha-contenido-encapsulado-centro">
+                            <div class="ficha-contenido-encapsulado-centro" id ="cambioAltura">
                                 <h3 id="tituloficha"> Ficha de competidor</h3>
                                 
                                 <!--formulario donde se registran los datos-->
@@ -109,11 +109,11 @@
 
                                     </div>
                                     <hr class="linea-horizontal">
-                                    <div class="form-input">
-                                    <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
+                                    <div class="form-input" id="form-input">
+                                        <button id="seleccionador">Agregar otra categoria </button> 
                                     </div>
                                     <!--segunda seleccion de agregar categorias -->
-                                    <div>
+                                    <div class="seleccionadores" id="seleccionadores1">
                                         <p>Selección de categorias</p>
                                         <hr class="form-linea-horizontal">
                                         <div class="form-inputs" id="seleccionadorCategorias">
@@ -157,14 +157,14 @@
 
                                         </div>
                                         <hr class="linea-horizontal">
-                                        <div class="form-input">
-                                            <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
+                                        <div class="form-input" id="form-input1">
+                                            <button id="seleccionador1" >Agregar otra categoria </button> 
                                         </div>
                                     </div>
                                      <!-- fin segunda seleccion de agregar categorias -->
                                      
                                      <!--inicio de la tercera selección-->
-                                     <div>
+                                     <div class="seleccionadores" id="seleccionadores2">
                                         <p>Selección de categorias</p>
                                         <hr class="form-linea-horizontal">
                                         <div class="form-inputs" id="seleccionadorCategorias">
@@ -208,13 +208,13 @@
 
                                         </div>
                                         <hr class="linea-horizontal">
-                                        <div class="form-input">
-                                            <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
+                                        <div class="form-input" id="form-input2">
+                                            <button id="seleccionador2"  >Agregar otra categoria </button> 
                                         </div>
                                     </div>
                                      <!--fin de la tercera selección -->
                                      <!--inico cuarta seleccion-->
-                                     <div>
+                                     <div class="seleccionadores" id="seleccionadores3">
                                         <p>Selección de categorias</p>
                                         <hr class="form-linea-horizontal">
                                         <div class="form-inputs" id="seleccionadorCategorias">
@@ -258,9 +258,6 @@
 
                                         </div>
                                         <hr class="linea-horizontal">
-                                        <div class="form-input">
-                                            <button id="seleccionador" onclick="copiar()">Agregar otra categoria </button> 
-                                        </div>
                                     </div>
                                     <!--fin cuarta seleccion-->
                                     <div class="form-botones">
@@ -275,12 +272,13 @@
                     </div>
                     
                 </div>
-<!--formulario para el pago movil -->
+            <!--formulario para el pago movil -->
                 <div class="main-content-izquierda-pago pago">
-                    <div class="pago-logo">
-                        <img src="../../img/logo.png" alt="">
-                    </div>
-                    <div class="pago-contenido">
+                  
+                    <div class="pago-contenido" id="moverMargen">
+                         <div class="pago-logo">
+                            <img src="../../img/logo.png" alt="">
+                        </div>
                         <div class="pago-contenido-encapsulado">
                             <div class="pago-contenido-encapsulado-centro">
                                 <div class="pago-tipo">
@@ -330,7 +328,7 @@
                     </div>
                 </div>
             </div>
-<!--formulario para el efectivo-->
+        <!--formulario para el efectivo-->
 
             <!--            <div class="main-content-izquierda-pago pago">
                 <   div class="pago-logo">
@@ -375,15 +373,16 @@
                 </div>
             </div> -->
 
-            <!--contenedor derecho -->
+        <!--contenedor derecho -->
             <div class="main-content-derecha right">
                 <h2></h2>
                 <div class="main-content-derecha-tabla tabla">
                     
+                   
+                    <div class="tabla-contenido">
                     <div class="tabla-logo">
                         <img src="../../img/logo.png" alt="">
                     </div>
-                    <div class="tabla-contenido">
                         <div class="tabla-contenido-encapsulado">
                             <div class="tabla-contenido-encapsulado-centro">
                                 <div class="tabla-competidores">
@@ -417,7 +416,7 @@
         </div>
     </section>
     @include('templates.footer')
-
+    <script src="../../js/agregarCategoria.js"></script>
     <script src="../../js/registroCompetidores.js"></script>
     <script>
         const $categoria1 = document.querySelector('#Options2');
