@@ -400,9 +400,9 @@
                                             
                                             </tr>
                                         </tbody>
-                                        <tfoot id="total">
+                                        <tfoot>
                                             <tr>
-                                                <th>Total: </th>
+                                                <th>Total: <p id="total"></p> </th>
                                             </tr>
                                         </tfoot>
                                     </table>

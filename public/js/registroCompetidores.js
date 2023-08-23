@@ -21,21 +21,31 @@ const contenedorTotal = document.querySelector('#total');
 class Competidores{
     constructor(){
         this.competidores = []; 
+        this.total = [];
     }
 
     agregarCompetidor(competidor){
 
-        const competidorExistenteIndex = this.competidores.findIndex(comp => comp.cedula === competidor.cedula);
+        const competidorExistenteIndex = this.competidores.some(comp => comp.cedula === competidor.cedula);
         console.log(competidorExistenteIndex);
-
-        if(competidorExistenteIndex !== -1){
-            const competidorExistente = this.competidores[competidorExistenteIndex];
-            competidorExistente.contador++;  
         
-            this.competidores = [...this.competidores, competidor];
+        if(competidorExistenteIndex){
+            const competidores = this.competidores.map( comp => {
+                if( comp.cedula === competidor.cedula){
+                    comp.contador++;
+
+                    return comp;
+                } else{
+                    return comp;
+                }
+            });
+            this.competidores = [...competidores, competidor];
             return console.log(this.competidores);
         }else{
+            
+
             this.competidores = [...this.competidores, competidor];
+
             return console.log(this.competidores);
         }
         // console.log(competidorExistenteIndex);
@@ -43,27 +53,44 @@ class Competidores{
     }
 
     calcularPrecio(contadores){
-        let precio;
-        let contando = contadores.contador
-        switch (contando) {
-          case 1:
-            precio = 20;
-            break;
-          case 2:
-            precio = 20;
-            break;
-          case 3:
-            precio = 35;
-            break;
-          case 4:
-            precio = 45;
-            break;
-          default:
-            precio = 0;
-        }
-        console.log(contando + ' probandooo');
-        return precio;
+        let precio = 0;
+        let total = 0;
+
+        // const competidorExistente = this.competidores.map(comp => comp.cedula === competidores.cedula);
+ 
+        switch (contadores) {
+            case 1:
+              precio = 25;
+              break;
+            case 2:
+              precio = 25;
+              break;
+            case 3:
+              precio = 30;
+              break;
+            case 4:
+              precio = 30;
+              break;
+            case 5:
+              precio = 35;
+              break;
+            case 5:
+              precio = 40;
+              break;
+            default:
+              precio = 0;
+          }
+
+              total += precio;
         
+              console.log(total + ' probandooo');
+              return total; 
+        
+    }
+    
+    crearPrecio(precio){
+        this.total = [...this.total, precio];
+        return;
     }
 
     eliminarCompetidor(id){
@@ -126,6 +153,7 @@ class UI{
 
             btnEditar.onclick = () => editarCompetidor(competidor);
 
+
             divCompetidor.appendChild(divNombre);
             divCompetidor.appendChild(divCedula);
             divCompetidor.appendChild(btnEliminar);
@@ -138,9 +166,9 @@ class UI{
 
     }
 
-    imprimirTotal({competidores}){
-        const divTotal = document.createElement('th');
+    imprimirTotal(total){
 
+        contenedorTotal.textContent = total;
 
     }
 
@@ -262,8 +290,13 @@ const UserObj = {
     categoria2: '',
     categoria3: '',
     contador: 1,
-    precio: 0,
+    precio: 25,
     ticket_id: ticket
+}
+
+const TotalObj = {
+    cedulas: '',
+    precio: 0
 }
 
 
@@ -283,6 +316,7 @@ function nuevoCompetidor(e){
     e.preventDefault();
 
     const {academy_id, name, apellido, cedula, edad, instagram, categoria1, categoria2, categoria3, contador, ticket_id} = UserObj;
+    const {cedulas, precio} = TotalObj;
 
     
     
@@ -292,7 +326,8 @@ function nuevoCompetidor(e){
         return;
     }
    
-
+    // const existe = admCompetidores.competidores.some(comp => comp.cedula === UserObj.cedula);
+    // console.log(existe);
     if(editando){
         ui.imprimirAlerta('Editado correctamente');
 
@@ -304,18 +339,56 @@ function nuevoCompetidor(e){
     } else{
 
         UserObj.id = Date.now();
-      
+
+        // const competidorExistenteIndex = admCompetidores.competidores.some(comp => comp.cedula === UserObj.cedula);
+        // if(competidorExistenteIndex){
+        //     UserObj.precio =  admCompetidores.calcularPrecio(UserObj.contador);
+        // }
+
+        //     console.log(UserObj.precio + ' PRECIOTOTAL');
+
         admCompetidores.agregarCompetidor({...UserObj});
 
+        let datoss = admCompetidores.competidores;
+        let total = 0;
+        // console.log(total + ' PRECIOTOTALprincipio');
+
+        let datos = datoss.filter(obje => obje.cedula === UserObj.cedula);
+        
+
+        console.log(datos + ' CEDULAINPUT');
+        datoss.forEach( (key, i) => {    
+        if(datoss.includes(key)){
+            let contarcedula = datos.length;
+            TotalObj.precio =  admCompetidores.calcularPrecio(contarcedula);
+            TotalObj.cedulas = key;
+            admCompetidores.total(precio);
+        console.log(admCompetidores.total + ' cedulacontada');
+        
+        }else{
+            let contarcedula = datos.length;
+         // console.log(contarcedula + ' cedulacontada');
+            TotalObj.precio =  admCompetidores.calcularPrecio(contarcedula);
+            TotalObj.cedulas = key;
+            let precio =  admCompetidores.calcularPrecio(contarcedula);
+            admCompetidores.total(precio);
+
+            
+        }
+        
+        })
+
+        UserObj.precio =  admCompetidores.competidores.calcularPrecio(UserObj.contador);
+
+
         ui.imprimirAlerta('Se agrego correctamente');
-
     }
+    ui.imprimirTotal();
 
 
-    reiniciarOBjeto();
+    reiniciarOBjeto({...UserObj});
 
     formulario.reset();
-
     ui.imprimirCompetidores(admCompetidores);
 
 }
@@ -330,7 +403,7 @@ function reiniciarOBjeto(){
     UserObj.categoria2= '';
     UserObj.categoria3= '';
 }
-
+ 
 function eliminarCompetidor(id){
     
     admCompetidores.eliminarCompetidor(id);
