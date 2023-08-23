@@ -10,10 +10,11 @@
             <div class="main-content-izquierda left">
                 <h2></h2>
                 <div class="main-content-izquierda-ficha ficha">
+                    
+                    <div class="ficha-contenido">
                     <div class="ficha-logo">
                         <img src="" alt="">
                     </div>
-                    <div class="ficha-contenido">
                         <div class="ficha-contenido-encapsulado">
                             <div class="ficha-contenido-encapsulado-centro" id ="cambioAltura">
                                 <h3 id="tituloficha"> Ficha de competidor</h3>
@@ -276,9 +277,7 @@
                 <div class="main-content-izquierda-pago pago">
                   
                     <div class="pago-contenido" id="moverMargen">
-                         <div class="pago-logo">
-                            <img src="../../img/logo.png" alt="">
-                        </div>
+                       
                         <div class="pago-contenido-encapsulado">
                             <div class="pago-contenido-encapsulado-centro">
                                 <div class="pago-tipo">
@@ -321,7 +320,9 @@
                                     </div>
 
                                 <!-- </form> -->
-
+                                <div class="pago-logo">
+                                    <img src="../../img/logo.png" alt="">
+                                </div>
                             </div>
                         </div>
                         
@@ -380,9 +381,7 @@
                     
                    
                     <div class="tabla-contenido">
-                    <div class="tabla-logo">
-                        <img src="../../img/logo.png" alt="">
-                    </div>
+                   
                         <div class="tabla-contenido-encapsulado">
                             <div class="tabla-contenido-encapsulado-centro">
                                 <div class="tabla-competidores">
@@ -409,6 +408,9 @@
                                 </div>
                                 
                             </div>
+                        </div>
+                        <div class="tabla-logo">
+                            <img src="../../img/logo.png" alt="">
                         </div>
                     </div>
                 </div>
