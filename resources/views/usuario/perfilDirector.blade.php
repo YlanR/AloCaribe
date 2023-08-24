@@ -1,24 +1,30 @@
 <?php 
 //llamado a la conexión con el controlador para recibir los datos 
-   // include("mostrarprueba.php");
+   // 
 ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>perfil director</title>
+    <link rel="stylesheet" href="../../css/perfildirector.css">
     <style>
 
     </style>
 </head>
 <body>
+    <!--agregar el header-->
+    <!---->
     <main>
         <section class="main">
             <div class="main-content">
                 <div class="perfil">
                     <div class="perfil-superior">
-                        <div class="perfil-superior-foto"> <img src="../../public/img/logo.png" alt="foto perfil"></div>
+                        <div class="perfil-superior-foto"> 
+                             <!--esta sección es dnd se llama los datos registrados para la foto-->
+                            <img src="../../public/img/logo.png" alt="foto perfil"></div>
                         <div class="prefil-superior-texto"> 
+                             <!--esta sección es dnd se llama los datos registrados-->
                             <h1>Elian Rizos</h1>
                             <h4>C.I.24.356.782</h4>
                             <hr style="    margin: 0 0 20px 0;">
@@ -33,6 +39,7 @@
                                 <h5>Cédula:</h5>
                             </div>
                             <div class="perfil-contenido-relleno">
+                                <!--esta sección es dnd se llama los datos registrados para el usuario-->
                                 <h5>Nombre:</h5>
                                 <h5>Apellido:</h5>
                                 <h5>Edad:</h5>
@@ -46,7 +53,7 @@
                                 <h5>Academia:</h5>
                             </div>
                             <div class="perfil-contenido-relleno">
-                                
+                                 <!--esta sección es dnd se llama los datos registrados para la academia-->
                                 <h5>Apellido:</h5>
                                 <h5>Edad:</h5>
                                 <h5>Cédula:</h5>
@@ -82,8 +89,8 @@
 
     </main>
 
-
+    <!--agregar el footer-->
+    <!---->
 </body>
 
 </html>
-
