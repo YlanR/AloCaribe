@@ -1,15 +1,11 @@
-<?php 
-//llamado a la conexión con el controlador para recibir los datos 
-   // include("mostrarprueba.php");
-?>
-
 <!--no se dnd pondrás este code pero cuidado dnd lo pongas pq de ser dnd hay otro nav tendrás que ponerle a este una clase y ponerle los estilos que tiene este nav en esa clase para que no afecte a otrs-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>menu</title>
-    <link rel="stylesheet" href="../../public/fonts/style.css">
+    <link rel="stylesheet" href="../../css/menu.css">
+    <link rel="stylesheet" href="../../fonts/style.css">
     <style>
       
     </style>
@@ -64,4 +60,3 @@
 </script>
 
 </html>
-
