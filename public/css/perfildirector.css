@@ -1,10 +1,11 @@
 .perfil{
-    position: absolute;
+   /* position: absolute;*/
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
+    margin: 20% 0;
 }
 .perfil-superior{
     position: absolute;
@@ -24,7 +25,7 @@ height: 10rem;
 .perfil-contenido{
     position: absolute;
     display: flex;
-    width: 50%;
+    width: 55%;
     height: 50%;
     margin-top: 195px;
     background-color: #6800C875;
@@ -53,7 +54,7 @@ height: 10rem;
 }
 @media (max-width:1690px) {
     .perfil-superior{
-        margin-bottom:405px;
+        margin-bottom:300px;
     }
     .perfil-contenido{
         margin-top: 245px;
@@ -107,27 +108,27 @@ height: 100%;
     opacity: 0.7;
     height: 5rem;
 }
-.perfil .perfil-fondo .p00{    translate: 0 200%;}
-.perfil .perfil-fondo .p0{    translate: 78%;}
-.perfil .perfil-fondo .p01{    translate: 13% 410%;}
+.perfil .perfil-fondo .p00{    translate: 0 -100%;}
+.perfil .perfil-fondo .p0{    translate: 78% -227%;}
+.perfil .perfil-fondo .p01{    translate: 13% 110%;}
 .perfil .perfil-fondo .p02{translate: 40% 550%;}
-.perfil .perfil-fondo .p03{    translate: 0 137%;}
-.perfil .perfil-fondo .p04{    translate: 0 454%;}
-.perfil .perfil-fondo .p05{    translate: 0 290%;}
+.perfil .perfil-fondo .p03{    translate: 0 0%;}
+.perfil .perfil-fondo .p04{    translate: 0 387%;}
+.perfil .perfil-fondo .p05{    translate: 0 90%;}
 .perfil .perfil-fondo .p06{    translate: 0 578%;}
-.perfil .perfil-fondo .p07{    translate: 0 100%;}
-.perfil .perfil-fondo .p08{    translate: 0 264%;}
-.perfil .perfil-fondo .p09{translate: 0 690%;}
-.perfil .perfil-fondo .p10{    translate: 0 150%;}
+.perfil .perfil-fondo .p07{    translate: 0 -5%;}
+.perfil .perfil-fondo .p08{    translate: 0 -264%;}
+.perfil .perfil-fondo .p09{translate: 0 450%;}
+.perfil .perfil-fondo .p10{    translate: 0 -100%;}
 .perfil .perfil-fondo .p11{    translate: 0 590%;}
-.perfil .perfil-fondo .p12{translate: 0 333%;}
+.perfil .perfil-fondo .p12{translate: 0 269%;}
 .perfil .perfil-fondo .p13{translate: 0 550%;}
 
 .perfil .perfil-fondo0{
     height: 28rem;
-    position: fixed;
+    position: absolute;
     display: flex;
-    translate: -400px 200px;
+    translate: -414px 206px;
 }
 .perfil .perfil-fondo1{
     height: 40rem;
