@@ -132,9 +132,11 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Usuario $usuario)
+    public function show(string $id)
     {
         //
+
+        
     }
 
     /**

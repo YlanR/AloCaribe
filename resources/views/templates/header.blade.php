@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="./css/plantillas/2.css">
     <link rel="stylesheet" href="./css/plantillas/1.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../../css/menu.css">
+    
     <title>{{ $modo }}</title>
 </head>
 <body>
@@ -40,7 +42,7 @@
                     <a href="#">CONTACTO</a>
                 </li>
 
-                @if(Auth::user())
+                <!-- @if(Auth::user())
                 <li class="navbar-link">
                     <a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
@@ -52,7 +54,7 @@
                         @csrf
                     </form>
                 </li>
-                @endif
+                @endif -->
 
                 @if(Auth::user())
                 <li class="navbar-link">
@@ -62,16 +64,25 @@
                 </li>
                 @endif
 
-
-                <li class="navbar-link"> 
+                <!-- <li class="navbar-link"> 
                         @if(Auth::user()) 
-                        <p class="nombre"> {{ Auth::user()->name }} {{ Auth::user()->apellido }} </p>
+                        <p class="nombre">   </p>
                         @endif
 
-                </li>
+                </li> -->
             </ul>
+            @if(Auth::user()) 
+            <button id="menu"> 
+                    <span class="icon-previous2"></span>
+                </button>
+                @endif
+
+            
+
+            
          <!---->
         @if(!Auth::user())
+        
             <div id="navbar-botones" >
             <!--emoji que manda al inicio de sesión -->
                 <a href="{{ url('/login') }}">
@@ -86,4 +97,51 @@
         @endif    
         </div>
     </nav>
+    @if(Auth::user()) 
+        <ul class="menu-vertical" id="menuVertical">
+            <li>
+                <li>
+                    <div class="menu-vertical-superior">
+                        <!--en este lado tienen que ser llamado los datos del usuario asi como su roll-->
+                        <div class="menu-vertical-text">
+                            <h5>@role('Operador')
+                                Operador
+                                @endrole
+                                @role('Director')
+                                Director
+                                @endrole</h5>
+                            <h4>{{ Auth::user()->name }} {{ Auth::user()->apellido }}</h4>
+                            <h6>{{ Auth::user()->cedula }}</h6>
+                        </div>
+                        <div class="menu-vertical-foto"><img src="../../public/img/logo.png" alt=""></div>
+                    </div>
+                </li>
+                <li><a href="{{url('perfil/')}}/{{Auth::user()->id}}" >Perfil</a></li>
+                <li><a href="#">Validación de Ticket</a></li>
+                <li><a href="#">Tickets Validados</a></li>
+                <li><a href="{{ url('/listaCompetidores') }}">Lista de Competidores</a></li>
+                <li><a href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                        {{ __('Cerrar Sesion') }}
+                    </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" hidden>
+                        @csrf
+                    </form></li>
+                
+            </li>
+        </ul>
+    @endif
     </header>
+    
+    <script>
+    let menu=document.getElementById("menu");
+    let menuVertical=document.getElementById("menuVertical");
+
+    menu.addEventListener("click",desplegar);
+
+    function desplegar(){
+        menuVertical.classList.toggle("show");
+        menu.classList.toggle("rotar");
+    }
+</script>

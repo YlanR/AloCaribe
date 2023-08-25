@@ -83,9 +83,5 @@ class User extends Authenticatable
         return $this->belongsToMany(Categoria::class, 'Categorias_users');
     }
 
-    public function relacionTablas(){
-        return $this->join('categorias_users', 'categorias_users.user_id', '=', 'users.id')
-        ->select('*')
-        ->get();
-    }
+    
 }

@@ -67,7 +67,6 @@
                             </thead>
         <!--llemar las celdas desde la dba :3 -->
                             <tbody class="lista-cuerpo">
-                                <!-- <h2>{{ $competidores->name_cate1 }}</h2> -->
 
                             @foreach ($competidores as $competidor => $valore)
                             

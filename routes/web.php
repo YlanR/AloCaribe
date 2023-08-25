@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CompetidoresController;
 use App\Http\Controllers\AcademyController;
 use App\Http\Controllers\OperadoresController;
+use App\Http\Controllers\PerfilesController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -35,6 +36,9 @@ Route::get('/registraCompetidores', [UsuarioController::class, 'index'])->middle
 Route::post('/recibirdatos', [UsuarioController::class, 'store']);
 Route::get('/listaCompetidores', [OperadoresController::class, 'index'])->middleware('auth');
 Route::post('/buscar', [OperadoresController::class, 'index'])->middleware('auth');
+Route::get('/perfil/{id}', [PerfilesController::class, 'index'])->middleware('auth');
+// Route::resource('/perfil', UsuarioController::class)->middleware('auth');
+
 
 
 
