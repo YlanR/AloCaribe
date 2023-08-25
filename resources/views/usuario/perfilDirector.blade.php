@@ -1,32 +1,22 @@
-<?php 
-//llamado a la conexión con el controlador para recibir los datos 
-   // 
-?>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>perfil director</title>
+    @include('templates.header',  ['modo' => 'Alo Caribe'])
     <link rel="stylesheet" href="../../css/perfildirector.css">
-    <style>
+    <link rel="stylesheet" href="../../css/index.css">
 
-    </style>
-</head>
-<body>
-    <!--agregar el header-->
-    <!---->
-    <main>
+<main>
+
+   
+    <body>
         <section class="main">
             <div class="main-content">
                 <div class="perfil">
                     <div class="perfil-superior">
                         <div class="perfil-superior-foto"> 
                              <!--esta sección es dnd se llama los datos registrados para la foto-->
-                            <img src="../../public/img/logo.png" alt="foto perfil"></div>
+                             <img  class="foto_perfil" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></div>
                         <div class="prefil-superior-texto"> 
                              <!--esta sección es dnd se llama los datos registrados-->
-                            <h1>Elian Rizos</h1>
-                            <h4>C.I.24.356.782</h4>
+                            <h1>{{ $usuar->name }} {{ $usuar->apellido }}</h1>
+                            <h4>C.I. {{ $usuar->cedula }}</h4>
                             <hr style="    margin: 0 0 20px 0;">
                         </div>
                     </div>
@@ -40,10 +30,10 @@
                             </div>
                             <div class="perfil-contenido-relleno">
                                 <!--esta sección es dnd se llama los datos registrados para el usuario-->
-                                <h5>Nombre:</h5>
-                                <h5>Apellido:</h5>
-                                <h5>Edad:</h5>
-                                <h5>Cédula:</h5>
+                                <h5>{{ $usuar->name }}</h5>
+                                <h5>{{ $usuar->apellido }}</h5>
+                                <h5>{{ $usuar->edad }}</h5>
+                                <h5>{{ $usuar->cedula }}</h5>
                             </div>
                         </div>
                         <div class="perfil-contenido-textos">
@@ -54,9 +44,9 @@
                             </div>
                             <div class="perfil-contenido-relleno">
                                  <!--esta sección es dnd se llama los datos registrados para la academia-->
-                                <h5>Apellido:</h5>
-                                <h5>Edad:</h5>
-                                <h5>Cédula:</h5>
+                                <h5>{{ $academy->telefono }}</</h5>
+                                <h5>{{ $usuar->instagram }}</h5>
+                                <h5>{{ $academy->name_academy }}</</h5>
                             </div> 
                         </div>
                         <div class="perfil-boton"> 
@@ -86,11 +76,8 @@
                 </div>
             </div>
         </section>
+</main>
 
-    </main>
-
-    <!--agregar el footer-->
-    <!---->
+   
 </body>
-
-</html>
+@include('templates.footer')

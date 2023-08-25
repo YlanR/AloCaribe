@@ -33,7 +33,7 @@ class OperadoresController extends Controller
         ->join('categoria2', 'categorias_users.categoria2_id', '=', 'categoria2.id')
         ->join('categorias', 'categorias_users.categoria_id', '=', 'categorias.id')
 
-        ->select('categorias_users.*', 'users.*', 'academies.*', 'categoria1.*','categoria2.*','categorias.*')
+        ->select('categorias_users.*', 'users.*', 'academies.*')
         ->where('categorias_users.categoria1_id', $request->input('categoria1'))
         ->where('categorias_users.categoria2_id', $request->input('categoria2'))
         ->where('categorias_users.categoria_id', $request->input('categoria3'))
@@ -42,6 +42,7 @@ class OperadoresController extends Controller
         // die();
 
         ->get();
+
         return view('usuario.listaCompetidores', compact('competidores'));
 
 
