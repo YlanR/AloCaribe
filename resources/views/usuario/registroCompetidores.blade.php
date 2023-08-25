@@ -24,7 +24,8 @@
                                 @csrf
                                     <div class="form-inputs" id="form-inputs">
 
-                                        <input type="hidden" name="academy_id" id="idUser" value="{{ $academy->id }}">
+                                        <input type="hidden" name="academy_id" id="idAcademy" value="{{ $academy->id }}">
+                                        <input type="hidden" name="user_id" id="idUser" value="{{ Auth::user()->id }}">
                                         <input type="hidden" name="_token" id="token" value="{{ csrf_token() }}">
                                         <div class="form-input">
                                             <input type="text" placeholder="nombre" id="name" name="name" class="">

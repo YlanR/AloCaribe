@@ -18,7 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('categoria2_id');
             $table->unsignedBigInteger('categorias_id');
             $table->unsignedBigInteger('academy_id');
-            $table->string('ticket_id');
+            $table->unsignedBigInteger('director_id');
+            $table->unsignedBigInteger('ticket_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
@@ -26,6 +27,8 @@ return new class extends Migration
             $table->foreign('categoria2_id')->references('id')->on('categoria2')->onDelete('cascade');
             $table->foreign('categorias_id')->references('id')->on('categorias')->onDelete('cascade');
             $table->foreign('academy_id')->references('id')->on('academies')->onDelete('cascade');
+            $table->foreign('director_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
 
         });
     }

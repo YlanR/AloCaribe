@@ -1,4 +1,5 @@
-const idImput = document.querySelector('#idUser').value;
+const idAca = document.querySelector('#idAcademy').value;
+const idUser = document.querySelector('#idUser').value;
 const nombreImput = document.querySelector('#name');
 const apellidoImput = document.querySelector('#apellido');
 const cedulaInput = document.querySelector('#cedula ');
@@ -221,11 +222,14 @@ function Enviar(){
         ticket_ID = datos.map(objeto => objeto.ticket_id);
 
 
-        let datosAca = parseInt(idImput);
+        let datosAca = parseInt(idAca);
+        let datosUser = parseInt(idUser);
+
 
         let datosEnviar = datos.map((objeto, index) => {
             return {
                 academy_id: datosAca,
+                director_id: datosUser,
                 name: datosName[index],
                 apellido: datosApellido[index],
                 cedula: datosCedula[index],
@@ -280,7 +284,8 @@ function Enviar(){
 }
 
 const UserObj = {
-    academy_id: idImput,
+    academy_id: idAca,
+    director_id: idUser,
     name: '',
     apellido: '',
     cedula: '',
