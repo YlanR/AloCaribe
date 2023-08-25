@@ -13,7 +13,7 @@ use App\Models\Categoria1;
 use App\Models\Categoria2;
 use App\Models\Categoria3;
 
-
+use App\Models\Tickets;
 use App\Models\Categorias_users;
 
 
@@ -71,10 +71,13 @@ class UsuarioController extends Controller
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
         }
 
-            
-
             // $instagram = new Instagram;
             // $instagram->name = $request->input('instagram');
+
+            
+            $tickete = $request->input('ticket_id');
+            $ticketsExist = Tickets::where('ticket', $tickete)->exists();
+            $ticketsExistent = Tickets::where('ticket', $tickete)->first();
 
             // $instagram->save();
             $cedula = $request->input('cedula');
@@ -96,30 +99,93 @@ class UsuarioController extends Controller
                 
                 $competidor->save();
 
-                $categoria = new Categorias_users;
-                $categoria->user_id = $competidor->id;
-                $categoria->categoria1_id = $request->input('categoria1');
-                $categoria->categoria2_id = $request->input('categoria2');
-                $categoria->categoria_id = $request->input('categoria3');
-                $categoria->academy_id = $request->input('academy_id');
-                $categoria->ticket_id = $request->input('ticket_id');
-                
-                $categoria->save();
-                return response()->json('Todo listo');
+                $ticket = new Tickets;
+                $ticket->ticket = $request->input('ticket_id'); 
+                $ticket->resultado = 'f';
+                if($ticketsExist == null){
+                    $ticket->save();
+                    
 
+                    $categoria = new Categorias_users;
+                    $categoria->user_id = $competidor->id;
+                    $categoria->categoria1_id = $request->input('categoria1');
+                    $categoria->categoria2_id = $request->input('categoria2');
+                    $categoria->categorias_id = $request->input('categoria3');
+                    $categoria->academy_id = $request->input('academy_id');
+                    $categoria->director_id = $request->input('director_id');
+                    $categoria->ticket_id = $ticket->id;
+                    
+                    $categoria->save();
+                    return response()->json('Todo listo');
+
+                }else{
+     
+
+                    $categoria = new Categorias_users;
+                    $categoria->user_id = $competidor->id;
+                    $categoria->categoria1_id = $request->input('categoria1');
+                    $categoria->categoria2_id = $request->input('categoria2');
+                    $categoria->categorias_id = $request->input('categoria3');
+                    $categoria->academy_id = $request->input('academy_id');
+                    $categoria->director_id = $request->input('director_id');
+                    $categoria->ticket_id = $ticketsExistent->id;
+                    
+                    $categoria->save();
+                    return response()->json('Todo listo');
+
+                }
 
             } else{
                 
+                $ticket = new Tickets;
+                $ticket->ticket = $request->input('ticket_id'); 
+                $ticket->resultado = 'f';
+                if($ticketsExist == null){
+                    $ticket->save();
+                    
+
+                    $categoria = new Categorias_users;
+                    $categoria->user_id = $UserExistent->id;
+                    $categoria->categoria1_id = $request->input('categoria1');
+                    $categoria->categoria2_id = $request->input('categoria2');
+                    $categoria->categorias_id = $request->input('categoria3');
+                    $categoria->academy_id = $request->input('academy_id');
+                    $categoria->director_id = $request->input('director_id');
+                    $categoria->ticket_id = $ticket->id;
+                    
+                    $categoria->save();
+                    return response()->json('Todo listo');
+
+                }else{
+     
+
+                    $categoria = new Categorias_users;
+                    $categoria->user_id = $UserExistent->id;
+                    $categoria->categoria1_id = $request->input('categoria1');
+                    $categoria->categoria2_id = $request->input('categoria2');
+                    $categoria->categorias_id = $request->input('categoria3');
+                    $categoria->academy_id = $request->input('academy_id');
+                    $categoria->director_id = $request->input('director_id');
+                    $categoria->ticket_id = $ticketsExistent->id;
+                    
+                    $categoria->save();
+                    return response()->json('Todo listo');
+
+                }
+
+
                 $categoria = new Categorias_users;
                 $categoria->user_id = $UserExistent->id;
                 $categoria->categoria1_id = $request->input('categoria1');
                 $categoria->categoria2_id = $request->input('categoria2');
-                $categoria->categoria_id = $request->input('categoria3');
+                $categoria->categorias_id = $request->input('categoria3');
                 $categoria->academy_id = $request->input('academy_id');
-                $categoria->ticket_id = $request->input('ticket_id');
+                $categoria->director_id = $request->input('director_id');
+                $categoria->ticket_id = $ticket->id;
 
                 $categoria->save();
 
+                
                 
 
                 
