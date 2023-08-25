@@ -7,6 +7,7 @@
 <body>
     
 <main>
+    
         <section class="main">
             <div class="main-content">
                 <div class="main-content-contenido">

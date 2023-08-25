@@ -14,7 +14,7 @@ use App\Models\Categoria2;
 use App\Models\Categoria3;
 
 
-use App\Models\Users_has_categorias;
+use App\Models\Categorias_users;
 
 
 class UsuarioController extends Controller
@@ -96,11 +96,11 @@ class UsuarioController extends Controller
                 
                 $competidor->save();
 
-                $categoria = new Users_has_categorias;
+                $categoria = new Categorias_users;
                 $categoria->user_id = $competidor->id;
                 $categoria->categoria1_id = $request->input('categoria1');
                 $categoria->categoria2_id = $request->input('categoria2');
-                $categoria->categoria3_id = $request->input('categoria3');
+                $categoria->categoria_id = $request->input('categoria3');
                 $categoria->academy_id = $request->input('academy_id');
                 $categoria->ticket_id = $request->input('ticket_id');
                 
@@ -110,11 +110,11 @@ class UsuarioController extends Controller
 
             } else{
                 
-                $categoria = new Users_has_categorias;
+                $categoria = new Categorias_users;
                 $categoria->user_id = $UserExistent->id;
                 $categoria->categoria1_id = $request->input('categoria1');
                 $categoria->categoria2_id = $request->input('categoria2');
-                $categoria->categoria3_id = $request->input('categoria3');
+                $categoria->categoria_id = $request->input('categoria3');
                 $categoria->academy_id = $request->input('academy_id');
                 $categoria->ticket_id = $request->input('ticket_id');
 

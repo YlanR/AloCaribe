@@ -362,7 +362,7 @@ function nuevoCompetidor(e){
             let contarcedula = datos.length;
             TotalObj.precio =  admCompetidores.calcularPrecio(contarcedula);
             TotalObj.cedulas = key;
-            admCompetidores.total(precio);
+            // admCompetidores.total(precio);
         console.log(admCompetidores.total + ' cedulacontada');
         
         }else{
@@ -371,14 +371,14 @@ function nuevoCompetidor(e){
             TotalObj.precio =  admCompetidores.calcularPrecio(contarcedula);
             TotalObj.cedulas = key;
             let precio =  admCompetidores.calcularPrecio(contarcedula);
-            admCompetidores.total(precio);
+            // admCompetidores.total(precio);
 
             
         }
         
         })
 
-        UserObj.precio =  admCompetidores.competidores.calcularPrecio(UserObj.contador);
+        // UserObj.precio =  admCompetidores.competidores.calcularPrecio(UserObj.contador);
 
 
         ui.imprimirAlerta('Se agrego correctamente');

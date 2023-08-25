@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="login-content"> 
-                            <input type="url" placeholder=" instagram de la academia" id="social-red" name="id_instagram" class="login-social-red" value="0">
+                            <input type="url" placeholder=" instagram de la academia" id="social-red" name="id_instagram" class="login-social-red" >
                         </div>  
                     </div>
                     <div class="login-contents content-left">

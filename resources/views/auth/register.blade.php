@@ -124,7 +124,7 @@
                         </div>
 
                         <div class="login-content"> 
-                            <input type="text" placeholder=" instagram" id="social-red" name="id_instagram" class="login-social-red" value="0">
+                            <input type="text" placeholder=" instagram" id="social-red" name="id_instagram" class="login-social-red">
                         </div>  
                     </div>
                     

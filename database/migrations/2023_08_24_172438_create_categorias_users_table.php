@@ -11,22 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users_has_categorias', function (Blueprint $table) {
+        Schema::create('categorias_users', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('categoria1_id');
             $table->unsignedBigInteger('categoria2_id');
-            $table->unsignedBigInteger('categoria3_id');
+            $table->unsignedBigInteger('categorias_id');
+            $table->unsignedBigInteger('academy_id');
             $table->string('ticket_id');
-            $table->integer('academy_id');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('categoria1_id')->references('id')->on('categoria1')->onDelete('cascade');
             $table->foreign('categoria2_id')->references('id')->on('categoria2')->onDelete('cascade');
-            $table->foreign('categoria3_id')->references('id')->on('categoria3')->onDelete('cascade');
-
-            
+            $table->foreign('categorias_id')->references('id')->on('categorias')->onDelete('cascade');
+            $table->foreign('academy_id')->references('id')->on('academies')->onDelete('cascade');
 
         });
     }
@@ -36,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users_has_categorias');
+        Schema::dropIfExists('categorias_users');
     }
 };

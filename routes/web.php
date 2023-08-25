@@ -5,6 +5,7 @@ use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CompetidoresController;
 use App\Http\Controllers\AcademyController;
+use App\Http\Controllers\OperadoresController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -32,6 +33,9 @@ Route::get('/academia/{id}', [AcademyController::class, 'show'])->middleware('au
 Route::resource('/academia', AcademyController::class)->middleware('auth');
 Route::get('/registraCompetidores', [UsuarioController::class, 'index'])->middleware('auth');
 Route::post('/recibirdatos', [UsuarioController::class, 'store']);
+Route::get('/listaCompetidores', [OperadoresController::class, 'index'])->middleware('auth');
+Route::post('/buscar', [OperadoresController::class, 'index'])->middleware('auth');
+
 
 
 

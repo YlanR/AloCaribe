@@ -11,7 +11,8 @@ use Spatie\Permission\Traits\HasRoles;
 
 use App\Models\Academy;
 use App\Models\Pagos;
-use App\Models\Users_has_categorias;
+use App\Models\Categoria;
+use App\Models\Categorias_users;
 
 
 
@@ -59,15 +60,32 @@ class User extends Authenticatable
 
     
     public function academy(){
-        return $this->hasMany(Academy::class, 'id');
+        return $this->hasMany(Academy::class,'Categorias_users');
     }
 
     public function pagos(){
         return $this->hasMany(Pagos::class, 'user_id');
     }
 
+    public function competencias(){
+        return $this->belongsToMany(Categorias_users::class);
+    }
 
-    public function Users_has_categorias(){
-        return $this->belongsToMany(Users_has_categorias::class);
+    public function categoria1(){
+        return $this->belongsToMany(Categoria1::class, 'Categorias_users');
+    }
+
+    public function categoria2(){
+        return $this->belongsToMany(Categoria2::class, 'Categorias_users', 'user_id', 'categoria_id');
+    }
+
+    public function categoria(){
+        return $this->belongsToMany(Categoria::class, 'Categorias_users');
+    }
+
+    public function relacionTablas(){
+        return $this->join('categorias_users', 'categorias_users.user_id', '=', 'users.id')
+        ->select('*')
+        ->get();
     }
 }

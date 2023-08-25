@@ -14,7 +14,7 @@ class categoria3Seeder extends Seeder
     public function run(): void
     {
         //
-        DB::table('categoria3')->insert([
+        DB::table('categorias')->insert([
             ['name' => 'Begginer'],
             ['name' => 'Nuevo Talento'],
             ['name' => 'Novel'],

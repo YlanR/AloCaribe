@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Users_has_categorias;
+use App\Models\Categorias_users;
 
 
-class Categoria3 extends Model
+class Categoria extends Model
 {
     use HasFactory;
 
     public function users(){
-        return $this->belongsToMany(Users_has_categorias::class, 'users_has_categorias');
+        return $this->belongsToMany(User::class, 'Categorias_users');
     }
 }
