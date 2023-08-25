@@ -11,7 +11,80 @@
     <title>menu</title>
     <link rel="stylesheet" href="../../public/fonts/style.css">
     <style>
-      
+      nav{
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 50px;
+    background-color: white;
+    justify-content: right;
+    height: 100%;
+    align-items: center;
+}
+.menu-vertical{
+    list-style: none;
+    display: none;
+    justify-content: right;
+    background: blueviolet;
+    border-radius: 5% 0 0 5%;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    
+}
+.menu-vertical-superior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid white;
+    color: white;
+}
+.menu-vertical-text h4 ,.menu-vertical-text h6{
+    margin: 0;
+} 
+.menu-vertical-text h5{
+    margin: 10px 0 0 0;
+}
+.menu-vertical-foto{
+    margin: 10px;
+}
+.menu-vertical-foto img{
+    height: 5rem;
+}
+.menu-vertical > li{
+    margin: 20px 0;
+}
+.menu-vertical > li >a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-vertical > li:hover{
+    background-color: #530D9385;
+}
+nav button{
+color: white;
+background: blueviolet;
+border: none;
+border-radius: 50% 0 0 50%;
+padding: 15px;
+cursor: pointer;
+transition: 3s;
+}
+nav button:hover{
+
+background: #E91E63;
+}
+.show{
+display: block;
+}
+.rotar{ 
+rotate: 180deg;
+border-radius: 0% 50% 50% 0%;
+}
     </style>
 </head>
 <body>
