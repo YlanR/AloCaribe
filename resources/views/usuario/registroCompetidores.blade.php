@@ -287,7 +287,8 @@
                                 </div>
                                 
                                 <h3 style="margin: 0 0 1em 0;"> Pago movil </h3>
-                                <div class="pago-contenido-datos" >
+                                <div id="info-error"></div>
+                                <div class="pago-contenido-datos"  >
                                     <div class="pago-contenido-dato">
                                         <label for="">Banplus</label>
                                         <label for="">(0175)</label>
@@ -303,9 +304,10 @@
                                 </div>
                                 <!--formulario donde se registran los datos-->
                                 <!-- <form action="" id="" class="pago-form form" method="POST"> -->
+                                    <input type="hidden" name="efectivo" id="efectivoModalidad">
                                     <div class="form-inputs">
                                         <div class="form-input">
-                                            <input type="text" placeholder="nombre del titular del pago" id="nombreTitular" name="nombreTitular" class="">
+                                            <input type="text" placeholder="nombre del titular del pago" id="nombreTitular" name="nombreTitular" value="{{ Auth::user()->name }} {{ Auth::user()->apellido }}" class="">
                                         </div>
                                         <div class="form-input">
                                             <input type="tel" placeholder="número del titular" id="numeroTitular" name="numeroTitular" class="">

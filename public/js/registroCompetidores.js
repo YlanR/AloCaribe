@@ -18,6 +18,10 @@ const contenedorCompetidores = document.querySelector('#competidoresLista');
 const contenedorTotal = document.querySelector('#total');
 
 
+const nombreImputPago = document.querySelector('#nombreTitular');
+const telefonoImput = document.querySelector('#numeroTitular');
+const referenciaImput = document.querySelector('#referenciaPago');
+const ModalidadImput = document.querySelector('#efectivoModalidad');
 
 class Competidores{
     constructor(){
@@ -129,6 +133,25 @@ class UI{
         }, 5000);
     }
 
+    imprimirAlertaPago(mensaje, tipo){
+        const divMensajePago = document.createElement('div');
+        divMensajePago.classList.add('alerta')
+
+        if(tipo === 'error'){
+            divMensajePago.classList.add('AlertError');
+        } else{
+            divMensajePago.classList.add('AlertSucces');
+        }
+
+        divMensajePago.textContent = mensaje;
+
+        // formulario.insertBefore(divMensajePago, document.querySelector('#info-error'));
+        document.querySelector('#info-error').appendChild(divMensajePago);
+        setTimeout( () => {
+            divMensajePago.remove();
+        }, 5000);
+    }
+
     imprimirCompetidores({competidores}){
         this.limpiarHTML();
     
@@ -196,13 +219,23 @@ function eventListener(){
     Categoria2.addEventListener('change', datosUsuario);
     btnFormulario.addEventListener('click', nuevoCompetidor);
 
+    nombreImputPago.addEventListener()
+    telefonoImput.addEventListener()
+    referenciaImput.addEventListener()
 }
 
 let ticket = generarID();
 Enviar();
 function Enviar(){
+
     formulario.addEventListener('submit', async (e) =>{
         e.preventDefault();
+
+        if(nombreImputPago.value === '' || telefonoImput.value === '' || referenciaImput.value === ''){
+            // console.log('Todos los campos son obligatorios');
+            ui.imprimirAlertaPago('Todos los campos son obligatorios', 'error');
+            return;
+        }
 
     if(admCompetidores){
 
@@ -304,6 +337,15 @@ const TotalObj = {
     precio: 0
 }
 
+const PagoObj = {
+    academy_id: idAca,
+    director_id: idUser,
+    referencia: referenciaImput.value,
+    telefono: telefonoImput.value,
+    nombre: nombreImputPago.value,
+    modalidad: efectivoModalidad.value,
+}
+
 
 function datosUsuario(e){
 
@@ -321,7 +363,6 @@ function nuevoCompetidor(e){
     e.preventDefault();
 
     const {academy_id, name, apellido, cedula, edad, instagram, categoria1, categoria2, categoria3, contador, ticket_id} = UserObj;
-    const {cedulas, precio} = TotalObj;
 
     
     
