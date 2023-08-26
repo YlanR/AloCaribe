@@ -54,24 +54,24 @@
                         </div>
                     </div>
                     <div class="perfil-fondo">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p00">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p0">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p01">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p02">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p03">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p04">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p05">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p06">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p07">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p08">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p09">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p10">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p11">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p12">
-                        <img src="../../public/img/3/Polygon.png" alt="" class="p13">
+                        <img src="../../img/3/Polygon.png" alt="" class="p00">
+                        <img src="../../img/3/Polygon.png" alt="" class="p0">
+                        <img src="../../img/3/Polygon.png" alt="" class="p01">
+                        <img src="../../img/3/Polygon.png" alt="" class="p02">
+                        <img src="../../img/3/Polygon.png" alt="" class="p03">
+                        <img src="../../img/3/Polygon.png" alt="" class="p04">
+                        <img src="../../img/3/Polygon.png" alt="" class="p05">
+                        <img src="../../img/3/Polygon.png" alt="" class="p06">
+                        <img src="../../img/3/Polygon.png" alt="" class="p07">
+                        <img src="../../img/3/Polygon.png" alt="" class="p08">
+                        <img src="../../img/3/Polygon.png" alt="" class="p09">
+                        <img src="../../img/3/Polygon.png" alt="" class="p10">
+                        <img src="../../img/3/Polygon.png" alt="" class="p11">
+                        <img src="../../img/3/Polygon.png" alt="" class="p12">
+                        <img src="../../img/3/Polygon.png" alt="" class="p13">
                     </div>
-                    <img src="../../public/img/3/bachata1.png" alt=" imagen bailarines" class="perfil-fondo0">
-                    <img src="../../public/img/logo.png" alt="logo" class="perfil-fondo1">
+                    <img src="../../img/3/bachata1.png" alt=" imagen bailarines" class="perfil-fondo0">
+                    <img src="../../img/logo.png" alt="logo" class="perfil-fondo1">
                     
                 </div>
             </div>
