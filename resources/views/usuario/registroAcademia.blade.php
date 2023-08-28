@@ -1,6 +1,4 @@
 
-        @if($academy == NULL)
-
         @include('templates.header',  ['modo' => 'Alo Caribe'])
         <link rel="stylesheet" href="../../css/registroAca.css">
         <link rel="stylesheet" href="../../css/index.css">
@@ -70,34 +68,6 @@
         
         </section>
 
-        @else
-
-            @include('templates.header',  ['modo' => 'Alo Caribe'])
-            <link rel="stylesheet" href="../../css/registroAca.css">
-        <link rel="stylesheet" href="../../css/index.css">
-    <link rel="stylesheet" href="../fonts/style.css">
-
-            <section class="main">
-            <div class="main-content">  
-                <div class="main-content-contenido">
-                    <form action="{{ route('academia.store') }}" enctype="multipart/form-data" class="contenido-form" method="POST">
-                        @csrf
-                        <div class="form-logo">
-                            <img src="../../img/logo.png" alt=" logo " class="form-logo-logo">
-                            <label for="">Datos Academía</label>
-                        </div>
-                        <h1>Ya tienes cuenta, es {{ $academy->name_academy }}</h1>
-                        <div class="form-logo">
-                            <label for="">Agrega tus competidores <a href="{{url('competidor/')}}"> AQUI</a></label>
-                        </div>
-                </div>
-            
-        </div>
-        
-        </section>
-
-
-        @endif
         
     </main>
 

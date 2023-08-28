@@ -21,9 +21,23 @@ class TicketsController extends Controller
         ->join('tickets', 'pagos.ticket_id', '=', 'tickets.idt')
         ->join('academies', 'pagos.academy_id', '=', 'academies.id')
         ->select('pagos.*', 'tickets.*', 'academies.*')
+        ->where('tickets.resultado', 'f')
         ->get();
 
         return view('usuario.validacionTicket', compact('tickets'));
+    }
+
+    public function indexValidados()
+    {
+        //
+        $tickets = DB::table('pagos')
+        ->join('tickets', 'pagos.ticket_id', '=', 'tickets.idt')
+        ->join('academies', 'pagos.academy_id', '=', 'academies.id')
+        ->select('pagos.*', 'tickets.*', 'academies.*')
+        ->where('tickets.resultado', 't')
+        ->get();
+
+        return view('usuario.ticketsValidados', compact('tickets'));
     }
 
     /**

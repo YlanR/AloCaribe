@@ -1,4 +1,4 @@
-    @include('templates.header',  ['modo' => 'Alo Caribe'])
+@include('templates.header',  ['modo' => 'Alo Caribe'])
     <link rel="stylesheet" href="../../css/perfildirector.css">
     <link rel="stylesheet" href="../../css/index.css">
 
@@ -12,42 +12,39 @@
                     <div class="perfil-superior">
                         <div class="perfil-superior-foto"> 
                              <!--esta sección es dnd se llama los datos registrados para la foto-->
-                             <img  class="foto_perfil" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></div>
+                             <img  class="foto_perfil" src="{{ asset('storage/').'/'. $academy->foto_academy }}" alt=""></div>
                         <div class="prefil-superior-texto"> 
                              <!--esta sección es dnd se llama los datos registrados-->
-                            <h1>{{ $usuar->name }} {{ $usuar->apellido }}</h1>
-                            <h4>C.I. {{ $usuar->cedula }}</h4>
+                            <h1>{{ $academy->name_academy }}</h1>
+                            <h4>@ {{ $instagram->name}}</h4>
                             <hr style="    margin: 0 0 20px 0;">
                         </div>
                     </div>
                     <div class="perfil-contenido">
                         <div class="perfil-contenido-textos">
                             <div class="perfil-contenido-texto">
-                                <h5>Nombre:</h5>
-                                <h5>Apellido:</h5>
-                                <h5>Edad:</h5>
-                                <h5>Cédula:</h5>
+                                <h5>Nombre academia:</h5>
+                                <h5>Director: </h5>
+                                <h5>Telefono:</h5>
                             </div>
                             <div class="perfil-contenido-relleno">
                                 <!--esta sección es dnd se llama los datos registrados para el usuario-->
-                                <h5>{{ $usuar->name }}</h5>
-                                <h5>{{ $usuar->apellido }}</h5>
-                                <h5>{{ $usuar->edad }}</h5>
-                                <h5>{{ $usuar->cedula }}</h5>
+                                <h5>{{ $academy->name_academy }}</h5>
+                                <h5>{{ $usuar->name }}{{ $usuar->apellido }}</h5>
+                                <h5>{{ $academy->telefono_academy }}</h5>
                             </div>
                         </div>
                         <div class="perfil-contenido-textos">
                             <div class="perfil-contenido-texto">
+                                <h5>Estado:</h5>
                                 <h5>Instagram:</h5>
                                 <h5>Academia:</h5>
                             </div>
                             <div class="perfil-contenido-relleno">
                                  <!--esta sección es dnd se llama los datos registrados para la academia-->
-                                <h5>{{ $usuar->instagram }}</h5>
-                                @if($academy == null)
-                                @else
-                                <h5>{{ $academy->name_academy }}</h5>
-                                @endif
+                                <h5>{{ $academy->estado }}</</h5>
+                                <h5>{{ $instagram->name }}</h5>
+
                             </div> 
                         </div>
                         <div class="perfil-boton"> 

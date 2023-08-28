@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use App\Models\Academy;
+use App\Models\User;
 use App\Models\Instagram;
 
 class AcademyController extends Controller
@@ -17,6 +18,8 @@ class AcademyController extends Controller
     public function index()
     {
         //
+
+
        
     }
 
@@ -79,9 +82,18 @@ class AcademyController extends Controller
         //
 
         $user = Auth::user()->id;
+        $academyExist = Academy::where('user_id', $user)->exists();
         $academy = Academy::where('user_id', $user)->first();
+        $usuar = User::where('id', $user)->first();
+
+        if($academyExist == null){
+            return view('usuario.registroAcademia');
+        } else{
+            $instagram = Instagram::where('id', $academy->instagram_id)->first();
+
+            return view('usuario.perfilAcademia', compact('academy', 'usuar', 'instagram'));
+        }
         
-        return view('usuario.registroAcademia', compact('academy'));
     }
 
     /**

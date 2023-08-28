@@ -56,14 +56,6 @@
                 </li>
                 @endif -->
 
-                @if(Auth::user())
-                <li class="navbar-link">
-                    <a href="{{url('academia/')}}/{{Auth::user()->id}}">
-                        Academia
-                    </a>
-                </li>
-                @endif
-
                 <!-- <li class="navbar-link"> 
                         @if(Auth::user()) 
                         <p class="nombre">   </p>
@@ -117,9 +109,16 @@
                     </div>
                 </li>
                 <li><a href="{{url('perfil/')}}/{{Auth::user()->id}}" >Perfil</a></li>
+                @role('Operador')
                 <li><a href="{{ url('/validacionTicket') }}">Validación de Ticket</a></li>
-                <li><a href="#">Tickets Validados</a></li>
+                <li><a href="{{ url('/ticketsValidados') }}">Tickets Validados</a></li>
                 <li><a href="{{ url('/listaCompetidores') }}">Lista de Competidores</a></li>
+                @endrole
+                @role('Director')
+                <li><a href="{{url('academia/')}}/{{Auth::user()->id}}">Mi Academia</a></li>
+                <li><a href="{{ url('/competidor') }}">Agregar Competidores</a></li>
+                <li><a href="{{ url('/listaCompetidores') }}">Mis tickets</a></li>
+                @endrole
                 <li><a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">

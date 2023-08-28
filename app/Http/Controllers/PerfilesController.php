@@ -17,10 +17,16 @@ class PerfilesController extends Controller
     {
         //
         $user = Auth::user()->id;
-        $academy = Academy::where('user_id', $user)->first();
+        $academy = Academy::where('user_id', $user)->exists();
         $usuar = User::where('id', $user)->first();
+
+        if($academy == null){
+            return view('usuario.perfilDirector', compact('usuar', 'academy'));
+        } else{
+            $academy = Academy::where('user_id', $user)->first();
+            return view('usuario.perfilDirector', compact('usuar', 'academy'));
+        }
         
-        return view('usuario.perfilDirector', compact('usuar', 'academy'));
     }
 
     /**
