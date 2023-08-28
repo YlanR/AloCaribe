@@ -7,6 +7,7 @@ use App\Http\Controllers\CompetidoresController;
 use App\Http\Controllers\AcademyController;
 use App\Http\Controllers\OperadoresController;
 use App\Http\Controllers\PerfilesController;
+use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -37,6 +38,8 @@ Route::post('/recibirdatos', [UsuarioController::class, 'store']);
 Route::get('/listaCompetidores', [OperadoresController::class, 'index'])->middleware('auth');
 Route::post('/buscar', [OperadoresController::class, 'index'])->middleware('auth');
 Route::get('/perfil/{id}', [PerfilesController::class, 'index'])->middleware('auth');
+Route::get('/validacionTicket', [TicketsController::class, 'index'])->middleware('auth');
+Route::post('/validar/{id}', [TicketsController::class, 'update'])->middleware('auth');
 // Route::resource('/perfil', UsuarioController::class)->middleware('auth');
 
 

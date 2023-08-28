@@ -1,11 +1,6 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+@include('templates.header',  ['modo' => 'Alo Caribe'])
+    <link rel="stylesheet" href="../../css/validacionTicket.css">
+    <link rel="stylesheet" href="../../css/index.css">
 <main>
     
         <section class="main">
@@ -29,18 +24,28 @@
                             </div>
                         </div>
                     </div>
+
+                    @foreach ($tickets as $ticket => $valore)
+                    @if ($valore->resultado == 'f')
                     <div class="main-content-contenido-central central">
                         <div class="central-contenido">   
                             <div class="central-contenido-superior">
                                 <div class="central-contenido-superior-izq" id="Flecha">flecha</div>
-                                <div class="central-contenido-superior-izq" id="imagenAcademia">logo</div>
-                                <div class="central-contenido-superior-izq" id="nombreAcademia">nombre</div>
-                                <div class="central-contenido-superior-izq" id="precioTicket">precio</div>
+                                <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
+                                <div class="central-contenido-superior-izq" id="nombreAcademia">{{ $valore->name_academy }}</div>
+                                <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
                             </div>
                             <div class="central-contenido-superior">
                                 <div class="central-contenido-superior-derecha"><a href="">pay</a>
                                 </div>
-                                <div class="central-contenido-superior-derecha"><a href="">check</a>
+                                <div class="central-contenido-superior-derecha"><a href="{{ url('validar/'.$valore->idt)}}"
+                                            onclick="event.preventDefault();
+                                                            document.getElementById('check').submit();">
+                                            {{ __('check') }}
+                                        </a>
+                                        <form id="check" action="{{ url('validar/'.$valore->idt) }}" method="post" hidden>
+                                            @csrf
+                                        </form>
                                 </div>
                                 <div class="central-contenido-superior-derecha"><a href="">loading</a>
                                 </div>
@@ -54,22 +59,24 @@
                         <div class="central-contenido central-contenido2">
                             <div class="central-contenido-inferior">
                                 <label for="">Nombre del titular del pago</label>
-                                <input type="text" id="">
+                                <p>{{ $valore->nombrePago }}</p>
                             </div>
                             <div class="central-contenido-inferior">
                                 <label for="">Teléfono del Titular</label>
-                                <input type="tel" id="">
+                                <p>{{ $valore->telefono }}</p>
+
                             </div>
                             <div class="central-contenido-inferior">
                                 <label for="">Referencia del pago móvil</label>
-                                <input type="num" id="">
+                                <p>{{ $valore->referencia }}</p>
+
                             </div>
-                            <div class="central-contenido-inferior">
-                                <label for="">Comprobante de pago</label>
-                                <button>ver</button>
-                            </div>
+                      
                         </div>
                     </div>
+                    @endif
+                    @endforeach
+
                     <div class="main-content-contenido-inferior inferior">
                     <div class="inferior-contenido">
                             <div class="inferior-contenido-izq" id="Flecha">flecha</div>

@@ -60,7 +60,7 @@ class AcademyController extends Controller
             $academia->user_id= $request->input('user_id');
             $academia->instagram_id= $instagram->id;
             $academia->name_academy= $request->input('name_academy');
-            $academia->telefono= $request->input('telefono');
+            $academia->telefono_academy= $request->input('telefono');
             $academia->estado= $request->input('estado');
             $academia->foto_academy = $foto;
         

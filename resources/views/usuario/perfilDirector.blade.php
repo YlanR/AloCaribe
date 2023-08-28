@@ -44,7 +44,7 @@
                             </div>
                             <div class="perfil-contenido-relleno">
                                  <!--esta sección es dnd se llama los datos registrados para la academia-->
-                                <h5>{{ $academy->telefono }}</</h5>
+                                <h5>{{ $academy->telefono_academy }}</</h5>
                                 <h5>{{ $usuar->instagram }}</h5>
                                 <h5>{{ $academy->name_academy }}</</h5>
                             </div> 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Pagos;
 use App\Models\Instagram;
 use App\Models\Academy;
 use Illuminate\Http\Request;
@@ -64,7 +65,7 @@ class UsuarioController extends Controller
 
         // $this->validate($request, $campos,$mensaje);
 
-        
+        // var_dump($request->input('modalidad'));
 
         if ($request->hasFile('foto_competidor')) {
             $foto = $request->file('foto_competidor')->store('uploads', 'public');
@@ -73,8 +74,11 @@ class UsuarioController extends Controller
 
             // $instagram = new Instagram;
             // $instagram->name = $request->input('instagram');
-
             
+            $PagosP = $request->input('referenciaPago');
+            $pagosExist = Pagos::where('referencia', $PagosP)->exists();
+            $pagosExistent = Pagos::where('referencia', $PagosP)->first();
+
             $tickete = $request->input('ticket_id');
             $ticketsExist = Tickets::where('ticket', $tickete)->exists();
             $ticketsExistent = Tickets::where('ticket', $tickete)->first();
@@ -116,6 +120,25 @@ class UsuarioController extends Controller
                     $categoria->ticket_id = $ticket->id;
                     
                     $categoria->save();
+
+                    $pagos = new Pagos;
+                    $pagos->user_id = $request->input('director_id');
+                    $pagos->modalidad = $request->input('modalidad');
+                    $pagos->telefono = $request->input('numeroTitular');
+                    $pagos->nombrePago = $request->input('nombreTitular');
+                    $pagos->referencia = $request->input('referenciaPago');
+                    $pagos->total = 25;
+                    $pagos->academy_id = $request->input('academy_id');
+                    $pagos->ticket_id = $ticket->id;
+
+                    if($pagosExist == null){
+                        $pagos->save();
+                    }  else{
+                        return response()->json('Todo listo');
+
+                    }
+
+
                     return response()->json('Todo listo');
 
                 }else{
@@ -131,6 +154,24 @@ class UsuarioController extends Controller
                     $categoria->ticket_id = $ticketsExistent->id;
                     
                     $categoria->save();
+
+                    
+                    $pagos = new Pagos;
+                    $pagos->user_id = $request->input('director_id');
+                    $pagos->modalidad = $request->input('modalidad');
+                    $pagos->telefono = $request->input('numeroTitular');
+                    $pagos->nombrePago = $request->input('nombreTitular');
+                    $pagos->referencia = $request->input('referenciaPago');
+                    $pagos->total = 25;
+                    $pagos->academy_id = $request->input('academy_id');
+                    $pagos->ticket_id = $ticketsExistent->id;
+
+                    if($pagosExist == null){
+                        $pagos->save();
+                    } else{
+                        return response()->json('Todo listo');
+
+                    } 
                     return response()->json('Todo listo');
 
                 }
@@ -154,6 +195,24 @@ class UsuarioController extends Controller
                     $categoria->ticket_id = $ticket->id;
                     
                     $categoria->save();
+
+                    $pagos = new Pagos;
+                    $pagos->user_id = $request->input('director_id');
+                    $pagos->modalidad = $request->input('modalidad');
+                    $pagos->telefono = $request->input('numeroTitular');
+                    $pagos->nombrePago = $request->input('nombreTitular');
+                    $pagos->referencia = $request->input('referenciaPago');
+                    $pagos->total = 25;
+                    $pagos->academy_id = $request->input('academy_id');
+                    $pagos->ticket_id = $ticket->id;
+
+                    if($pagosExist == null){
+                        $pagos->save();
+                    } else{
+                        return response()->json('Todo listo');
+
+                    }
+
                     return response()->json('Todo listo');
 
                 }else{
@@ -169,25 +228,39 @@ class UsuarioController extends Controller
                     $categoria->ticket_id = $ticketsExistent->id;
                     
                     $categoria->save();
+                    
+                    $pagos = new Pagos;
+                    $pagos->user_id = $request->input('director_id');
+                    $pagos->modalidad = $request->input('modalidad');
+                    $pagos->telefono = $request->input('numeroTitular');
+                    $pagos->nombrePago = $request->input('nombreTitular');
+                    $pagos->referencia = $request->input('referenciaPago');
+                    $pagos->total = 25;
+                    $pagos->academy_id = $request->input('academy_id');
+                    $pagos->ticket_id = $ticketsExistent->id;
+
+                    if($pagosExist == null){
+                        $pagos->save();
+                    } else{
+                        return response()->json('Todo listo');
+
+                    }
+
                     return response()->json('Todo listo');
 
                 }
 
+                // $categoria = new Categorias_users;
+                // $categoria->user_id = $UserExistent->id;
+                // $categoria->categoria1_id = $request->input('categoria1');
+                // $categoria->categoria2_id = $request->input('categoria2');
+                // $categoria->categorias_id = $request->input('categoria3');
+                // $categoria->academy_id = $request->input('academy_id');
+                // $categoria->director_id = $request->input('director_id');
+                // $categoria->ticket_id = $ticket->id;
 
-                $categoria = new Categorias_users;
-                $categoria->user_id = $UserExistent->id;
-                $categoria->categoria1_id = $request->input('categoria1');
-                $categoria->categoria2_id = $request->input('categoria2');
-                $categoria->categorias_id = $request->input('categoria3');
-                $categoria->academy_id = $request->input('academy_id');
-                $categoria->director_id = $request->input('director_id');
-                $categoria->ticket_id = $ticket->id;
-
-                $categoria->save();
-
-                
-                
-
+                // $categoria->save();
+   
                 
             return response()->json('Todo listo');
 

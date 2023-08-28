@@ -18,6 +18,10 @@ const contenedorCompetidores = document.querySelector('#competidoresLista');
 const contenedorTotal = document.querySelector('#total');
 
 
+const namePago = document.querySelector('#nombreTitular');
+const telefonoImput = document.querySelector('#numeroTitular');
+const referenciaImput = document.querySelector('#referenciaPago');
+const ModalidadImput = document.querySelector('#efectivoModalidad').value;
 
 class Competidores{
     constructor(){
@@ -129,6 +133,25 @@ class UI{
         }, 5000);
     }
 
+    imprimirAlertaPago(mensaje, tipo){
+        const divMensajePago = document.createElement('div');
+        divMensajePago.classList.add('alerta')
+
+        if(tipo === 'error'){
+            divMensajePago.classList.add('AlertError');
+        } else{
+            divMensajePago.classList.add('AlertSucces');
+        }
+
+        divMensajePago.textContent = mensaje;
+
+        // formulario.insertBefore(divMensajePago, document.querySelector('#info-error'));
+        document.querySelector('#info-error').appendChild(divMensajePago);
+        setTimeout( () => {
+            divMensajePago.remove();
+        }, 5000);
+    }
+
     imprimirCompetidores({competidores}){
         this.limpiarHTML();
     
@@ -196,20 +219,38 @@ function eventListener(){
     Categoria2.addEventListener('change', datosUsuario);
     btnFormulario.addEventListener('click', nuevoCompetidor);
 
+    
 }
 
 let ticket = generarID();
 Enviar();
+
 function Enviar(){
+    
+
     formulario.addEventListener('submit', async (e) =>{
         e.preventDefault();
 
+        if(namePago.value === '' || telefonoImput.value === '' || referenciaImput.value === ''){
+            // console.log('Todos los campos son obligatorios');
+            ui.imprimirAlertaPago('Todos los campos son obligatorios', 'error');
+            return;
+        }
+
+        // nombreImputPago.addEventListener('input', datosUsuario);
+        // telefonoImput.addEventListener('input', datosUsuario);
+        // referenciaImput.addEventListener('input', datosUsuario);
+
+        // console.log(admCompetidores.competidores);
+
+
     if(admCompetidores){
 
+        
         // if (e.target == formulario) {
 
         let datos = admCompetidores.competidores
-    // console.log(datos);
+    console.log(datos);
         
         var datosName = datos.map(objeto => objeto.name),
         datosApellido = datos.map(objeto => objeto.apellido),
@@ -219,7 +260,11 @@ function Enviar(){
         datosCate1 = datos.map(objeto => objeto.categoria1),
         datosCate2 = datos.map(objeto => objeto.categoria2),
         datosCate3 = datos.map(objeto => objeto.categoria3),
-        ticket_ID = datos.map(objeto => objeto.ticket_id);
+        ticket_ID = datos.map(objeto => objeto.ticket_id),
+        datosNombreTitular = namePago.value,
+        datosNumeroTitular = telefonoImput.value,
+        datosModalidad = datos.map(objeto => objeto.modalidad),
+        datosReferencia = referenciaImput.value;
 
 
         let datosAca = parseInt(idAca);
@@ -238,7 +283,11 @@ function Enviar(){
                 categoria1: datosCate1[index],
                 categoria2: datosCate2[index],
                 categoria3: datosCate3[index],
-                ticket_id: ticket_ID[index]
+                ticket_id: ticket_ID[index],
+                nombreTitular: datosNombreTitular,
+                numeroTitular: datosNumeroTitular,
+                modalidad: datosModalidad[index],
+                referenciaPago: datosReferencia,
             };
         });
     console.log(JSON.stringify(datosEnviar));
@@ -264,6 +313,23 @@ function Enviar(){
             })
 
         })  
+
+
+        // let option2 = {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json;charset=utf-8',
+        //         Accept: 'application/json;charset=utf-8',
+        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Agrega el token de Laravel para protección CSRF
+        //     },
+        //     body: JSON.stringify(PagoObj)
+        // }
+        
+        // fetch('/recibirdatos', option2)
+        // .then(response => response.json())
+        // .then(data => {
+        // console.log(data); // Handlea la respuesta del servidor
+        // })
 
         // .catch(error => console.log('Error: ',error));
         // (datos => datos.json())
@@ -296,7 +362,13 @@ const UserObj = {
     categoria3: '',
     contador: 1,
     precio: 25,
-    ticket_id: ticket
+    referenciaPago: '',
+    nombreTitular: '',
+    numeroTitular: '',
+    ticket_id: ticket,
+    academy_id: idAca,
+    director_id: idUser,
+    modalidad: ModalidadImput,
 }
 
 const TotalObj = {
@@ -305,11 +377,17 @@ const TotalObj = {
 }
 
 
+
 function datosUsuario(e){
 
     UserObj[e.target.name] = e.target.value;
-    // console.log(UserObj);
 }
+
+// function datosPago(e){
+
+//     PagoObj[e.target.name] = e.target.value;
+//     // console.log(UserObj);
+// }
 
 function generarID(){
 let idRandom = Math.random().toString(30).substring(2).toUpperCase();
@@ -321,7 +399,6 @@ function nuevoCompetidor(e){
     e.preventDefault();
 
     const {academy_id, name, apellido, cedula, edad, instagram, categoria1, categoria2, categoria3, contador, ticket_id} = UserObj;
-    const {cedulas, precio} = TotalObj;
 
     
     
@@ -332,7 +409,6 @@ function nuevoCompetidor(e){
     }
    
     // const existe = admCompetidores.competidores.some(comp => comp.cedula === UserObj.cedula);
-    // console.log(existe);
     if(editando){
         ui.imprimirAlerta('Editado correctamente');
 
@@ -398,6 +474,12 @@ function nuevoCompetidor(e){
 
 }
 
+// function nuevoPago(e){
+//     e.preventDefault();
+
+
+// }
+
 function reiniciarOBjeto(){
     UserObj.name= '';
     UserObj.apellido= '';
@@ -407,6 +489,9 @@ function reiniciarOBjeto(){
     UserObj.categoria1= '';
     UserObj.categoria2= '';
     UserObj.categoria3= '';
+    UserObj.nombreTitular = '';
+    UserObj.numeroTitular = '';
+    UserObj.referenciaPago = '';
 }
  
 function eliminarCompetidor(id){
