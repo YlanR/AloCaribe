@@ -31,12 +31,12 @@ class OperadoresController extends Controller
         ->join('academies', 'categorias_users.academy_id', '=', 'academies.id')
         ->join('categoria1', 'categorias_users.categoria1_id', '=', 'categoria1.id')
         ->join('categoria2', 'categorias_users.categoria2_id', '=', 'categoria2.id')
-        ->join('categorias', 'categorias_users.categoria_id', '=', 'categorias.id')
+        ->join('categorias', 'categorias_users.categorias_id', '=', 'categorias.id')
 
         ->select('categorias_users.*', 'users.*', 'academies.*')
         ->where('categorias_users.categoria1_id', $request->input('categoria1'))
         ->where('categorias_users.categoria2_id', $request->input('categoria2'))
-        ->where('categorias_users.categoria_id', $request->input('categoria3'))
+        ->where('categorias_users.categorias_id', $request->input('categoria3'))
 
         // var_dump($request->input('categoria2'));
         // die();
