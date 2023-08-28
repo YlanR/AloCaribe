@@ -39,8 +39,9 @@ Route::get('/listaCompetidores', [OperadoresController::class, 'index'])->middle
 Route::post('/buscar', [OperadoresController::class, 'index'])->middleware('auth');
 Route::get('/perfil/{id}', [PerfilesController::class, 'index'])->middleware('auth');
 Route::get('/validacionTicket', [TicketsController::class, 'index'])->middleware('auth');
-Route::post('/validar/{id}', [TicketsController::class, 'update'])->middleware('auth');
+Route::post('/validar/{ids}', [TicketsController::class, 'update'])->middleware('auth');
 Route::get('/ticketsValidados', [TicketsController::class, 'indexValidados'])->middleware('auth');
+Route::get('/misTickets', [TicketsController::class, 'misTickets'])->middleware('auth');
 // Route::resource('/perfil', UsuarioController::class)->middleware('auth');
 
 

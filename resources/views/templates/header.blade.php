@@ -117,7 +117,7 @@
                 @role('Director')
                 <li><a href="{{url('academia/')}}/{{Auth::user()->id}}">Mi Academia</a></li>
                 <li><a href="{{ url('/competidor') }}">Agregar Competidores</a></li>
-                <li><a href="{{ url('/listaCompetidores') }}">Mis tickets</a></li>
+                <li><a href="{{ url('/misTickets') }}">Mis tickets</a></li>
                 @endrole
                 <li><a href="{{ route('logout') }}"
                         onclick="event.preventDefault();

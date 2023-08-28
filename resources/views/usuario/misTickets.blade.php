@@ -6,7 +6,7 @@
         <section class="main">
             <div class="main-content">
                 <div class="main-content-contenido">
-                    <h3>Validadición de ticket</h3>
+                    <h3>Mis Tickets</h3>
                     <div class="main-content-contenido-superior superior">
                         <div class="superior-contenido">
                             <!--la flacha la pongo yo el logo nombre y precio tienen que ser llamado de la base de datos dejare un name y un id ralacionado ya que es igual en los 3 bloque para facilitar el llamado -->
@@ -34,21 +34,18 @@
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
                                 <div class="central-contenido-superior-izq" id="nombreAcademia">{{ $valore->name_academy }}</div>
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
+
                             </div>
                             <div class="central-contenido-superior">
-                                <div class="central-contenido-superior-derecha"><a href="">pay</a>
                                 </div>
-                                <div class="central-contenido-superior-derecha"><a href="{{ url('validar/'.$valore->idt)}}"
-                                            onclick="event.preventDefault();
-                                                            document.getElementById('check{{ $ticket+1 }}').submit();">
-                                            {{ __('check') }}
-                                        </a>
-                                        <form id="check{{ $ticket+1 }}" action="{{ url('validar/'.$valore->idt) }}" method="post" >
-                                            @csrf
-                                        </form>
+                                @if($valore->resultado == 't')
+                                <div class="central-contenido-superior-derecha">
+                                    <p>{{ $valore->ticket }}</p>
                                 </div>
-                                <div class="central-contenido-superior-derecha"><a href="">loading</a>
+                                @else
+                                <div class="central-contenido-superior-derecha"><a href="">Pendiente</a>
                                 </div>
+                                @endif
                             </div> 
                             <div class="central-contenido-logo">
                                 <img src="../../img/logo.png" alt="logo en el fondo jejeje ">
@@ -57,21 +54,35 @@
                         </div>
                         <hr>
                         <div class="central-contenido central-contenido2">
-                            <div class="central-contenido-inferior">
-                                <label for="">Nombre del titular del pago</label>
-                                <p>{{ $valore->nombrePago }}</p>
-                            </div>
-                            <div class="central-contenido-inferior">
-                                <label for="">Teléfono del Titular</label>
-                                <p>{{ $valore->telefono }}</p>
+                        <table class="lista-seleccionada-tabla">
+                        <thead class="lista-cabecera">
+                                <tr>
+                                    <th>Nombre</td>
+                                    <th>Apellido</td>
+                                    <th>Cedula</td>
+                                    <th>Edad</td>
+                                    <th>Instagram</td>
+                                    <th>Categoria</td>
+                                </tr>
+                            </thead>
 
-                            </div>
-                            <div class="central-contenido-inferior">
-                                <label for="">Referencia del pago móvil</label>
-                                <p>{{ $valore->referencia }}</p>
+                          <tbody class="lista-cuerpo">
+                    @foreach ($competidores as $competidor => $valoress)
+                        @if($valore->idt == $valoress->ticket_id)
+                                <tr>
+                                    <td>{{ $valoress->name }}</td>
+                                    <td>{{ $valoress->apellido }}</td>
+                                    <td>{{ $valoress->cedula }}</td>
+                                    <td>{{ $valoress->edad }}</td>
+                                    <td>{{ $valoress->instagram }}</td>
+                                    <td>{{ $valoress->name_cate1 }}/{{ $valoress->name_cate2 }}/{{ $valoress->name_cate3 }}</td>
 
-                            </div>
-                      
+                                </tr>
+                        @endif
+
+                      @endforeach
+                          </tbody>
+                          </table>
                         </div>
                     </div>
 
