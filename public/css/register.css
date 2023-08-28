@@ -13,7 +13,7 @@
     --moztarillo:#F3FE01;
     --morainicio-regitro:#602F92;
     --gris:#B0B0B0;
-    
+    --azul:#0279BB;
     }
 /*estilos generales*/
 body{
@@ -83,6 +83,11 @@ form {
     border: none;
     color: var(--negro);
     font-size: 16px;
+    cursor: pointer;
+}
+.registrar:hover{
+    background-color: var(--rosado,30%);
+    font-size: 18px;
 }
 /*diseño de la parte derecha*/
 
@@ -159,7 +164,7 @@ form {
     text-align:  center; 
     padding: 1rem 9rem;
     margin-top:  5px; 
-    background-color:var(--rosado,30%);
+    background-color:var(--azul);
     color:#fff; 
     font-size:  14px;
 
@@ -167,7 +172,12 @@ form {
     box-shadow:  0px 2px 6px -1px rgba(0,0,0,.13); 
     border:  none;
     transition:  all .3s ease; 
-    outline: 0; 
+    outline: 0;
+    cursor: pointer; 
+}
+.login-boton:hover{
+    background-color:var(--rosado,30%);
+    transition: 2s;
 }
 .login a{
     display: flex;

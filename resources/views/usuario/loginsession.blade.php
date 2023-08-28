@@ -53,10 +53,10 @@
 
                     <div class="left-botones">
                     <a href="{{ url('/login') }}">
-                        <button class="left-boton">iniciar</button>
+                        <button class="left-boton iniciar">iniciar</button>
                     </a>
                     <a href="{{ url('/register') }}">
-                        <button  class="left-boton">registrarse</button>
+                        <button  class="left-boton registrar">registrarse</button>
                     </a>
                 </div>
                 </div>
