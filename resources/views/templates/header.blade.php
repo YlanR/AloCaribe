@@ -117,7 +117,7 @@
                     </div>
                 </li>
                 <li><a href="{{url('perfil/')}}/{{Auth::user()->id}}" >Perfil</a></li>
-                <li><a href="#">Validación de Ticket</a></li>
+                <li><a href="{{ url('/validacionTicket') }}">Validación de Ticket</a></li>
                 <li><a href="#">Tickets Validados</a></li>
                 <li><a href="{{ url('/listaCompetidores') }}">Lista de Competidores</a></li>
                 <li><a href="{{ route('logout') }}"

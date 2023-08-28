@@ -25,7 +25,7 @@ return new class extends Migration
 
             $table->foreign('academy_id')->references('id')->on('academies')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('ticket_id')->references('id')->on('tickets')->onDelete('cascade');
+            $table->foreign('ticket_id')->references('idt')->on('tickets')->onDelete('cascade');
         });
     }
 

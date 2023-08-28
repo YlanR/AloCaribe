@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name_academy');
-            $table->string('telefono');
+            $table->string('telefono_academy');
             $table->string('estado');
             $table->unsignedBigInteger('instagram_id')->unique();
             $table->string('foto_academy');
