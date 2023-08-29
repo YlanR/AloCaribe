@@ -1,4 +1,4 @@
-    @include('templates.header',  ['modo' => 'Alo Caribe'])
+@include('templates.header',  ['modo' => 'Alo Caribe'])
     <link rel="stylesheet" href="../../css/perfildirector.css">
     <link rel="stylesheet" href="../../css/index.css">
 
@@ -25,34 +25,38 @@
                             <div class="perfil-contenido-texto">
                                 <h5>Nombre:</h5>
                                 <h5>Apellido:</h5>
-                                <h5>Edad:</h5>
                                 <h5>Cédula:</h5>
                             </div>
+                    <form method="POST" action="{{ url('/actualizarUsuario/'.$usuar->id) }}" enctype="multipart/form-data" class="main-content-right login">
+                    @csrf
                             <div class="perfil-contenido-relleno">
                                 <!--esta sección es dnd se llama los datos registrados para el usuario-->
-                                <h5>{{ $usuar->name }}</h5>
-                                <h5>{{ $usuar->apellido }}</h5>
-                                <h5>{{ $usuar->edad }}</h5>
-                                <h5>{{ $usuar->cedula }}</h5>
+                                <input type="text" placeholder=" Nombre" name="name" id="director" class="login-director" value="{{ $usuar->name }}"> 
+                                <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="login-academy" value="{{ $usuar->apellido }}">
+                                <input type="num" placeholder="Cedula" id="number" name="cedula" class="login-number" value="{{ $usuar->cedula }}">
+
                             </div>
                         </div>
                         <div class="perfil-contenido-textos">
                             <div class="perfil-contenido-texto">
                                 <h5>Instagram:</h5>
-                                <h5>Academia:</h5>
+                                <h5>Edad:</h5>
+                                <h5>Email:</h5>
                             </div>
                             <div class="perfil-contenido-relleno">
                                  <!--esta sección es dnd se llama los datos registrados para la academia-->
-                                <h5>{{ $usuar->instagram }}</h5>
-                                @if($academy == null)
-                                @else
-                                <h5>{{ $academy->name_academy }}</h5>
-                                @endif
+                                 <input type="text" placeholder=" instagram" id="social-red" name="id_instagram" class="login-social-red" value="{{ $usuar->instagram }}">
+                                 <input type="num" placeholder="Edad" name="edad" id="estado" class="login-estado" value="{{ $usuar->edad }}">
+                                 <input type="email" placeholder=" Email" id="email" name="email" class="login-email" value="{{ $usuar->email }}">
+                                
                             </div> 
                         </div>
                         <div class="perfil-boton"> 
-                            <a href="{{ url('/perfilEdit/'.$usuar->id) }}" style="position: absolute;text-decoration: none;color: aliceblue;">Editar Usuario</a>
+                        <button style="position: absolute;color: blue;" type="submit">Guardar cambios</button>
+                            
                         </div>
+                    </form>
+
                     </div>
                     <div class="perfil-fondo">
                         <img src="../../img/3/Polygon.png" alt="" class="p00">

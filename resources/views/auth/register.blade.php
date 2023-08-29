@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../../css/index.css">
+@include('templates.header',  ['modo' => 'Alo Caribe'])
+
+<link rel="stylesheet" href="../../css/index.css">
    <link rel="stylesheet" href="../../css/register.css">
    <link rel="stylesheet" href="../fonts/style.css">
-    <title>Registro</title>
-</head>
 <body>
      <!---->
      <header>

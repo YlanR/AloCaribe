@@ -43,6 +43,10 @@ Route::post('/validar/{ids}', [TicketsController::class, 'update'])->middleware(
 Route::get('/ticketsValidados', [TicketsController::class, 'indexValidados'])->middleware('auth');
 Route::get('/misTickets', [TicketsController::class, 'misTickets'])->middleware('auth');
 // Route::resource('/perfil', UsuarioController::class)->middleware('auth');
+Route::get('ticket/{id}', [TicketsController::class, 'show'])->name('tickets.pdf')->middleware('auth');
+Route::get('/perfilEdit/{id}', [PerfilesController::class, 'edit'])->middleware('auth');
+Route::post('/actualizarUsuario/{id}', [PerfilesController::class, 'update'])->middleware('auth');
+
 
 
 

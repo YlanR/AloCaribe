@@ -7,6 +7,8 @@ use App\Models\Instagram;
 use App\Models\Academy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class PerfilesController extends Controller
 {
@@ -59,6 +61,10 @@ class PerfilesController extends Controller
     public function edit(string $id)
     {
         //
+        // $academy = Academy::where('user_id', $id)->exists();
+        $usuar = User::where('id', $id)->first();
+        return view('usuario.editUser', compact('usuar'));
+
     }
 
     /**
@@ -67,6 +73,19 @@ class PerfilesController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $name = $request->input('name');
+        $apellido = $request->input('apellido');
+        $cedula = $request->input('cedula');
+        $instagram = $request->input('id_instagram');
+        $edad = $request->input('edad');
+        $email = $request->input('email');
+
+        $tickets = DB::table('users')
+        ->select('users.*')
+        ->where('users.id', $id)
+        ->update(['name' => $name, 'apellido' => $apellido, 'cedula' => $cedula, 'edad' => $edad, 'instagram' => $instagram, 'email' => $email]);
+
+        return redirect('/perfil/'.$id);
     }
 
     /**

@@ -42,6 +42,8 @@
                                 <div class="central-contenido-superior-derecha">
                                     <p>{{ $valore->ticket }}</p>
                                 </div>
+                                <div class="central-contenido-superior-derecha"><a href="{{ url('ticket/'.$valore->idp)}}" target="_blank">Imprimir Ticket</a>
+                                </div>
                                 @else
                                 <div class="central-contenido-superior-derecha"><a href="">Pendiente</a>
                                 </div>
