@@ -6,7 +6,7 @@
         <section class="main">
             <div class="main-content">
                 <div class="main-content-contenido">
-                    <h3>Validadición de ticket</h3>
+                    <h3>Tickets Validados</h3>
                     <div class="main-content-contenido-superior superior">
                         <div class="superior-contenido">
                             <!--la flacha la pongo yo el logo nombre y precio tienen que ser llamado de la base de datos dejare un name y un id ralacionado ya que es igual en los 3 bloque para facilitar el llamado -->
@@ -38,21 +38,19 @@
                                 @endif
                                 <div class="central-contenido-superior-izq" id="nombreAcademia">{{ $valore->name_academy }}</div>
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
+                                <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->ticket }}</div>
+
                             </div>
                             <div class="central-contenido-superior">
-                                <div class="central-contenido-superior-derecha"><a href="">pay</a>
                                 </div>
-                                <div class="central-contenido-superior-derecha"><a href="{{ url('validar/'.$valore->idt)}}"
-                                            onclick="event.preventDefault();
-                                                            document.getElementById('check{{ $ticket+1 }}').submit();">
-                                            {{ __('check') }}
-                                        </a>
-                                        <form id="check{{ $ticket+1 }}" action="{{ url('validar/'.$valore->idt) }}" method="post" >
-                                            @csrf
-                                        </form>
+                                @if($valore->modalidad == 'pagoMovil')
+                                <div class="central-contenido-superior-derecha">
+                                    <p>Aprobado</p>
                                 </div>
+                                @else
                                 <div class="central-contenido-superior-derecha"><a href="">loading</a>
                                 </div>
+                                @endif
                             </div> 
                             <div class="central-contenido-logo">
                                 <img src="../../img/logo.png" alt="logo en el fondo jejeje ">

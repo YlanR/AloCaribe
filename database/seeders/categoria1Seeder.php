@@ -15,8 +15,8 @@ class categoria1Seeder extends Seeder
     {
         //
         DB::table('categoria1')->insert([
-            ['name' => 'Salsa Casino'],
-            ['name' => 'Bachata']
+            ['name_cate1' => 'Salsa Casino'],
+            ['name_cate1' => 'Bachata']
         ]);
     }
 }

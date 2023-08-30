@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\Categorias_users;
 
 
-class Categoria extends Model
+class Categorias extends Model
 {
     use HasFactory;
 

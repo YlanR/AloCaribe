@@ -51,6 +51,23 @@ height: 10rem;
     justify-content: end;
     align-items: end;
     margin: 0px 59px 20px -40px;
+    z-index: 2;
+}
+
+.atrasBoton{
+    display: flex;
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    background-color: white;
+    width: 59px;
+    padding-right: 9px;
+    height: 20px;
+    border-radius: 5px;
+    justify-content: end;
+    align-items: end;
+    margin: 0px 59px 20px -40px;
+    z-index: 2;
 }
 @media (max-width:1690px) {
     .perfil-superior{

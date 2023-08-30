@@ -15,11 +15,11 @@ class categoria3Seeder extends Seeder
     {
         //
         DB::table('categorias')->insert([
-            ['name' => 'Begginer'],
-            ['name' => 'Nuevo Talento'],
-            ['name' => 'Novel'],
-            ['name' => 'Libre'],
-            ['name' => 'Abierta']
+            ['name_cate3' => 'Begginer'],
+            ['name_cate3' => 'Nuevo Talento'],
+            ['name_cate3' => 'Novel'],
+            ['name_cate3' => 'Libre'],
+            ['name_cate3' => 'Abierta']
         ]);
     }
 }

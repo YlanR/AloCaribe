@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\DB;
 use App\Models\Academy;
 use App\Models\Pagos;
 use App\Models\Tickets;
+use Illuminate\Support\Facades\Auth;
+
+use Barryvdh\DomPDF\Facade\Pdf;
 
 
 class TicketsController extends Controller
@@ -21,11 +24,56 @@ class TicketsController extends Controller
         ->join('tickets', 'pagos.ticket_id', '=', 'tickets.idt')
         ->join('academies', 'pagos.academy_id', '=', 'academies.id')
         ->select('pagos.*', 'tickets.*', 'academies.*')
+        ->where('tickets.resultado', 'f')
         ->get();
 
         return view('usuario.validacionTicket', compact('tickets'));
     }
 
+    public function indexValidados()
+    {
+        //
+        $tickets = DB::table('pagos')
+        ->join('tickets', 'pagos.ticket_id', '=', 'tickets.idt')
+        ->join('academies', 'pagos.academy_id', '=', 'academies.id')
+        ->select('pagos.*', 'tickets.*', 'academies.*')
+        ->where('tickets.resultado', 't')
+        ->get();
+
+        return view('usuario.ticketsValidados', compact('tickets'));
+    }
+
+    public function misTickets()
+    {
+        //
+
+        $miUser = Auth::user()->id;
+
+        $tickets = DB::table('pagos')
+        ->join('tickets', 'pagos.ticket_id', '=', 'tickets.idt')
+        ->join('academies', 'pagos.academy_id', '=', 'academies.id')
+        ->select('pagos.*', 'tickets.*', 'academies.*')
+        ->where('pagos.user_id', $miUser)
+        ->get();
+
+        $competidores = DB::table('categorias_users')
+        ->join('users', 'categorias_users.user_id', '=', 'users.id')
+        ->join('academies', 'categorias_users.academy_id', '=', 'academies.id')
+        ->join('categoria1', 'categorias_users.categoria1_id', '=', 'categoria1.id')
+        ->join('categoria2', 'categorias_users.categoria2_id', '=', 'categoria2.id')
+        ->join('categorias', 'categorias_users.categorias_id', '=', 'categorias.id')
+        ->join('tickets', 'categorias_users.ticket_id', '=', 'tickets.idt')
+        ->select('categorias_users.*', 'users.*', 'academies.*', 'tickets.*', 'categoria1.*', 'categoria2.*', 'categorias.*')
+        ->where('categorias_users.director_id', $miUser)
+        ->get();
+
+        return view('usuario.misTickets', compact('tickets', 'competidores'));
+    }
+
+    public function pdf(){
+
+        
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -48,6 +96,32 @@ class TicketsController extends Controller
     public function show(string $id)
     {
         //
+        $miUser = Auth::user()->id;
+
+        $tickets = DB::table('pagos')
+        ->join('tickets', 'pagos.ticket_id', '=', 'tickets.idt')
+        ->join('academies', 'pagos.academy_id', '=', 'academies.id')
+        ->select('pagos.*', 'tickets.*', 'academies.*')
+        ->where('pagos.user_id', $miUser)
+        ->where('pagos.idp', $id)
+        ->get();
+
+        $competidores = DB::table('categorias_users')
+        ->join('users', 'categorias_users.user_id', '=', 'users.id')
+        ->join('academies', 'categorias_users.academy_id', '=', 'academies.id')
+        ->join('categoria1', 'categorias_users.categoria1_id', '=', 'categoria1.id')
+        ->join('categoria2', 'categorias_users.categoria2_id', '=', 'categoria2.id')
+        ->join('categorias', 'categorias_users.categorias_id', '=', 'categorias.id')
+        ->join('tickets', 'categorias_users.ticket_id', '=', 'tickets.idt')
+        ->select('categorias_users.*', 'users.*', 'academies.*', 'tickets.*', 'categoria1.*', 'categoria2.*', 'categorias.*')
+        ->where('categorias_users.director_id', $miUser)
+        ->get();
+        set_time_limit(0);
+
+        $pdf = Pdf::loadView('pdf.pdfTicket', compact('tickets', 'competidores'));
+        return $pdf->stream();
+        // return $pdf->download('ticketAloCaribe.pdf');
+
     }
 
     /**

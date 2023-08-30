@@ -314,34 +314,11 @@ function Enviar(){
 
         })  
 
-
-        // let option2 = {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json;charset=utf-8',
-        //         Accept: 'application/json;charset=utf-8',
-        //         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Agrega el token de Laravel para protección CSRF
-        //     },
-        //     body: JSON.stringify(PagoObj)
-        // }
-        
-        // fetch('/recibirdatos', option2)
-        // .then(response => response.json())
-        // .then(data => {
-        // console.log(data); // Handlea la respuesta del servidor
-        // })
-
-        // .catch(error => console.log('Error: ',error));
-        // (datos => datos.json())
-        // .then(datosformulario => {
-        //     console.log(datosformulario);
-        // })
-
-
         reiniciarOBjeto();
         UserObj.ticket_id = generarID();
         admCompetidores.borrarTodo();
         ui.imprimirCompetidores(admCompetidores);
+        window.location.href = 'http://127.0.0.1:8000/misTickets';
         console.log(admCompetidores);
     } else{
         ui.imprimirAlerta('No haz ingresado competidores', 'error');

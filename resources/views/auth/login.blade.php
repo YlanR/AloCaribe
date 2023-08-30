@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../../css/index.css">
+@include('templates.header',  ['modo' => 'Alo Caribe'])
+
+
+<link rel="stylesheet" href="../../css/index.css">
    <link rel="stylesheet" href="../../css/login.css">
    <link rel="stylesheet" href="../fonts/style.css">
-    <title>Inicio de sesión</title>
-</head>
 <body>
      <!---->
      <header>
@@ -35,7 +31,7 @@
          <!---->
             <div id="navbar-botones" >
             <!--emoji que manda al inicio de sesión-->
-                <a href="./vista/login.php">
+                <a href="/login.php">
                 <span class="icon-user" style="color:white;"></span>
                 </a>
             </div>

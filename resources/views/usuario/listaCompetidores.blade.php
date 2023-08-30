@@ -51,8 +51,11 @@
                             <button type="submit"> Buscar</button>
                         </div>
                     </form>
-
-
+                @if($categoria1)
+                    <div class="tituloCategorias">
+                        <h2>Categoria: {{ $categoria3->name_cate3 }} / {{ $categoria2->name_cate2}} / {{ $categoria1->name_cate1}}</h2>
+                    </div>
+                @endif
                     <div class=" lista-seleccionada">
                         <table class="lista-seleccionada-tabla">
                         <thead class="lista-cabecera">
@@ -69,16 +72,18 @@
                             <tbody class="lista-cuerpo">
 
                             @foreach ($competidores as $competidor => $valore)
-                            
+                                  
                                 <tr>
                                     <td>{{ $competidor+1 }}</td>
                                     <td>{{ $valore->name_academy }}</td>
                                     <td>{{ $valore->name }}</td>
                                     <td>{{ $valore->apellido }}</td>
                                     <td>{{ $valore->cedula }}</td>
+                                    @if($valore->foto_academy) 
                                     <td><img  class="foto_header" src="{{ asset('storage/').'/'.  $valore->foto_academy }}" alt=""></td>
-
-
+                                    @else
+                                    <td><img  class="foto_header" src="../img/academia.png" alt=""></td>
+                                    @endif
                                     
                                 </tr>
 

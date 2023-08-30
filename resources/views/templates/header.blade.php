@@ -39,7 +39,7 @@
                     <a href="#">REGLAS</a>
                 </li>
                 <li class="navbar-link"> 
-                    <a href="#">CONTACTO</a>
+                    <a href="{{ url('/contacto') }}">CONTACTO</a>
                 </li>
 
                 <!-- @if(Auth::user())
@@ -55,14 +55,6 @@
                     </form>
                 </li>
                 @endif -->
-
-                @if(Auth::user())
-                <li class="navbar-link">
-                    <a href="{{url('academia/')}}/{{Auth::user()->id}}">
-                        Academia
-                    </a>
-                </li>
-                @endif
 
                 <!-- <li class="navbar-link"> 
                         @if(Auth::user()) 
@@ -91,8 +83,12 @@
             </div>
         @else
           
-            <li class="navbar-link foto_header-cuadro"> 
-                        <a class="" href="#"> <img  class="foto_header" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></a>
+            <li class="navbar-link foto_header-cuadro">
+                @if(Auth::user()->foto) 
+                    <a class="" href="#"> <img  class="foto_header" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></a>
+                @else
+                    <a class="" href="#"> <img  class="foto_header" src="../img/user.jpg" alt=""></a>
+                @endif
             </li>
         @endif    
         </div>
@@ -116,10 +112,29 @@
                         <div class="menu-vertical-foto"><img src="../../public/img/logo.png" alt=""></div>
                     </div>
                 </li>
+                @can('perfil.index')
                 <li><a href="{{url('perfil/')}}/{{Auth::user()->id}}" >Perfil</a></li>
+                @endcan
+
+                @can('ticket.index')
                 <li><a href="{{ url('/validacionTicket') }}">Validación de Ticket</a></li>
-                <li><a href="#">Tickets Validados</a></li>
+                @endcan
+
+                @can('ticket.indexValidados')
+                <li><a href="{{ url('/ticketsValidados') }}">Tickets Validados</a></li>
+                @endcan
+                @can('operador.index')
                 <li><a href="{{ url('/listaCompetidores') }}">Lista de Competidores</a></li>
+                @endcan
+                @can('usuario.academy.show')
+                <li><a href="{{url('academia/')}}/{{Auth::user()->id}}">Mi Academia</a></li>
+                @endcan
+                @can('usuario.index')
+                <li><a href="{{ url('/competidor') }}">Agregar Competidores</a></li>
+                @endcan
+                @can('ticket.misTickets')
+                <li><a href="{{ url('/misTickets') }}">Mis tickets</a></li>
+                @endcan
                 <li><a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">

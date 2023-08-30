@@ -15,17 +15,17 @@ class categoria2Seeder extends Seeder
     {
         //
         DB::table('categoria2')->insert([
-            ['name' => 'Solista Femenido'],
-            ['name' => 'Solista Masculino'],
-            ['name' => 'Parejas'],
-            ['name' => 'Grupos'],
-            ['name' => 'Duo Masculino'],
-            ['name' => 'Duo Femenido'],
-            ['name' => 'Rueda'],
-            ['name' => 'Coreográfico'],
-            ['name' => 'Parejas'],
-            ['name' => 'Lady Style'],
-            ['name' => 'Men Style']
+            ['name_cate2' => 'Solista Femenido'],
+            ['name_cate2' => 'Solista Masculino'],
+            ['name_cate2' => 'Parejas'],
+            ['name_cate2' => 'Grupos'],
+            ['name_cate2' => 'Duo Masculino'],
+            ['name_cate2' => 'Duo Femenido'],
+            ['name_cate2' => 'Rueda'],
+            ['name_cate2' => 'Coreográfico'],
+            ['name_cate2' => 'Parejas'],
+            ['name_cate2' => 'Lady Style'],
+            ['name_cate2' => 'Men Style']
         ]);
     }
 }

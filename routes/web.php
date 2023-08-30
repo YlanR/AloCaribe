@@ -29,18 +29,25 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/registraCompetidores', [UsuarioController::class, 'index'])->middleware('auth');
+Route::get('/registraCompetidores', [UsuarioController::class, 'index'])->middleware('can:usuario.index')->name('usuario.index');
 Route::resource('/competidor', UsuarioController::class)->middleware('auth');
-Route::get('/academia/{id}', [AcademyController::class, 'show'])->middleware('auth');
+Route::get('/academia/{id}', [AcademyController::class, 'show'])->middleware('can:usuario.academy.show')->name('usuario.academy.show');
 Route::resource('/academia', AcademyController::class)->middleware('auth');
-Route::get('/registraCompetidores', [UsuarioController::class, 'index'])->middleware('auth');
-Route::post('/recibirdatos', [UsuarioController::class, 'store']);
-Route::get('/listaCompetidores', [OperadoresController::class, 'index'])->middleware('auth');
-Route::post('/buscar', [OperadoresController::class, 'index'])->middleware('auth');
-Route::get('/perfil/{id}', [PerfilesController::class, 'index'])->middleware('auth');
-Route::get('/validacionTicket', [TicketsController::class, 'index'])->middleware('auth');
-Route::post('/validar/{id}', [TicketsController::class, 'update'])->middleware('auth');
+Route::post('/recibirdatos', [UsuarioController::class, 'store'])->middleware('can:usuario.store')->name('usuario.store');
+Route::get('/listaCompetidores', [OperadoresController::class, 'index'])->middleware('can:operador.index')->name('operador.index');
+Route::post('/buscar', [OperadoresController::class, 'index'])->middleware('can:operador.index')->name('operador.index');
+Route::get('/perfil/{id}', [PerfilesController::class, 'index'])->middleware('can:perfil.index')->name('perfil.index');
+Route::get('/validacionTicket', [TicketsController::class, 'index'])->middleware('can:ticket.index')->name('ticket.index');
+Route::post('/validar/{ids}', [TicketsController::class, 'update'])->middleware('can:ticket.update')->name('ticket.update');
+Route::get('/ticketsValidados', [TicketsController::class, 'indexValidados'])->middleware('can:ticket.indexValidados')->name('ticket.indexValidados');
+Route::get('/misTickets', [TicketsController::class, 'misTickets'])->middleware('can:ticket.misTickets')->name('ticket.misTickets');
 // Route::resource('/perfil', UsuarioController::class)->middleware('auth');
+Route::get('ticket/{id}', [TicketsController::class, 'show'])->name('tickets.pdf')->middleware('can:ticket.show')->name('ticket.show');
+Route::get('/perfilEdit/{id}', [PerfilesController::class, 'edit'])->middleware('can:perfil.edit')->name('perfil.edit');
+Route::post('/actualizarUsuario/{id}', [PerfilesController::class, 'update'])->middleware('can:perfil.update')->name('perfil.update');
+Route::get('/contacto', [HomeController::class, 'contacto'])->name('home.contacto');
+
+
 
 
 

@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Categoria1;
 use App\Models\Categoria2;
-use App\Models\Categoria3;
+use App\Models\Categorias;
 
 use App\Models\Tickets;
 use App\Models\Categorias_users;
@@ -27,6 +27,10 @@ class UsuarioController extends Controller
     {
         //
         $academy = Academy::where('user_id', Auth::user()->id)->first();
+
+        if($academy == null){
+            return redirect()->to('/academia/'.Auth::user()->id);
+        }
         return view('usuario.registroCompetidores', compact('academy'));
     }
 
@@ -117,7 +121,7 @@ class UsuarioController extends Controller
                     $categoria->categorias_id = $request->input('categoria3');
                     $categoria->academy_id = $request->input('academy_id');
                     $categoria->director_id = $request->input('director_id');
-                    $categoria->ticket_id = $ticket->id;
+                    $categoria->ticket_id = $ticket->idt;
                     
                     $categoria->save();
 
@@ -129,7 +133,7 @@ class UsuarioController extends Controller
                     $pagos->referencia = $request->input('referenciaPago');
                     $pagos->total = 25;
                     $pagos->academy_id = $request->input('academy_id');
-                    $pagos->ticket_id = $ticket->id;
+                    $pagos->ticket_id = $ticket->idt;
 
                     if($pagosExist == null){
                         $pagos->save();
@@ -151,7 +155,7 @@ class UsuarioController extends Controller
                     $categoria->categorias_id = $request->input('categoria3');
                     $categoria->academy_id = $request->input('academy_id');
                     $categoria->director_id = $request->input('director_id');
-                    $categoria->ticket_id = $ticketsExistent->id;
+                    $categoria->ticket_id = $ticketsExistent->idt;
                     
                     $categoria->save();
 
@@ -164,7 +168,7 @@ class UsuarioController extends Controller
                     $pagos->referencia = $request->input('referenciaPago');
                     $pagos->total = 25;
                     $pagos->academy_id = $request->input('academy_id');
-                    $pagos->ticket_id = $ticketsExistent->id;
+                    $pagos->ticket_id = $ticketsExistent->idt;
 
                     if($pagosExist == null){
                         $pagos->save();
