@@ -50,7 +50,7 @@ form {
 }
 /*parte dieño de la parte izquierda*/
 .main-content-left{
-    width:  29rem; 
+    width:  27.5rem; 
     height:  45rem; 
     min-height:  100%; 
     position:  relative;  
@@ -85,9 +85,10 @@ form {
     font-size: 16px;
     cursor: pointer;
 }
-.registrar:hover{
+.left-boton:hover{
     background-color: var(--rosado,30%);
     font-size: 18px;
+    transition: 1s;
 }
 /*diseño de la parte derecha*/
 
@@ -111,7 +112,7 @@ form {
 }
 .login-contents{
     display: flex;
-    margin: -10px;   
+    margin: 0px;   
 }
 .login-content{
     position:  relative; 
@@ -187,10 +188,11 @@ form {
 .subir-foto-perfil{
     margin: 0 200px;
     padding: 0 20px;
-    background: var(--rosado,30%);
+    background: var(--azul);
     color: white;
     border: none;
 }
+
 /*  &:hover {
     transform:  translateY(-3px);
     box-shadow:  0 2px 6px -1px rgba(-var(--moraclaro), .65);
@@ -202,3 +204,81 @@ form {
     /*
 
     */
+    /*responsive*/
+@media (min-width:1502.22px) {
+    .main-content{
+        margin: 8rem 16.9rem;
+    }
+    .main-content-left {
+        width: 28.9rem;
+    }    
+}
+@media (min-width:1690px) {
+    .main-content {    
+        margin: 8rem 21.9rem;
+    }
+    .main-content-left {
+        width: 30.9rem;
+    }
+}
+@media (min-width:1802.67px) {
+    .main-content{
+        margin: 8rem 24.9rem;
+        border-radius: 10%;
+    }
+    .main-content-left {
+        width: 31rem;
+    }
+}
+@media (min-width:2028px) {
+    .main-content {    
+        margin: 8rem 29.9rem;
+        border-radius: 10%;
+    }
+    .main-content-left {
+        width: 35rem;
+    }
+}
+/*más pequeño*/
+@media (max-width:1229.09px){
+    .main-content {    
+        margin: 8rem 8.9rem;
+        border-radius: 10%
+    }
+}
+@media (max-width:1081.60px){
+    .main-content {    
+        margin: 8rem 3.9rem;
+        border-radius: 10%;
+    }
+    .main-content-left {
+        width: 28.5rem;
+    }
+    
+}
+@media (max-width:901.33px){
+    .main-content-left {
+        width: 17.5rem;}
+    .left-botones a {
+        margin: 0rem 11rem;}
+        .login-contents {
+            margin: 0px;
+        }
+
+}
+@media (max-width:772.57px){
+
+    .left-botones a {
+        margin: 0rem 5rem;}
+    .left-boton {
+        min-width: 4.8rem;
+        font-size: 10px;
+    }
+    .main-content {
+        margin: 8rem 3.9rem;
+        border-radius: 11%;
+    }
+    .main-content-left {
+        width: 9.5rem;
+    }
+}

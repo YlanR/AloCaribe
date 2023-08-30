@@ -19,6 +19,18 @@
     --transparencia2:#b0b0b010;
 
 }
+@font-face {
+    font-family:Bayon-Regular;
+    src: url(../letras/Bayon-Regular.ttf);
+}
+@font-face {
+    font-family:Amaranth-Regular;
+    src: url(../letras/Amaranth-Regular.ttf);
+}
+@font-face {
+    font-family:AAmaranth-Italic;
+    src: url(../letras/Amaranth-Italic.ttf);
+}
 /*estilos de las pelotas y posicionamiento*/
 .plantilla2-content-pelotas{
     display: flex;
@@ -162,13 +174,21 @@ box-shadow: 0rem 3rem 1rem var(--gris);
     border-radius: 28px;
     padding: 20px;
     margin: 0 4rem;
-    box-shadow: inset;
+    box-shadow: 4px 5px var(--gris,30%);
+    font-family: "Amaranth-Italic";
+    color: var(--moraoscuro);
+    font-size: 28px;
 }
 .plantilla2-content-mid{
     padding: 20px;
+    font-family: "Bayon-Regula";
+    color: var(--morapie);
+    font-size:22px ;
 }
 .plantilla2-content-bot{
     padding: 20px;
+    font-family: "Amaranth-Regular";
+    font-size: 18px;
 }
 /* contenedor del resto del contenido */
 .contenidos{
@@ -227,3 +247,17 @@ gap: 5rem;
     translate: 0 100%;
     
 }
+
+/*responsive*/
+@media (min-width:1502.22px) {
+    
+}
+@media (min-width:1690px){}
+@media (min-width:1802.67px){}
+@media (min-width:2028px){}
+
+/*hacia abajo */
+@media (max-width:1229.09px){}
+@media (max-width:1081.60px){}
+@media (max-width:901.33px){}
+@media (max-width:772.57px){}

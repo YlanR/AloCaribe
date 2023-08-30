@@ -19,6 +19,10 @@
     --transparencia2:#b0b0b010;
 
 }
+@font-face {
+    font-family:Bira_PERSONAL_USE_ONLY ;
+    src: url(../../letras/Bira_PERSONAL_USE_ONLY.ttf);
+}
 /*estilo de la plantilla 1*/
 /*   display: flex;
     width: 100%;
@@ -36,41 +40,38 @@
 .plantilla1-content-letras{
     display: flex;
     position: absolute;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-    width: 100%;
-    height: 100%;
+    font-family: 'Bira_PERSONAL_USE_ONLY';
     align-items: center;
     justify-content: center;
     text-align: center;
 
 }
 .plantilla1-content-letras .letra1{
-    font-size: 80px;
+    font-size: 120px;
     color: transparent;
-    -webkit-text-stroke: 5px var(--blanco);
+    -webkit-text-stroke: 1px var(--blanco);
 }
 .vivelo1{translate: 4.5rem 0rem;}
 .maximo1{    
-    translate: 46rem 16rem;
+    translate: 38rem 16rem;
     position: absolute;
 }
 .plantilla1-content-letras .letra2{
-    font-size: 80px;
+    font-size: 100px;
     color: transparent;
-    -webkit-text-stroke: 3px var(--blanco);
+    -webkit-text-stroke: 0.5px var(--blanco);
 }
-.vivelo2{    translate: -1rem 5rem;}
-.maximo2{    translate: 50rem 22rem;
+.vivelo2{    translate: -3rem 6rem;}
+.maximo2{    translate: 41rem 23rem;
     position: absolute;}
 .plantilla1-content-letras .letra3{
     font-size: 80px;
     color: transparent;
-    -webkit-text-stroke: 1px var(--blanco);
+    -webkit-text-stroke: 0.1px var(--blanco);
 }
-.vivelo3{translate: -7rem 10rem;}
+.vivelo3{translate: -11rem 11rem;}
 .maximo3{
-    translate: 55rem 28rem;
+    translate: 42rem 28rem;
     position: absolute;}
 /*imagenes del home*/
 .plantilla1-home-content{
@@ -96,7 +97,9 @@ background-position-y: bottom;
     text-align: center;
 }
 .plantilla1-content-logo h4{
-    font-size: 28px;
+    font-size: 60px;
+    font-family: 'Bira_PERSONAL_USE_ONLY';
+    color: var(--blanco);
 }
 .plantilla1-content-logo .letra1{   translate: 6rem -9rem;}
 .plantilla1-content-logo .letra2{   translate: -6rem 7rem;}
@@ -220,3 +223,200 @@ translate: -100% -11rem;
     }
 }
 */
+/*responsive*/
+@media (min-width:1502.22px) {
+    .plantilla1-content-letras .letra1 {
+        font-size: 130px;}
+    .maximo3 {
+        translate: 54rem 28rem;}
+    .maximo2 {
+        translate: 45rem 23rem;}
+        
+
+}
+@media (min-width:1690px){
+    .plantilla1-content-letras .letra1 {
+        font-size: 135px;}
+    .vivelo1 {
+        translate: 5.5rem 0rem;       
+    }
+    .plantilla1-content-letras .letra2 {
+        font-size: 115px;}
+    .vivelo2 {
+        translate: -1rem 6rem;
+    }
+    .plantilla1-content-letras .letra3 {
+        font-size: 100px;}
+    .vivelo3 {
+        translate: -8rem 11rem;
+    }
+    .maximo1 {
+        translate: 40rem 16rem;}
+    .maximo2 {
+        translate: 48rem 23rem;}
+    .maximo3 {
+        translate: 59rem 28rem;}
+}
+@media (min-width:1802.67px){
+    .vivelo2 {
+        translate: 1rem 6.5rem;
+    }
+    .vivelo3 {
+        translate: -5rem 12rem;
+    }
+    .maximo3 {
+        translate: 66rem 28rem;}
+    .maximo2 {
+        translate: 58rem 23rem;}
+    .maximo3 {
+        translate: 66rem 28rem;}
+}
+@media (min-width:2028px){
+    .plantilla1-content-letras .letra1 {
+        font-size: 155px;
+    }
+    .maximo1 {
+        translate: 47rem 13rem;
+    }
+    .plantilla1-content-letras .letra2 {
+        font-size: 140px;
+    }
+    .maximo2 {
+        translate: 59rem 21rem;
+    }
+    .plantilla1-content-letras .letra3 {
+        font-size: 120px;
+    }
+    .maximo3 {
+        translate: 69rem 27rem;
+    }
+    .plantilla1-content-logo h4 {
+        font-size: 80px;}
+
+    .plantilla1-content-trompeta img {
+        width: 14rem;
+        height: 14rem;
+        }
+        
+    .trompeta {
+        translate: -165% -10rem;
+        }
+
+    .plantilla1-content-redoblante img {
+    width: 16rem;
+    height: 16rem;
+    }
+
+    .redoblante {
+    transform: rotate(20deg);
+    translate: 26rem 13rem;
+    }
+}
+
+/*hacia abajo */
+@media (max-width:1229.09px){
+    .plantilla1-content-letras .letra1 {
+        font-size: 100px;}
+    .plantilla1-content-letras .letra2 {
+        font-size: 90px;}
+    .plantilla1-content-letras .letra3 {
+        font-size: 80px;}
+    .plantilla1-content-redoblante img {
+        width: 13rem;
+        height: 13rem;
+    }
+    .plantilla1-content-trompeta img {
+        width: 12rem;
+        height: 12rem;
+    }
+    .plantilla1-content-logo h4 {
+        font-size: 50px;}
+    .maximo3 {
+        translate: 40rem 28rem;}
+    .maximo2 {
+        translate: 35rem 23rem;}
+    .maximo1 {
+        translate: 30rem 16rem}    
+}
+
+@media (max-width:1081.60px){
+    .plantilla1-content-letras .letra1 {
+        font-size: 90px;
+    }
+    .maximo1 {
+        translate: 29rem 14rem;}
+
+    .plantilla1-content-letras .letra2 {
+        font-size: 70px;
+    }
+
+    .vivelo2 {
+        translate: -1rem 5rem;
+    }
+    .maximo2 {
+        translate: 32rem 20rem;}
+    .plantilla1-content-letras .letra3 {
+        font-size: 60px;
+    }
+    .vivelo3 {
+        translate: -7rem 9rem;
+    }
+    .maximo3 {
+        translate: 34rem 25rem;
+    }
+    .plantilla1-content-maracas img {
+        width: 12rem;
+        height: 25rem;
+    }
+    .plantilla1-content-matas img {
+        width: 31rem;
+        height: 32rem;
+    }
+    .plantilla1-content-logo h4 {
+        font-size: 50px;
+    }
+}
+@media (max-width:901.33px){
+    .plantilla1-content-matas img {
+        width: 28rem;
+        height: 29rem;
+    }
+    .plantilla1-content-logo h4 {
+        font-size: 40px;
+    }
+    .plantilla1-content-logo img {
+        width: 20rem;
+        height: 15rem;
+    }
+    .plantilla1-content-redoblante img {
+        width: 10rem;
+        height: 10rem;
+    }
+    .plantilla1-content-maracas img {
+        width: 8rem;
+        height: 20rem;
+    }
+    .plantilla1-content-trompeta img {
+        width: 10rem;
+        height: 10rem;
+    }
+    .plantilla1-content-letras .letra1 {
+        font-size: 80px;
+    }
+    .plantilla1-content-letras .letra2 {
+        font-size: 60px;
+    }
+    .plantilla1-content-letras .letra3 {
+        font-size: 50px;
+    }
+    .maximo3 {
+        translate: 32rem 23rem;
+    }
+    .maximo2 {
+        translate: 29rem 19rem;
+    }
+    .maximo1 {
+        translate: 25rem 14rem;
+    }
+}
+@media (max-width:772.57px){}
