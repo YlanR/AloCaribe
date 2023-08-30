@@ -52,6 +52,8 @@ class AcademyController extends Controller
         if ($request->hasFile('foto_academy')) {
             $foto = $request->file('foto_academy')->store('uploads', 'public');
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
+        } else{
+            $foto = null;
         }
 
             $instagram = new Instagram;

@@ -12,7 +12,11 @@
                     <div class="perfil-superior">
                         <div class="perfil-superior-foto"> 
                              <!--esta sección es dnd se llama los datos registrados para la foto-->
+                             @if(Auth::user()->foto)
                              <img  class="foto_perfil" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></div>
+                             @else
+                             <img  class="foto_perfil" src="../img/user.jpg" alt=""></div>
+                            @endif
                         <div class="prefil-superior-texto"> 
                              <!--esta sección es dnd se llama los datos registrados-->
                             <h1>{{ $usuar->name }} {{ $usuar->apellido }}</h1>
@@ -39,11 +43,14 @@
                         <div class="perfil-contenido-textos">
                             <div class="perfil-contenido-texto">
                                 <h5>Instagram:</h5>
+                                <h5>Email:</h5>
                                 <h5>Academia:</h5>
                             </div>
                             <div class="perfil-contenido-relleno">
                                  <!--esta sección es dnd se llama los datos registrados para la academia-->
                                 <h5>{{ $usuar->instagram }}</h5>
+                                <h5>{{ $usuar->email }}</h5>
+
                                 @if($academy == null)
                                 @else
                                 <h5>{{ $academy->name_academy }}</h5>

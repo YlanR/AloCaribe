@@ -12,7 +12,11 @@
                     <div class="perfil-superior">
                         <div class="perfil-superior-foto"> 
                              <!--esta sección es dnd se llama los datos registrados para la foto-->
+                             @if(Auth::user()->foto)
                              <img  class="foto_perfil" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></div>
+                             @else
+                             <img  class="foto_perfil" src="../img/user.jpg" alt=""></div>
+                            @endif
                         <div class="prefil-superior-texto"> 
                              <!--esta sección es dnd se llama los datos registrados-->
                             <h1>{{ $usuar->name }} {{ $usuar->apellido }}</h1>
@@ -51,9 +55,13 @@
                                 
                             </div> 
                         </div>
+
+                        
                         <div class="perfil-boton"> 
                         <button style="position: absolute;color: blue;" type="submit">Guardar cambios</button>
-                            
+                        <div class="atrasBoton">
+                            <a href="{{ url('/perfil/'.Auth::user()->id)}}">Volver</a>
+                        </div>
                         </div>
                     </form>
 

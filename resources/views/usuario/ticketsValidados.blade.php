@@ -6,7 +6,7 @@
         <section class="main">
             <div class="main-content">
                 <div class="main-content-contenido">
-                    <h3>Validadición de ticket</h3>
+                    <h3>Tickets Validados</h3>
                     <div class="main-content-contenido-superior superior">
                         <div class="superior-contenido">
                             <!--la flacha la pongo yo el logo nombre y precio tienen que ser llamado de la base de datos dejare un name y un id ralacionado ya que es igual en los 3 bloque para facilitar el llamado -->
@@ -31,7 +31,11 @@
                         <div class="central-contenido">   
                             <div class="central-contenido-superior">
                                 <div class="central-contenido-superior-izq" id="Flecha">flecha</div>
+                                @if($valore->foto_academy)
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
+                                @else
+                                <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="../img/academia.png" alt=""></div>
+                                @endif
                                 <div class="central-contenido-superior-izq" id="nombreAcademia">{{ $valore->name_academy }}</div>
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->ticket }}</div>

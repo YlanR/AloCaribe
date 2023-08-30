@@ -12,7 +12,11 @@
                     <div class="perfil-superior">
                         <div class="perfil-superior-foto"> 
                              <!--esta sección es dnd se llama los datos registrados para la foto-->
+                             @if($academy->foto_academy)
                              <img  class="foto_perfil" src="{{ asset('storage/').'/'. $academy->foto_academy }}" alt=""></div>
+                             @else
+                             <img  class="foto_perfil" src="../img/academia.png" alt=""></div>
+                            @endif
                         <div class="prefil-superior-texto"> 
                              <!--esta sección es dnd se llama los datos registrados-->
                             <h1>{{ $academy->name_academy }}</h1>

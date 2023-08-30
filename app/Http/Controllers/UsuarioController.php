@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Models\Categoria1;
 use App\Models\Categoria2;
-use App\Models\Categoria3;
+use App\Models\Categorias;
 
 use App\Models\Tickets;
 use App\Models\Categorias_users;
@@ -27,6 +27,10 @@ class UsuarioController extends Controller
     {
         //
         $academy = Academy::where('user_id', Auth::user()->id)->first();
+
+        if($academy == null){
+            return redirect()->to('/academia/'.Auth::user()->id);
+        }
         return view('usuario.registroCompetidores', compact('academy'));
     }
 

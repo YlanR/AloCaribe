@@ -31,7 +31,11 @@
                         <div class="central-contenido">   
                             <div class="central-contenido-superior">
                                 <div class="central-contenido-superior-izq" id="Flecha">flecha</div>
+                                @if($valore->foto_academy)
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
+                                @else
+                                <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="../img/academia.png" alt=""></div>
+                                @endif
                                 <div class="central-contenido-superior-izq" id="nombreAcademia">{{ $valore->name_academy }}</div>
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
                             </div>

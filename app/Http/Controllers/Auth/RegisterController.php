@@ -75,6 +75,8 @@ class RegisterController extends Controller
         if (request()->hasFile('foto')) {
             $foto['foto'] = request()->file('foto')->store('uploads', 'public');
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
+        }else{
+            $foto['foto'] = null;
         }
 
         
