@@ -49,7 +49,7 @@ justify-content: center;
 .form-logo-logo{    height: 14rem;}
 .form-contents{
     display: flex;
-    margin: -5px;
+    margin: 0px;
 }
 .form-content{
     position: relative;

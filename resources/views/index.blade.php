@@ -147,7 +147,8 @@
                     <div class="contenedor-contenidos">
                         <div class="contenedor-contenido">
                             <div class="contenido">
-                            <img src="../img/2/Vector.png" alt="" style="background: black; height: 75px;translate: 0 3rem;"></div>
+                                <button class="contenidoBoton" id="plantControl">click aqui</button>
+                            </div>
                             <div class="despliegue" id="plantCont">
                                 
                                 <div class=" plantilla3">
@@ -305,21 +306,24 @@
 
                                     </div>                              
                                 </div>
-                                
+                            
+                            <div class="tranding-slider-control" style="margin-top:60px;  " id="plantCont">
+                                <div class="swiper-button-prev slider-arrow">
+                                    <ion-icon name="arrow-back-outline"></ion-icon>
+                                </div>
+                                <div class="swiper-button-next slider-arrow">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>      
+
+
                         </div>
                         </div>
                     </div>
                     
                 </div>
-                <div class="tranding-slider-control" style="margin-top:60px; display:none;" id="plantControl">
-                    <div class="swiper-button-prev slider-arrow">
-                        <ion-icon name="arrow-back-outline"></ion-icon>
-                    </div>
-                    <div class="swiper-button-next slider-arrow">
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+               
             </div>
         </section>
 
@@ -354,12 +358,13 @@
     
 </script>
 <script>
-    let plantControl=document.getElementById("planControl");
-    let plantCont=document.getElementById("planCont");
+    let plantControl=document.getElementById("plantControl");
+    let plantCont=document.getElementById("plantCont");
 
-    planCont.addEventListener("click",ver);
+    plantControl.addEventListener("click",ver);
     function ver() {
-        planControl.classList.toggle("ver")
+        plantCont.classList.toggle("ver");
+        plantControl.classList.toggle("giro");
     }
 </script>
     @include('templates.footer')

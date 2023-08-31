@@ -16,11 +16,20 @@
                             <div class="superior-contenido-izq" id="precioTicket">precio</div>
                         </div>
                         <div class="superior-contenido">
-                            <div class="superior-contenido-derecha"><a href="">pay</a>
+                            <div class="superior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-credit-card"></span>
+                                </a>
                             </div>
-                            <div class="superior-contenido-derecha"><a href="">check</a>
+                            <div class="superior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-checkbox-checked" style="color:#06C63B;"></span>
+                                </a>
                             </div>
-                            <div class="superior-contenido-derecha"><a href="">loading</a>
+                            <div class="superior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-clock2" style="color:#F6CF02;"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -87,10 +96,16 @@
                             <div class="inferior-contenido-izq" id="precioTicket">precio</div>
                         </div>
                         <div class="inferior-contenido">
-                            <div class="inferior-contenido-derecha"><a href="">photo</a>
+                            <div class="inferior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-database"></span>
+                                </a>
                             </div>
                             
-                            <div class="inferior-contenido-derecha"><a href="">loading</a>
+                            <div class="inferior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-clock2" style="color:#F6CF02;"></span>
+                                </a>
                             </div>
                         </div>
                     </div>

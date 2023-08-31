@@ -1,6 +1,7 @@
 @include('templates.header',  ['modo' => 'Alo Caribe'])
     <link rel="stylesheet" href="../../css/validacionTicket.css">
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../fonts/style.css">
 <main>
     
         <section class="main">
@@ -10,17 +11,28 @@
                     <div class="main-content-contenido-superior superior">
                         <div class="superior-contenido">
                             <!--la flacha la pongo yo el logo nombre y precio tienen que ser llamado de la base de datos dejare un name y un id ralacionado ya que es igual en los 3 bloque para facilitar el llamado -->
-                            <div class="superior-contenido-izq" id="Flecha">flecha</div>
+                            <div class="superior-contenido-izq" id="Flecha">
+                                <span class="icon-play3" style="color:#531A87;"></span>
+                            </div>
                             <div class="superior-contenido-izq" id="imagenAcademia">logo</div>
                             <div class="superior-contenido-izq" id="nombreAcademia">nombre</div>
                             <div class="superior-contenido-izq" id="precioTicket">precio</div>
                         </div>
                         <div class="superior-contenido">
-                            <div class="superior-contenido-derecha"><a href="">pay</a>
+                            <div class="superior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-credit-card"></span>
+                                </a>
                             </div>
-                            <div class="superior-contenido-derecha"><a href="">check</a>
+                            <div class="superior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-checkbox-checked" style="color:#06C63B;"></span>
+                                </a>
                             </div>
-                            <div class="superior-contenido-derecha"><a href="">loading</a>
+                            <div class="superior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-clock2" style="color:#F6CF02;"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +61,10 @@
                                 <div class="central-contenido-superior-derecha"><a href="{{ url('ticket/'.$valore->idp)}}" target="_blank">Imprimir Ticket</a>
                                 </div>
                                 @else
-                                <div class="central-contenido-superior-derecha"><a href="">Pendiente</a>
+                                <div class="central-contenido-superior-derecha">
+                                    <a href="">
+                                        <span class="icon-clock2"></span>
+                                    </a>
                                 </div>
                                 @endif
                             </div> 
@@ -96,16 +111,24 @@
 
                     <div class="main-content-contenido-inferior inferior">
                     <div class="inferior-contenido">
-                            <div class="inferior-contenido-izq" id="Flecha">flecha</div>
+                            <div class="inferior-contenido-izq" id="Flecha">
+                                <span class="icon-play3" style="color:#531A87;"></span>
+                            </div>
                             <div class="inferior-contenido-izq" id="imagenAcademia">logo</div>
                             <div class="inferior-contenido-izq" id="nombreAcademia">nombre</div>
                             <div class="inferior-contenido-izq" id="precioTicket">precio</div>
                         </div>
                         <div class="inferior-contenido">
-                            <div class="inferior-contenido-derecha"><a href="">photo</a>
+                            <div class="inferior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-database"></span>
+                                </a>
                             </div>
                             
-                            <div class="inferior-contenido-derecha"><a href="">loading</a>
+                            <div class="inferior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-clock2" style="color:#F6CF02;"></span>
+                                </a>
                             </div>
                         </div>
                     </div>
