@@ -330,6 +330,39 @@
         <section></section>
     </main>
 
+    @if(Session::has('message'))
+        <script>
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+                })
+                Toast.fire({
+                icon: 'success',
+                title: '{{ Session::get('message') }}'
+                }) 
+        </script>
+    @endif
+
+    @if(Session::has('messageRegister'))
+        <script>
+            Swal.fire({
+                position: 'center-center',
+                icon: 'success',
+                title: '{{ Session::get('messageRegister') }}',
+                showConfirmButton: false,
+                timer: 1500
+                })
+        </script>
+    @endif
+
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

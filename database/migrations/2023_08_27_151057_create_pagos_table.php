@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('pagos', function (Blueprint $table) {
             $table->id('idp');        
             $table->string('modalidad');
-            $table->integer('referencia');
+            $table->integer('referencia')->nullable();
             $table->string('telefono');
             $table->string('nombrePago');
             $table->integer('total');
+            $table->integer('cedula_pago')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('academy_id');
             $table->unsignedBigInteger('ticket_id');

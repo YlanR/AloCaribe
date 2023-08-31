@@ -39,7 +39,7 @@
                     <div class="main-content-contenido-central central">
                         <div class="central-contenido">   
                             <div class="central-contenido-superior">
-                                <div class="central-contenido-superior-izq" id="Flecha">flecha</div>
+                                <div class="central-contenido-superior-izq" id="Flecha"><span class="icon-play3" style="color:#531A87;"></span></div>
                                 @if($valore->foto_academy)
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
                                 @else
@@ -49,17 +49,18 @@
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
                             </div>
                             <div class="central-contenido-superior">
-                                <div class="central-contenido-superior-derecha"><a href="">pay</a>
+                                <div class="central-contenido-superior-derecha"><a href=""><span class="icon-credit-card"></span></a>
                                 </div>
                                 <div class="central-contenido-superior-derecha">
-                                        <form id="check{{ $ticket+1 }}" action="{{ url('validar/'.$valore->idt) }}" method="post" >
+                                        <form id="check{{ $ticket+1 }}" class="check" action="{{ url('validar/'.$valore->idt) }}" method="post" >
                                             @csrf
-                                            <button type="submit">
-                                            {{ __('Validar') }}
+                                            <button type="submit" class="icon-checkbox-checked" style="color:#06C63B;">
+                                            
+
                                             </button>
                                         </form>
                                 </div>
-                                <div class="central-contenido-superior-derecha"><a href="">loading</a>
+                                <div class="central-contenido-superior-derecha"><a href=""><span class="icon-clock2" style="color:#F6CF02;"></span></a>
                                 </div>
                             </div> 
                             <div class="central-contenido-logo">

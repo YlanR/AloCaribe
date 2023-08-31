@@ -21,7 +21,8 @@ const contenedorTotal = document.querySelector('#total');
 const namePago = document.querySelector('#nombreTitular');
 const telefonoImput = document.querySelector('#numeroTitular');
 const referenciaImput = document.querySelector('#referenciaPago');
-const ModalidadImput = document.querySelector('#efectivoModalidad').value;
+const ModalidadImput = document.querySelector('#movilModalidad').value;
+const ModalidadPagoImput = document.querySelector('#efectivoModalidad').value;
 
 
 console.log(nombreImput.length)

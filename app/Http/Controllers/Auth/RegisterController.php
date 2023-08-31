@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Validation\Rules\File;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 
 class RegisterController extends Controller
@@ -102,14 +104,14 @@ class RegisterController extends Controller
             return $user->assignRole('2');
 
         } else{
-            
-
+        
             return redirect()-to('/');
 
         }
 
-       
-
-
     }
+    protected function registered(Request $request, $user)
+{
+    Session::flash('messageRegister', '¡Registro exitoso!');
+}
 }

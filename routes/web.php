@@ -46,6 +46,8 @@ Route::get('ticket/{id}', [TicketsController::class, 'show'])->name('tickets.pdf
 Route::get('/perfilEdit/{id}', [PerfilesController::class, 'edit'])->middleware('can:perfil.edit')->name('perfil.edit');
 Route::post('/actualizarUsuario/{id}', [PerfilesController::class, 'update'])->middleware('can:perfil.update')->name('perfil.update');
 Route::get('/contacto', [HomeController::class, 'contacto'])->name('home.contacto');
+Route::post('/buscarTicket', [TicketsController::class, 'ticketBuscar'])->middleware('can:operador.index')->name('ticket.buscar');
+
 
 
 

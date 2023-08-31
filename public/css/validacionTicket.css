@@ -44,6 +44,7 @@
         height: 100px;
         border-radius: 50px;
         border: 2px solid;
+        margin-bottom: 25px;
     }
     .superior-contenido{
         display: flex;
@@ -80,9 +81,11 @@
     }
     .central-contenido-superior-izq{
         margin:0 10px;
+        font-family: 'Bold';
     }
     .central-contenido-superior-derecha{
         margin:0 10px;
+        font-size: 30px;
     }
     .central-contenido2{
         display: flex;
@@ -90,6 +93,7 @@
         margin-top:25px;
     }
     .central-contenido-inferior{
+        font-family: 'Bold';
         display: grid;
     }
     .central-contenido-inferior input{
@@ -104,6 +108,13 @@
         color:white;
     
     }
+
+    .check button{
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    
     /*estilos de la parte inferior */
     .main-content-contenido-inferior{
         display: flex;

@@ -43,6 +43,20 @@ class TicketsController extends Controller
         return view('usuario.ticketsValidados', compact('tickets'));
     }
 
+    public function ticketBuscar(Request $request)
+    {
+        //
+        $tickets = DB::table('pagos')
+        ->join('tickets', 'pagos.ticket_id', '=', 'tickets.idt')
+        ->join('academies', 'pagos.academy_id', '=', 'academies.id')
+        ->select('pagos.*', 'tickets.*', 'academies.*')
+        ->where('tickets.resultado', 't')
+        ->where('tickets.ticket', $request->input('ticketValidado'))
+        ->get();
+
+        return view('usuario.buscarTicket', compact('tickets'));
+    }
+
     public function misTickets()
     {
         //

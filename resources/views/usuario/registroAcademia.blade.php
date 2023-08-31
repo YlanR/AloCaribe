@@ -18,7 +18,7 @@
                         <input type="hidden" name="user_id" value="{{ Auth::User()->id }}">
                         <div class="form-contents">
                             <div class="form-content">
-                                <input type="text" placeholder="nombre de la academia" id="nombreAcademia" name="name_academy" class="nombreAcademia">
+                                <input type="text" placeholder="nombre de la academia" id="nombreAcademia" name="name_academy" value="{{ old('name_academy') }}" class="nombreAcademia">
                             </div>
                             @error('name_academy')
                                     <span class="invalid-feedback" role="alert">
@@ -26,7 +26,7 @@
                                     </span>
                                 @enderror
                             <div class="form-content">
-                                <input type="tel" placeholder="Número de celular" id="telefono" name="telefono" class="telefono">
+                                <input type="tel" placeholder="Número de celular" id="telefono" name="telefono" value="{{ old('telefono') }}" class="telefono">
                             </div>
                             @error('telefono')
                                     <span class="invalid-feedback" role="alert">
@@ -36,7 +36,7 @@
                         </div>
                         <div class="form-contents">
                             <div class="form-content">
-                                <select name="estado" id="Estados" class="Estados">
+                                <select name="estado" id="Estados" value="{{ old('estado') }}" class="Estados">
                                     <option selected disabled>Selecciona Estado</option>
                                     <option value="amazonas">Amazonas</option>
                                     <option value="anzoategui">Anzoátegui</option>
@@ -70,7 +70,7 @@
                                     </span>
                                 @enderror
                             <div class="form-content">
-                                <input type="text" placeholder="instagram de la academia" id="instagramAcademia" name="instagram" class="instagramAcademia">
+                                <input type="text" placeholder="instagram de la academia" id="instagramAcademia" name="instagram" value="{{ old('instagram') }}" class="instagramAcademia">
                             </div>
                             @error('instagram')
                                     <span class="invalid-feedback" role="alert">
@@ -98,4 +98,5 @@
 
    
 </body>
+
 @include('templates.footer')

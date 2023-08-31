@@ -85,9 +85,9 @@ class AcademyController extends Controller
         
             $academia->save();
            
-            return redirect()->back();
+            return redirect()->back()->with('registrarAca', 'ok');
         } else{
-            return redirect()->back();
+            return redirect()->back()->with('registrarAca', 'none');
         }
     }
 

@@ -10,7 +10,10 @@
                     <div class="main-content-contenido-superior superior">
                         <div class="superior-contenido">
                             <!--la flacha la pongo yo el logo nombre y precio tienen que ser llamado de la base de datos dejare un name y un id ralacionado ya que es igual en los 3 bloque para facilitar el llamado -->
-                            <div class="superior-contenido-izq" id="Flecha">Buscardor de ticket:</div>  
+                            <div class="superior-contenido-izq" id="Flecha">Buscardor de ticket:</div>
+                            
+                            
+                            
                         </div>
                         <div class="superior-contenido">
                             <form action="{{ route('ticket.buscar') }}" method="post">

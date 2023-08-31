@@ -304,7 +304,7 @@
                                 </div>
                                 <!--formulario donde se registran los datos-->
                                 <!-- <form action="" id="" class="pago-form form" method="POST"> -->
-                                    <input type="hidden" name="efectivo" id="efectivoModalidad" value="pagoMovil">
+                                    <input type="hidden" name="pagoMovil" id="movilModalidad" value="pagoMovil">
                                     <div class="form-inputs">
                                         <div class="form-input">
                                             <input type="text" placeholder="nombre del titular del pago" id="nombreTitular" name="nombreTitular" class="">
@@ -351,8 +351,10 @@
                                     </div>
                                 </div>
                                 <!--formulario donde se registran los datos-->
-                                <form action="" id="" class="pago-form form" method="POST">
+                                <!-- <form action="" id="" class="pago-form form" method="POST"> -->
                                     <div class="form-inputs">
+                                        <input type="hidden" name="efectivo" id="efectivoModalidad" value="efectivo">
+                                        
                                         <div class="form-input">
                                             <input type="text" placeholder="Responsable del pago" id="nombreTitular" name="nombreTitular" class="">
                                         </div>
@@ -538,7 +540,8 @@ let Efectivo= document.getElementById("Efectivo");
 let pagoMovil= document.getElementById("pagoMovil");
 
 Efectivo.addEventListener("click",mostrar);
-function mostrar (){
+function mostrar (e){
+    e.preventDefault();
     cash.classList.toggle("aparecer");
    
 }

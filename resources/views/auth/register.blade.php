@@ -66,7 +66,7 @@
                     </div>
                     <div class="login-contents content-right">
                         <div class="login-content">
-                            <input type="text" placeholder=" Nombre" name="name" id="director" class="login-director"> 
+                            <input type="text" placeholder=" Nombre" name="name" id="director" value="{{ old('name') }}" class="login-director"> 
 
                             @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="login-content"> 
-                            <input type="text" placeholder="Apellido" id="apellido" name="apellido" class="login-academy">
+                            <input type="text" placeholder="Apellido" id="apellido" name="apellido" value="{{ old('apellido') }}" class="login-academy">
                             @error('apellido')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -86,7 +86,7 @@
                     </div>  
                     <div class="login-contents content-left">
                         <div class="login-content"> 
-                            <input type="num" placeholder="Cedula" id="number" name="cedula" class="login-number">
+                            <input type="num" placeholder="Cedula" id="number" name="cedula" value="{{ old('cedula') }}" class="login-number">
 
                             @error('cedula')
                                     <span class="invalid-feedback" role="alert">
@@ -96,7 +96,7 @@
                         </div>  
 
                         <div class="login-content"> 
-                            <input type="email" placeholder=" Email" id="email" name="email" class="login-email">
+                            <input type="email" placeholder=" Email" id="email" name="email" value="{{ old('email') }}" class="login-email">
 
                              @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -109,7 +109,7 @@
                     <div class="login-contents content-left">
                         <div class="login-content">
                             <!--aqui va un select-->
-                            <input type="num" placeholder="Edad" name="edad" id="estado" class="login-estado"> 
+                            <input type="num" placeholder="Edad" name="edad" id="estado" value="{{ old('edad') }}" class="login-estado"> 
 
                             @error('edad')
                                     <span class="invalid-feedback" role="alert">
@@ -119,7 +119,7 @@
                         </div>
 
                         <div class="login-content"> 
-                            <input type="text" placeholder=" instagram" id="social-red" name="id_instagram" class="login-social-red">
+                            <input type="text" placeholder=" instagram" id="social-red" name="id_instagram" value="{{ old('instagram') }} class="login-social-red">
                         </div>  
                     </div>
                     

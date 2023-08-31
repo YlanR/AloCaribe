@@ -82,4 +82,18 @@
 
    
 </body>
+@section('scripts')
+    @if( session('registrarAca') == 'ok')
+        <script>
+            Swal.fire({
+                position: 'center-center',
+                icon: 'success',
+                title: 'Academia registrada con Exito!',
+                showConfirmButton: false,
+                timer: 1500
+                })
+        </script>
+    @endif
+@endsection
+
 @include('templates.footer')
