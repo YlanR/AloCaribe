@@ -114,5 +114,16 @@
         </section>
 
     </main>
-</body>
-</html>
+
+    @section('scripts')
+        @if( session('competidores') == 'ok')
+            <script>
+                Swal.fire(
+                    'Ticket registrado!',
+                    'Debe esperar a que el ticket sea validado.',
+                    'success'
+                    )            
+            </script>
+        @endif
+    @endsection
+    @include('templates.footer')

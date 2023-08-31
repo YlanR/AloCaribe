@@ -137,8 +137,12 @@
                         <div class="login-content">
                           
                                 <input id="password-confirm" type="password" placeholder=" Confirmar contraseña" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            
                         </div>
+                        @error('foto')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                     </div>
                     
                     <!--subir logo -->

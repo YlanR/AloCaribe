@@ -20,9 +20,19 @@
                             <div class="form-content">
                                 <input type="text" placeholder="nombre de la academia" id="nombreAcademia" name="name_academy" class="nombreAcademia">
                             </div>
+                            @error('name_academy')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             <div class="form-content">
                                 <input type="tel" placeholder="Número de celular" id="telefono" name="telefono" class="telefono">
                             </div>
+                            @error('telefono')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                         <div class="form-contents">
                             <div class="form-content">
@@ -54,12 +64,27 @@
                                     <option value="zulia">Zulia</option>
                                 </select>
                             </div>
+                            @error('estado')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             <div class="form-content">
                                 <input type="text" placeholder="instagram de la academia" id="instagramAcademia" name="instagram" class="instagramAcademia">
                             </div>
+                            @error('instagram')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         </div>
                         <label for="" id="form-label">logo de la academia </label>
                         <input type="file" name="foto_academy" id="">
+                        @error('foto_academy')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                         <button class="form-boton" type="submit">Listo</button>
                     </form>
                 </div>

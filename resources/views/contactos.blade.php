@@ -26,7 +26,7 @@
                     </div>
                     <div class="content-contenido contenido-derecho">
                         <div class="mapa">
-                            <img src="../../public/img/mapa.png" alt="">
+                            <iframe class="contact__iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1960.8552531817334!2d-66.93147361278534!3d10.601792060567368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8c2a5d0a3de7e3d5%3A0xf55324fc3200f970!2sSal%C3%B3n%20de%20eventos%20VIP%20la%20guaira!5e0!3m2!1ses-419!2sve!4v1693427266940!5m2!1ses-419!2sve"></iframe>
                         </div>
                         <h1>¿Como podemos <strong style="color:violet;"> ayudarte?</strong></h1>
                         <div class="mensajes">

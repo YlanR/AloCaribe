@@ -143,7 +143,7 @@ class TicketsController extends Controller
         ->where('tickets.idt', $id)
         ->update(['resultado' => 't']);
 
-        return back();
+        return back()->with('validar', 'ok');
     
     }
 

@@ -138,12 +138,12 @@ class UsuarioController extends Controller
                     if($pagosExist == null){
                         $pagos->save();
                     }  else{
-                        return response()->json('Todo listo');
+                        return response()->redirect()->to('/');
 
                     }
 
 
-                    return response()->json('Todo listo');
+                    return response()->redirect()->to('/');
 
                 }else{
      
@@ -173,10 +173,10 @@ class UsuarioController extends Controller
                     if($pagosExist == null){
                         $pagos->save();
                     } else{
-                        return response()->json('Todo listo');
+                        return response()->redirect()->to('/');
 
                     } 
-                    return response()->json('Todo listo');
+                    return response()->redirect()->to('/');
 
                 }
 
@@ -213,11 +213,11 @@ class UsuarioController extends Controller
                     if($pagosExist == null){
                         $pagos->save();
                     } else{
-                        return response()->json('Todo listo');
+                        return response()->redirect()->to('/');
 
                     }
 
-                    return response()->json('Todo listo');
+                    return response()->redirect()->to('/');
 
                 }else{
      
@@ -246,11 +246,11 @@ class UsuarioController extends Controller
                     if($pagosExist == null){
                         $pagos->save();
                     } else{
-                        return response()->json('Todo listo');
+                        return response()->redirect()->to('/');
 
                     }
 
-                    return response()->json('Todo listo');
+                    return response()->redirect()->to('/');
 
                 }
 

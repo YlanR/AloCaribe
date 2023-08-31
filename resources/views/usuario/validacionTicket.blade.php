@@ -42,13 +42,12 @@
                             <div class="central-contenido-superior">
                                 <div class="central-contenido-superior-derecha"><a href="">pay</a>
                                 </div>
-                                <div class="central-contenido-superior-derecha"><a href="{{ url('validar/'.$valore->idt)}}"
-                                            onclick="event.preventDefault();
-                                                            document.getElementById('check{{ $ticket+1 }}').submit();">
-                                            {{ __('check') }}
-                                        </a>
+                                <div class="central-contenido-superior-derecha">
                                         <form id="check{{ $ticket+1 }}" action="{{ url('validar/'.$valore->idt) }}" method="post" >
                                             @csrf
+                                            <button type="submit">
+                                            {{ __('Validar') }}
+                                            </button>
                                         </form>
                                 </div>
                                 <div class="central-contenido-superior-derecha"><a href="">loading</a>
@@ -99,7 +98,43 @@
                 </div>
             </div>
         </section>
+        @section('scripts')
 
+        @if( session('validar') == 'ok')
+        <script>
+            Swal.fire(
+                'Validado!',
+                'El ticket a sido validado con Exito.',
+                'success'
+                )            
+        </script>
+        @endif
+
+        <script>
+            <?php foreach($tickets as $ticket => $valore){ ?>
+            $('#check'+<?= $ticket+1 ?>).submit(function(e){
+                e.preventDefault();
+                
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: "No podras revertir tu decisión!",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Si, validamoslo!',
+                    cancelButtonText: 'Cancelar'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            
+                            this.submit()
+                        }else{
+
+                        }
+                    })
+            });
+            <?php }?>
+        </script>
+    @endsection
     </main>
-</body>
-</html>
+    @include('templates.footer')

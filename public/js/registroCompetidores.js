@@ -23,6 +23,8 @@ const telefonoImput = document.querySelector('#numeroTitular');
 const referenciaImput = document.querySelector('#referenciaPago');
 const ModalidadImput = document.querySelector('#efectivoModalidad').value;
 
+
+console.log(nombreImput.length)
 class Competidores{
     constructor(){
         this.competidores = []; 
@@ -47,8 +49,6 @@ class Competidores{
             this.competidores = [...competidores, competidor];
             return console.log(this.competidores);
         }else{
-            
-
             this.competidores = [...this.competidores, competidor];
 
             return console.log(this.competidores);
@@ -231,9 +231,14 @@ function Enviar(){
     formulario.addEventListener('submit', async (e) =>{
         e.preventDefault();
 
-        if(namePago.value === '' || telefonoImput.value === '' || referenciaImput.value === ''){
+        if(namePago.value === '' || telefonoImput.value === '' || referenciaImput.value === '' || referenciaImput.length > 5){
             // console.log('Todos los campos son obligatorios');
             ui.imprimirAlertaPago('Todos los campos son obligatorios', 'error');
+            return;
+        }
+
+        if(referenciaImput.value.length > 5){
+            ui.imprimirAlertaPago('Deben ser los ultimos 5 digitos de la referencia bancaria', 'error');
             return;
         }
 
@@ -308,8 +313,17 @@ function Enviar(){
             
             fetch('/recibirdatos', option)
             .then(response => response.json())
-            .then(data => {
-            console.log(data); // Handlea la respuesta del servidor
+            .then(data => {Swal.fire(
+                'Ticket registrado!',
+                'Debe esperar a que el ticket sea validado.',
+                'success'
+                )  
+                setTimeout( () => {
+                    window.location.href = 'http://127.0.0.1:8000/misTickets';
+                }, 3000);
+                
+             
+        console.log(data); // Handlea la respuesta del servidor
             })
 
         })  
@@ -318,7 +332,6 @@ function Enviar(){
         UserObj.ticket_id = generarID();
         admCompetidores.borrarTodo();
         ui.imprimirCompetidores(admCompetidores);
-        window.location.href = 'http://127.0.0.1:8000/misTickets';
         console.log(admCompetidores);
     } else{
         ui.imprimirAlerta('No haz ingresado competidores', 'error');

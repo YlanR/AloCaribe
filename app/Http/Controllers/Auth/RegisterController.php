@@ -10,6 +10,9 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Validation\Rules\File;
+use Illuminate\Support\Facades\DB;
+
 
 class RegisterController extends Controller
 {
@@ -58,7 +61,10 @@ class RegisterController extends Controller
             'apellido' => ['required', 'string', 'max:255'],
             'cedula' => ['required', 'integer'],
             'edad' => ['required', 'integer', 'max:255'],
-            'instagram' => ['string', 'max:20']
+            'instagram' => ['string', 'max:20'],
+            'foto' => [
+                'required', 'mimes:jpg,jpeg,png'
+            ]
         ]);
     }
 
@@ -79,20 +85,31 @@ class RegisterController extends Controller
             $foto['foto'] = null;
         }
 
-        
+        $userExist = User::where('cedula', $data['cedula'])->exists();
 
-       $user = User::create([
-            'name' => $data['name'],
-            'apellido' => $data['apellido'],
-            'cedula' => $data['cedula'],
-            'edad' => $data['edad'],
-            'email' => $data['email'],
-            'instagram' => $data['id_instagram'],
-            'foto' => $foto['foto'],
-            'password' => Hash::make($data['password']),
-        ]);
+        if($userExist == null){
+            $user = User::create([
+                'name' => $data['name'],
+                'apellido' => $data['apellido'],
+                'cedula' => $data['cedula'],
+                'edad' => $data['edad'],
+                'email' => $data['email'],
+                'instagram' => $data['id_instagram'],
+                'foto' => $foto['foto'],
+                'password' => Hash::make($data['password']),
+            ]);
 
-        return $user->assignRole('2');
+            return $user->assignRole('2');
+
+        } else{
+            
+
+            return redirect()-to('/');
+
+        }
+
+       
+
 
     }
 }

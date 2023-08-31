@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 // use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Validation\Rules\File;
 use App\Models\Academy;
 use App\Models\User;
 use App\Models\Instagram;
@@ -49,6 +50,16 @@ class AcademyController extends Controller
         // // return response()->json($datos);
         // return redirect('/')->with('mensaje', 'Academia agregada con exito');
 
+        $validacion = $request->validate([
+            'instagram' => ['required', 'string', 'max:30'],
+            'name_academy' => ['required', 'string', 'max:30', 'unique:academies'],
+            'telefono' => ['required', 'string', 'min:8', 'max:20'],
+            'estado' => ['required'],
+            'foto' => [
+                    'required', 'mimes:jpg,jpeg,png'
+                ],
+        ]);
+
         if ($request->hasFile('foto_academy')) {
             $foto = $request->file('foto_academy')->store('uploads', 'public');
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
@@ -56,6 +67,9 @@ class AcademyController extends Controller
             $foto = null;
         }
 
+        $academyExist = Academy::where('instagram_id', $request->input('instagram'))->exists();
+
+        if($academyExist == null){
             $instagram = new Instagram;
             $instagram->name = $request->input('instagram');
 
@@ -70,10 +84,11 @@ class AcademyController extends Controller
             $academia->foto_academy = $foto;
         
             $academia->save();
-
            
             return redirect()->back();
-      
+        } else{
+            return redirect()->back();
+        }
     }
 
     /**

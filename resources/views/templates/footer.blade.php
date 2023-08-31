@@ -39,5 +39,7 @@
             </div>
         </section>
     </footer>
+
+    @yield('scripts')
 </body>
 </html>
