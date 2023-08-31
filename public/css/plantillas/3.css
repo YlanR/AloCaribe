@@ -21,7 +21,7 @@
 .plantilla3{
     display: flex;
     height: 100%;
-    width:100%;
+    width:50%;
     position: sticky;
 }
 .plantilla3-izq,
@@ -33,11 +33,11 @@
     align-items: center;
 }
 .plantilla3-izq img{
-    height:46%;
+    height:38%;
 }
 .plantilla3-izq .plantilla3-adornos{
-    height: 12%;
-    width: 8%;
+    height: 8%;
+    width: 12%;
 }
 .plantilla3-adornos{
     width: 30%;
@@ -50,7 +50,7 @@
     opacity: 0.6;
 }
 .plantilla3-derch img{
-    height:100%;
+    height:90%;
 }
 .plantilla3-imagen-superior{
     translate: 50px 10px;
@@ -75,12 +75,12 @@
 }
 /*pocision de los triangulos */
 .plantilla3-izq .plantilla3-adorno2{
-    height: 7%;
-    width: 4%;
+    height: 4%;
+    width: 7%;
 }
 .plantilla3-izq .plantilla3-adorno5{
-height: 7%;
-width: 4%;
+height: 4%;
+width: 7%;
 }
 .plantilla3-adorno1{
 translate: -340px -496px;
@@ -116,13 +116,13 @@ translate: -416px 326px;}
 .plantilla3-izq .plantilla3-adornoi,
 .plantilla3-izq .plantilla3-adornoh,
 .plantilla3-izq .plantilla3-adornog{
-    height: 11%;
-    width: 6%;
+    height: 6%;
+    width: 11%;
 }
 .plantilla3-izq .plantilla3-adornob,
 .plantilla3-izq .plantilla3-adornoc{
-    height: 9%;
-    width: 5%;
+    height: 5%;
+    width: 9%;
 }
 .plantilla3-adornoa{
     translate: -307px -168px;
@@ -161,6 +161,43 @@ translate: -416px 326px;}
 .plantilla3-derch .plantilla3-derch-inferior{
     position: absolute;
     z-index: -1;
-    height: 75%;
+    height: 65%;
     opacity: 0.5;
+}
+@media (min-width:1802.67px) {
+
+    .plantilla3-izq img{
+    height:46%;
+    }
+    .plantilla3-derch img{
+        height:100%;
+    }
+    .plantilla3{
+        display: flex;
+        height: 100%;
+        width:100%;
+        position: sticky;
+    }
+    .plantilla3-derch .plantilla3-derch-inferior{
+        position: absolute;
+        z-index: -1;
+        height: 75%;
+        opacity: 0.5;
+    }
+    .plantilla3-izq .plantilla3-adornos{
+        height: 12%;
+        width: 8%;
+    }
+    .plantilla3-izq .plantilla3-adornoa,
+.plantilla3-izq .plantilla3-adornoi,
+.plantilla3-izq .plantilla3-adornoh,
+.plantilla3-izq .plantilla3-adornog{
+    height: 11%;
+    width: 6%;
+}
+.plantilla3-izq .plantilla3-adornob,
+.plantilla3-izq .plantilla3-adornoc{
+    height: 9%;
+    width: 5%;
+}
 }

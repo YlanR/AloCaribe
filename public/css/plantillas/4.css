@@ -18,6 +18,14 @@
     --transparencia2:#b0b0b010;
 
 }
+@font-face {
+    font-family: Bira_PERSONAL_USE_ONLY;
+    src: url(../../letras/Bira_PERSONAL_USE_ONLY.ttf);
+} 
+@font-face{
+    font-family: Bayon-Regular;
+    src: url(../../letras/Bayon-Regular.ttf);
+}
 .plantilla4{
 height: 100%;
 width:100%;
@@ -32,6 +40,13 @@ background-color: #CC01FF;
 border-radius: 50px;
 padding: 1px;
 margin: 3rem 30rem;
+color: var(--blanco);
+}
+.plantilla4-jurados-text .tittle{
+    font-family: 'Bira_PERSONAL_USE_ONLY';
+}
+.plantilla4-jurados-text .cont{
+    font-family: 'Bayon-Regular';
 }
 .plantilla4-jurados-text h2{
 margin:2px 

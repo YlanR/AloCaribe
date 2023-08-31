@@ -36,3 +36,24 @@ function categoriaExtra2(){
         cambioAltura.classList.toggle('altura3');
         moverMargen.classList.toggle('mover2');
 }
+
+// ocultar y mostrar pago movil y efectivo 
+let electronicCash= document.getElementById("electronicCash");
+let cash= document.getElementById("cash");
+let Efectivo= document.getElementById("Efectivo");
+let pagoMovil= document.getElementById("pagoMovil");
+
+Efectivo.addEventListener("click",mostrar);
+function mostrar (){
+        cash.classList.toggle("aparecer");
+        electronicCash.classList.toggle("desaparecer");
+}
+let Efectivo1= document.getElementById("Efectivo1");
+let pagoMovil1= document.getElementById("pagoMovil1");
+
+pagoMovil1.addEventListener("click",cambio);
+function cambio() {
+       
+        cash.classList.toggle("desaparecer1");
+        electronicCash.classList.toggle("aparecer1");
+}

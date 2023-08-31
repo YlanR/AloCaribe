@@ -14,15 +14,26 @@
     --gris:#B0B0B0;
     --conten:#efefef;
     }
-
-    .main-content-contenido{
+@font-face {
+    font-family: Amaranth;
+    src: url(../letras/Amaranth-BoldItalic.ttf);
+}
+@font-face {
+    font-family: Bold;
+    src: url(../letras/Amaranth-Bold.ttf);
+}
+.main-content-contenido{
         width: 100%;
         height: 100%;
         display: grid;
         text-align: center;
         margin-top: 120px;
         justify-content: center;
-    }
+}
+.main-content-contenido h3{
+    font-family: 'Amaranth';
+    margin: 30px 0;
+}
     .main-content-contenido-superior{
         display: flex;
         justify-content: space-between;
@@ -36,14 +47,16 @@
     }
     .superior-contenido{
         display: flex;
-        margin: 20px 100px;
+        margin: 20px 90px;
         padding: 20px 40px;
     }
     .superior-contenido-izq{
         margin:0 10px;
+        font-family: 'Bold';
     }
     .superior-contenido-derecha{
         margin:0 10px;
+        font-size: 30px;
     }
     .main-content-contenido-central{
         margin-bottom: 25px;
@@ -107,14 +120,16 @@
     }
     .inferior-contenido{
         display: flex;
-        margin: 20px 100px;
+        margin: 20px 90px;
         padding: 20px 40px;
     }
     .inferior-contenido-izq{
         margin:0 10px;
+        font-family: 'Bold';
     }
     .inferior-contenido-derecha{
-        margin:0 20px;
+        margin:0 30px;
+        font-size: 30px;
     }
 
     .central-contenido-logo img{

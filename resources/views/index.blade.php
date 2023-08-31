@@ -108,7 +108,7 @@
                         <img src="../img/2/sss.png" alt="confeti">
                     </div>
                     <div class="confeti-diseño confeti7">
-                        <img src="../img/6/ajp.png2/sss.png" alt="confeti">
+                        <img src="../img/2/sss.png" alt="confeti">
                     </div>
                     <div class="confeti-diseño confeti8">
                         <img src="../img/2/sss.png" alt="confeti">
@@ -133,20 +133,23 @@
                                
                             </div>
                             <div class="plantilla2-content-bot">
-                                <p>14 de Octubre</p>
-                                <p>2023</p>
+                                <strong>  
+                                    <p>14 de Octubre</p>
+                                    <p>2023</p>
+                                </strong>
                             </div>
 
                         </div>
                     </div>
                     
                 </div>
-                <div class="contenidos">
+                <div class="contenidos" >
                     <div class="contenedor-contenidos">
                         <div class="contenedor-contenido">
                             <div class="contenido">
-                            <img src="../img/2/Vector.png" alt="" style="background: black; height: 75px;translate: 0 3rem;"></div>
-                            <div class="despliegue">
+                                <button class="contenidoBoton" id="plantControl">click aqui</button>
+                            </div>
+                            <div class="despliegue" id="plantCont">
                                 
                                 <div class=" plantilla3">
                                     <div class="plantilla3-izq">
@@ -185,8 +188,8 @@
                                 <div class="plantilla4">
                                     <div class="plantilla4-jurados jurados-salsa">
                                             <div class="plantilla4-jurados-text ">
-                                                <h2>Jurados </h2>
-                                                <h2>Salsa Casino</h2>
+                                                <h2 class="tittle">Jurados </h2>
+                                                <h2 class="cont">Salsa Casino</h2>
                                             </div>
                                         <div class="plantilla4-jurados-image">
                                             <img src="../img/4/aaaa.svg" alt="" class="plantilla4-jurados-image-costado">
@@ -196,8 +199,8 @@
                                     </div>
                                     <div class="plantilla4-jurados jurados-bacahta">
                                         <div class="plantilla4-jurados-text ">
-                                            <h2>Jurados </h2>
-                                            <h2>Bachata</h2>
+                                            <h2 class="tittle">Jurados </h2>
+                                            <h2 class="cont">Bachata</h2>
                                         </div>
                                         <div class="plantilla4-jurados-image">
                                             <img src="../img/4/2.svg" alt="" class="plantilla4-jurados-image-costado">
@@ -303,21 +306,24 @@
 
                                     </div>                              
                                 </div>
-                                
+                            
+                            <div class="tranding-slider-control" style="margin-top:60px;  " id="plantCont">
+                                <div class="swiper-button-prev slider-arrow">
+                                    <ion-icon name="arrow-back-outline"></ion-icon>
+                                </div>
+                                <div class="swiper-button-next slider-arrow">
+                                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>      
+
+
                         </div>
                         </div>
                     </div>
                     
                 </div>
-                <div class="tranding-slider-control" style="margin-top:60px;">
-                    <div class="swiper-button-prev slider-arrow">
-                        <ion-icon name="arrow-back-outline"></ion-icon>
-                    </div>
-                    <div class="swiper-button-next slider-arrow">
-                        <ion-icon name="arrow-forward-outline"></ion-icon>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+               
             </div>
         </section>
 
@@ -351,5 +357,16 @@
             prevEl: '.swiper-button-prev',
             }
         });
-    </script>
+        
+</script>
+<script>
+    let plantControl=document.getElementById("plantControl");
+    let plantCont=document.getElementById("plantCont");
+
+    plantControl.addEventListener("click",ver);
+    function ver() {
+        plantCont.classList.toggle("ver");
+        plantControl.classList.toggle("giro");
+    }
+</script>
     @include('templates.footer')

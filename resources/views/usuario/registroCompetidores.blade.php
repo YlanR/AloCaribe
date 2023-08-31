@@ -8,7 +8,7 @@
         <div class="main-content">
             <!--contenido de la columna izquierda /la ficha y el pago -->
             <div class="main-content-izquierda left">
-                <h2></h2>
+                <h2>Registro de competidores</h2>
                 <div class="main-content-izquierda-ficha ficha">
                     
                     <div class="ficha-contenido">
@@ -275,15 +275,15 @@
                     
                 </div>
             <!--formulario para el pago movil -->
-                <div class="main-content-izquierda-pago pago">
+                <div class="main-content-izquierda-pago pago" id="electronicCash">
                   
                     <div class="pago-contenido" id="moverMargen">
                        
                         <div class="pago-contenido-encapsulado">
                             <div class="pago-contenido-encapsulado-centro">
                                 <div class="pago-tipo">
-                                    <button id="pago-movil">Pago móvil</button>
-                                    <button id="Efectivo">Efectivo</button>
+                                    <button class="cham" id="pagoMovil">Pago móvil</button>
+                                    <button class="cham" id="Efectivo">Efectivo</button>
                                 </div>
                                 
                                 <h3 style="margin: 0 0 1em 0;"> Pago movil </h3>
@@ -334,16 +334,14 @@
             </div>
         <!--formulario para el efectivo-->
 
-            <!--            <div class="main-content-izquierda-pago pago">
-                <   div class="pago-logo">
-                        <img src="../../img/logo.png" alt="">
-                    </div>
+            <div class="main-content-izquierda-pago pago desaparecer" id="cash">
+                
                     <div class="pago-contenido">
                         <div class="pago-contenido-encapsulado">
                             <div class="pago-contenido-encapsulado-centro">
                                 <div class="pago-tipo">
-                                    <button id="pago-movil">Pago móvil</button>
-                                    <button id="Efectivo">Efectivo</button>
+                                    <button class="cham" id="pagoMovil1">Pago móvil</button>
+                                    <button class="cham" id="Efectivo1">Efectivo</button>
                                 </div>
                                 
                                 <h3 style="margin: 0 0 1em 0;"> Efectivo </h3>
@@ -352,7 +350,7 @@
                                         <label for="">"Información para pagar en efectivo"</label>
                                     </div>
                                 </div>
-                                <--formulario donde se registran los datos--
+                                <!--formulario donde se registran los datos-->
                                 <form action="" id="" class="pago-form form" method="POST">
                                     <div class="form-inputs">
                                         <div class="form-input">
@@ -370,16 +368,19 @@
                                         <button class="form-botones-enviar" type="submit" style="width:20%;">hecho</button>
                                     </div>
                                 </form>
+                                <div class="pago-logo">
+                                    <img src="../../img/logo.png" alt="">
+                                </div>
                             </div>
                         </div>
                         
                     </div>
                 </div>
-            </div> -->
+             
 
         <!--contenedor derecho -->
             <div class="main-content-derecha right">
-                <h2></h2>
+                <h2>competidores registrados</h2>
                 <div class="main-content-derecha-tabla tabla">
                     
                    
@@ -530,3 +531,15 @@
             // });
         
     </script>
+<script>
+let electronicCash= document.getElementById("electronicCash");
+let cash= document.getElementById("cash");
+let Efectivo= document.getElementById("Efectivo");
+let pagoMovil= document.getElementById("pagoMovil");
+
+Efectivo.addEventListener("click",mostrar);
+function mostrar (){
+    cash.classList.toggle("aparecer");
+   
+}
+</script>
