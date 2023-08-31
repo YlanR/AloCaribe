@@ -10,7 +10,8 @@ use App\Models\Tickets;
 use Illuminate\Support\Facades\Auth;
 
 use Barryvdh\DomPDF\Facade\Pdf;
-
+// use App\Mail\TicketMailable;
+// use Illuminate\Support\Facades\Mail;
 
 class TicketsController extends Controller
 {
@@ -131,6 +132,9 @@ class TicketsController extends Controller
         ->where('categorias_users.director_id', $miUser)
         ->get();
         set_time_limit(0);
+
+        // $correo = new TicketMailable($tickets, $competidores);
+        // Mail::to('ylanrizo@gmail.com')->send($correo);
 
         $pdf = Pdf::loadView('pdf.pdfTicket', compact('tickets', 'competidores'));
         return $pdf->stream();

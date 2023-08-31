@@ -63,11 +63,11 @@ display: flex;
 transition: all .5s ease;
 }
 #navbar-logo{
-    margin: 0 8rem;
-    
+    margin: 0rem 7rem;
+    margin-top: 5px;
 }
 .navbar-logo-logo-diminutivo{
-    height: 3rem;
+    height: 2.7rem;
 }
 .navbar-content{
     display: flex;
@@ -98,7 +98,7 @@ ul{
 }
 .navbar-link a {
     color: var(--blanco);
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: all .5s ease-out;
 }
 li{
@@ -231,7 +231,8 @@ margin: 1rem;
 
 .foto_header-cuadro{
     width: 1rem;
-    margin: 0px 15px;
+    height: 0.5rem;
+    margin: -4px 15px;
     list-style: none;
 }
 
@@ -245,8 +246,8 @@ margin: 1rem;
     border-bottom-right-radius: 30%;
     border-start-start-radius: 30%;
     border-start-end-radius: 30%;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 .ver{
     display: block;

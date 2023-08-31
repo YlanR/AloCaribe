@@ -8,7 +8,7 @@
             <div class="main-content">
                 <div class="content">
                     <div class="content-contenido contenido-izquierdo">
-                        <h1>Contanto </h1>
+                        <h1>Contactanos </h1>
                         <div class="contactos">
                             <span class="icon-mail"></span>
                             <p>alocaribedancefestival@gmail.com</p>
@@ -30,14 +30,24 @@
                         </div>
                         <h1>¿Como podemos <strong style="color:violet;"> ayudarte?</strong></h1>
                         <div class="mensajes">
-                            <form action="" class="mensaje">
+                            <form action="{{ route('home.store') }}" method="POST" class="mensaje">
+                                @csrf
                                 <div class="mensaje-datos">
-                                    <input type="text" placeholder="Nombre">
-                                    <input type="text" placeholder="Email">
-                                    <button>enviar</button>
+                                    <input type="text" name="nombre" placeholder="Nombre">
+                                    @error('nombre')
+                                        <p><strong>{{ $message }}</strong></p>
+                                    @enderror
+                                    <input type="text" name="email"  placeholder="Email">
+                                    @error('email')
+                                    <p><strong>{{ $message }}</strong></p>
+                                    @enderror
+                                    <button>Enviar mensaje</button>
                                 </div>
                                 <div class="mensaje-text">
-                                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                                    <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>    
+                                    @error('mensaje')
+                                    <p><strong>{{ $message }}</strong></p>
+                                    @enderror
                                 </div>
                             </form>
                         </div>
@@ -47,6 +57,17 @@
         </section>
 
     </main>
+    @section('scripts')
+        @if( session('mensaje') == 'ok')
+            <script>
+                Swal.fire(
+                    'Enviado!',
+                    'El mensaje ha sido enviado con Exito.',
+                    'success'
+                    )            
+            </script>
+        @endif
+    @endsection
 
     @include('templates.footer')
 

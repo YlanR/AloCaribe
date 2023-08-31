@@ -60,6 +60,7 @@ border-radius: 50% 0 0 50%;
 padding: 15px;
 cursor: pointer;
 transition: 3s;
+height: 3.8rem;
 }
 nav button:hover{
 
