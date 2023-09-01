@@ -24,38 +24,73 @@
                             <hr style="    margin: 0 0 20px 0;">
                         </div>
                     </div>
+
                     <div class="perfil-contenido">
                         <div class="perfil-contenido-textos">
                             <div class="perfil-contenido-texto">
-                                <h5>Nombre academia:</h5>
-                                <h5>Director: </h5>
+                                <h5>Nombre Academia:</h5>
+                                <h5>Director:</h5>
                                 <h5>Telefono:</h5>
                             </div>
+                    <form method="POST" action="{{ url('/actualizarAcademy/'.$usuar->id) }}" enctype="multipart/form-data" class="main-content-right login">
+                    @csrf
                             <div class="perfil-contenido-relleno">
                                 <!--esta sección es dnd se llama los datos registrados para el usuario-->
-                                <h5>{{ $academy->name_academy }}</h5>
-                                <h5>{{ $usuar->name }} {{ $usuar->apellido }}</h5>
-                                <h5>{{ $academy->telefono_academy }}</h5>
+                                <input type="text" placeholder=" Nombre" name="name_academy" id="director" class="login-director" value="{{ $academy->name_academy }}"> 
+                                <input type="text" placeholder="Apellido" id="apellido" name="director" class="login-academy" disabled value="{{ $usuar->name }} {{ $usuar->apellido }}">
+                                <input type="num" placeholder="Cedula" id="number" name="telefono_academy" class="login-number" value="{{ $academy->telefono_academy }}">
+
                             </div>
                         </div>
                         <div class="perfil-contenido-textos">
                             <div class="perfil-contenido-texto">
-                                <h5>Estado:</h5>
                                 <h5>Instagram:</h5>
-                                <h5>Academia:</h5>
+                                <h5>Estado:</h5>
                             </div>
                             <div class="perfil-contenido-relleno">
                                  <!--esta sección es dnd se llama los datos registrados para la academia-->
-                                <h5>{{ $academy->estado }}</</h5>
-                                <h5>{{ $instagram->name }}</h5>
-
+                                 <input type="text" placeholder=" instagram" id="social-red" name="instagram_id" class="login-social-red" value="{{ $instagram->name }}">
+                                 <select name="estado" id="Estados" value="" class="Estados">
+                                    <option value="" disabled>Selecciona Estado</option>
+                                    <option selected value="{{ $academy->estado }}">{{ $academy->estado }}</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Anzoategui">Anzoátegui</option>
+                                    <option value="Apure">Apure</option>
+                                    <option value="Aragua">Aragua</option>
+                                    <option value="Barinas">Barinas</option>
+                                    <option value="Bolivar">Bolívar</option>
+                                    <option value="Carabobo">Carabobo</option>
+                                    <option value="Cojedes">Cojedes</option>
+                                    <option value="Delta Amacuro">Delta Amacuro</option>
+                                    <option value="Distrito Capital">Distrito Capital</option>
+                                    <option value="Falcon">Falcón</option>
+                                    <option value="Guarico">Guárico</option>
+                                    <option value="La Guaira">La Guaira</option>
+                                    <option value="Lara">Lara</option>
+                                    <option value="Merida">Mérida</option>
+                                    <option value="Miranda">Miranda</option>
+                                    <option value="Monagas">Monagas</option>
+                                    <option value="Nueva Esparta">Nueva Esparta</option>
+                                    <option value="Portuguesa">Portuguesa</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tachira">Táchira</option>
+                                    <option value="Trujillo">Trujillo</option>
+                                    <option value="Yaracuy">Yaracuy</option>
+                                    <option value="Zulia">Zulia</option>
+                                </select>
+                                
                             </div> 
                         </div>
-                        <div class="perfil-boton">
-                            @if(Auth::user()->id == $usuar->id)
-                            <a href="{{ url('/academyEdit/'.Auth::user()->id) }}" style="position: absolute;text-decoration: none;color: aliceblue;">Editar Academia</a>
-                            @endif
+
+                        
+                        <div class="perfil-boton"> 
+                        <button style="position: absolute;color: blue;" type="submit">Guardar cambios</button>
+                        <div class="atrasBoton">
+                            <a href="{{ url('/perfilAcademia/'.Auth::user()->id)}}">Volver</a>
                         </div>
+                        </div>
+                    </form>
+
                     </div>
                     <div class="perfil-fondo">
                         <img src="../../img/3/Polygon.png" alt="" class="p00">

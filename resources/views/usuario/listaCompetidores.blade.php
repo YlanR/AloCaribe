@@ -75,7 +75,7 @@
                                   
                                 <tr>
                                     <td>{{ $competidor+1 }}</td>
-                                    <td>{{ $valore->name_academy }}</td>
+                                    <td><a href="{{ url('perfilAcademia/'.$valore->id) }}"> {{ $valore->name_academy }} </a></td>
                                     <td>{{ $valore->name }}</td>
                                     <td>{{ $valore->apellido }}</td>
                                     <td>{{ $valore->cedula }}</td>

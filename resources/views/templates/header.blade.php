@@ -41,7 +41,7 @@
                     <a href="#">REGLAS</a>
                 </li>
                 <li class="navbar-link"> 
-                    <a href="{{ url('/contacto') }}">CONTACTO</a>
+                    <a href="{{ url('/contacto') }}">CONTACTANOS</a>
                 </li>
 
                 <!-- @if(Auth::user())
@@ -128,9 +128,9 @@
                 @can('operador.index')
                 <li><a href="{{ url('/listaCompetidores') }}">Lista de Competidores</a></li>
                 @endcan
-                @can('usuario.academy.show')
+                @role('Director')
                 <li><a href="{{url('academia/')}}/{{Auth::user()->id}}">Mi Academia</a></li>
-                @endcan
+                @endrole
                 @can('usuario.index')
                 <li><a href="{{ url('/competidor') }}">Agregar Competidores</a></li>
                 @endcan
