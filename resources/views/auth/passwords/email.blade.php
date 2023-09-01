@@ -1,6 +1,18 @@
-@extends('layouts.app')
-
-@section('content')
+@include('templates.header',  ['modo' => 'Alo Caribe'])
+<link rel="stylesheet" href="../../css/index.css"> 
+   <link rel="stylesheet" href="../fonts/style.css">
+<style>
+    .container{
+        margin-top: 150px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+   <body>
+     <!---->
+  
+     <main>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -44,4 +56,9 @@
         </div>
     </div>
 </div>
-@endsection
+
+</main>
+
+
+</body>
+@include('templates.footer')

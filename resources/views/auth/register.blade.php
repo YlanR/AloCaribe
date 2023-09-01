@@ -119,7 +119,7 @@
                         </div>
 
                         <div class="login-content"> 
-                            <input type="text" placeholder=" instagram" id="social-red" name="id_instagram" value="{{ old('instagram') }} class="login-social-red">
+                            <input type="text" placeholder=" instagram" id="social-red" name="id_instagram" value="{{ old('instagram') }}" class="login-social-red">
                         </div>  
                     </div>
                     
@@ -148,10 +148,10 @@
                     <!--subir logo -->
                     <label for="subir">subir logo de la academia </label>
                     <input type="file" name="foto" id="">
-                    <button class="subir-foto-perfil">subir</button>
+
                     <!--boton-->
                     <button class="login-boton" type="submit">registrarse </button>
-                    <a href="">¿Olvido su contraseña?</a>
+
                 </form>
             </div>
         </section>
