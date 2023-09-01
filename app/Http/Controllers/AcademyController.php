@@ -51,11 +51,11 @@ class AcademyController extends Controller
         // return redirect('/')->with('mensaje', 'Academia agregada con exito');
 
         $validacion = $request->validate([
-            'instagram' => ['required', 'string', 'max:30'],
+            'instagram' => ['required', 'max:30'],
             'name_academy' => ['required', 'string', 'max:30', 'unique:academies'],
             'telefono' => ['required', 'string', 'min:8', 'max:20'],
             'estado' => ['required'],
-            'foto' => [
+            'foto_academy' => [
                     'required', 'mimes:jpg,jpeg,png'
                 ],
         ]);

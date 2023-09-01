@@ -99,4 +99,12 @@
    
 </body>
 
+<script>
+        Swal.fire(
+            '¡Atención!',
+            'Si eres bailador independiente, llena el formulario con tus datos personales.',
+            'warning'
+            )      
+</script>
+
 @include('templates.footer')

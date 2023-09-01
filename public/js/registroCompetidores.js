@@ -314,17 +314,19 @@ function Enviar(){
             
             fetch('/recibirdatos', option)
             .then(response => response.json())
-            .then(data => {Swal.fire(
-                'Ticket registrado!',
-                'Debe esperar a que el ticket sea validado.',
-                'success'
-                )  
-                setTimeout( () => {
-                    window.location.href = 'http://127.0.0.1:8000/misTickets';
-                }, 3000);
+            .then(data => {
                 
              
         console.log(data); // Handlea la respuesta del servidor
+
+        Swal.fire(
+            'Ticket registrado!',
+            'Debe esperar a que el ticket sea validado.',
+            'success'
+            )  
+            setTimeout( () => {
+                window.location.href = 'http://127.0.0.1:8000/misTickets';
+            }, 3000);
             })
 
         })  

@@ -158,5 +158,13 @@
         <section></section>
 
     </main>
+    
+    <script>
+        Swal.fire(
+            '¡Atención!',
+            'Solo se pueden registrar los directores de academias o bailadores independientes.',
+            'warning'
+            )      
+    </script>
 
     @include('templates.footer')
