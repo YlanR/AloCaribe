@@ -23,7 +23,7 @@
                         <a href="#">REGLAMENTO</a>
                     </li>
                     <li class="footer-link"> 
-                        <a href="#" style="margin:1rem;">CONTACTO</a>
+                        <a href="#" style="margin:1rem;">CONTACTANOS</a>
                     </li>
                 </ul>
 

@@ -32,7 +32,7 @@
                                 @else
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="../img/academia.png" alt=""></div>
                                 @endif
-                                <div class="central-contenido-superior-izq" id="nombreAcademia">{{ $valore->name_academy }}</div>
+                                <div class="central-contenido-superior-izq" id="nombreAcademia"><a href="{{ url('perfilAcademia/'.$valore->id) }}"> {{ $valore->name_academy }} </a></div>
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->ticket }}</div>
 

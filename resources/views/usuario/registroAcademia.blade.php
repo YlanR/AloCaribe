@@ -38,30 +38,30 @@
                             <div class="form-content">
                                 <select name="estado" id="Estados" value="{{ old('estado') }}" class="Estados">
                                     <option selected disabled>Selecciona Estado</option>
-                                    <option value="amazonas">Amazonas</option>
-                                    <option value="anzoategui">Anzoátegui</option>
-                                    <option value="apure">Apure</option>
-                                    <option value="aragua">Aragua</option>
-                                    <option value="barinas">Barinas</option>
-                                    <option value="bolivar">Bolívar</option>
-                                    <option value="carabobo">Carabobo</option>
-                                    <option value="cojedes">Cojedes</option>
-                                    <option value="delta-amacuro">Delta Amacuro</option>
-                                    <option value="distrito-capital">Distrito Capital</option>
-                                    <option value="falcon">Falcón</option>
-                                    <option value="guarico">Guárico</option>
-                                    <option value="la-guaira">La Guaira</option>
-                                    <option value="lara">Lara</option>
-                                    <option value="merida">Mérida</option>
-                                    <option value="miranda">Miranda</option>
-                                    <option value="monagas">Monagas</option>
-                                    <option value="nueva-esparta">Nueva Esparta</option>
-                                    <option value="portuguesa">Portuguesa</option>
-                                    <option value="sucre">Sucre</option>
-                                    <option value="tachira">Táchira</option>
-                                    <option value="trujillo">Trujillo</option>
-                                    <option value="yaracuy">Yaracuy</option>
-                                    <option value="zulia">Zulia</option>
+                                    <option value="Amazonas">Amazonas</option>
+                                    <option value="Anzoategui">Anzoátegui</option>
+                                    <option value="Apure">Apure</option>
+                                    <option value="Aragua">Aragua</option>
+                                    <option value="Barinas">Barinas</option>
+                                    <option value="Bolivar">Bolívar</option>
+                                    <option value="Carabobo">Carabobo</option>
+                                    <option value="Cojedes">Cojedes</option>
+                                    <option value="Delta Amacuro">Delta Amacuro</option>
+                                    <option value="Distrito Capital">Distrito Capital</option>
+                                    <option value="Falcon">Falcón</option>
+                                    <option value="Guarico">Guárico</option>
+                                    <option value="La Guaira">La Guaira</option>
+                                    <option value="Lara">Lara</option>
+                                    <option value="Merida">Mérida</option>
+                                    <option value="Miranda">Miranda</option>
+                                    <option value="Monagas">Monagas</option>
+                                    <option value="Nueva Esparta">Nueva Esparta</option>
+                                    <option value="Portuguesa">Portuguesa</option>
+                                    <option value="Sucre">Sucre</option>
+                                    <option value="Tachira">Táchira</option>
+                                    <option value="Trujillo">Trujillo</option>
+                                    <option value="Yaracuy">Yaracuy</option>
+                                    <option value="Zulia">Zulia</option>
                                 </select>
                             </div>
                             @error('estado')

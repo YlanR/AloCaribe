@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\File;
 use App\Models\Academy;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
 use App\Models\Instagram;
 
 class AcademyController extends Controller
@@ -113,12 +114,37 @@ class AcademyController extends Controller
         
     }
 
+    public function perfilOp(string $id)
+    {
+        //
+
+        $user = $id;
+        $academy = Academy::where('id', $user)->first();
+        $usuar = User::where('id', $academy->user_id)->first();
+
+       
+            $instagram = Instagram::where('id', $academy->instagram_id)->first();
+
+            return view('usuario.perfilAcademia', compact('academy', 'usuar', 'instagram'));
+        
+    }
+
     /**
      * Show the form for editing the specified resource.
      */
     public function edit(string $id)
     {
         //
+        
+        $user = Auth::user()->id;
+        $academyExist = Academy::where('user_id', $user)->exists();
+        $academy = Academy::where('user_id', $user)->first();
+        $usuar = User::where('id', $user)->first();
+
+        $instagram = Instagram::where('id', $academy->instagram_id)->first();
+
+        return view('usuario.editAcademy', compact('academy', 'usuar', 'instagram'));
+
     }
 
     /**
@@ -127,6 +153,23 @@ class AcademyController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $name = $request->input('name_academy');
+        $telefono = $request->input('telefono_academy');
+        $estado = $request->input('estado');
+        $instagram = $request->input('instagram_id');
+
+        $academia = DB::table('academies')
+        ->select('academies.*')
+        ->where('academies.user_id', $id)
+        ->update(['name_academy' => $name, 'telefono_academy' => $telefono, 'estado' => $estado]);
+
+        $instagramDB = DB::table('instagrams')
+        ->join('academies', 'instagrams.id', '=', 'academies.instagram_id')
+        ->select('instagrams.*', 'academies.*')
+        ->where('academies.user_id', $id)
+        ->update(['instagrams.name' => $instagram]);
+
+        return redirect('/perfil/'.$id);
     }
 
     /**
