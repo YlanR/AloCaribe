@@ -43,17 +43,26 @@ let cash= document.getElementById("cash");
 let Efectivo= document.getElementById("Efectivo");
 let pagoMovil= document.getElementById("pagoMovil");
 
+const pay = document.getElementsByClassName("pagoM");
+let buy = document.getElementsByClassName("Efect");
+
 Efectivo.addEventListener("click",mostrar);
 function mostrar (){
         cash.classList.toggle("aparecer");
         electronicCash.classList.toggle("desaparecer");
+
+      //  cash.classList.toggle("habilitar");
+       // electronicCash.classList.toggle("deshabilitar");
 }
 let Efectivo1= document.getElementById("Efectivo1");
 let pagoMovil1= document.getElementById("pagoMovil1");
 
 pagoMovil1.addEventListener("click",cambio);
 function cambio() {
-       
+
         cash.classList.toggle("desaparecer1");
         electronicCash.classList.toggle("aparecer1");
+
+      //  cash.classList.toggle("deshabilitar");
+     //   electronicCash.classList.toggle("habilitar");
 }

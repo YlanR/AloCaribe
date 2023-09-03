@@ -282,8 +282,8 @@
                         <div class="pago-contenido-encapsulado">
                             <div class="pago-contenido-encapsulado-centro">
                                 <div class="pago-tipo">
-                                    <button class="cham" id="pagoMovil">Pago móvil</button>
-                                    <button class="cham" id="Efectivo">Efectivo</button>
+                                    <button class="cham" id="pagoMovil" >Pagomóvil</button>
+                                    <button class="cham" id="Efectivo" >Efectivo</button>
                                 </div>
                                 
                                 <h3 style="margin: 0 0 1em 0;"> Pago movil </h3>
@@ -307,13 +307,13 @@
                                     <input type="hidden" name="pagoMovil" id="movilModalidad" value="pagoMovil">
                                     <div class="form-inputs">
                                         <div class="form-input">
-                                            <input type="text" placeholder="nombre del titular del pago" id="nombreTitular" name="nombreTitular" class="">
+                                            <input type="text" placeholder="nombre del titular del pago" id="nombreTitular" name="pagoM" class="pagoM">
                                         </div>
                                         <div class="form-input">
-                                            <input type="tel" placeholder="número del titular" id="numeroTitular" name="numeroTitular" class="">
+                                            <input type="tel" placeholder="número del titular" id="numeroTitular" name="pagoM" class="pagoM">
                                         </div>
                                         <div class="form-input">
-                                            <input type="num" placeholder="referencia del pago móvil" id="referenciaPago" name="referenciaPago">
+                                            <input type="num" placeholder="referencia del pago móvil" id="referenciaPago" name="pagoM" class="pagoM" >
                                         </div>
                                     </div>
                                     <div class="form-botones">
@@ -332,16 +332,16 @@
                     </div>
                 </div>
             </div>
-        <!--formulario para el efectivo-->
+        <!--formulario para el efectivo  -->
 
-            <div class="main-content-izquierda-pago pago desaparecer" id="cash">
+            <div class="main-content-izquierda-pago pago  desaparecer " id="cash" >
                 
                     <div class="pago-contenido">
                         <div class="pago-contenido-encapsulado">
                             <div class="pago-contenido-encapsulado-centro">
                                 <div class="pago-tipo">
-                                    <button class="cham" id="pagoMovil1">Pago móvil</button>
-                                    <button class="cham" id="Efectivo1">Efectivo</button>
+                                    <a class="cham" id="pagoMovil1" onclick="desactivar()" >Pagomóvil</a>
+                                    <a class="cham" id="Efectivo1" onclick="activar()" >Efectivo</a>
                                 </div>
                                 
                                 <h3 style="margin: 0 0 1em 0;"> Efectivo </h3>
@@ -351,18 +351,18 @@
                                     </div>
                                 </div>
                                 <!--formulario donde se registran los datos-->
-                                <!-- <form action="" id="" class="pago-form form" method="POST"> -->
+                                <!-- <form action="" id="" class="pago-form form" method="POST"> -->           
                                     <div class="form-inputs">
                                         <input type="hidden" name="efectivo" id="efectivoModalidad" value="efectivo">
                                         
-                                        <div class="form-input">
-                                            <input type="text" placeholder="Responsable del pago" id="nombreTitular" name="nombreTitular" class="">
+                                        <div class="form-input"> 
+                                            <input type="text" placeholder="Responsable del pago" id="nombreTitularE" name="Efect" class="Efect" disabled  >
                                         </div>
                                         <div class="form-input">
-                                            <input type="num" placeholder="Cédula del responsable" id="referenciaPago" name="referenciaPago">
+                                            <input type="num" placeholder="Cédula del responsable" id="referenciaPagoE" name="Efect" class="Efect" disabled >
                                         </div>
                                         <div class="form-input">
-                                            <input type="tel" placeholder="número del responsable" id="numeroTitular" name="numeroTitular" class="">
+                                            <input type="tel" placeholder="número del responsable" id="numeroTitularE" name="Efect" class="Efect" disabled  >
                                         </div>
 
                                     </div>
@@ -426,6 +426,7 @@
     @include('templates.footer')
     <script src="../../js/agregarCategoria.js"></script>
     <script src="../../js/registroCompetidores.js"></script>
+    <script src="../../js/habilitar.js"></script>
     <script>
         const $categoria1 = document.querySelector('#Options2');
         const $categoria2 = document.querySelector('#Options3');
@@ -532,17 +533,9 @@
             //     }
             // });
         
+            
     </script>
-<script>
-let electronicCash= document.getElementById("electronicCash");
-let cash= document.getElementById("cash");
-let Efectivo= document.getElementById("Efectivo");
-let pagoMovil= document.getElementById("pagoMovil");
+    <script type="text/javascript"> 
+    
 
-Efectivo.addEventListener("click",mostrar);
-function mostrar (e){
-    e.preventDefault();
-    cash.classList.toggle("aparecer");
-   
-}
-</script>
+    </script>

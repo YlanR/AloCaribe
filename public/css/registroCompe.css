@@ -132,6 +132,9 @@ justify-content:space-between;
     background:transparent;
     width:80%;
 }
+.form-input input:disabled{
+    background-color: var(--gris);
+}
 .form-input .otracate{
     display: flex;
     width: 40%;
@@ -213,6 +216,16 @@ justify-content:space-between;
     margin: 20px 2px 0 0;
 }
 .pago-tipo button{
+    width: 100px;
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 2px;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background: var(--azul);
+    color: var(--blanco);
+}
+.pago-tipo a{
     width: 100px;
     text-align: center;
     padding: 3px;
@@ -338,4 +351,12 @@ padding: 5px;
 }
 .aparecer1{
     display: block;
+}
+.habilitar{
+pointer-events: auto;
+
+}
+
+.deshabilitar{ 
+pointer-events: none;
 }
