@@ -104,6 +104,12 @@ ul{
 li{
     display: list-item;
 }
+
+.nombreMenu{
+    color: var(--blanco);
+    font-size: 1.1rem;
+    padding-top: 2px
+}
 #navbar-botones{
     align-items: center;
     display: flex;

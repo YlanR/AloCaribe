@@ -39,26 +39,17 @@
                     <a href="#">COMPETICIÓN <span class="icon-play3" style="color: white ; "></span></a>
                 </li>
                 <li class="navbar-link"> 
-                    <a href="#">REGLAS</a>
+                    <a href="#">REGLAMENTO</a>
                 </li>
                 <li class="navbar-link"> 
                     <a href="{{ url('/contacto') }}">CONTACTANOS</a>
                 </li>
 
-                <!-- @if(Auth::user())
+                @if(Auth::user())
                 <li class="navbar-link">
-                    <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" hidden>
-                        @csrf
-                    </form>
+                   <p class="nombreMenu"> {{ Auth::user()->name }} {{ Auth::user()->apellido }} </p>
                 </li>
-                @endif -->
-
+                @endif    
                 <!-- <li class="navbar-link"> 
                         @if(Auth::user()) 
                         <p class="nombre">   </p>
