@@ -23,6 +23,8 @@
 
                     @foreach ($tickets as $ticket => $valore)
 
+                    @if($valore->modalidad == 'pagoMovil')
+
                     <div class="main-content-contenido-central central">
                         <div class="central-contenido">   
                             <div class="central-contenido-superior">
@@ -72,6 +74,60 @@
                       
                         </div>
                     </div>
+
+                    @else
+
+                    <div class="main-content-contenido-central central">
+                        <div class="central-contenido">   
+                            <div class="central-contenido-superior">
+                                <div class="central-contenido-superior-izq" id="Flecha"><span class="icon-play3" style="color:#531A87;"></span></div>
+                                @if($valore->foto_academy)
+                                <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
+                                @else
+                                <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="../img/academia.png" alt=""></div>
+                                @endif
+                                <div class="central-contenido-superior-izq" id="nombreAcademia"><a href="{{ url('perfilAcademia/'.$valore->id) }}"> {{ $valore->name_academy }} </a></div>
+                                <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
+                                <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->ticket }}</div>
+
+                            </div>
+                            <div class="central-contenido-superior">
+                                </div>
+                                @if($valore->modalidad == 'pagoMovil')
+                                <div class="central-contenido-superior-derecha">
+                                    <p>Aprobado</p>
+                                </div>
+                                @else
+                                <div class="central-contenido-superior-derecha"><p>Atento al Pago</p>
+                                </div>
+                                @endif
+                            </div> 
+                            <div class="central-contenido-logo">
+                                <img src="../../img/logo.png" alt="logo en el fondo jejeje ">
+                            </div>
+                            
+                        </div>
+                        <hr>
+                        <div class="central-contenido central-contenido2">
+                            <div class="central-contenido-inferior">
+                                <label for="">Nombre del Responsable del pago</label>
+                                <p>{{ $valore->nombrePago }}</p>
+                            </div>
+                            <div class="central-contenido-inferior">
+                                <label for="">Teléfono del Responsable</label>
+                                <p>{{ $valore->telefono }}</p>
+
+                            </div>
+                            <div class="central-contenido-inferior">
+                                <label for="">Cedula del Responsable</label>
+                                <p>C.I: v- {{ $valore->cedula_pago }}</p>
+
+                            </div>
+                      
+                        </div>
+                    </div>
+
+                    @endif
 
                     @endforeach
 

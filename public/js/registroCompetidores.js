@@ -22,10 +22,15 @@ const namePago = document.querySelector('#nombreTitular');
 const telefonoImput = document.querySelector('#numeroTitular');
 const referenciaImput = document.querySelector('#referenciaPago');
 const ModalidadImput = document.querySelector('#movilModalidad').value;
+
+const cedulaPagoImput = document.querySelector('#referenciaPagoE');
+const nombrePagoImput = document.querySelector('#nombreTitularE');
+const telefonoPagoImput = document.querySelector('#numeroTitularE');
 const ModalidadPagoImput = document.querySelector('#efectivoModalidad').value;
 
 
-console.log(nombreImput.length)
+
+
 class Competidores{
     constructor(){
         this.competidores = []; 
@@ -174,7 +179,7 @@ class UI{
             btnEliminar.onclick = () => eliminarCompetidor(id);
 
             const btnEditar = document.createElement('button');
-            btnEditar.innerHTML = 'Editar';
+            btnEditar.innerHTML = 'Agregar Categoria';
 
             btnEditar.onclick = () => editarCompetidor(competidor);
 
@@ -224,123 +229,231 @@ function eventListener(){
 }
 
 let ticket = generarID();
-Enviar();
 
-function Enviar(){
-    
+    Enviar();
+    function Enviar(){
+        
 
-    formulario.addEventListener('submit', async (e) =>{
+        formulario.addEventListener('submit', async (e) =>{
+
+            e.preventDefault();
+            if(referenciaImput.value){
+
+            if(namePago.value === '' || telefonoImput.value === '' || referenciaImput.value === '' || referenciaImput.length > 5){
+                // console.log('Todos los campos son obligatorios');
+                ui.imprimirAlertaPago('Todos los campos son obligatorios', 'error');
+                return;
+            }
+
+            if(referenciaImput.value.length > 5){
+                ui.imprimirAlertaPago('Deben ser los ultimos 5 digitos de la referencia bancaria', 'error');
+                return;
+            }
+
+        
+            // nombreImputPago.addEventListener('input', datosUsuario);
+            // telefonoImput.addEventListener('input', datosUsuario);
+            // referenciaImput.addEventListener('input', datosUsuario);
+
+            // console.log(admCompetidores.competidores);
+
+
+        if(admCompetidores){
+
+            
+            // if (e.target == formulario) {
+
+            let datos = admCompetidores.competidores
+        console.log(datos);
+            
+            var datosName = datos.map(objeto => objeto.name),
+            datosApellido = datos.map(objeto => objeto.apellido),
+            datosCedula = datos.map(objeto => objeto.cedula),
+            datosEdad = datos.map(objeto => objeto.edad),
+            datosInsta = datos.map(objeto => objeto.instagram),
+            datosCate1 = datos.map(objeto => objeto.categoria1),
+            datosCate2 = datos.map(objeto => objeto.categoria2),
+            datosCate3 = datos.map(objeto => objeto.categoria3),
+            ticket_ID = datos.map(objeto => objeto.ticket_id),
+            datosNombreTitular = namePago.value,
+            datosNumeroTitular = telefonoImput.value,
+            datosModalidad = datos.map(objeto => objeto.modalidad),
+            datosReferencia = referenciaImput.value;
+
+
+            let datosAca = parseInt(idAca);
+            let datosUser = parseInt(idUser);
+
+
+            let datosEnviar = datos.map((objeto, index) => {
+                return {
+                    academy_id: datosAca,
+                    director_id: datosUser,
+                    name: datosName[index],
+                    apellido: datosApellido[index],
+                    cedula: datosCedula[index],
+                    edad: datosEdad[index],
+                    instagram: datosInsta[index],
+                    categoria1: datosCate1[index],
+                    categoria2: datosCate2[index],
+                    categoria3: datosCate3[index],
+                    ticket_id: ticket_ID[index],
+                    nombreTitular: datosNombreTitular,
+                    numeroTitular: datosNumeroTitular,
+                    modalidad: datosModalidad[index],
+                    referenciaPago: datosReferencia,
+                };
+            });
+        console.log(JSON.stringify(datosEnviar));
+        ui.imprimirAlerta('Registrados con exito');
+
+        
+            datosEnviar.forEach(function(objeto) {
+                
+                let option = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8',
+                        Accept: 'application/json;charset=utf-8',
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Agrega el token de Laravel para protección CSRF
+                    },
+                    body: JSON.stringify(objeto)
+                }
+                
+                fetch('/recibirdatos', option)
+                .then(response => response.json())
+                .then(data => {
+                    
+                
+            console.log(data); // Handlea la respuesta del servidor
+
+            Swal.fire(
+                'Ticket registrado!',
+                'Debe esperar a que el ticket sea validado.',
+                'success'
+                )  
+                setTimeout( () => {
+                    window.location.href = 'http://127.0.0.1:8000/misTickets';
+                }, 3000);
+                })
+
+            })  
+
+            reiniciarOBjeto();
+            UserObj.ticket_id = generarID();
+            admCompetidores.borrarTodo();
+            ui.imprimirCompetidores(admCompetidores);
+            console.log(admCompetidores);
+        } else{
+            ui.imprimirAlerta('No haz ingresado competidores', 'error');
+        }
+    } else{
         e.preventDefault();
 
-        if(namePago.value === '' || telefonoImput.value === '' || referenciaImput.value === '' || referenciaImput.length > 5){
-            // console.log('Todos los campos son obligatorios');
-            ui.imprimirAlertaPago('Todos los campos son obligatorios', 'error');
-            return;
-        }
-
-        if(referenciaImput.value.length > 5){
-            ui.imprimirAlertaPago('Deben ser los ultimos 5 digitos de la referencia bancaria', 'error');
-            return;
-        }
-
-        // nombreImputPago.addEventListener('input', datosUsuario);
-        // telefonoImput.addEventListener('input', datosUsuario);
-        // referenciaImput.addEventListener('input', datosUsuario);
-
-        // console.log(admCompetidores.competidores);
-
-
-    if(admCompetidores){
-
-        
-        // if (e.target == formulario) {
-
-        let datos = admCompetidores.competidores
-    console.log(datos);
-        
-        var datosName = datos.map(objeto => objeto.name),
-        datosApellido = datos.map(objeto => objeto.apellido),
-        datosCedula = datos.map(objeto => objeto.cedula),
-        datosEdad = datos.map(objeto => objeto.edad),
-        datosInsta = datos.map(objeto => objeto.instagram),
-        datosCate1 = datos.map(objeto => objeto.categoria1),
-        datosCate2 = datos.map(objeto => objeto.categoria2),
-        datosCate3 = datos.map(objeto => objeto.categoria3),
-        ticket_ID = datos.map(objeto => objeto.ticket_id),
-        datosNombreTitular = namePago.value,
-        datosNumeroTitular = telefonoImput.value,
-        datosModalidad = datos.map(objeto => objeto.modalidad),
-        datosReferencia = referenciaImput.value;
-
-
-        let datosAca = parseInt(idAca);
-        let datosUser = parseInt(idUser);
-
-
-        let datosEnviar = datos.map((objeto, index) => {
-            return {
-                academy_id: datosAca,
-                director_id: datosUser,
-                name: datosName[index],
-                apellido: datosApellido[index],
-                cedula: datosCedula[index],
-                edad: datosEdad[index],
-                instagram: datosInsta[index],
-                categoria1: datosCate1[index],
-                categoria2: datosCate2[index],
-                categoria3: datosCate3[index],
-                ticket_id: ticket_ID[index],
-                nombreTitular: datosNombreTitular,
-                numeroTitular: datosNumeroTitular,
-                modalidad: datosModalidad[index],
-                referenciaPago: datosReferencia,
-            };
-        });
-    console.log(JSON.stringify(datosEnviar));
-    ui.imprimirAlerta('Registrados con exito');
-
-    
-        datosEnviar.forEach(function(objeto) {
-            
-            let option = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json;charset=utf-8',
-                    Accept: 'application/json;charset=utf-8',
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Agrega el token de Laravel para protección CSRF
-                },
-                body: JSON.stringify(objeto)
+        if(nombrePagoImput.value === '' || cedulaPagoImput.value === '' || telefonoPagoImput.value === ''){
+                // console.log('Todos los campos son obligatorios');
+                ui.imprimirAlertaPago('Todos los campos son obligatorios', 'error');
+                return;
             }
+
+            if(cedulaPagoImput.length < 7){
+                ui.imprimirAlertaPago('Error en la cedula.', 'error');
+                return;
+            }
+
+        if(admCompetidores){
+
             
-            fetch('/recibirdatos', option)
-            .then(response => response.json())
-            .then(data => {
+            // if (e.target == formulario) {
+
+            let datos = admCompetidores.competidores
+        console.log(datos);
+            
+            var datosName = datos.map(objeto => objeto.name),
+            datosApellido = datos.map(objeto => objeto.apellido),
+            datosCedula = datos.map(objeto => objeto.cedula),
+            datosEdad = datos.map(objeto => objeto.edad),
+            datosInsta = datos.map(objeto => objeto.instagram),
+            datosCate1 = datos.map(objeto => objeto.categoria1),
+            datosCate2 = datos.map(objeto => objeto.categoria2),
+            datosCate3 = datos.map(objeto => objeto.categoria3),
+            ticket_ID = datos.map(objeto => objeto.ticket_id),
+            datosNombreTitular = nombrePagoImput.value,
+            datosNumeroTitular = telefonoPagoImput.value,
+            datosModalidad = datos.map(objeto => objeto.modalidad),
+            datosCedulaPago = cedulaPagoImput.value;
+
+
+            let datosAca = parseInt(idAca);
+            let datosUser = parseInt(idUser);
+
+
+            let datosEnviar = datos.map((objeto, index) => {
+                return {
+                    academy_id: datosAca,
+                    director_id: datosUser,
+                    name: datosName[index],
+                    apellido: datosApellido[index],
+                    cedula: datosCedula[index],
+                    edad: datosEdad[index],
+                    instagram: datosInsta[index],
+                    categoria1: datosCate1[index],
+                    categoria2: datosCate2[index],
+                    categoria3: datosCate3[index],
+                    ticket_id: ticket_ID[index],
+                    nombreTitular: datosNombreTitular,
+                    numeroTitular: datosNumeroTitular,
+                    modalidad: ModalidadPagoImput,
+                    referenciaCedulaPago: datosCedulaPago,
+                };
+            });
+        console.log(JSON.stringify(datosEnviar));
+        ui.imprimirAlerta('Registrados con exito');
+
+        
+            datosEnviar.forEach(function(objeto) {
                 
-             
-        console.log(data); // Handlea la respuesta del servidor
+                let option = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8',
+                        Accept: 'application/json;charset=utf-8',
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Agrega el token de Laravel para protección CSRF
+                    },
+                    body: JSON.stringify(objeto)
+                }
+                
+                fetch('/recibirdatos', option)
+                .then(response => response.json())
+                .then(data => {
+                    
+                
+            console.log(data); // Handlea la respuesta del servidor
 
-        Swal.fire(
-            'Ticket registrado!',
-            'Debe esperar a que el ticket sea validado.',
-            'success'
-            )  
-            setTimeout( () => {
-                window.location.href = 'http://127.0.0.1:8000/misTickets';
-            }, 3000);
-            })
+            Swal.fire(
+                'Ticket registrado!',
+                'Debe esperar a que el ticket sea validado.',
+                'success'
+                )  
+                setTimeout( () => {
+                    window.location.href = 'http://127.0.0.1:8000/misTickets';
+                }, 3000);
+                })
 
-        })  
+            })  
 
-        reiniciarOBjeto();
-        UserObj.ticket_id = generarID();
-        admCompetidores.borrarTodo();
-        ui.imprimirCompetidores(admCompetidores);
-        console.log(admCompetidores);
-    } else{
-        ui.imprimirAlerta('No haz ingresado competidores', 'error');
-    }
+            reiniciarOBjeto();
+            UserObj.ticket_id = generarID();
+            admCompetidores.borrarTodo();
+            ui.imprimirCompetidores(admCompetidores);
+            console.log(admCompetidores);
+        } else{
+            ui.imprimirAlerta('No haz ingresado competidores', 'error');
+        }
+    }    
     });
-}
+    }
+
 
 const UserObj = {
     academy_id: idAca,
@@ -505,18 +618,16 @@ function editarCompetidor(competidor){
     cedulaInput.value = cedula;
     edadImput.value = edad;
     instagramImput.value =instagram; 
-    Categoria1.value = categoria1;
-    Categoria2.value = categoria2;
-    Categoria33.value = categoria3;
+    
 
     UserObj.name = name;
     UserObj.apellido = apellido;
     UserObj.cedula = cedula;
     UserObj.edad = edad;
     UserObj.instagram = instagram;
-    UserObj.categoria1 = categoria1;
-    UserObj.categoria2 = categoria2;
-    UserObj.categoria3 = categoria3;
+    UserObj.categoria1 = '';
+    UserObj.categoria2 = '';
+    UserObj.categoria3 = '';
     UserObj.academy_id = academy_id;
     
     formulario.querySelector('button[type="submit"]').textContent = 'Guardar Cambios';
