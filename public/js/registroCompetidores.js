@@ -174,20 +174,20 @@ class UI{
             divCedula.textContent = 'V-'+cedula;
 
             const btnEliminar = document.createElement('button');
-            btnEliminar.innerHTML = 'Eliminar';
+            btnEliminar.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
             btnEliminar.onclick = () => eliminarCompetidor(id);
 
             const btnEditar = document.createElement('button');
-            btnEditar.innerHTML = 'Agregar Categoria';
+            btnEditar.innerHTML = '<i class="fa-solid fa-layer-plus"></i>Agregar otra Categoria';
 
             btnEditar.onclick = () => editarCompetidor(competidor);
 
 
             divCompetidor.appendChild(divNombre);
             divCompetidor.appendChild(divCedula);
-            divCompetidor.appendChild(btnEliminar);
             divCompetidor.appendChild(btnEditar);
+            divCompetidor.appendChild(btnEliminar);
 
 
             contenedorCompetidores.appendChild(divCompetidor);
