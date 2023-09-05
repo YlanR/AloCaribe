@@ -237,9 +237,39 @@
                                     <img src="../img/4/Rectangle.svg" alt="" class="plantilla4-adornos-claros plantilla4-adornos-claros02">
                                 </div>
                                 <div class="plantilla5">
-                                    <div class="plantilla5-content">
-                                        <div></div>
-                                    </div>
+                                <div class="plantilla5-content">
+                        <h1>Lugar del evento</h1>
+                        <div class="plantilla5-contenido">
+                            <div class="plantilla5-contenido-puesto">
+                                <p>Terminal terrestre la guaira piso 1,<br>
+                                    La Guaira 1161, La Guaira</p>
+                                <img src="../img/5/VIP1.png" alt="" class="vip">
+                            </div>
+                            <div class="plantilla5-contenido-puesto"><hr></div>
+                            <div class="plantilla5-contenido-puesto"><img src="../img/mapa.png" alt="" class="map" style=" position: absolute;"></div>
+                        </div>
+                        
+                    </div>
+                    <img src="../img/3/Polygon.png" class="triangle t1" alt="">
+                    <img src="../img/2/Ellipse12.png" class="ellipse e1" alt="">
+                    <img src="../img/4/Rectangle.svg" class="rectangle r1" alt="">
+                    <img src="../img/2/Ellipse12.png" class="ellipse e2" alt="">
+                    <img src="../img/3/Polygon.png" class="triangle t2" alt="">
+                    <img src="../img/4/Rectangle.svg" class="rectangle r2" alt="">
+                    <img src="../img/3/Polygon.png" class="triangle t3" alt="">
+                    <img src="../img/4/Rectangle.svg" class="rectangle r3" alt="">
+                    <img src="../img/2/Ellipse12.png" class="ellipse e3" alt="">
+                    <img src="../img/4/Rectangle.svg" class="rectangle r4" alt="">
+                    <img src="../img/2/Ellipse12.png" class="ellipse e4" alt="">
+                    <img src="../img/3/Polygon.png" class="triangle t4" alt="">
+                    <img src="../img/4/Rectangle.svg" class="rectangle r5" alt="">
+                    <img src="../img/2/Ellipse12.png" class="ellipse e5" alt="">
+                    <img src="../img/3/Polygon.png" class="triangle t5" alt="">
+
+                    <img src="../img/3/Polygon.png" class="triangle t6" alt="">
+                    <img src="../img/4/Rectangle.svg" class="rectangle r6" alt="">
+                    <img src="../img/2/Ellipse12.png" class="ellipse e6" alt="">
+                    
                                 </div>
                                 <div class="plantilla6">
                                     <div class="swiper tranding-slider">

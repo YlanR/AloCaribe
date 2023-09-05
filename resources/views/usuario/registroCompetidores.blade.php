@@ -275,7 +275,7 @@
                     
                 </div>
             <!--formulario para el pago movil -->
-                <div class="main-content-izquierda-pago pago" id="electronicCash">
+                <div class="main-content-izquierda-pago pago desaparecer" id="electronicCash">
                   
                     <div class="pago-contenido" id="moverMargen">
                        
@@ -418,6 +418,10 @@
                         <div class="tabla-logo">
                             <img src="../../img/logo.png" alt="">
                         </div>
+                        
+                    </div>
+                    <div class="tabla-boton">
+                        <button id="botonTabla">Comprar Ticket</button>
                     </div>
                 </div>
             </div>
