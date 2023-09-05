@@ -23,7 +23,7 @@
                         <a href="#">REGLAMENTO</a>
                     </li>
                     <li class="footer-link"> 
-                        <a href="#" style="margin:1rem;">CONTACTANOS</a>
+                        <a href="{{ url('/contacto') }}" style="margin:1rem;">CONTACTANOS</a>
                     </li>
                 </ul>
 

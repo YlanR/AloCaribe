@@ -76,32 +76,28 @@ class UsuarioController extends Controller
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
         }
 
-            // $instagram = new Instagram;
-            // $instagram->name = $request->input('instagram');
-            
-            $PagosP = $request->input('referenciaPago');
-            $pagosExist = Pagos::where('referencia', $PagosP)->exists();
-            $pagosExistent = Pagos::where('referencia', $PagosP)->first();
+        $PagosP = $request->input('referenciaPago');
+        $pagosExist = Pagos::where('referencia', $PagosP)->exists();
+        $pagosExistent = Pagos::where('referencia', $PagosP)->first();
 
-            $tickete = $request->input('ticket_id');
-            $ticketsExist = Tickets::where('ticket', $tickete)->exists();
-            $ticketsExistent = Tickets::where('ticket', $tickete)->first();
+        $tickete = $request->input('ticket_id');
+        $ticketsExist = Tickets::where('ticket', $tickete)->exists();
+        $ticketsExistent = Tickets::where('ticket', $tickete)->first();
 
-            // $instagram->save();
-            $cedula = $request->input('cedula');
-            $UserExist = User::where('cedula', $cedula)->exists();
-            $UserExistent = User::where('cedula', $cedula)->first();
+        // $instagram->save();
+        $cedula = $request->input('cedula');
+        $UserExist = User::where('cedula', $cedula)->exists();
+        $UserExistent = User::where('cedula', $cedula)->first();
 
 
-                $competidor = new User;
-                $competidor->name= $request->input('name');
-                $competidor->apellido= $request->input('apellido');
-                $competidor->cedula= $request->input('cedula');
-                $competidor->edad= $request->input('edad');
-                $competidor->instagram= $request->input('instagram');;
-                // $competidor->foto = $foto;
+            $competidor = new User;
+            $competidor->name= $request->input('name');
+            $competidor->apellido= $request->input('apellido');
+            $competidor->cedula= $request->input('cedula');
+            $competidor->edad= $request->input('edad');
+            $competidor->instagram= $request->input('instagram');
 
-                
+        if($request->input('referenciaPago')){    
 
             if($UserExist == null){
                 
@@ -269,6 +265,176 @@ class UsuarioController extends Controller
             return response()->json('Todo listo');
 
             }
+        } else{
+
+            if($UserExist == null){
+                
+                $competidor->save();
+
+                $ticket = new Tickets;
+                $ticket->ticket = $request->input('ticket_id'); 
+                $ticket->resultado = 't';
+                if($ticketsExist == null){
+                    $ticket->save();
+                    
+
+                    $categoria = new Categorias_users;
+                    $categoria->user_id = $competidor->id;
+                    $categoria->categoria1_id = $request->input('categoria1');
+                    $categoria->categoria2_id = $request->input('categoria2');
+                    $categoria->categorias_id = $request->input('categoria3');
+                    $categoria->academy_id = $request->input('academy_id');
+                    $categoria->director_id = $request->input('director_id');
+                    $categoria->ticket_id = $ticket->id;
+                    
+                    $categoria->save();
+
+                    $pagos = new Pagos;
+                    $pagos->user_id = $request->input('director_id');
+                    $pagos->modalidad = $request->input('modalidad');
+                    $pagos->telefono = $request->input('numeroTitular');
+                    $pagos->nombrePago = $request->input('nombreTitular');
+                    $pagos->cedula_pago = $request->input('referenciaCedulaPago');
+                    $pagos->total = 25;
+                    $pagos->academy_id = $request->input('academy_id');
+                    $pagos->ticket_id = $ticket->id;
+
+                    if($pagosExist == null){
+                        $pagos->save();
+                    }  else{
+                        return response()->json('Todo listo');
+
+                    }
+
+
+                    return response()->json('Todo listo');
+
+                }else{
+     
+
+                    $categoria = new Categorias_users;
+                    $categoria->user_id = $competidor->id;
+                    $categoria->categoria1_id = $request->input('categoria1');
+                    $categoria->categoria2_id = $request->input('categoria2');
+                    $categoria->categorias_id = $request->input('categoria3');
+                    $categoria->academy_id = $request->input('academy_id');
+                    $categoria->director_id = $request->input('director_id');
+                    $categoria->ticket_id = $ticketsExistent->id;
+                    
+                    $categoria->save();
+
+                    
+                    $pagos = new Pagos;
+                    $pagos->user_id = $request->input('director_id');
+                    $pagos->modalidad = $request->input('modalidad');
+                    $pagos->telefono = $request->input('numeroTitular');
+                    $pagos->nombrePago = $request->input('nombreTitular');
+                    $pagos->cedula_pago = $request->input('referenciaCedulaPago');
+                    $pagos->total = 25;
+                    $pagos->academy_id = $request->input('academy_id');
+                    $pagos->ticket_id = $ticketsExistent->id;
+
+                    if($pagosExist == null){
+                        $pagos->save();
+                    } else{
+                        return response()->json('Todo listo');
+
+                    } 
+                    return response()->json('Todo listo');
+
+                }
+
+            } else{
+                
+                $ticket = new Tickets;
+                $ticket->ticket = $request->input('ticket_id'); 
+                $ticket->resultado = 't';
+                if($ticketsExist == null){
+                    $ticket->save();
+                    
+
+                    $categoria = new Categorias_users;
+                    $categoria->user_id = $UserExistent->id;
+                    $categoria->categoria1_id = $request->input('categoria1');
+                    $categoria->categoria2_id = $request->input('categoria2');
+                    $categoria->categorias_id = $request->input('categoria3');
+                    $categoria->academy_id = $request->input('academy_id');
+                    $categoria->director_id = $request->input('director_id');
+                    $categoria->ticket_id = $ticket->id;
+                    
+                    $categoria->save();
+
+                    $pagos = new Pagos;
+                    $pagos->user_id = $request->input('director_id');
+                    $pagos->modalidad = $request->input('modalidad');
+                    $pagos->telefono = $request->input('numeroTitular');
+                    $pagos->nombrePago = $request->input('nombreTitular');
+                    $pagos->cedula_pago = $request->input('referenciaCedulaPago');
+                    $pagos->total = 25;
+                    $pagos->academy_id = $request->input('academy_id');
+                    $pagos->ticket_id = $ticket->id;
+
+                    if($pagosExist == null){
+                        $pagos->save();
+                    } else{
+                        return response()->json('Todo listo');
+
+                    }
+
+                    return response()->json('Todo listo');
+
+                }else{
+     
+
+                    $categoria = new Categorias_users;
+                    $categoria->user_id = $UserExistent->id;
+                    $categoria->categoria1_id = $request->input('categoria1');
+                    $categoria->categoria2_id = $request->input('categoria2');
+                    $categoria->categorias_id = $request->input('categoria3');
+                    $categoria->academy_id = $request->input('academy_id');
+                    $categoria->director_id = $request->input('director_id');
+                    $categoria->ticket_id = $ticketsExistent->id;
+                    
+                    $categoria->save();
+                    
+                    $pagos = new Pagos;
+                    $pagos->user_id = $request->input('director_id');
+                    $pagos->modalidad = $request->input('modalidad');
+                    $pagos->telefono = $request->input('numeroTitular');
+                    $pagos->nombrePago = $request->input('nombreTitular');
+                    $pagos->cedula_pago = $request->input('referenciaCedulaPago');
+                    $pagos->total = 25;
+                    $pagos->academy_id = $request->input('academy_id');
+                    $pagos->ticket_id = $ticketsExistent->id;
+
+                    if($pagosExist == null){
+                        $pagos->save();
+                    } else{
+                        return response()->json('Todo listo');
+
+                    }
+
+                    return response()->json('Todo listo');
+
+                }
+
+                // $categoria = new Categorias_users;
+                // $categoria->user_id = $UserExistent->id;
+                // $categoria->categoria1_id = $request->input('categoria1');
+                // $categoria->categoria2_id = $request->input('categoria2');
+                // $categoria->categorias_id = $request->input('categoria3');
+                // $categoria->academy_id = $request->input('academy_id');
+                // $categoria->director_id = $request->input('director_id');
+                // $categoria->ticket_id = $ticket->id;
+
+                // $categoria->save();
+   
+                
+            return response()->json('Todo listo');
+
+            }
+
+        }
             
     }
 

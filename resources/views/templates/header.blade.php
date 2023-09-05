@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./css/plantillas/1.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../../css/menu.css">
+    <script src="https://kit.fontawesome.com/762a628b03.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
@@ -38,26 +39,17 @@
                     <a href="#">COMPETICIÓN <span class="icon-play3" style="color: white ; "></span></a>
                 </li>
                 <li class="navbar-link"> 
-                    <a href="#">REGLAS</a>
+                    <a href="#">REGLAMENTO</a>
                 </li>
                 <li class="navbar-link"> 
                     <a href="{{ url('/contacto') }}">CONTACTANOS</a>
                 </li>
 
-                <!-- @if(Auth::user())
+                @if(Auth::user())
                 <li class="navbar-link">
-                    <a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" hidden>
-                        @csrf
-                    </form>
+                   <p class="nombreMenu"> {{ Auth::user()->name }} {{ Auth::user()->apellido }} </p>
                 </li>
-                @endif -->
-
+                @endif    
                 <!-- <li class="navbar-link"> 
                         @if(Auth::user()) 
                         <p class="nombre">   </p>
