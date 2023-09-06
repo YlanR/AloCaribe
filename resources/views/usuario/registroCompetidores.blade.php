@@ -277,7 +277,7 @@
         </div>
     </section>
     @include('templates.footer')
-    <!-- <script src="../../js/agregarCategoria.js"></script> -->
+    <script src="../../js/agregarCategoria.js"></script>
     <script src="../../js/registroCompetidores.js"></script>
     <script src="../../js/habilitar.js"></script>
     <script>

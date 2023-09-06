@@ -41,23 +41,39 @@ class Competidores{
 
         const competidorExistenteIndex = this.competidores.some(comp => comp.cedula === competidor.cedula);
         console.log(competidorExistenteIndex);
-        
+
         if(competidorExistenteIndex){
+
+                    
             const competidores = this.competidores.map( comp => {
                 if( comp.cedula === competidor.cedula){
-                    comp.contador++;
+                let max= 0;
+                    for(let i = 0; i <= comp.length ; i++){
+                        if(comp.contador > max){
+                            max = comp.contador;
+                        }
 
+                    }
+                    max.contador++;
+                    
                     return comp;
                 } else{
                     return comp;
                 }
             });
             this.competidores = [...competidores, competidor];
-            return console.log(this.competidores);
+
+            this.competidores.sort((a,b) => {
+                console.log(this.competidores);
+                return b.id - a.id;
+            })
         }else{
             this.competidores = [...this.competidores, competidor];
 
-            return console.log(this.competidores);
+            this.competidores.sort((a,b) => {
+                console.log(this.competidores);
+                return a.id - b.id;
+            })
         }
         // console.log(competidorExistenteIndex);
 
