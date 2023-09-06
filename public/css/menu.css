@@ -14,10 +14,11 @@ nav{
     display: none;
     justify-content: right;
     background: blueviolet;
-    border-radius: 5% 0 0 5%;
+    border-radius: 0% 0 0 10%;
     padding: 0;
     height: 100%;
     text-align: center;
+    margin: 0 0 0 85%;
     
 }
 .menu-vertical-superior{
@@ -41,7 +42,7 @@ nav{
     height: 5rem;
 }
 .menu-vertical > li{
-    margin: 20px 0;
+   /* margin: 20px 0;*/
 }
 .menu-vertical > li >a{
     display: block;
@@ -53,14 +54,14 @@ nav{
     background-color: #530D9385;
 }
 nav button{
-color: white;
-background: blueviolet;
+/*color: white;*/
+background: transparent;
 border: none;
-border-radius: 50% 0 0 50%;
-padding: 15px;
+border-radius: 25%;
+/*padding: 15px;*/
 cursor: pointer;
 transition: 3s;
-height: 3.8rem;
+width: 15%;
 }
 nav button:hover{
 
@@ -70,6 +71,6 @@ background: #E91E63;
 display: block;
 }
 .rotar{ 
-rotate: 180deg;
-border-radius: 0% 50% 50% 0%;
+/*rotate: 180deg;
+border-radius: 0% 50% 50% 0%;*/
 }

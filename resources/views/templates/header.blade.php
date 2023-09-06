@@ -57,11 +57,9 @@
 
                 </li> -->
             </ul>
-            @if(Auth::user()) 
-            <button id="menu"> 
-                    <span class="icon-previous2"></span>
-                </button>
-                @endif
+           
+                    
+               
 
             
 
@@ -76,14 +74,17 @@
                 </a>
             </div>
         @else
-          
-            <li class="navbar-link foto_header-cuadro">
-                @if(Auth::user()->foto) 
-                    <a class="" href="#"> <img  class="foto_header" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></a>
-                @else
-                    <a class="" href="#"> <img  class="foto_header" src="../img/user.jpg" alt=""></a>
-                @endif
-            </li>
+            @if(Auth::user()) 
+            <button id="menu"> 
+                <li class="navbar-link foto_header-cuadro">
+                    @if(Auth::user()->foto) 
+                        <a class="" href="#"> <img  class="foto_header" src="{{ asset('storage/').'/'. Auth::user()->foto }}" alt=""></a>
+                    @else
+                        <a class="" href="#"> <img  class="foto_header" src="../img/user.jpg" alt=""></a>
+                    @endif
+                </li>
+            </button>
+            @endif
         @endif    
         </div>
     </nav>
