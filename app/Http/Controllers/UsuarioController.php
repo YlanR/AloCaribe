@@ -55,22 +55,6 @@ class UsuarioController extends Controller
     {
         //
 
-        // $campos=[
-        //     'Nombre' => 'required|string|max:100',
-        //     'ApellidoPaterno' => 'required|string|max:100',
-        //     'ApellidoMaterno' => 'required|string|max:100',
-        //     'Correo' => 'required|email',
-        //     'Foto' => 'required|max:10000|mimes:jpeg,png,jpg',
-        // ];
-        // $mensaje = [
-        //     'required' => 'El :attribute es requirido',
-        //     'Foto.required' => 'La foto es requerida'
-        // ];
-
-        // $this->validate($request, $campos,$mensaje);
-
-        // var_dump($request->input('modalidad'));
-
         if ($request->hasFile('foto_competidor')) {
             $foto = $request->file('foto_competidor')->store('uploads', 'public');
             // Guardar la ruta en la base de datos o cualquier otro procesamiento necesario
@@ -83,6 +67,7 @@ class UsuarioController extends Controller
         $tickete = $request->input('ticket_id');
         $ticketsExist = Tickets::where('ticket', $tickete)->exists();
         $ticketsExistent = Tickets::where('ticket', $tickete)->first();
+
 
         // $instagram->save();
         $cedula = $request->input('cedula');
@@ -127,7 +112,7 @@ class UsuarioController extends Controller
                     $pagos->telefono = $request->input('numeroTitular');
                     $pagos->nombrePago = $request->input('nombreTitular');
                     $pagos->referencia = $request->input('referenciaPago');
-                    $pagos->total = 25;
+                    $pagos->total = $request->input('precio');
                     $pagos->academy_id = $request->input('academy_id');
                     $pagos->ticket_id = $ticket->id;
 
@@ -151,7 +136,7 @@ class UsuarioController extends Controller
                     $categoria->categorias_id = $request->input('categoria3');
                     $categoria->academy_id = $request->input('academy_id');
                     $categoria->director_id = $request->input('director_id');
-                    $categoria->ticket_id = $ticketsExistent->id;
+                    $categoria->ticket_id = $ticketsExistent->idt;
                     
                     $categoria->save();
 
@@ -162,7 +147,7 @@ class UsuarioController extends Controller
                     $pagos->telefono = $request->input('numeroTitular');
                     $pagos->nombrePago = $request->input('nombreTitular');
                     $pagos->referencia = $request->input('referenciaPago');
-                    $pagos->total = 25;
+                    $pagos->total = $request->input('precio');
                     $pagos->academy_id = $request->input('academy_id');
                     $pagos->ticket_id = $ticketsExistent->id;
 
@@ -202,7 +187,7 @@ class UsuarioController extends Controller
                     $pagos->telefono = $request->input('numeroTitular');
                     $pagos->nombrePago = $request->input('nombreTitular');
                     $pagos->referencia = $request->input('referenciaPago');
-                    $pagos->total = 25;
+                    $pagos->total = $request->input('precio');
                     $pagos->academy_id = $request->input('academy_id');
                     $pagos->ticket_id = $ticket->id;
 
@@ -225,7 +210,7 @@ class UsuarioController extends Controller
                     $categoria->categorias_id = $request->input('categoria3');
                     $categoria->academy_id = $request->input('academy_id');
                     $categoria->director_id = $request->input('director_id');
-                    $categoria->ticket_id = $ticketsExistent->id;
+                    $categoria->ticket_id = $ticketsExistent->idt;
                     
                     $categoria->save();
                     
@@ -235,7 +220,7 @@ class UsuarioController extends Controller
                     $pagos->telefono = $request->input('numeroTitular');
                     $pagos->nombrePago = $request->input('nombreTitular');
                     $pagos->referencia = $request->input('referenciaPago');
-                    $pagos->total = 25;
+                    $pagos->total = $request->input('precio');
                     $pagos->academy_id = $request->input('academy_id');
                     $pagos->ticket_id = $ticketsExistent->id;
 
@@ -262,7 +247,7 @@ class UsuarioController extends Controller
                 // $categoria->save();
    
                 
-            return response()->json('Todo listo');
+                return response()->json('Todo listo');
 
             }
         } else{
@@ -295,7 +280,7 @@ class UsuarioController extends Controller
                     $pagos->telefono = $request->input('numeroTitular');
                     $pagos->nombrePago = $request->input('nombreTitular');
                     $pagos->cedula_pago = $request->input('referenciaCedulaPago');
-                    $pagos->total = 25;
+                    $pagos->total = $request->input('precio');
                     $pagos->academy_id = $request->input('academy_id');
                     $pagos->ticket_id = $ticket->id;
 
@@ -319,7 +304,7 @@ class UsuarioController extends Controller
                     $categoria->categorias_id = $request->input('categoria3');
                     $categoria->academy_id = $request->input('academy_id');
                     $categoria->director_id = $request->input('director_id');
-                    $categoria->ticket_id = $ticketsExistent->id;
+                    $categoria->ticket_id = $ticketsExistent->idt;
                     
                     $categoria->save();
 
@@ -330,7 +315,7 @@ class UsuarioController extends Controller
                     $pagos->telefono = $request->input('numeroTitular');
                     $pagos->nombrePago = $request->input('nombreTitular');
                     $pagos->cedula_pago = $request->input('referenciaCedulaPago');
-                    $pagos->total = 25;
+                    $pagos->total = $request->input('precio');
                     $pagos->academy_id = $request->input('academy_id');
                     $pagos->ticket_id = $ticketsExistent->id;
 
@@ -370,7 +355,7 @@ class UsuarioController extends Controller
                     $pagos->telefono = $request->input('numeroTitular');
                     $pagos->nombrePago = $request->input('nombreTitular');
                     $pagos->cedula_pago = $request->input('referenciaCedulaPago');
-                    $pagos->total = 25;
+                    $pagos->total = $request->input('precio');
                     $pagos->academy_id = $request->input('academy_id');
                     $pagos->ticket_id = $ticket->id;
 
@@ -393,7 +378,7 @@ class UsuarioController extends Controller
                     $categoria->categorias_id = $request->input('categoria3');
                     $categoria->academy_id = $request->input('academy_id');
                     $categoria->director_id = $request->input('director_id');
-                    $categoria->ticket_id = $ticketsExistent->id;
+                    $categoria->ticket_id = $ticketsExistent->idt;
                     
                     $categoria->save();
                     
@@ -403,7 +388,7 @@ class UsuarioController extends Controller
                     $pagos->telefono = $request->input('numeroTitular');
                     $pagos->nombrePago = $request->input('nombreTitular');
                     $pagos->cedula_pago = $request->input('referenciaCedulaPago');
-                    $pagos->total = 25;
+                    $pagos->total = $request->input('precio');
                     $pagos->academy_id = $request->input('academy_id');
                     $pagos->ticket_id = $ticketsExistent->id;
 

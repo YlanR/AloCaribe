@@ -54,14 +54,15 @@ nav{
     background-color: #530D9385;
 }
 nav button{
-/*color: white;*/
-background: transparent;
-border: none;
-border-radius: 25%;
-/*padding: 15px;*/
-cursor: pointer;
-transition: 3s;
-width: 15%;
+    /* color: white;  */
+    background: transparent;
+    border: none;
+    border-radius: 25%;
+    padding: 4.4px;
+    cursor: pointer;
+    transition: 3s;
+    width: 65px;
+    height: 65px;
 }
 nav button:hover{
 

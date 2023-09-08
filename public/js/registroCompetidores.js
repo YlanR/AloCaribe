@@ -35,6 +35,7 @@ class Competidores{
     constructor(){
         this.competidores = []; 
         this.total = [];
+        this.totalPagar = Number(this.competidores)
     }
 
     agregarCompetidor(competidor){
@@ -44,36 +45,37 @@ class Competidores{
 
         if(competidorExistenteIndex){
 
-                    
             const competidores = this.competidores.map( comp => {
-                if( comp.cedula === competidor.cedula){
-                let max= 0;
-                    for(let i = 0; i <= comp.length ; i++){
-                        if(comp.contador > max){
-                            max = comp.contador;
-                        }
+                let max = 0;
 
-                    }
-                    max.contador++;
-                    
+                if( comp.cedula === competidor.cedula){
+                    if(comp.contador >= max){
+                        comp.contador++;
+                        console.log(comp.contador);
+
+                        max = comp.contador; 
+
                     return comp;
+                    }
                 } else{
                     return comp;
                 }
             });
+
             this.competidores = [...competidores, competidor];
 
-            this.competidores.sort((a,b) => {
-                console.log(this.competidores);
-                return b.id - a.id;
-            })
+
+            return console.log(this.competidores);
+
+
+
         }else{
             this.competidores = [...this.competidores, competidor];
+            // this.total += this.calcularPrecio(this.competidores.contador);
+            
+            // console.log(this.total);
+            return console.log(this.competidores);
 
-            this.competidores.sort((a,b) => {
-                console.log(this.competidores);
-                return a.id - b.id;
-            })
         }
         // console.log(competidorExistenteIndex);
 
@@ -101,23 +103,59 @@ class Competidores{
             case 5:
               precio = 35;
               break;
-            case 5:
+            case 6:
               precio = 40;
+              break;
+            case 7:
+              precio = 45;
+              break;
+            case 8:
+              precio = 50;
+              break;
+            case 9:
+              precio = 55;
+              break;
+            case 10:
+              precio = 60;
               break;
             default:
               precio = 0;
           }
 
               total += precio;
-        
+
               console.log(total + ' probandooo');
               return total; 
         
     }
     
     crearPrecio(precio){
-        this.total = [...this.total, precio];
-        return;
+
+        const competidorExistenteIndex = this.total.some(comp => comp.cedula === precio.cedula);
+        console.log(competidorExistenteIndex)
+
+        if(competidorExistenteIndex){
+            let nuevoarray = this.total.map( competidor => competidor.cedula === precio.cedula ? precio : competidor);
+            this.total = nuevoarray;
+            console.log(this.total)
+            return;
+        }else{
+            this.total = [...this.total, precio];
+            console.log(this.total)
+            return;
+        }
+        // this.total = this.total.map( competidor => competidor.cedula === precio.cedula ? precio : competidor);
+        // this.total = [...this.total, precio];
+
+    }
+
+    precioTotal(){
+        const total = this.total.reduce((total, precio) => total + precio.precio, 0);
+        // this.total.totalP += total; 
+        // this.competidores = total;
+        console.log(total);
+        this.competidores.precio = total;
+        return total;
     }
 
     eliminarCompetidor(id){
@@ -272,13 +310,13 @@ let ticket = generarID();
             // referenciaImput.addEventListener('input', datosUsuario);
 
             // console.log(admCompetidores.competidores);
-
+          
 
         if(admCompetidores){
 
             
             // if (e.target == formulario) {
-
+            
             let datos = admCompetidores.competidores
         console.log(datos);
             
@@ -294,7 +332,8 @@ let ticket = generarID();
             datosNombreTitular = namePago.value,
             datosNumeroTitular = telefonoImput.value,
             datosModalidad = datos.map(objeto => objeto.modalidad),
-            datosReferencia = referenciaImput.value;
+            datosReferencia = referenciaImput.value
+            precio = datos.precio;
 
 
             let datosAca = parseInt(idAca);
@@ -318,6 +357,7 @@ let ticket = generarID();
                     numeroTitular: datosNumeroTitular,
                     modalidad: datosModalidad[index],
                     referenciaPago: datosReferencia,
+                    precio: precio
                 };
             });
         console.log(JSON.stringify(datosEnviar));
@@ -348,9 +388,9 @@ let ticket = generarID();
                 'Debe esperar a que el ticket sea validado.',
                 'success'
                 )  
-                setTimeout( () => {
-                    window.location.href = 'http://127.0.0.1:8000/misTickets';
-                }, 3000);
+                // setTimeout( () => {
+                //     window.location.href = 'http://127.0.0.1:8000/misTickets';
+                // }, 3000);
                 })
 
             })  
@@ -397,7 +437,9 @@ let ticket = generarID();
             datosNombreTitular = nombrePagoImput.value,
             datosNumeroTitular = telefonoPagoImput.value,
             datosModalidad = datos.map(objeto => objeto.modalidad),
-            datosCedulaPago = cedulaPagoImput.value;
+            datosCedulaPago = cedulaPagoImput.value
+            precio = datos.precio;
+            console.log(precio);
 
 
             let datosAca = parseInt(idAca);
@@ -421,6 +463,7 @@ let ticket = generarID();
                     numeroTitular: datosNumeroTitular,
                     modalidad: ModalidadPagoImput,
                     referenciaCedulaPago: datosCedulaPago,
+                    precio: precio
                 };
             });
         console.log(JSON.stringify(datosEnviar));
@@ -451,9 +494,9 @@ let ticket = generarID();
                 'Debe esperar a que el ticket sea validado.',
                 'success'
                 )  
-                setTimeout( () => {
-                    window.location.href = 'http://127.0.0.1:8000/misTickets';
-                }, 3000);
+                // setTimeout( () => {
+                //     window.location.href = 'http://127.0.0.1:8000/misTickets';
+                // }, 3000);
                 })
 
             })  
@@ -483,7 +526,7 @@ const UserObj = {
     categoria2: '',
     categoria3: '',
     contador: 1,
-    precio: 25,
+    precio: '',
     referenciaPago: '',
     nombreTitular: '',
     numeroTitular: '',
@@ -520,7 +563,7 @@ return idRandom;
 function nuevoCompetidor(e){
     e.preventDefault();
 
-    const {academy_id, name, apellido, cedula, edad, instagram, categoria1, categoria2, categoria3, contador, ticket_id} = UserObj;
+    const {academy_id, name, apellido, cedula, edad, instagram, categoria1, categoria2, categoria3, contador, ticket_id, totalPagar} = UserObj;
 
     
     
@@ -553,40 +596,66 @@ function nuevoCompetidor(e){
         admCompetidores.agregarCompetidor({...UserObj});
 
         let datoss = admCompetidores.competidores;
+        let precio = 0;
         let total = 0;
         // console.log(total + ' PRECIOTOTALprincipio');
 
         let datos = datoss.filter(obje => obje.cedula === UserObj.cedula);
         
 
-        console.log(datos + ' CEDULAINPUT');
         datoss.forEach( (key, i) => {    
         if(datoss.includes(key)){
             let contarcedula = datos.length;
             TotalObj.precio =  admCompetidores.calcularPrecio(contarcedula);
             TotalObj.cedulas = key;
             // admCompetidores.total(precio);
-        console.log(admCompetidores.total + ' cedulacontada');
-        
-        }else{
-            let contarcedula = datos.length;
-         // console.log(contarcedula + ' cedulacontada');
-            TotalObj.precio =  admCompetidores.calcularPrecio(contarcedula);
-            TotalObj.cedulas = key;
-            let precio =  admCompetidores.calcularPrecio(contarcedula);
-            // admCompetidores.total(precio);
+            precio = TotalObj.precio;
+        }
+
+        // const cedulaprecio = UserObj.cedula;
+        // const arrayprecio = {cedulaprecio, precio};
+        // let prueba = admCompetidores.crearPrecio(arrayprecio);
+        // // total += precio;
+        // console.log(arrayprecio)
+
+
+        // console.log(total + ' Totaliti');
+
+        // else{
+        //     let contarcedula = datos.length;
+        //  // console.log(contarcedula + ' cedulacontada');
+        //     TotalObj.precio =  admCompetidores.calcularPrecio(contarcedula);
+        //     TotalObj.cedulas = key;
+        //     let precio =  admCompetidores.calcularPrecio(contarcedula);
+        //     // admCompetidores.total(precio);
+        //     console.log(precio + 'precio');
 
             
-        }
+        // }
         
         })
+        
+        let totalP = 0;
+        var arrayprecio = {cedula, precio, totalP};
+        let prueba = admCompetidores.crearPrecio(arrayprecio);
+        
+        // total += precio;
+        console.log(arrayprecio)
+        console.log(prueba)
+
+
+    
 
         // UserObj.precio =  admCompetidores.competidores.calcularPrecio(UserObj.contador);
 
 
         ui.imprimirAlerta('Se agrego correctamente');
     }
-    ui.imprimirTotal();
+
+
+    var probando =  admCompetidores.precioTotal();
+   
+    ui.imprimirTotal(probando);
 
 
     reiniciarOBjeto({...UserObj});
