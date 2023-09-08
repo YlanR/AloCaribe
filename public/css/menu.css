@@ -18,7 +18,8 @@ nav{
     padding: 0;
     height: 100%;
     text-align: center;
-    margin: 0 0 0 85%;
+    margin: 0 0 0 80%;
+    font-size: 20px;
     
 }
 .menu-vertical-superior{
@@ -31,9 +32,10 @@ nav{
 }
 .menu-vertical-text h4 ,.menu-vertical-text h6{
     margin: 0;
+    margin-left: 65px;
 } 
 .menu-vertical-text h5{
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 65px;
 }
 .menu-vertical-foto{
     margin: 10px;
@@ -46,7 +48,7 @@ nav{
 }
 .menu-vertical > li >a{
     display: block;
-    padding: 15px 20px;
+    padding: 40px 20px;
     color: white;
     text-decoration: none;
 }
