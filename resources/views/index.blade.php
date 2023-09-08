@@ -147,7 +147,11 @@
                     <div class="contenedor-contenidos">
                         <div class="contenedor-contenido">
                             <div class="contenido">
-                                <button class="contenidoBoton" id="plantControl">click aqui</button>
+                                <button class="contenidoBoton" id="plantControl">
+                                    click aqui
+                                    <br>
+                                    <span class="icon-arrow-up"></span>
+                                </button>
                             </div>
                             <div class="despliegue" id="plantCont">
                                 

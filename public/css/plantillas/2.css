@@ -203,7 +203,7 @@ box-shadow: 0rem 3rem 1rem var(--gris);
 
 }
 .contenidoBoton{
-    padding: 25px 10px;
+    padding: 15px 10px;
     border: none;
     background:  var(--negro);
     color:  var(--blanco);

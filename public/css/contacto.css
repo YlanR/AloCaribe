@@ -1,3 +1,24 @@
+/*definiendo variables para colores*/
+:root{
+    --negro:#000;
+    --blanco:#fff;
+    --transparente-claro:rgba(255, 255, 255, 0.459);
+    --transparente-oscuro:rgba(0, 0, 0, 0.11);
+    --rosado:#EDA5FF;
+    --moraclaro:#CC00FF;
+    --moradousuario:#CC01FF;/*boton de usuario*/
+    --morapie:#531A87;
+    --moraoscuro:#2C0351;/*barra*/
+    --moradomezcla:#3f017a;/*home tiene un efecto mezcla */
+    --moztarillo:#F3FE01;
+    --morainicio-regitro:#602F92;
+    --gris:#B0B0B0;
+    --gris-transparente:#E3E3E350;
+    --transparencia:#fafafa10;
+    --tranparencia1:#e3e3e310;
+    --transparencia2:#b0b0b030;
+
+}
 .main-content{
     display: flex;
     justify-content: center;
@@ -18,7 +39,7 @@
     display: grid;
 }
 .contenido-izquierdo{
-    background-color: blue;
+   /* background-color: blue;*/
     opacity: 0.7;
     height: 100%;
     width: 28%;
@@ -26,7 +47,7 @@
     text-align: center;
 }
 .contenido-derecho{
-    background-color: rebeccapurple;
+    background-color: var(--transparencia2);
     opacity: 0.8;
     height: 90%;
     width: 50%;
