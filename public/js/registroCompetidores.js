@@ -388,9 +388,9 @@ let ticket = generarID();
                 'Debe esperar a que el ticket sea validado.',
                 'success'
                 )  
-                // setTimeout( () => {
-                //     window.location.href = 'http://127.0.0.1:8000/misTickets';
-                // }, 3000);
+                setTimeout( () => {
+                    window.location.href = 'http://127.0.0.1:8000/misTickets';
+                }, 3000);
                 })
 
             })  
@@ -494,9 +494,9 @@ let ticket = generarID();
                 'Debe esperar a que el ticket sea validado.',
                 'success'
                 )  
-                // setTimeout( () => {
-                //     window.location.href = 'http://127.0.0.1:8000/misTickets';
-                // }, 3000);
+                setTimeout( () => {
+                    window.location.href = 'http://127.0.0.1:8000/misTickets';
+                }, 3000);
                 })
 
             })  
