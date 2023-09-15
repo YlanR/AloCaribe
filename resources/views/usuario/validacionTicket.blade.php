@@ -15,7 +15,11 @@
                     <div class="main-content-contenido-central central">
                         <div class="central-contenido">   
                             <div class="central-contenido-superior">
-                                <div class="central-contenido-superior-izq" id="Flecha"><span class="icon-play3" style="color:#531A87;"></span></div>
+                                <div class="central-contenido-superior-izq" id="Flecha">
+                                    <a href="" id="flecha-Boton">
+                                        <span class="icon-play3" style="color:#531A87;"></span>
+                                    </a>
+                                </div>
                                 @if($valore->foto_academy)
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
                                 @else

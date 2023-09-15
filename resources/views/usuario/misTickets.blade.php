@@ -13,8 +13,12 @@
 
                     <div class="main-content-contenido-central central">
                         <div class="central-contenido">   
-                            <div class="central-contenido-superior">
-                                <div class="central-contenido-superior-izq" id="Flecha"><span class="icon-play3" style="color:#531A87;"></span></div>
+                            <div class="central-contenido-superior" style="margin: 7px 45px;">
+                                <div class="central-contenido-superior-izq" id="Flecha">
+                                    <button id="flecha">
+                                        <span class="icon-play3" style="color:#531A87;"></span>
+                                    </button>
+                                </div>
                                 @if($valore->foto_academy)
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
                                 @else
@@ -24,15 +28,15 @@
                                 <div class="central-contenido-superior-izq" id="precioTicket">{{ $valore->total }}$</div>
 
                             </div>
-                            <div class="central-contenido-superior">
+                                <div class="central-contenido-superior">
                                 </div>
                                 @if($valore->resultado == 't')
-                                <div class="central-contenido-superior-derecha">
+                                <div class="central-contenido-superior-derecha" style="margin: 25px 45px;">
                                     <p>{{ $valore->ticket }}</p>
                                 </div>
 
                                 @if($valore->modalidad == 'efectivo')
-                                <div class="central-contenido-superior-derecha">
+                                <div class="central-contenido-superior-derecha" style="margin: 25px 45px;" >
                                     <p>Pagar en taquilla</p>
                                 </div>
                                 @endif
@@ -41,7 +45,7 @@
                                 <div class="central-contenido-superior-derecha"><a href="{{ url('ticket/'.$valore->idp)}}" target="_blank">Imprimir Ticket</a>
                                 </div>
                                 @else
-                                <div class="central-contenido-superior-derecha">
+                                <div class="central-contenido-superior-derecha" style="margin: 25px 45px;">
                                     <a href="">
                                         <span class="icon-clock2"></span>
                                     </a>
@@ -49,22 +53,23 @@
                                 @endif
                             </div> 
                             
-                            <div class="central-contenido-logo">
+                        <!--   <div class="central-contenido-logo">
                                 <img src="../../img/logo.png" alt="logo en el fondo jejeje ">
                             </div>
-                            
-                        </div>
-                        <hr>
-                        <div class="central-contenido central-contenido2">
+
+                            <hr>
+                        -->
+                               
+                        <div class="central-contenido central-contenido2" id="tabla">
                         <table class="lista-seleccionada-tabla">
                             <thead class="lista-cabecera">
                                     <tr>
-                                        <th>Nombre</td>
-                                        <th>Apellido</td>
-                                        <th>Cedula</td>
-                                        <th>Edad</td>
-                                        <th>Instagram</td>
-                                        <th>Categoria</td>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Cedula</th>
+                                        <th>Edad</th>
+                                        <th>Instagram</th>
+                                        <th>Categoria</th>
                                     </tr>
                             </thead>
 
@@ -89,8 +94,10 @@
                     </div>
 
                     @endforeach
-
-                    <div class="main-content-contenido-inferior inferior">
+                        </div>
+                 
+                <!--
+                <div class="main-content-contenido-inferior inferior">
                     <div class="inferior-contenido">
                             <div class="inferior-contenido-izq" id="Flecha">
                                 <span class="icon-play3" style="color:#531A87;"></span>
@@ -114,11 +121,12 @@
                         </div>
                     </div>
                 </div>
+                -->
             </div>
         </section>
 
     </main>
-
+    <script src="../../js/tickets.js"></script>
     @section('scripts')
         @if( session('competidores') == 'ok')
             <script>

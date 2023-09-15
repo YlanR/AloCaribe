@@ -1,7 +1,7 @@
 @include('templates.header',  ['modo' => 'Alo Caribe'])
     <link rel="stylesheet" href="../../css/perfildirector.css">
     <link rel="stylesheet" href="../../css/index.css">
-
+    <link rel="stylesheet" href="../../css/editar.css">
 <main>
 
    
@@ -49,7 +49,7 @@
                             </div>
                             <div class="perfil-contenido-relleno">
                                  <!--esta sección es dnd se llama los datos registrados para la academia-->
-                                 <input type="text" placeholder=" instagram" id="social-red" name="instagram_id" class="login-social-red" value="{{ $instagram->name }}">
+                                 <input type="text" placeholder=" instagram" id="social-red" name="instagram_id" class="login-social-red" value="{{ $instagram->name }}" style=" margin: 10px 0;">
                                  <select name="estado" id="Estados" value="" class="Estados">
                                     <option value="" disabled>Selecciona Estado</option>
                                     <option selected value="{{ $academy->estado }}">{{ $academy->estado }}</option>
@@ -84,7 +84,7 @@
 
                         
                         <div class="perfil-boton"> 
-                        <button style="position: absolute;color: blue;" type="submit">Guardar cambios</button>
+                        <button type="submit">Guardar cambios</button>
                         <div class="atrasBoton">
                             <a href="{{ url('/perfilAcademia/'.Auth::user()->id)}}">Volver</a>
                         </div>

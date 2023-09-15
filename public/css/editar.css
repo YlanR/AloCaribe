@@ -1,0 +1,85 @@
+:root{
+    --negro:#000;
+    --blanco:#fff;
+    --transparente-claro:rgba(255, 255, 255, 0.911);
+    --transparente-oscuro:rgba(0, 0, 0, 0.11);
+    --rosado:#EDA5FF;
+    --moraclaro:#CC00FF;
+    --moradousuario:#CC01FF;/*boton de usuario*/
+    --morapie:#531A87;
+    --moraoscuro:#2C0351;/*barra*/
+    --moradomezcla:#3f017a;/*home tiene un efecto mezcla */
+    --moztarillo:#F3FE01;
+    --morainicio-regitro:#602F92;
+    --gris:#B0B0B0;
+    --conten:#efefef;
+    --azul:#0279BB;
+    }
+
+/*datos generales*/
+.perfil-contenido-texto h5{
+    margin: 20px 0;
+}
+.perfil-contenido-relleno input{
+border: none;
+background-color: transparent;
+}
+#director{
+    margin: 22px 0;
+}
+#apellido{
+    margin: 0 0 20px 0;
+}
+#number{
+    margin: 0px 0;
+}
+.perfil-contenido-textos {
+    margin: 65px 60px 55px 60px;
+}
+.perfil-boton {
+    margin: 0px 60px 20px -100px;
+}
+
+/* datos de la academia */
+
+#social-red{
+   
+}
+#Estados{
+    margin: 10px 0;
+    border-radius: 25px;
+    background: var(--azul);
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    color: var(--blanco);
+}
+/*datos del usuario*/
+
+
+
+#estado{ margin: 22px 0;}
+
+#email{}
+
+/*estilo de los botones*/
+.perfil-boton button{    
+    position: absolute;
+    color: var(--blanco);
+    background: var(--azul);
+    border-radius: 25px;
+    border: none;
+    padding: 5px;}
+.perfil-boton button:hover{
+        background-color: var(--rosado);
+        cursor: pointer;
+        transition: 1s;
+}
+.atrasBoton {
+    border-radius: 25px;
+    background-color: var(--azul);
+
+}
+.atrasBoton a{
+    color: var(--blanco);
+}

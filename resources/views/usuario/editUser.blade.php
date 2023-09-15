@@ -1,6 +1,8 @@
 @include('templates.header',  ['modo' => 'Alo Caribe'])
     <link rel="stylesheet" href="../../css/perfildirector.css">
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/editar.css">
+
 
 <main>
 
@@ -58,7 +60,7 @@
 
                         
                         <div class="perfil-boton"> 
-                        <button style="position: absolute;color: blue;" type="submit">Guardar cambios</button>
+                        <button  type="submit">Guardar cambios</button>
                         <div class="atrasBoton">
                             <a href="{{ url('/perfil/'.Auth::user()->id)}}">Volver</a>
                         </div>
