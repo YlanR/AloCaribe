@@ -123,7 +123,7 @@
 
                     <div class="main-content-contenido-inferior inferior">
                     <div class="inferior-contenido">
-                            <div class="inferior-contenido-izq" id="Flecha">flecha</div>
+                            <div class="inferior-contenido-izq" id="Flecha"><span class="icon-play3" style="color:#531A87;"></span></div>
                             <div class="inferior-contenido-izq" id="imagenAcademia">logo</div>
                             <div class="inferior-contenido-izq" id="nombreAcademia">nombre</div>
                             <div class="inferior-contenido-izq" id="precioTicket">precio</div>
