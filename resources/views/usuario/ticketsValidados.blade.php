@@ -15,8 +15,10 @@
                         <div class="superior-contenido">
                             <form action="{{ route('ticket.buscar') }}" method="post">
                                 @csrf
-                                <input type="search" name="ticketValidado" class="">
-                                <button type="submit">Buscar</button>
+                                <input type="search" name="ticketValidado" class="buscar">
+                                <button type="submit" class="buscador">
+                                    <span class="icon-search" style="color:#531A87;"></span>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -26,9 +28,13 @@
                     @if($valore->modalidad == 'pagoMovil')
 
                     <div class="main-content-contenido-central central">
-                        <div class="central-contenido">   
+                        <div class="central-contenido" id="bord">   
                             <div class="central-contenido-superior">
-                                <div class="central-contenido-superior-izq" id="Flecha"><span class="icon-play3" style="color:#531A87;"></span></div>
+                                <div class="central-contenido-superior-izq" id="Flecha">
+                                    <button id="botonFlecha">
+                                        <span class="icon-play3" style="color:#531A87;"></span>
+                                    </button>
+                                </div>
                                 @if($valore->foto_academy)
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
                                 @else
@@ -42,7 +48,7 @@
                             <div class="central-contenido-superior">
                                 </div>
                                 @if($valore->modalidad == 'pagoMovil')
-                                <div class="central-contenido-superior-derecha">
+                                <div class="central-contenido-superior-derecha" id="aprobado">
                                     <p>Aprobado</p>
                                 </div>
                                 @else
@@ -50,29 +56,34 @@
                                 </div>
                                 @endif
                             </div> 
-                            <div class="central-contenido-logo">
+
+
+                            <!--    <div class="central-contenido-logo">
                                 <img src="../../img/logo.png" alt="logo en el fondo jejeje ">
                             </div>
-                            
-                        </div>
-                        <hr>
-                        <div class="central-contenido central-contenido2">
-                            <div class="central-contenido-inferior">
-                                <label for="">Nombre del titular del pago</label>
-                                <p>{{ $valore->nombrePago }}</p>
-                            </div>
-                            <div class="central-contenido-inferior">
-                                <label for="">Teléfono del Titular</label>
-                                <p>{{ $valore->telefono }}</p>
+                            <hr>
+                            -->    
+                            <div class="central-contenido central-contenido2" id="tablaDatas">
+                                <div class="central-contenido-inferior">
+                                    <label for="">Nombre del titular del pago</label>
+                                    <p>{{ $valore->nombrePago }}</p>
+                                </div>
+                                <div class="central-contenido-inferior">
+                                    <label for="">Teléfono del Titular</label>
+                                    <p>{{ $valore->telefono }}</p>
 
-                            </div>
-                            <div class="central-contenido-inferior">
-                                <label for="">Referencia del pago móvil</label>
-                                <p>{{ $valore->referencia }}</p>
+                                </div>
+                                <div class="central-contenido-inferior">
+                                    <label for="">Referencia del pago móvil</label>
+                                    <p>{{ $valore->referencia }}</p>
 
-                            </div>
+                                </div>
                       
+                            </div>
+
                         </div>
+                        
+                        
                     </div>
 
                     @else
@@ -125,6 +136,7 @@
                             </div>
                       
                         </div>
+
                     </div>
 
                     @endif
@@ -132,7 +144,7 @@
                     @endforeach
 
                     <div class="main-content-contenido-inferior inferior">
-                    <div class="inferior-contenido">
+                        <div class="inferior-contenido">
                             <div class="inferior-contenido-izq" id="Flecha">flecha</div>
                             <div class="inferior-contenido-izq" id="imagenAcademia">logo</div>
                             <div class="inferior-contenido-izq" id="nombreAcademia">nombre</div>
@@ -152,10 +164,13 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
     </main>
+   
+    <script src="../../js/validados.js"></script>
 </body>
 </html>

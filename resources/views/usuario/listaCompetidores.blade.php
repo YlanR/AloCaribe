@@ -1,6 +1,7 @@
 @include('templates.header',  ['modo' => 'Alo Caribe'])
 
-   <link rel="stylesheet" href="../../css/listaCompe.css">
+<link rel="stylesheet" href="../../css/listaCompe.css">
+<link rel="stylesheet" href="../../css/index.css">
 
         <section class="main">
             <div class="main-content">
@@ -48,7 +49,9 @@
                                 </select>
                             </div>
 
-                            <button type="submit"> Buscar</button>
+                            <button type="submit" class="search"> 
+                                <span class="icon-search" style="color:#531A87; font-size: 20px;"></span>
+                            </button>
                         </div>
                     </form>
                 @if($categoria1)
@@ -96,6 +99,6 @@
                 </div>
             </div>
         </section>
-@include('templates.footer')
-<script src="../../js/listadoCompe.js"></script>
 
+<script src="../../js/listadoCompe.js"></script>
+@include('templates.footer')

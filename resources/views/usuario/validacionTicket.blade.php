@@ -13,12 +13,12 @@
                     @if($valore->modalidad == 'pagoMovil')
 
                     <div class="main-content-contenido-central central">
-                        <div class="central-contenido">   
+                        <div class="central-contenido"  id="bordeo">   
                             <div class="central-contenido-superior">
                                 <div class="central-contenido-superior-izq" id="Flecha">
-                                    <a href="" id="flecha-Boton">
+                                    <button id="flechaBoton">
                                         <span class="icon-play3" style="color:#531A87;"></span>
-                                    </a>
+                                    </button>
                                 </div>
                                 @if($valore->foto_academy)
                                 <div class="central-contenido-superior-izq" id="imagenAcademia"><img  class="foto_header" src="{{ asset('storage/').'/'. $valore->foto_academy }}" alt=""></div>
@@ -43,13 +43,14 @@
                                 <div class="central-contenido-superior-derecha"><a href=""><span class="icon-clock2" style="color:#F6CF02;"></span></a>
                                 </div>
                             </div> 
-                            <div class="central-contenido-logo">
+                        <!--    <div class="central-contenido-logo">
                                 <img src="../../img/logo.png" alt="logo en el fondo jejeje ">
                             </div>
-                            
+                              <hr>
+                        -->  
                         </div>
-                        <hr>
-                        <div class="central-contenido central-contenido2">
+                      
+                        <div class="central-contenido central-contenido2" id="datosTabla">
                             <div class="central-contenido-inferior">
                                 <label for="">Nombre del titular del pago</label>
                                 <p>{{ $valore->nombrePago }}</p>
@@ -149,6 +150,7 @@
                 </div>
             </div>
         </section>
+        
         @section('scripts')
 
         @if( session('validar') == 'ok')
@@ -188,4 +190,5 @@
         </script>
     @endsection
     </main>
+    <script src="../../js/tickets.js"></script>
     @include('templates.footer')

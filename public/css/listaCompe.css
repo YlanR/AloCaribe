@@ -13,7 +13,17 @@
     --moztarillo:#F3FE01;
     --morainicio-regitro:#602F92;
     --gris:#B0B0B0;
-    
+    --conten:#efefef;
+    --azul:#0279BB;
+    --arto:#4C0092;
+    }
+    @font-face {
+        font-family: Basic;
+        src: url(../letras/Basic-Regular.ttf);
+    }
+    @font-face {
+        font-family: Amaranth;
+        src: url(../letras/Amaranth-BoldItalic.ttf);
     }
 .main-content-contenido{
     justify-content:center;
@@ -22,16 +32,20 @@
     text-align: center;
     margin-top: 75px;
 }
+.main-content-contenido h2{
+    font-family: 'Amaranth';
+}
 .main-content-contenido-lista{
     display: flex;
     justify-content:space-between;
     margin-top:20px;
-    border:2px solid ;
+    border:2px solid var(--arto);
     background:#b0b0b020;
     padding: 10px;
     border-radius:50px;
     width:100%;
     box-shadow:6px 10px 14px -1px #00000085;
+    font-family: 'Basic';
 }
 .lista{
     margin:0 30px;
@@ -41,9 +55,9 @@
     border-radius: 50px;
     padding: 5px 20px;
     margin: 0 90px;
-    background: white;
-    color: coral;
-    border: 1px solid coral;
+    background: var(--azul);
+    color: var(--blanco);
+    border: 1px solid var(--arto);
 }
 .lista label{
     margin-bottom:6px;
@@ -51,7 +65,7 @@
 /*estilos de la lista */
 .lista-seleccionada{
     margin-top:20px;
-    border:2px solid ;
+    border:2px solid var(--arto);
     background:#b0b0b020;
     padding: 10px;
     border-radius:50px;
@@ -71,5 +85,12 @@
 }
 
 th,td{
-    border-bottom:2px dotted blue;
+    border-bottom:2px dotted var(--arto);
+}
+
+.search{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 18px;
 }
