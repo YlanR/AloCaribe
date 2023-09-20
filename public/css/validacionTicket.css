@@ -189,11 +189,26 @@
         rotate: 90deg;
     }
 
-.central-contenido-superior-izq button{
+.central-contenido-superior-izq button,
+.inferior-contenido-izq button{
     border: none;
     cursor: pointer;
 }
 
+.imprimirTicket{
+    margin: 30px 10px;
+    font-size: 20px;
+}
+.imprimirTicket a{
+    color: var(--negro);
+}
+.imprimirTicket a:hover{
+    color: var(--rosado);
+}
+
+.esperarTicket{
+    margin: 25px 45px;
+}
 /*para validación de tickets*/
 .bordeob{
     border-bottom: 2px solid var(--arto);
@@ -219,5 +234,4 @@ font-size: 16px;
     color:var(--blanco);
     border-radius: 10px;
     padding: 10px;
-
 }

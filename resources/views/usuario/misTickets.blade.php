@@ -42,10 +42,11 @@
                                 @endif
 
 
-                                <div class="central-contenido-superior-derecha"><a href="{{ url('ticket/'.$valore->idp)}}" target="_blank">Imprimir Ticket</a>
+                                <div class="central-contenido-superior-derecha imprimirTicket">
+                                    <a href="{{ url('ticket/'.$valore->idp)}}" target="_blank" >Imprimir Ticket</a>
                                 </div>
                                 @else
-                                <div class="central-contenido-superior-derecha" style="margin: 25px 45px;">
+                                <div class="central-contenido-superior-derecha esperarTicket" >
                                     <a href="">
                                         <span class="icon-clock2"></span>
                                     </a>
@@ -94,7 +95,32 @@
                     </div>
 
                     @endforeach
+                    
+                    <div class="main-content-contenido-inferior inferior">
+                    <div class="inferior-contenido">
+                            <div class="inferior-contenido-izq" id="Flecha">
+                                <span class="icon-play3" style="color:#531A87;"></span>
+                            </div>
+                            <div class="inferior-contenido-izq" id="imagenAcademia">logo</div>
+                            <div class="inferior-contenido-izq" id="nombreAcademia">nombre</div>
+                            <div class="inferior-contenido-izq" id="precioTicket">precio</div>
                         </div>
+                        <div class="inferior-contenido">
+                            <div class="inferior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-database"></span>
+                                </a>
+                            </div>
+                            
+                            <div class="inferior-contenido-derecha">
+                                <a href="">
+                                    <span class="icon-clock2" style="color:#F6CF02;"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
                  
                 <!--
                 <div class="main-content-contenido-inferior inferior">

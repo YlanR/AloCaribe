@@ -26,7 +26,7 @@ body{
     height:  auto; 
     margin:  8rem 12.9rem; 
     background: var(--blanco); 
-    border-radius: 9% ;
+    border-radius: 50px ;
     box-shadow:  4rem 3rem 1rem -1rem var(--transparente-oscuro);
 
 justify-content: center;
@@ -41,12 +41,13 @@ justify-content: center;
     text-align: center;
     margin: 15px;}
 .form-logo{
-    display: flex;
+    display: grid;
     width: auto;
     height: auto;
     margin: 3rem 5rem;
 }
-.form-logo-logo{    height: 14rem;}
+.form-logo-logo{    height: 14rem;
+opacity: 0.9;}
 .form-contents{
     display: flex;
     margin: 0px;

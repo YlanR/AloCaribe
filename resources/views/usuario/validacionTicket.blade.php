@@ -70,7 +70,7 @@
                     </div>
                     @else
 
-                    <div class="main-content-contenido-central central">
+                    <div class="main-content-contenido-central central" id="pgMVL">
                         <div class="central-contenido">   
                             <div class="central-contenido-superior">
                                 <div class="central-contenido-superior-izq" id="Flecha"><span class="icon-play3" style="color:#531A87;"></span></div>
@@ -120,15 +120,21 @@
                             </div>
                       
                         </div>
-                    </div>
+
+                        
+                </div>
 
                     @endif
 
                     @endforeach
 
-                    <div class="main-content-contenido-inferior inferior">
+                <div class="main-content-contenido-inferior inferior">
                     <div class="inferior-contenido">
-                            <div class="inferior-contenido-izq" id="Flecha"><span class="icon-play3" style="color:#531A87;"></span></div>
+                            <div class="inferior-contenido-izq" id="Flecha">
+                                <button id="botonPM">
+                                    <span class="icon-play3" style="color:#531A87;"></span>
+                                </button>
+                            </div>
                             <div class="inferior-contenido-izq" id="imagenAcademia">logo</div>
                             <div class="inferior-contenido-izq" id="nombreAcademia">nombre</div>
                             <div class="inferior-contenido-izq" id="precioTicket">precio</div>
@@ -190,5 +196,5 @@
         </script>
     @endsection
     </main>
-    <script src="../../js/tickets.js"></script>
+    <script src="../../js/validar.js"></script>
     @include('templates.footer')
